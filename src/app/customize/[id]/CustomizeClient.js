@@ -892,20 +892,36 @@ export default function CustomizeClient({ params }) {
 
           {/* Layer Selector Chips */}
           <div className="flex flex-col gap-1.5 border-b border-outline-variant/40 pb-md">
-            <span className="text-xs font-semibold text-outline">Select Text Layer To Edit:</span>
-            <div className="flex flex-wrap gap-xs">
-              {textLayers.map((layer) => (
-                <div
-                  key={layer.id}
-                  onClick={() => setSelectedLayerId(layer.id)}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer border ${
-                    selectedLayerId === layer.id
-                      ? "bg-primary-container text-on-primary-container border-primary-container shadow"
-                      : "bg-surface-container text-outline border-outline-variant/60 hover:text-on-background"
-                  }`}
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold text-outline">
+                {textLayers.length > 0 ? "Select Text Layer To Edit:" : "Text Layers:"}
+              </span>
+              {textLayers.length > 0 && (
+                <button
+                  onClick={() => {
+                    setTextLayers([]);
+                    setSelectedLayerId(null);
+                  }}
+                  className="text-[10px] font-bold text-red-400 hover:text-red-300 hover:underline"
                 >
-                  <span>{layer.label || layer.text.slice(0, 10) || "Layer"}</span>
-                  {textLayers.length > 1 && (
+                  Clear All Text (Textless Banner)
+                </button>
+              )}
+            </div>
+
+            {textLayers.length > 0 ? (
+              <div className="flex flex-wrap gap-xs">
+                {textLayers.map((layer) => (
+                  <div
+                    key={layer.id}
+                    onClick={() => setSelectedLayerId(layer.id)}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer border ${
+                      selectedLayerId === layer.id
+                        ? "bg-primary-container text-on-primary-container border-primary-container shadow"
+                        : "bg-surface-container text-outline border-outline-variant/60 hover:text-on-background"
+                    }`}
+                  >
+                    <span>{layer.label || layer.text.slice(0, 10) || "Layer"}</span>
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
@@ -916,10 +932,12 @@ export default function CustomizeClient({ params }) {
                     >
                       &times;
                     </button>
-                  )}
-                </div>
-              ))}
-            </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <span className="text-xs text-outline italic">No text layers active (Textless Banner Mode).</span>
+            )}
           </div>
 
           {/* Controls for currently selected layer */}
@@ -929,14 +947,12 @@ export default function CustomizeClient({ params }) {
                 <span className="text-xs font-bold text-primary-container uppercase font-data-mono">
                   Editing: {selectedLayer.label || selectedLayer.text || "Selected Layer"}
                 </span>
-                {textLayers.length > 1 && (
-                  <button
-                    onClick={() => removeTextLayer(selectedLayer.id)}
-                    className="text-xs font-bold text-red-400 hover:text-red-300 hover:underline"
-                  >
-                    🗑️ Remove Layer
-                  </button>
-                )}
+                <button
+                  onClick={() => removeTextLayer(selectedLayer.id)}
+                  className="text-xs font-bold text-red-400 hover:text-red-300 hover:underline"
+                >
+                  🗑️ Remove Layer
+                </button>
               </div>
 
               {/* Text Input */}

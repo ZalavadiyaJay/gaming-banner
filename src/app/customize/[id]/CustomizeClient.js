@@ -729,30 +729,35 @@ export default function CustomizeClient({ params }) {
       <Header />
 
       <main className="flex-1 pt-16 flex flex-col md:flex-row h-auto overflow-y-auto md:h-[calc(100vh-64px)] md:overflow-hidden">
-        {/* Left Canvas Preview Panel (65%) */}
-        <section className="w-full md:flex-1 bg-surface-container/60 p-lg flex flex-col justify-center gap-md border-b md:border-b-0 md:border-r border-outline-variant/65">
+        {/* Left Canvas Preview Panel (Sticky on Mobile, 65% on Desktop) */}
+        <section className="w-full md:flex-1 sticky top-16 z-30 bg-surface-container-low/95 backdrop-blur-md p-xs sm:p-md md:p-lg flex flex-col justify-center gap-xs sm:gap-md border-b md:border-b-0 md:border-r border-outline-variant/65 shadow-md md:shadow-none">
           {/* View Toggles */}
-          <div className="flex items-center gap-sm self-start bg-surface-container-high border border-outline-variant/50 p-1 rounded-lg">
-            <button
-              onClick={() => setActiveTab("desktop")}
-              className={`px-lg py-1.5 rounded text-xs font-bold transition-all ${
-                activeTab === "desktop"
-                  ? "bg-primary-container text-on-primary-container shadow"
-                  : "text-outline hover:text-on-background"
-              }`}
-            >
-              Desktop Layout
-            </button>
-            <button
-              onClick={() => setActiveTab("mobile")}
-              className={`px-lg py-1.5 rounded text-xs font-bold transition-all ${
-                activeTab === "mobile"
-                  ? "bg-primary-container text-on-primary-container shadow"
-                  : "text-outline hover:text-on-background"
-              }`}
-            >
-              Mobile Safe Zone
-            </button>
+          <div className="flex items-center justify-between w-full">
+            <div className="flex items-center gap-xs bg-surface-container-high border border-outline-variant/50 p-1 rounded-lg">
+              <button
+                onClick={() => setActiveTab("desktop")}
+                className={`px-sm sm:px-lg py-1 rounded text-[11px] sm:text-xs font-bold transition-all ${
+                  activeTab === "desktop"
+                    ? "bg-primary-container text-on-primary-container shadow"
+                    : "text-outline hover:text-on-background"
+                }`}
+              >
+                Desktop Layout
+              </button>
+              <button
+                onClick={() => setActiveTab("mobile")}
+                className={`px-sm sm:px-lg py-1 rounded text-[11px] sm:text-xs font-bold transition-all ${
+                  activeTab === "mobile"
+                    ? "bg-primary-container text-on-primary-container shadow"
+                    : "text-outline hover:text-on-background"
+                }`}
+              >
+                Mobile Safe Zone
+              </button>
+            </div>
+            <span className="text-[10px] text-primary-container font-extrabold uppercase font-data-mono md:hidden flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded border border-primary-container/30">
+              📌 Live Preview
+            </span>
           </div>
 
           {/* Render Mockup Container */}
@@ -773,7 +778,7 @@ export default function CustomizeClient({ params }) {
                   }
                 }}
                 onTouchEnd={() => setActiveDragId(null)}
-                className={`w-full relative flex flex-col p-lg justify-center transition-all duration-300 select-none ${
+                className={`w-full relative flex flex-col p-md sm:p-lg justify-center transition-all duration-300 select-none ${
                   activeDragId ? "cursor-grabbing" : "cursor-default"
                 }`}
                 style={{ ...currentTemplate.style, ...getPreviewAspectStyle(), containerType: "inline-size" }}
@@ -854,25 +859,19 @@ export default function CustomizeClient({ params }) {
               </div>
 
               {/* Simulated Channel info strip */}
-              <div className="p-md bg-surface-container-high border-t border-outline-variant/40 flex items-center gap-md">
-                <div className="h-10 w-10 rounded-full bg-surface-container-low border border-outline-variant/60 flex items-center justify-center font-bold text-outline">
+              <div className="p-xs sm:p-md bg-surface-container-high border-t border-outline-variant/40 hidden sm:flex items-center gap-md">
+                <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-surface-container-low border border-outline-variant/60 flex items-center justify-center font-bold text-outline text-xs sm:text-sm">
                   {textLayers.length > 0 && textLayers[0].text ? textLayers[0].text[0] : "S"}
                 </div>
                 <div>
-                  <span className="font-bold text-sm text-on-background block">
+                  <span className="font-bold text-xs sm:text-sm text-on-background block">
                     {textLayers.length > 0 && textLayers[0].text ? textLayers[0].text : "STORM"}
                   </span>
-                  <span className="text-xs text-outline font-data-mono">12.4K subscribers &bull; 42 videos</span>
+                  <span className="text-[10px] sm:text-xs text-outline font-data-mono">12.4K subscribers &bull; 42 videos</span>
                 </div>
               </div>
             </div>
           </div>
-
-          <span className="text-xs text-outline/75 text-center font-data-mono">
-            {activeTab === "desktop"
-              ? "Tip: Drag any text layer directly on the banner. Add or remove layers anytime!"
-              : "Preview shows strict mobile display dimensions."}
-          </span>
         </section>
 
         {/* Right Editor sidebar (35%) */}

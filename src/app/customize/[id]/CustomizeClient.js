@@ -397,6 +397,8 @@ export default function CustomizeClient({ params }) {
   const [accentColor, setAccentColor] = useState("#00d4ff");
   const [exportSize, setExportSize] = useState("YouTube (2560 x 1440)");
   const [fontSizeScale, setFontSizeScale] = useState(1);
+  const [bgOverlay, setBgOverlay] = useState(15); // Percentage background darkener
+  const [glowIntensity, setGlowIntensity] = useState(70); // Percentage text glow intensity
   const [isDownloading, setIsDownloading] = useState(false);
 
   // Initialize template defaults ONLY when template ID changes
@@ -521,9 +523,13 @@ export default function CustomizeClient({ params }) {
         ctx.textAlign = "right";
       }
 
-      // Add modern text glow
-      ctx.shadowColor = accentColor;
-      ctx.shadowBlur = Math.round(25 * scale);
+      // Add modern text glow based on user glow intensity slider
+      if (glowIntensity > 0) {
+        ctx.shadowColor = accentColor;
+        ctx.shadowBlur = Math.round(30 * scale * (glowIntensity / 50));
+      } else {
+        ctx.shadowBlur = 0;
+      }
       ctx.fillStyle = accentColor;
 
       ctx.fillText(channelName || "YOUR NAME", textX, textY);
@@ -586,12 +592,8 @@ export default function CustomizeClient({ params }) {
 
         ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
 
-        // Draw vignette
-        let overlayOpacity = 0.45;
-        if (id === "rpg") overlayOpacity = 0.5;
-        else if (id === "streaming" || id === "minimalist" || id === "gamer-profile") overlayOpacity = 0.4;
-        
-        ctx.fillStyle = `rgba(0, 0, 0, ${overlayOpacity})`;
+        // Draw dynamic dark overlay fill based on bgOverlay slider
+        ctx.fillStyle = `rgba(0, 0, 0, ${bgOverlay / 100})`;
         ctx.fillRect(0, 0, width, height);
 
         drawContentAndDownload();
@@ -687,10 +689,15 @@ export default function CustomizeClient({ params }) {
                 }`}
                 style={{ ...currentTemplate.style, ...getPreviewAspectStyle(), containerType: "inline-size" }}
               >
-                {/* Background Dimmer / Shading for Twitch Banners */}
+                {/* Dynamic User Background Darkener / Overlay */}
+                <div
+                  className="absolute inset-0 z-0 pointer-events-none transition-all duration-200"
+                  style={{ backgroundColor: `rgba(0, 0, 0, ${bgOverlay / 100})` }}
+                />
+
+                {/* Additional Dimmer / Shading for Twitch Banners */}
                 {id.startsWith("twitch-") && (
                   <>
-                    <div className="absolute inset-0 bg-black/30 z-0" />
                     <div className="absolute inset-y-0 left-0 w-[22%] bg-gradient-to-r from-black/60 to-transparent pointer-events-none z-0" />
                     <div className="absolute inset-y-0 right-0 w-[22%] bg-gradient-to-l from-black/60 to-transparent pointer-events-none z-0" />
                   </>
@@ -698,9 +705,9 @@ export default function CustomizeClient({ params }) {
 
                 {currentTemplate.decor}
 
-                {/* Mobile crop guidelines overlay (only on desktop mode, not for twitch/discord/twitter headers) */}
+                {/* Mobile crop guidelines overlay */}
                 {activeTab === "desktop" && !id.startsWith("twitch-") && !id.includes("discord") && !id.includes("esports-pro") && !id.includes("schedule") && !id.includes("clan-tag") && !id.includes("glow") && !id.includes("blurple") && !id.includes("server") && !id.includes("guild") && !id.includes("portal") && !id.includes("rp") && !id.includes("music") && !id.includes("clan") && (
-                  <div className="absolute inset-y-0 w-[60%] left-[20%] border-l border-r border-dashed border-white/25 bg-white/[0.01] pointer-events-none flex items-center justify-between px-xs">
+                  <div className="absolute inset-y-0 w-[60%] left-[20%] border-l border-r border-dashed border-white/25 bg-white/[0.01] pointer-events-none flex items-center justify-between px-xs z-10">
                     <span className="text-[1.5cqw] text-white/35 uppercase font-data-mono">Mobile Safe Edge</span>
                     <span className="text-[1.5cqw] text-white/35 uppercase font-data-mono">Mobile Safe Edge</span>
                   </div>
@@ -712,10 +719,12 @@ export default function CustomizeClient({ params }) {
                     ...currentTemplate.textStyle,
                     fontFamily: fontStyles[selectedFont] || currentTemplate.textStyle?.fontFamily || "var(--font-gamertag)",
                     color: accentColor,
-                    textShadow: `0 0 ${12 * fontSizeScale}px ${accentColor}, 0 0 ${24 * fontSizeScale}px ${accentColor}, 2px 2px 4px rgba(0,0,0,0.8)`,
+                    textShadow: glowIntensity > 0
+                      ? `0 0 ${Math.round(15 * fontSizeScale * (glowIntensity / 50))}px ${accentColor}, 0 0 ${Math.round(35 * fontSizeScale * (glowIntensity / 50))}px ${accentColor}, 3px 3px 6px rgba(0,0,0,0.9)`
+                      : "3px 3px 6px rgba(0,0,0,0.9)",
                     fontSize: `clamp(${14 * fontSizeScale}px, ${9 * fontSizeScale}cqw, ${52 * fontSizeScale}px)`
                   }}
-                  className="font-black uppercase tracking-wider select-none relative z-10 transition-all leading-none"
+                  className="font-black uppercase tracking-wider select-none relative z-10 transition-all leading-none drop-shadow-md"
                 >
                   {channelName || "YOUR NAME"}
                 </span>
@@ -726,7 +735,7 @@ export default function CustomizeClient({ params }) {
                     style={{
                       fontSize: "clamp(6px, 2.2cqw, 12px)"
                     }}
-                    className="font-bold tracking-widest uppercase mt-xs relative z-10 select-none font-sans px-2.5 py-0.5 rounded bg-black/60 border border-white/10 text-white/90"
+                    className="font-bold tracking-widest uppercase mt-xs relative z-10 select-none font-sans px-2.5 py-0.5 rounded bg-black/70 border border-white/10 text-white/90 shadow-md"
                   >
                     {subtitle || "STREAMING NOW"}
                   </span>
@@ -736,7 +745,7 @@ export default function CustomizeClient({ params }) {
                       fontFamily: "var(--font-sans)",
                       fontSize: "clamp(6px, 2.5cqw, 14px)"
                     }}
-                    className="font-bold text-white/80 tracking-widest uppercase mt-xs relative z-10 leading-none"
+                    className="font-bold text-white/90 tracking-widest uppercase mt-xs relative z-10 leading-none drop-shadow-sm"
                   >
                     {subtitle || "RANKED / K/D 2.5"}
                   </span>
@@ -824,6 +833,42 @@ export default function CustomizeClient({ params }) {
                 onChange={(e) => setFontSizeScale(parseFloat(e.target.value))}
                 className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
               />
+            </div>
+
+            {/* Text Glow / Shadow Intensity Slider */}
+            <div className="flex flex-col gap-1.5">
+              <div className="flex justify-between items-center text-xs font-semibold text-outline">
+                <span>Text Glow & Shadow</span>
+                <span className="font-data-mono text-primary-container font-bold">{glowIntensity}%</span>
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="150"
+                step="5"
+                value={glowIntensity}
+                onChange={(e) => setGlowIntensity(parseInt(e.target.value))}
+                className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+              />
+              <span className="text-[10px] text-outline/70">Adjust text glow highlight & pop effect.</span>
+            </div>
+
+            {/* Background Darkener / Dimmer Slider */}
+            <div className="flex flex-col gap-1.5">
+              <div className="flex justify-between items-center text-xs font-semibold text-outline">
+                <span>Poster Background Darkener</span>
+                <span className="font-data-mono text-primary-container font-bold">{bgOverlay}%</span>
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="80"
+                step="5"
+                value={bgOverlay}
+                onChange={(e) => setBgOverlay(parseInt(e.target.value))}
+                className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+              />
+              <span className="text-[10px] text-outline/70">0% = Full bright original poster colors.</span>
             </div>
 
             {/* Accent Color picker */}

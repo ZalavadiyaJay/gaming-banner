@@ -399,7 +399,18 @@ export default function CustomizeClient({ params }) {
   const [fontSizeScale, setFontSizeScale] = useState(1);
   const [bgOverlay, setBgOverlay] = useState(15); // Percentage background darkener
   const [glowIntensity, setGlowIntensity] = useState(70); // Percentage text glow intensity
+  const [textPosX, setTextPosX] = useState(50); // Text X position percentage (0-100)
+  const [textPosY, setTextPosY] = useState(50); // Text Y position percentage (0-100)
+  const [isDragging, setIsDragging] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
+
+  const handleDragMove = (clientX, clientY, containerRect) => {
+    if (!containerRect) return;
+    const x = ((clientX - containerRect.left) / containerRect.width) * 100;
+    const y = ((clientY - containerRect.top) / containerRect.height) * 100;
+    setTextPosX(Math.max(10, Math.min(90, x)));
+    setTextPosY(Math.max(15, Math.min(85, y)));
+  };
 
   // Initialize template defaults ONLY when template ID changes
   useEffect(() => {
@@ -513,15 +524,9 @@ export default function CustomizeClient({ params }) {
       ctx.font = canvasFont.replace(/(\d+)px/, (match, num) => `${Math.round(parseInt(num) * scale)}px`);
       ctx.textBaseline = "middle";
 
-      let textX = width / 2;
-      let textY = height / 2 - Math.round(25 * scale);
+      let textX = (width * textPosX) / 100;
+      let textY = (height * textPosY) / 100 - Math.round(15 * scale);
       ctx.textAlign = "center";
-
-      // If Discord or Twitter, right-align text (safe area offset for avatar/icon on left)
-      if (exportSize.includes("Discord") || exportSize.includes("Twitter")) {
-        textX = width - Math.round(80 * scale);
-        ctx.textAlign = "right";
-      }
 
       // Add modern text glow based on user glow intensity slider
       if (glowIntensity > 0) {
@@ -543,7 +548,7 @@ export default function CustomizeClient({ params }) {
       if ("letterSpacing" in ctx) {
         ctx.letterSpacing = `${Math.round(6 * scale)}px`;
       }
-      ctx.fillText(subtitle || "GAMER / STREAMER", textX, height / 2 + Math.round(55 * scale));
+      ctx.fillText(subtitle || "GAMER / STREAMER", textX, textY + Math.round(55 * scale));
 
       // Trigger automatic file download
       try {
@@ -682,10 +687,31 @@ export default function CustomizeClient({ params }) {
             <div className="w-full max-w-4xl border border-outline-variant rounded-xl overflow-hidden bg-surface-container shadow-2xl">
               {/* Mockup Canvas */}
               <div
-                className={`w-full relative flex flex-col p-lg justify-center transition-all duration-300 ${
-                  id.includes("discord") || id.includes("esports-pro") || id.includes("schedule") || id.includes("clan-tag") || id.includes("glow") || id.includes("blurple") || id.includes("server") || id.includes("guild") || id.includes("portal") || id.includes("rp") || id.includes("music") || id.includes("clan") || exportSize.includes("Discord") || exportSize.includes("Twitter")
-                    ? "items-end text-right pr-[8%]"
-                    : "items-center text-center"
+                onMouseDown={(e) => {
+                  setIsDragging(true);
+                  handleDragMove(e.clientX, e.clientY, e.currentTarget.getBoundingClientRect());
+                }}
+                onMouseMove={(e) => {
+                  if (isDragging) {
+                    handleDragMove(e.clientX, e.clientY, e.currentTarget.getBoundingClientRect());
+                  }
+                }}
+                onMouseUp={() => setIsDragging(false)}
+                onMouseLeave={() => setIsDragging(false)}
+                onTouchStart={(e) => {
+                  if (e.touches && e.touches[0]) {
+                    setIsDragging(true);
+                    handleDragMove(e.touches[0].clientX, e.touches[0].clientY, e.currentTarget.getBoundingClientRect());
+                  }
+                }}
+                onTouchMove={(e) => {
+                  if (isDragging && e.touches && e.touches[0]) {
+                    handleDragMove(e.touches[0].clientX, e.touches[0].clientY, e.currentTarget.getBoundingClientRect());
+                  }
+                }}
+                onTouchEnd={() => setIsDragging(false)}
+                className={`w-full relative flex flex-col p-lg justify-center transition-all duration-300 select-none ${
+                  isDragging ? "cursor-grabbing" : "cursor-crosshair"
                 }`}
                 style={{ ...currentTemplate.style, ...getPreviewAspectStyle(), containerType: "inline-size" }}
               >
@@ -713,43 +739,62 @@ export default function CustomizeClient({ params }) {
                   </div>
                 )}
 
-                {/* Main render name */}
-                <span
+                {/* Drag-and-Drop Text Position Wrapper */}
+                <div
                   style={{
-                    ...currentTemplate.textStyle,
-                    fontFamily: fontStyles[selectedFont] || currentTemplate.textStyle?.fontFamily || "var(--font-gamertag)",
-                    color: accentColor,
-                    textShadow: glowIntensity > 0
-                      ? `0 0 ${Math.round(15 * fontSizeScale * (glowIntensity / 50))}px ${accentColor}, 0 0 ${Math.round(35 * fontSizeScale * (glowIntensity / 50))}px ${accentColor}, 3px 3px 6px rgba(0,0,0,0.9)`
-                      : "3px 3px 6px rgba(0,0,0,0.9)",
-                    fontSize: `clamp(${14 * fontSizeScale}px, ${9 * fontSizeScale}cqw, ${52 * fontSizeScale}px)`
+                    position: "absolute",
+                    left: `${textPosX}%`,
+                    top: `${textPosY}%`,
+                    transform: "translate(-50%, -50%)",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textAlign: "center"
                   }}
-                  className="font-black uppercase tracking-wider select-none relative z-10 transition-all leading-none drop-shadow-md"
+                  className="z-20 p-2 rounded-lg border-2 border-dashed border-transparent hover:border-primary-container/70 transition-colors group cursor-grab active:cursor-grabbing pointer-events-auto"
                 >
-                  {channelName || "YOUR NAME"}
-                </span>
+                  <span className="text-[10px] text-primary-container font-extrabold uppercase font-data-mono opacity-0 group-hover:opacity-100 transition-opacity absolute -top-5 left-1/2 -translate-x-1/2 bg-black/90 px-2 py-0.5 rounded shadow pointer-events-none whitespace-nowrap border border-primary-container/40">
+                    🖐️ Drag to Reposition Text
+                  </span>
 
-                {/* Subtitle name */}
-                {id.startsWith("twitch-") ? (
+                  {/* Main render name */}
                   <span
                     style={{
-                      fontSize: "clamp(6px, 2.2cqw, 12px)"
+                      ...currentTemplate.textStyle,
+                      fontFamily: fontStyles[selectedFont] || currentTemplate.textStyle?.fontFamily || "var(--font-gamertag)",
+                      color: accentColor,
+                      textShadow: glowIntensity > 0
+                        ? `0 0 ${Math.round(15 * fontSizeScale * (glowIntensity / 50))}px ${accentColor}, 0 0 ${Math.round(35 * fontSizeScale * (glowIntensity / 50))}px ${accentColor}, 3px 3px 6px rgba(0,0,0,0.9)`
+                        : "3px 3px 6px rgba(0,0,0,0.9)",
+                      fontSize: `clamp(${14 * fontSizeScale}px, ${9 * fontSizeScale}cqw, ${52 * fontSizeScale}px)`
                     }}
-                    className="font-bold tracking-widest uppercase mt-xs relative z-10 select-none font-sans px-2.5 py-0.5 rounded bg-black/70 border border-white/10 text-white/90 shadow-md"
+                    className="font-black uppercase tracking-wider select-none relative z-10 transition-all leading-none drop-shadow-md"
                   >
-                    {subtitle || "STREAMING NOW"}
+                    {channelName || "YOUR NAME"}
                   </span>
-                ) : (
-                  <span
-                    style={{
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "clamp(6px, 2.5cqw, 14px)"
-                    }}
-                    className="font-bold text-white/90 tracking-widest uppercase mt-xs relative z-10 leading-none drop-shadow-sm"
-                  >
-                    {subtitle || "RANKED / K/D 2.5"}
-                  </span>
-                )}
+
+                  {/* Subtitle name */}
+                  {id.startsWith("twitch-") ? (
+                    <span
+                      style={{
+                        fontSize: "clamp(6px, 2.2cqw, 12px)"
+                      }}
+                      className="font-bold tracking-widest uppercase mt-xs relative z-10 select-none font-sans px-2.5 py-0.5 rounded bg-black/70 border border-white/10 text-white/90 shadow-md whitespace-nowrap"
+                    >
+                      {subtitle || "STREAMING NOW"}
+                    </span>
+                  ) : (
+                    <span
+                      style={{
+                        fontFamily: "var(--font-sans)",
+                        fontSize: "clamp(6px, 2.5cqw, 14px)"
+                      }}
+                      className="font-bold text-white/90 tracking-widest uppercase mt-xs relative z-10 leading-none drop-shadow-sm whitespace-nowrap"
+                    >
+                      {subtitle || "RANKED / K/D 2.5"}
+                    </span>
+                  )}
+                </div>
               </div>
 
               {/* Simulated Channel info strip */}
@@ -767,7 +812,7 @@ export default function CustomizeClient({ params }) {
 
           <span className="text-xs text-outline/75 text-center font-data-mono">
             {activeTab === "desktop"
-              ? "Preview shows safe-zone guides for mobile crop areas."
+              ? "Tip: Click and drag text anywhere on the banner to reposition."
               : "Preview shows strict mobile display dimensions."}
           </span>
         </section>
@@ -802,6 +847,44 @@ export default function CustomizeClient({ params }) {
                 onChange={(e) => setSubtitle(e.target.value.toUpperCase().slice(0, 25))}
                 className="bg-surface-container border border-outline-variant rounded p-sm text-sm outline-none text-on-background focus:border-primary-container font-semibold"
               />
+            </div>
+
+            {/* Position Sliders & Reset */}
+            <div className="flex flex-col gap-1.5 border-y border-outline-variant/30 py-md">
+              <div className="flex justify-between items-center text-xs font-semibold text-outline">
+                <span>Text Position (Drag Banner)</span>
+                <button
+                  type="button"
+                  onClick={() => { setTextPosX(50); setTextPosY(50); }}
+                  className="text-[10px] font-bold text-primary-container hover:underline"
+                >
+                  Reset Center
+                </button>
+              </div>
+              <div className="grid grid-cols-2 gap-md">
+                <div className="flex flex-col gap-1">
+                  <span className="text-[10px] text-outline">Horizontal: {Math.round(textPosX)}%</span>
+                  <input
+                    type="range"
+                    min="15"
+                    max="85"
+                    value={textPosX}
+                    onChange={(e) => setTextPosX(parseFloat(e.target.value))}
+                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+                  />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <span className="text-[10px] text-outline">Vertical: {Math.round(textPosY)}%</span>
+                  <input
+                    type="range"
+                    min="15"
+                    max="85"
+                    value={textPosY}
+                    onChange={(e) => setTextPosY(parseFloat(e.target.value))}
+                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Font selector */}

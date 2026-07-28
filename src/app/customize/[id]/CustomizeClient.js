@@ -25,6 +25,7 @@ export default function CustomizeClient({ params }) {
   const [selectedFont, setSelectedFont] = useState("Orbitron");
   const [accentColor, setAccentColor] = useState("#00d4ff");
   const [exportSize, setExportSize] = useState("YouTube (2560 x 1440)");
+  const [fontSizeScale, setFontSizeScale] = useState(1);
   const [isDownloading, setIsDownloading] = useState(false);
   // Template definitions
   const templateConfig = {
@@ -430,6 +431,14 @@ export default function CustomizeClient({ params }) {
     }
   }, [id, currentTemplate]);
 
+  // Aspect ratio calculator for live preview
+  const getPreviewAspectStyle = () => {
+    if (exportSize.includes("Twitch")) return { aspectRatio: "1200 / 480" };
+    if (exportSize.includes("Discord")) return { aspectRatio: "960 / 540" };
+    if (exportSize.includes("Twitter")) return { aspectRatio: "1500 / 500" };
+    return { aspectRatio: "2560 / 1440" };
+  };
+
   // Font family loader helper
   const fontStyles = {
     Orbitron: "var(--font-gamertag)",
@@ -494,7 +503,7 @@ export default function CustomizeClient({ params }) {
       }
 
       // Scaling fonts relative to standard 1920px width reference
-      const scale = width / 1920;
+      const scale = (width / 1920) * fontSizeScale;
       ctx.font = canvasFont.replace(/(\d+)px/, (match, num) => `${Math.round(parseInt(num) * scale)}px`);
       ctx.textBaseline = "middle";
 
@@ -667,12 +676,12 @@ export default function CustomizeClient({ params }) {
             <div className="w-full max-w-4xl border border-outline-variant rounded-xl overflow-hidden bg-surface-container shadow-2xl">
               {/* Mockup Canvas */}
               <div
-                className={`w-full aspect-video relative flex flex-col p-lg justify-center ${
-                  id.includes("discord") || id.includes("esports-pro") || id.includes("schedule") || id.includes("clan-tag") || id.includes("glow") || id.includes("blurple") || id.includes("server") || id.includes("guild") || id.includes("portal") || id.includes("rp") || id.includes("music") || id.includes("clan")
+                className={`w-full relative flex flex-col p-lg justify-center transition-all duration-300 ${
+                  id.includes("discord") || id.includes("esports-pro") || id.includes("schedule") || id.includes("clan-tag") || id.includes("glow") || id.includes("blurple") || id.includes("server") || id.includes("guild") || id.includes("portal") || id.includes("rp") || id.includes("music") || id.includes("clan") || exportSize.includes("Discord") || exportSize.includes("Twitter")
                     ? "items-end text-right pr-[8%]"
                     : "items-center text-center"
                 }`}
-                style={{ ...currentTemplate.style, containerType: "inline-size" }}
+                style={{ ...currentTemplate.style, ...getPreviewAspectStyle(), containerType: "inline-size" }}
               >
                 {/* Background Dimmer / Shading for Twitch Banners */}
                 {id.startsWith("twitch-") && (
@@ -682,8 +691,6 @@ export default function CustomizeClient({ params }) {
                     <div className="absolute inset-y-0 right-0 w-[22%] bg-gradient-to-l from-black/60 to-transparent pointer-events-none z-0" />
                   </>
                 )}
-
-
 
                 {currentTemplate.decor}
 
@@ -701,7 +708,8 @@ export default function CustomizeClient({ params }) {
                     ...currentTemplate.textStyle,
                     fontFamily: fontStyles[selectedFont] || currentTemplate.textStyle?.fontFamily || "var(--font-gamertag)",
                     color: accentColor,
-                    fontSize: "clamp(16px, 9cqw, 48px)"
+                    textShadow: `0 0 ${12 * fontSizeScale}px ${accentColor}, 0 0 ${24 * fontSizeScale}px ${accentColor}, 2px 2px 4px rgba(0,0,0,0.8)`,
+                    fontSize: `clamp(${14 * fontSizeScale}px, ${9 * fontSizeScale}cqw, ${52 * fontSizeScale}px)`
                   }}
                   className="font-black uppercase tracking-wider select-none relative z-10 transition-all leading-none"
                 >
@@ -716,7 +724,7 @@ export default function CustomizeClient({ params }) {
                     }}
                     className="font-bold tracking-widest uppercase mt-xs relative z-10 select-none font-sans px-2.5 py-0.5 rounded bg-black/60 border border-white/10 text-white/90"
                   >
-                    {subtitle}
+                    {subtitle || "STREAMING NOW"}
                   </span>
                 ) : (
                   <span
@@ -726,7 +734,7 @@ export default function CustomizeClient({ params }) {
                     }}
                     className="font-bold text-white/80 tracking-widest uppercase mt-xs relative z-10 leading-none"
                   >
-                    {subtitle}
+                    {subtitle || "RANKED / K/D 2.5"}
                   </span>
                 )}
               </div>
@@ -746,7 +754,7 @@ export default function CustomizeClient({ params }) {
 
           <span className="text-xs text-outline/75 text-center font-data-mono">
             {activeTab === "desktop"
-              ? "Preview shows 16:9 safe-zone guides for mobile crop areas."
+              ? "Preview shows safe-zone guides for mobile crop areas."
               : "Preview shows strict mobile display dimensions."}
           </span>
         </section>
@@ -765,6 +773,7 @@ export default function CustomizeClient({ params }) {
               <input
                 type="text"
                 value={channelName}
+                placeholder="e.g. STORM"
                 onChange={(e) => setChannelName(e.target.value.toUpperCase().slice(0, 15))}
                 className="bg-surface-container border border-outline-variant rounded p-sm text-sm outline-none text-on-background focus:border-primary-container font-bold"
               />
@@ -776,6 +785,7 @@ export default function CustomizeClient({ params }) {
               <input
                 type="text"
                 value={subtitle}
+                placeholder="e.g. STREAMING NOW"
                 onChange={(e) => setSubtitle(e.target.value.toUpperCase().slice(0, 25))}
                 className="bg-surface-container border border-outline-variant rounded p-sm text-sm outline-none text-on-background focus:border-primary-container font-semibold"
               />
@@ -793,6 +803,23 @@ export default function CustomizeClient({ params }) {
                   <option key={font}>{font}</option>
                 ))}
               </select>
+            </div>
+
+            {/* Text Size Slider */}
+            <div className="flex flex-col gap-1.5">
+              <div className="flex justify-between items-center text-xs font-semibold text-outline">
+                <span>Text Size</span>
+                <span className="font-data-mono text-primary-container font-bold">{Math.round(fontSizeScale * 100)}%</span>
+              </div>
+              <input
+                type="range"
+                min="0.6"
+                max="1.5"
+                step="0.05"
+                value={fontSizeScale}
+                onChange={(e) => setFontSizeScale(parseFloat(e.target.value))}
+                className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+              />
             </div>
 
             {/* Accent Color picker */}

@@ -378,58 +378,88 @@ const templateConfig = {
 export default function CustomizeClient({ params }) {
   const { id } = use(params);
 
-  // Editor states
-  const [channelName, setChannelName] = useState("STORM");
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const urlParams = new URLSearchParams(window.location.search);
-      const queryName = urlParams.get("name");
-      if (queryName) {
-        setChannelName(queryName.toUpperCase());
-      }
+  // Dynamic Multi-Text Layer Studio State
+  const [textLayers, setTextLayers] = useState([
+    {
+      id: "layer-title",
+      text: "STORM",
+      label: "Channel Name",
+      isTitle: true,
+      font: "Orbitron",
+      size: 1.0,
+      color: "#00d4ff",
+      glow: 70,
+      posX: 50,
+      posY: 44
+    },
+    {
+      id: "layer-sub",
+      text: "RANKED / K/D 2.5",
+      label: "Subtitle",
+      isSubtitle: true,
+      font: "Inter",
+      size: 0.7,
+      color: "#ffffff",
+      glow: 0,
+      posX: 50,
+      posY: 58
     }
-  }, []);
+  ]);
 
-  const [subtitle, setSubtitle] = useState("RANKED / K/D 2.5");
+  const [selectedLayerId, setSelectedLayerId] = useState("layer-title");
+  const [activeDragId, setActiveDragId] = useState(null);
   const [activeTab, setActiveTab] = useState("desktop");
-  const [selectedFont, setSelectedFont] = useState("Orbitron");
-  const [accentColor, setAccentColor] = useState("#00d4ff");
   const [exportSize, setExportSize] = useState("YouTube (2560 x 1440)");
-  const [fontSizeScale, setFontSizeScale] = useState(1);
   const [bgOverlay, setBgOverlay] = useState(15); // Percentage background darkener
-  const [glowIntensity, setGlowIntensity] = useState(70); // Percentage text glow intensity
-
-  // Independent Drag & Drop Position states
-  const [namePosX, setNamePosX] = useState(50); // Channel Name X (0-100)
-  const [namePosY, setNamePosY] = useState(44); // Channel Name Y (0-100)
-  const [subPosX, setSubPosX] = useState(50);   // Subtitle X (0-100)
-  const [subPosY, setSubPosY] = useState(58);   // Subtitle Y (0-100)
-  const [dragTarget, setDragTarget] = useState(null); // null | 'name' | 'sub'
   const [isDownloading, setIsDownloading] = useState(false);
 
+  // Helper to add a new custom text layer
+  const addTextLayer = () => {
+    const newId = `layer-${Date.now()}`;
+    const count = textLayers.length + 1;
+    const newLayer = {
+      id: newId,
+      text: `TEXT LAYER ${count}`,
+      label: `Text ${count}`,
+      font: "Orbitron",
+      size: 0.8,
+      color: "#00d4ff",
+      glow: 60,
+      posX: 50,
+      posY: Math.min(85, 30 + count * 10)
+    };
+    setTextLayers(prev => [...prev, newLayer]);
+    setSelectedLayerId(newId);
+  };
+
+  // Helper to remove a text layer
+  const removeTextLayer = (layerId) => {
+    setTextLayers(prev => prev.filter(l => l.id !== layerId));
+    if (selectedLayerId === layerId) {
+      setSelectedLayerId(null);
+    }
+  };
+
+  // Helper to update layer property
+  const updateLayer = (layerId, key, value) => {
+    setTextLayers(prev => prev.map(l => l.id === layerId ? { ...l, [key]: value } : l));
+  };
+
   const handleDragMove = (clientX, clientY, containerRect) => {
-    if (!containerRect || !dragTarget) return;
+    if (!containerRect || !activeDragId) return;
     const x = ((clientX - containerRect.left) / containerRect.width) * 100;
     const y = ((clientY - containerRect.top) / containerRect.height) * 100;
-    const clampedX = Math.max(8, Math.min(92, x));
-    const clampedY = Math.max(10, Math.min(90, y));
+    const clampedX = Math.max(5, Math.min(95, x));
+    const clampedY = Math.max(8, Math.min(92, y));
 
-    if (dragTarget === "name") {
-      setNamePosX(clampedX);
-      setNamePosY(clampedY);
-    } else if (dragTarget === "sub") {
-      setSubPosX(clampedX);
-      setSubPosY(clampedY);
-    }
+    updateLayer(activeDragId, "posX", clampedX);
+    updateLayer(activeDragId, "posY", clampedY);
   };
 
   // Initialize template defaults ONLY when template ID changes
   useEffect(() => {
     const tpl = templateConfig[id] || templateConfig.esports;
     if (tpl) {
-      if (tpl.sub) setSubtitle(tpl.sub);
-
       // Guess font from style or textStyle
       let defaultFont = "Orbitron";
       if (tpl.textStyle?.fontFamily) {
@@ -445,18 +475,50 @@ export default function CustomizeClient({ params }) {
         else if (family.includes("mono")) defaultFont = "JetBrains Mono";
         else if (family.includes("Georgia")) defaultFont = "Georgia";
       }
-      setSelectedFont(defaultFont);
 
       // Guess accent color
       let defaultColor = "#00d4ff";
-      if (tpl.textStyle?.color) {
-        defaultColor = tpl.textStyle.color;
-      } else if (tpl.style?.color) {
-        defaultColor = tpl.style.color;
-      }
-      setAccentColor(defaultColor);
+      if (tpl.textStyle?.color) defaultColor = tpl.textStyle.color;
+      else if (tpl.style?.color) defaultColor = tpl.style.color;
+
+      setTextLayers([
+        {
+          id: "layer-title",
+          text: "STORM",
+          label: "Channel Name",
+          isTitle: true,
+          font: defaultFont,
+          size: 1.0,
+          color: defaultColor,
+          glow: 70,
+          posX: 50,
+          posY: 44
+        },
+        {
+          id: "layer-sub",
+          text: tpl.sub || "RANKED / K/D 2.5",
+          label: "Subtitle",
+          isSubtitle: true,
+          font: "Inter",
+          size: 0.7,
+          color: "#ffffff",
+          glow: 0,
+          posX: 50,
+          posY: 58
+        }
+      ]);
     }
   }, [id]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryName = urlParams.get("name");
+      if (queryName) {
+        setTextLayers(prev => prev.map(l => l.isTitle ? { ...l, text: queryName.toUpperCase() } : l));
+      }
+    }
+  }, []);
 
   const currentTemplate = templateConfig[id] || templateConfig.esports;
 
@@ -517,62 +579,54 @@ export default function CustomizeClient({ params }) {
     }
 
     const drawContentAndDownload = () => {
-      // Determine font family
-      let canvasFont = "bold 120px 'Space Grotesk', sans-serif";
-      if (selectedFont === "Orbitron") {
-        canvasFont = "900 110px 'Space Grotesk', sans-serif";
-      } else if (selectedFont === "Inter") {
-        canvasFont = "bold 90px 'Inter', sans-serif";
-      } else if (selectedFont === "JetBrains Mono") {
-        canvasFont = "bold 80px 'JetBrains Mono', monospace";
-      } else if (selectedFont === "Georgia") {
-        canvasFont = "bold 100px Georgia, serif";
-      } else if (selectedFont === "Impact") {
-        canvasFont = "bold 130px Impact, sans-serif";
-      }
+      // Loop over and draw all active text layers
+      textLayers.forEach((layer) => {
+        if (!layer.text || !layer.text.trim()) return;
 
-      // Scaling fonts relative to standard 1920px width reference
-      const scale = (width / 1920) * fontSizeScale;
-      ctx.font = canvasFont.replace(/(\d+)px/, (match, num) => `${Math.round(parseInt(num) * scale)}px`);
-      ctx.textBaseline = "middle";
+        let canvasFont = "bold 90px 'Inter', sans-serif";
+        if (layer.font === "Orbitron") {
+          canvasFont = layer.isTitle ? "900 110px 'Space Grotesk', sans-serif" : "bold 70px 'Space Grotesk', sans-serif";
+        } else if (layer.font === "Inter") {
+          canvasFont = layer.isTitle ? "bold 90px 'Inter', sans-serif" : "bold 60px 'Inter', sans-serif";
+        } else if (layer.font === "JetBrains Mono") {
+          canvasFont = layer.isTitle ? "bold 80px 'JetBrains Mono', monospace" : "bold 50px 'JetBrains Mono', monospace";
+        } else if (layer.font === "Georgia") {
+          canvasFont = layer.isTitle ? "bold 100px Georgia, serif" : "bold 65px Georgia, serif";
+        } else if (layer.font === "Impact") {
+          canvasFont = layer.isTitle ? "bold 130px Impact, sans-serif" : "bold 80px Impact, sans-serif";
+        }
 
-      // Independent positions for high-res canvas export
-      const nameX = (width * namePosX) / 100;
-      const nameY = (height * namePosY) / 100;
+        const scale = (width / 1920) * (layer.size || 1.0);
+        ctx.font = canvasFont.replace(/(\d+)px/, (match, num) => `${Math.round(parseInt(num) * scale)}px`);
+        ctx.textBaseline = "middle";
+        ctx.textAlign = "center";
 
-      const subX = (width * subPosX) / 100;
-      const subY = (height * subPosY) / 100;
+        const posX = (width * layer.posX) / 100;
+        const posY = (height * layer.posY) / 100;
 
-      ctx.textAlign = "center";
+        if (layer.glow > 0) {
+          ctx.shadowColor = layer.color || "#00d4ff";
+          ctx.shadowBlur = Math.round(30 * scale * (layer.glow / 50));
+        } else {
+          ctx.shadowBlur = 0;
+        }
+        ctx.fillStyle = layer.color || "#ffffff";
 
-      // Add modern text glow based on user glow intensity slider
-      if (glowIntensity > 0) {
-        ctx.shadowColor = accentColor;
-        ctx.shadowBlur = Math.round(30 * scale * (glowIntensity / 50));
-      } else {
-        ctx.shadowBlur = 0;
-      }
-      ctx.fillStyle = accentColor;
+        if ("letterSpacing" in ctx) {
+          ctx.letterSpacing = layer.isSubtitle ? `${Math.round(6 * scale)}px` : "0px";
+        }
 
-      ctx.fillText(channelName || "YOUR NAME", nameX, nameY);
-
-      // Draw Subtitle without glow
-      ctx.shadowBlur = 0;
-      ctx.font = `bold ${Math.round(28 * scale)}px 'Inter', sans-serif`;
-      ctx.fillStyle = "rgba(255, 255, 255, 0.85)";
-      
-      // Handle letter spacing
-      if ("letterSpacing" in ctx) {
-        ctx.letterSpacing = `${Math.round(6 * scale)}px`;
-      }
-      ctx.fillText(subtitle || "GAMER / STREAMER", subX, subY);
+        ctx.fillText(layer.text, posX, posY);
+      });
 
       // Trigger automatic file download
       try {
+        const titleLayer = textLayers.find(l => l.isTitle);
+        const nameSlug = titleLayer && titleLayer.text ? titleLayer.text.toLowerCase().replace(/[^a-z0-9]/g, "") : "storm";
         const url = canvas.toDataURL("image/png");
         const a = document.createElement("a");
         a.href = url;
-        a.download = `gamingbanner-${id || "custom"}-${(channelName || "storm").toLowerCase()}.png`;
+        a.download = `gamingbanner-${id || "custom"}-${nameSlug}.png`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -668,6 +722,8 @@ export default function CustomizeClient({ params }) {
     }
   };
 
+  const selectedLayer = textLayers.find(l => l.id === selectedLayerId) || textLayers[0];
+
   return (
     <>
       <Header />
@@ -705,20 +761,20 @@ export default function CustomizeClient({ params }) {
               {/* Mockup Canvas */}
               <div
                 onMouseMove={(e) => {
-                  if (dragTarget) {
+                  if (activeDragId) {
                     handleDragMove(e.clientX, e.clientY, e.currentTarget.getBoundingClientRect());
                   }
                 }}
-                onMouseUp={() => setDragTarget(null)}
-                onMouseLeave={() => setDragTarget(null)}
+                onMouseUp={() => setActiveDragId(null)}
+                onMouseLeave={() => setActiveDragId(null)}
                 onTouchMove={(e) => {
-                  if (dragTarget && e.touches && e.touches[0]) {
+                  if (activeDragId && e.touches && e.touches[0]) {
                     handleDragMove(e.touches[0].clientX, e.touches[0].clientY, e.currentTarget.getBoundingClientRect());
                   }
                 }}
-                onTouchEnd={() => setDragTarget(null)}
+                onTouchEnd={() => setActiveDragId(null)}
                 className={`w-full relative flex flex-col p-lg justify-center transition-all duration-300 select-none ${
-                  dragTarget ? "cursor-grabbing" : "cursor-default"
+                  activeDragId ? "cursor-grabbing" : "cursor-default"
                 }`}
                 style={{ ...currentTemplate.style, ...getPreviewAspectStyle(), containerType: "inline-size" }}
               >
@@ -746,96 +802,66 @@ export default function CustomizeClient({ params }) {
                   </div>
                 )}
 
-                {/* 1. Independent Draggable Channel Name */}
-                <div
-                  onMouseDown={(e) => {
-                    e.stopPropagation();
-                    setDragTarget("name");
-                  }}
-                  onTouchStart={(e) => {
-                    e.stopPropagation();
-                    setDragTarget("name");
-                  }}
-                  style={{
-                    position: "absolute",
-                    left: `${namePosX}%`,
-                    top: `${namePosY}%`,
-                    transform: "translate(-50%, -50%)"
-                  }}
-                  className="z-20 p-1.5 rounded-lg border-2 border-dashed border-transparent hover:border-primary-container/80 transition-colors group cursor-grab active:cursor-grabbing pointer-events-auto"
-                >
-                  <span className="text-[9px] text-primary-container font-extrabold uppercase font-data-mono opacity-0 group-hover:opacity-100 transition-opacity absolute -top-5 left-1/2 -translate-x-1/2 bg-black/90 px-1.5 py-0.5 rounded shadow pointer-events-none whitespace-nowrap border border-primary-container/40">
-                    🖐️ Drag Channel Name
-                  </span>
-
-                  <span
-                    style={{
-                      ...currentTemplate.textStyle,
-                      fontFamily: fontStyles[selectedFont] || currentTemplate.textStyle?.fontFamily || "var(--font-gamertag)",
-                      color: accentColor,
-                      textShadow: glowIntensity > 0
-                        ? `0 0 ${Math.round(15 * fontSizeScale * (glowIntensity / 50))}px ${accentColor}, 0 0 ${Math.round(35 * fontSizeScale * (glowIntensity / 50))}px ${accentColor}, 3px 3px 6px rgba(0,0,0,0.9)`
-                        : "3px 3px 6px rgba(0,0,0,0.9)",
-                      fontSize: `clamp(${14 * fontSizeScale}px, ${9 * fontSizeScale}cqw, ${52 * fontSizeScale}px)`
+                {/* Render All Dynamic Text Layers */}
+                {textLayers.map((layer) => (
+                  <div
+                    key={layer.id}
+                    onMouseDown={(e) => {
+                      e.stopPropagation();
+                      setActiveDragId(layer.id);
+                      setSelectedLayerId(layer.id);
                     }}
-                    className="font-black uppercase tracking-wider select-none relative z-10 transition-all leading-none drop-shadow-md block whitespace-nowrap"
+                    onTouchStart={(e) => {
+                      e.stopPropagation();
+                      setActiveDragId(layer.id);
+                      setSelectedLayerId(layer.id);
+                    }}
+                    style={{
+                      position: "absolute",
+                      left: `${layer.posX}%`,
+                      top: `${layer.posY}%`,
+                      transform: "translate(-50%, -50%)"
+                    }}
+                    className={`z-20 p-1.5 rounded-lg border-2 border-dashed transition-all group cursor-grab active:cursor-grabbing pointer-events-auto ${
+                      selectedLayerId === layer.id
+                        ? "border-primary-container bg-primary-container/10 ring-2 ring-primary-container/30"
+                        : "border-transparent hover:border-white/40"
+                    }`}
                   >
-                    {channelName || "YOUR NAME"}
-                  </span>
-                </div>
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-5 left-1/2 -translate-x-1/2 bg-black/90 px-1.5 py-0.5 rounded shadow pointer-events-none whitespace-nowrap border border-primary-container/40 flex items-center gap-1">
+                      <span className="text-[9px] text-primary-container font-extrabold uppercase font-data-mono">
+                        🖐️ Drag {layer.label || "Text"}
+                      </span>
+                    </div>
 
-                {/* 2. Independent Draggable Subtitle */}
-                <div
-                  onMouseDown={(e) => {
-                    e.stopPropagation();
-                    setDragTarget("sub");
-                  }}
-                  onTouchStart={(e) => {
-                    e.stopPropagation();
-                    setDragTarget("sub");
-                  }}
-                  style={{
-                    position: "absolute",
-                    left: `${subPosX}%`,
-                    top: `${subPosY}%`,
-                    transform: "translate(-50%, -50%)"
-                  }}
-                  className="z-20 p-1 rounded-lg border-2 border-dashed border-transparent hover:border-emerald-400/80 transition-colors group cursor-grab active:cursor-grabbing pointer-events-auto"
-                >
-                  <span className="text-[9px] text-emerald-400 font-extrabold uppercase font-data-mono opacity-0 group-hover:opacity-100 transition-opacity absolute -top-5 left-1/2 -translate-x-1/2 bg-black/90 px-1.5 py-0.5 rounded shadow pointer-events-none whitespace-nowrap border border-emerald-400/40">
-                    🖐️ Drag Subtitle
-                  </span>
-
-                  {id.startsWith("twitch-") ? (
                     <span
                       style={{
-                        fontSize: "clamp(6px, 2.2cqw, 12px)"
+                        fontFamily: fontStyles[layer.font] || "var(--font-gamertag)",
+                        color: layer.color || "#00d4ff",
+                        textShadow: layer.glow > 0
+                          ? `0 0 ${Math.round(15 * (layer.size || 1) * (layer.glow / 50))}px ${layer.color}, 0 0 ${Math.round(35 * (layer.size || 1) * (layer.glow / 50))}px ${layer.color}, 3px 3px 6px rgba(0,0,0,0.9)`
+                          : "3px 3px 6px rgba(0,0,0,0.9)",
+                        fontSize: layer.isTitle
+                          ? `clamp(${14 * (layer.size || 1)}px, ${9 * (layer.size || 1)}cqw, ${52 * (layer.size || 1)}px)`
+                          : `clamp(${10 * (layer.size || 1)}px, ${4 * (layer.size || 1)}cqw, ${26 * (layer.size || 1)}px)`
                       }}
-                      className="font-bold tracking-widest uppercase relative z-10 select-none font-sans px-2.5 py-0.5 rounded bg-black/70 border border-white/10 text-white/90 shadow-md whitespace-nowrap block"
+                      className="font-black uppercase tracking-wider select-none relative z-10 transition-all leading-none drop-shadow-md block whitespace-nowrap"
                     >
-                      {subtitle || "STREAMING NOW"}
+                      {layer.text || "EMPTY TEXT"}
                     </span>
-                  ) : (
-                    <span
-                      style={{
-                        fontFamily: "var(--font-sans)",
-                        fontSize: "clamp(6px, 2.5cqw, 14px)"
-                      }}
-                      className="font-bold text-white/90 tracking-widest uppercase relative z-10 leading-none drop-shadow-sm whitespace-nowrap block"
-                    >
-                      {subtitle || "RANKED / K/D 2.5"}
-                    </span>
-                  )}
-                </div>
+                  </div>
+                ))}
               </div>
 
               {/* Simulated Channel info strip */}
               <div className="p-md bg-surface-container-high border-t border-outline-variant/40 flex items-center gap-md">
                 <div className="h-10 w-10 rounded-full bg-surface-container-low border border-outline-variant/60 flex items-center justify-center font-bold text-outline">
-                  {channelName ? channelName[0] : "S"}
+                  {textLayers.length > 0 && textLayers[0].text ? textLayers[0].text[0] : "S"}
                 </div>
                 <div>
-                  <span className="font-bold text-sm text-on-background block">{channelName || "STORM"}</span>
+                  <span className="font-bold text-sm text-on-background block">
+                    {textLayers.length > 0 && textLayers[0].text ? textLayers[0].text : "STORM"}
+                  </span>
                   <span className="text-xs text-outline font-data-mono">12.4K subscribers &bull; 42 videos</span>
                 </div>
               </div>
@@ -844,7 +870,7 @@ export default function CustomizeClient({ params }) {
 
           <span className="text-xs text-outline/75 text-center font-data-mono">
             {activeTab === "desktop"
-              ? "Tip: Drag Channel Name and Subtitle independently anywhere on the banner!"
+              ? "Tip: Drag any text layer directly on the banner. Add or remove layers anytime!"
               : "Preview shows strict mobile display dimensions."}
           </span>
         </section>
@@ -852,212 +878,222 @@ export default function CustomizeClient({ params }) {
         {/* Right Editor sidebar (35%) */}
         <section className="w-full md:w-[420px] bg-surface-container-high p-lg flex flex-col gap-lg md:overflow-y-auto border-t md:border-t-0 md:border-l border-outline-variant/60 min-h-[450px] md:min-h-0">
           <div>
-            <h2 className="text-xl font-bold text-on-background">Customize Template</h2>
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-bold text-on-background">Studio Editor</h2>
+              <button
+                onClick={addTextLayer}
+                className="bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-extrabold text-xs px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 shadow active:scale-95"
+              >
+                + Add Text Layer
+              </button>
+            </div>
             <p className="text-xs text-outline mt-1 font-data-mono">Style: {currentTemplate.name}</p>
           </div>
 
-          <div className="flex flex-col gap-lg">
-            {/* Input 1 */}
-            <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-outline">Channel Name</label>
-              <input
-                type="text"
-                value={channelName}
-                placeholder="e.g. STORM"
-                onChange={(e) => setChannelName(e.target.value.toUpperCase().slice(0, 15))}
-                className="bg-surface-container border border-outline-variant rounded p-sm text-sm outline-none text-on-background focus:border-primary-container font-bold"
-              />
-            </div>
-
-            {/* Input 2 */}
-            <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-outline">Subtitle Text</label>
-              <input
-                type="text"
-                value={subtitle}
-                placeholder="e.g. STREAMING NOW"
-                onChange={(e) => setSubtitle(e.target.value.toUpperCase().slice(0, 25))}
-                className="bg-surface-container border border-outline-variant rounded p-sm text-sm outline-none text-on-background focus:border-primary-container font-semibold"
-              />
-            </div>
-
-            {/* Independent Position Sliders & Reset */}
-            <div className="flex flex-col gap-md border-y border-outline-variant/30 py-md">
-              <div className="flex justify-between items-center text-xs font-semibold text-outline">
-                <span>Text Position (Drag Banner)</span>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setNamePosX(50);
-                    setNamePosY(44);
-                    setSubPosX(50);
-                    setSubPosY(58);
-                  }}
-                  className="text-[10px] font-bold text-primary-container hover:underline"
+          {/* Layer Selector Chips */}
+          <div className="flex flex-col gap-1.5 border-b border-outline-variant/40 pb-md">
+            <span className="text-xs font-semibold text-outline">Select Text Layer To Edit:</span>
+            <div className="flex flex-wrap gap-xs">
+              {textLayers.map((layer) => (
+                <div
+                  key={layer.id}
+                  onClick={() => setSelectedLayerId(layer.id)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer border ${
+                    selectedLayerId === layer.id
+                      ? "bg-primary-container text-on-primary-container border-primary-container shadow"
+                      : "bg-surface-container text-outline border-outline-variant/60 hover:text-on-background"
+                  }`}
                 >
-                  Reset Positions
-                </button>
-              </div>
-
-              {/* Name Position Sliders */}
-              <div className="bg-surface-container/60 p-sm rounded border border-outline-variant/40 flex flex-col gap-1">
-                <span className="text-[10px] font-bold text-primary-container uppercase font-data-mono">Channel Name Position</span>
-                <div className="grid grid-cols-2 gap-md mt-0.5">
-                  <div className="flex flex-col gap-0.5">
-                    <span className="text-[9px] text-outline">X: {Math.round(namePosX)}%</span>
-                    <input
-                      type="range"
-                      min="10"
-                      max="90"
-                      value={namePosX}
-                      onChange={(e) => setNamePosX(parseFloat(e.target.value))}
-                      className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-0.5">
-                    <span className="text-[9px] text-outline">Y: {Math.round(namePosY)}%</span>
-                    <input
-                      type="range"
-                      min="10"
-                      max="90"
-                      value={namePosY}
-                      onChange={(e) => setNamePosY(parseFloat(e.target.value))}
-                      className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
-                    />
-                  </div>
+                  <span>{layer.label || layer.text.slice(0, 10) || "Layer"}</span>
+                  {textLayers.length > 1 && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        removeTextLayer(layer.id);
+                      }}
+                      title="Remove text layer"
+                      className="ml-1 text-red-400 hover:text-red-300 font-extrabold text-xs hover:scale-125 transition-all"
+                    >
+                      &times;
+                    </button>
+                  )}
                 </div>
-              </div>
-
-              {/* Subtitle Position Sliders */}
-              <div className="bg-surface-container/60 p-sm rounded border border-outline-variant/40 flex flex-col gap-1">
-                <span className="text-[10px] font-bold text-emerald-400 uppercase font-data-mono">Subtitle Position</span>
-                <div className="grid grid-cols-2 gap-md mt-0.5">
-                  <div className="flex flex-col gap-0.5">
-                    <span className="text-[9px] text-outline">X: {Math.round(subPosX)}%</span>
-                    <input
-                      type="range"
-                      min="10"
-                      max="90"
-                      value={subPosX}
-                      onChange={(e) => setSubPosX(parseFloat(e.target.value))}
-                      className="w-full accent-emerald-400 cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-0.5">
-                    <span className="text-[9px] text-outline">Y: {Math.round(subPosY)}%</span>
-                    <input
-                      type="range"
-                      min="10"
-                      max="90"
-                      value={subPosY}
-                      onChange={(e) => setSubPosY(parseFloat(e.target.value))}
-                      className="w-full accent-emerald-400 cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
-                    />
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
+          </div>
 
-            {/* Font selector */}
-            <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-outline">Select Font</label>
-              <select
-                value={selectedFont}
-                onChange={(e) => setSelectedFont(e.target.value)}
-                className="bg-surface-container border border-outline-variant rounded p-sm text-sm outline-none text-on-background focus:border-primary-container font-semibold"
-              >
-                {Object.keys(fontStyles).map((font) => (
-                  <option key={font}>{font}</option>
-                ))}
-              </select>
-            </div>
-
-            {/* Text Size Slider */}
-            <div className="flex flex-col gap-1.5">
-              <div className="flex justify-between items-center text-xs font-semibold text-outline">
-                <span>Text Size</span>
-                <span className="font-data-mono text-primary-container font-bold">{Math.round(fontSizeScale * 100)}%</span>
-              </div>
-              <input
-                type="range"
-                min="0.6"
-                max="1.5"
-                step="0.05"
-                value={fontSizeScale}
-                onChange={(e) => setFontSizeScale(parseFloat(e.target.value))}
-                className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
-              />
-            </div>
-
-            {/* Text Glow / Shadow Intensity Slider */}
-            <div className="flex flex-col gap-1.5">
-              <div className="flex justify-between items-center text-xs font-semibold text-outline">
-                <span>Text Glow & Shadow</span>
-                <span className="font-data-mono text-primary-container font-bold">{glowIntensity}%</span>
-              </div>
-              <input
-                type="range"
-                min="0"
-                max="150"
-                step="5"
-                value={glowIntensity}
-                onChange={(e) => setGlowIntensity(parseInt(e.target.value))}
-                className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
-              />
-              <span className="text-[10px] text-outline/70">Adjust text glow highlight & pop effect.</span>
-            </div>
-
-            {/* Background Darkener / Dimmer Slider */}
-            <div className="flex flex-col gap-1.5">
-              <div className="flex justify-between items-center text-xs font-semibold text-outline">
-                <span>Poster Background Darkener</span>
-                <span className="font-data-mono text-primary-container font-bold">{bgOverlay}%</span>
-              </div>
-              <input
-                type="range"
-                min="0"
-                max="80"
-                step="5"
-                value={bgOverlay}
-                onChange={(e) => setBgOverlay(parseInt(e.target.value))}
-                className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
-              />
-              <span className="text-[10px] text-outline/70">0% = Full bright original poster colors.</span>
-            </div>
-
-            {/* Accent Color picker */}
-            <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-outline">Accent Color</label>
-              <div className="flex flex-wrap gap-xs">
-                {accentColorsList.map((color, idx) => (
+          {/* Controls for currently selected layer */}
+          {selectedLayer ? (
+            <div className="flex flex-col gap-lg">
+              <div className="flex justify-between items-center bg-surface-container p-2 rounded-lg border border-outline-variant/40">
+                <span className="text-xs font-bold text-primary-container uppercase font-data-mono">
+                  Editing: {selectedLayer.label || selectedLayer.text || "Selected Layer"}
+                </span>
+                {textLayers.length > 1 && (
                   <button
-                    key={idx}
-                    onClick={() => setAccentColor(color)}
-                    style={{ backgroundColor: color }}
-                    className={`h-8 w-8 rounded-full border transition-all ${
-                      accentColor === color
-                        ? "border-white ring-2 ring-primary-container scale-105"
-                        : "border-outline-variant/60 hover:scale-102"
-                    }`}
-                  />
-                ))}
+                    onClick={() => removeTextLayer(selectedLayer.id)}
+                    className="text-xs font-bold text-red-400 hover:text-red-300 hover:underline"
+                  >
+                    🗑️ Remove Layer
+                  </button>
+                )}
+              </div>
+
+              {/* Text Input */}
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold text-outline">Text Content</label>
+                <input
+                  type="text"
+                  value={selectedLayer.text}
+                  placeholder="Enter text..."
+                  onChange={(e) => updateLayer(selectedLayer.id, "text", e.target.value.toUpperCase().slice(0, 30))}
+                  className="bg-surface-container border border-outline-variant rounded p-sm text-sm outline-none text-on-background focus:border-primary-container font-bold"
+                />
+              </div>
+
+              {/* Font selector */}
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold text-outline">Select Font</label>
+                <select
+                  value={selectedLayer.font}
+                  onChange={(e) => updateLayer(selectedLayer.id, "font", e.target.value)}
+                  className="bg-surface-container border border-outline-variant rounded p-sm text-sm outline-none text-on-background focus:border-primary-container font-semibold"
+                >
+                  {Object.keys(fontStyles).map((font) => (
+                    <option key={font}>{font}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Text Size Slider */}
+              <div className="flex flex-col gap-1.5">
+                <div className="flex justify-between items-center text-xs font-semibold text-outline">
+                  <span>Text Size</span>
+                  <span className="font-data-mono text-primary-container font-bold">{Math.round((selectedLayer.size || 1) * 100)}%</span>
+                </div>
+                <input
+                  type="range"
+                  min="0.4"
+                  max="1.8"
+                  step="0.05"
+                  value={selectedLayer.size || 1}
+                  onChange={(e) => updateLayer(selectedLayer.id, "size", parseFloat(e.target.value))}
+                  className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+                />
+              </div>
+
+              {/* Text Glow / Shadow Intensity Slider */}
+              <div className="flex flex-col gap-1.5">
+                <div className="flex justify-between items-center text-xs font-semibold text-outline">
+                  <span>Text Glow & Shadow</span>
+                  <span className="font-data-mono text-primary-container font-bold">{selectedLayer.glow}%</span>
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="150"
+                  step="5"
+                  value={selectedLayer.glow}
+                  onChange={(e) => updateLayer(selectedLayer.id, "glow", parseInt(e.target.value))}
+                  className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+                />
+              </div>
+
+              {/* Accent Color picker */}
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold text-outline">Layer Color</label>
+                <div className="flex flex-wrap gap-xs">
+                  {accentColorsList.map((color, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => updateLayer(selectedLayer.id, "color", color)}
+                      style={{ backgroundColor: color }}
+                      className={`h-8 w-8 rounded-full border transition-all ${
+                        selectedLayer.color === color
+                          ? "border-white ring-2 ring-primary-container scale-105"
+                          : "border-outline-variant/60 hover:scale-102"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Position Sliders & Reset */}
+              <div className="flex flex-col gap-1.5 border-t border-outline-variant/30 pt-md">
+                <div className="flex justify-between items-center text-xs font-semibold text-outline">
+                  <span>Position (Drag On Banner)</span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      updateLayer(selectedLayer.id, "posX", 50);
+                      updateLayer(selectedLayer.id, "posY", 50);
+                    }}
+                    className="text-[10px] font-bold text-primary-container hover:underline"
+                  >
+                    Reset Center
+                  </button>
+                </div>
+
+                <div className="grid grid-cols-2 gap-md">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-[10px] text-outline">Horizontal (X): {Math.round(selectedLayer.posX)}%</span>
+                    <input
+                      type="range"
+                      min="10"
+                      max="90"
+                      value={selectedLayer.posX}
+                      onChange={(e) => updateLayer(selectedLayer.id, "posX", parseFloat(e.target.value))}
+                      className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-[10px] text-outline">Vertical (Y): {Math.round(selectedLayer.posY)}%</span>
+                    <input
+                      type="range"
+                      min="10"
+                      max="90"
+                      value={selectedLayer.posY}
+                      onChange={(e) => updateLayer(selectedLayer.id, "posY", parseFloat(e.target.value))}
+                      className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
+          ) : (
+            <p className="text-xs text-outline text-center py-4">Click any text layer to edit or click + Add Text Layer</p>
+          )}
 
-            {/* Platform dimensions */}
-            <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-outline">Export Size</label>
-              <select
-                value={exportSize}
-                onChange={(e) => setExportSize(e.target.value)}
-                className="bg-surface-container border border-outline-variant rounded p-sm text-sm outline-none text-on-background focus:border-primary-container font-semibold"
-              >
-                <option>YouTube (2560 x 1440)</option>
-                <option>Twitch (1200 x 480)</option>
-                <option>Discord (960 x 540)</option>
-                <option>Twitter/X (1500 x 500)</option>
-              </select>
+          {/* Background Darkener / Dimmer Slider */}
+          <div className="flex flex-col gap-1.5 border-t border-outline-variant/40 pt-md">
+            <div className="flex justify-between items-center text-xs font-semibold text-outline">
+              <span>Poster Background Darkener</span>
+              <span className="font-data-mono text-primary-container font-bold">{bgOverlay}%</span>
             </div>
+            <input
+              type="range"
+              min="0"
+              max="80"
+              step="5"
+              value={bgOverlay}
+              onChange={(e) => setBgOverlay(parseInt(e.target.value))}
+              className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+            />
+          </div>
+
+          {/* Platform dimensions */}
+          <div className="flex flex-col gap-1.5">
+            <label className="text-xs font-semibold text-outline">Export Size</label>
+            <select
+              value={exportSize}
+              onChange={(e) => setExportSize(e.target.value)}
+              className="bg-surface-container border border-outline-variant rounded p-sm text-sm outline-none text-on-background focus:border-primary-container font-semibold"
+            >
+              <option>YouTube (2560 x 1440)</option>
+              <option>Twitch (1200 x 480)</option>
+              <option>Discord (960 x 540)</option>
+              <option>Twitter/X (1500 x 500)</option>
+            </select>
           </div>
 
           <div className="mt-auto border-t border-outline-variant/40 pt-lg flex flex-col gap-sm">

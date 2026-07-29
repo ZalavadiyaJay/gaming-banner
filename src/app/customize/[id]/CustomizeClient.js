@@ -730,7 +730,7 @@ export default function CustomizeClient({ params }) {
 
       <main className="flex-1 pt-16 flex flex-col md:flex-row h-auto overflow-y-auto md:h-[calc(100vh-64px)] md:overflow-hidden">
         {/* Left Canvas Preview Panel (65%) */}
-        <section className="w-full md:flex-1 bg-surface-container/60 p-lg flex flex-col justify-center gap-md border-b md:border-b-0 md:border-r border-outline-variant/65">
+        <section className="w-full md:flex-1 bg-surface-container/60 p-md md:p-lg flex flex-col justify-start items-center gap-md border-b md:border-b-0 md:border-r border-outline-variant/65">
           {/* View Toggles */}
           <div className="flex items-center gap-sm self-start bg-surface-container-high border border-outline-variant/50 p-1 rounded-lg">
             <button
@@ -756,7 +756,7 @@ export default function CustomizeClient({ params }) {
           </div>
 
           {/* Render Mockup Container */}
-          <div className="w-full flex-1 flex items-center justify-center">
+          <div className="w-full flex justify-center items-start">
             <div className="w-full max-w-4xl border border-outline-variant rounded-xl overflow-hidden bg-surface-container shadow-2xl">
               {/* Mockup Canvas */}
               <div

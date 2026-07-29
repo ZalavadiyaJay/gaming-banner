@@ -770,13 +770,7 @@ export default function CustomizeClient({ params }) {
 
                 {currentTemplate.decor}
 
-                {/* Mobile crop guidelines overlay */}
-                {activeTab === "desktop" && !id.startsWith("twitch-") && !id.includes("discord") && !id.includes("esports-pro") && !id.includes("schedule") && !id.includes("clan-tag") && !id.includes("glow") && !id.includes("blurple") && !id.includes("server") && !id.includes("guild") && !id.includes("portal") && !id.includes("rp") && !id.includes("music") && !id.includes("clan") && (
-                  <div className="absolute inset-y-0 w-[60%] left-[20%] border-l border-r border-dashed border-white/25 bg-white/[0.01] pointer-events-none flex items-center justify-between px-xs z-10">
-                    <span className="text-[1.5cqw] text-white/35 uppercase font-data-mono">Mobile Safe Edge</span>
-                    <span className="text-[1.5cqw] text-white/35 uppercase font-data-mono">Mobile Safe Edge</span>
-                  </div>
-                )}
+
 
                 {/* Render All Dynamic Text Layers */}
                 {textLayers.map((layer) => (

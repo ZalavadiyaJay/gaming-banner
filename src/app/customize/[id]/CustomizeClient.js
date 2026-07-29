@@ -860,68 +860,42 @@ export default function CustomizeClient({ params }) {
             <p className="text-xs text-outline mt-1 font-data-mono">Style: {currentTemplate.name}</p>
           </div>
 
-          {/* Layer Selector Chips */}
-          <div className="flex flex-col gap-1.5 border-b border-outline-variant/40 pb-md">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold text-outline">
-                {textLayers.length > 0 ? "Select Text Layer To Edit:" : "Text Layers:"}
-              </span>
-              {textLayers.length > 0 && (
+          {/* Simple Layer Selector Chips (Clean & Minimal) */}
+          {textLayers.length > 0 ? (
+            <div className="flex flex-wrap gap-xs pb-sm border-b border-outline-variant/30">
+              {textLayers.map((layer) => (
                 <button
-                  onClick={() => {
-                    setTextLayers([]);
-                    setSelectedLayerId(null);
-                  }}
-                  className="text-[10px] font-bold text-red-400 hover:text-red-300 hover:underline"
+                  key={layer.id}
+                  onClick={() => setSelectedLayerId(layer.id)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all border ${
+                    selectedLayerId === layer.id
+                      ? "bg-primary-container text-on-primary-container border-primary-container shadow"
+                      : "bg-surface-container text-outline border-outline-variant/60 hover:text-on-background"
+                  }`}
                 >
-                  Clear All Text (Textless Banner)
+                  {layer.label || layer.text || "Text Layer"}
                 </button>
-              )}
+              ))}
             </div>
-
-            {textLayers.length > 0 ? (
-              <div className="flex flex-wrap gap-xs">
-                {textLayers.map((layer) => (
-                  <div
-                    key={layer.id}
-                    onClick={() => setSelectedLayerId(layer.id)}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer border ${
-                      selectedLayerId === layer.id
-                        ? "bg-primary-container text-on-primary-container border-primary-container shadow"
-                        : "bg-surface-container text-outline border-outline-variant/60 hover:text-on-background"
-                    }`}
-                  >
-                    <span>{layer.label || layer.text.slice(0, 10) || "Layer"}</span>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        removeTextLayer(layer.id);
-                      }}
-                      title="Remove text layer"
-                      className="ml-1 text-red-400 hover:text-red-300 font-extrabold text-xs hover:scale-125 transition-all"
-                    >
-                      &times;
-                    </button>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <span className="text-xs text-outline italic">No text layers active (Textless Banner Mode).</span>
-            )}
-          </div>
+          ) : (
+            <div className="p-md bg-surface-container rounded-xl text-center border border-outline-variant/40">
+              <span className="text-xs font-bold text-outline block">Textless Mode</span>
+              <span className="text-[11px] text-outline/80">Click "+ Add Text Layer" to add text anytime.</span>
+            </div>
+          )}
 
           {/* Controls for currently selected layer */}
           {selectedLayer ? (
-            <div className="flex flex-col gap-lg">
-              <div className="flex justify-between items-center bg-surface-container p-2 rounded-lg border border-outline-variant/40">
-                <span className="text-xs font-bold text-primary-container uppercase font-data-mono">
-                  Editing: {selectedLayer.label || selectedLayer.text || "Selected Layer"}
+            <div className="flex flex-col gap-md">
+              <div className="flex justify-between items-center pb-xs border-b border-outline-variant/30">
+                <span className="text-xs font-bold text-outline">
+                  Editing: <span className="text-on-background font-black">{selectedLayer.label || selectedLayer.text}</span>
                 </span>
                 <button
                   onClick={() => removeTextLayer(selectedLayer.id)}
-                  className="text-xs font-bold text-red-400 hover:text-red-300 hover:underline"
+                  className="text-xs font-bold text-red-400 hover:text-red-300 hover:underline flex items-center gap-1"
                 >
-                  🗑️ Remove Layer
+                  🗑️ Delete Layer
                 </button>
               </div>
 

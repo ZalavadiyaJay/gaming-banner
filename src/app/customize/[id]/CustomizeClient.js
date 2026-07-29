@@ -378,9 +378,21 @@ const templateConfig = {
 export default function CustomizeClient({ params }) {
   const { id } = use(params);
 
-  // Dynamic Multi-Text Layer Studio State (Default empty [] for textless banner initially)
-  const [textLayers, setTextLayers] = useState([]);
-  const [selectedLayerId, setSelectedLayerId] = useState(null);
+  // Dynamic Multi-Text Layer Studio State (Default 1 active text layer in WHITE color)
+  const [textLayers, setTextLayers] = useState([
+    {
+      id: "layer-1",
+      text: "TEXT 1",
+      label: "Text 1",
+      font: "Orbitron",
+      size: 1.0,
+      color: "#ffffff", // Default WHITE color
+      glow: 60,
+      posX: 50,
+      posY: 50
+    }
+  ]);
+  const [selectedLayerId, setSelectedLayerId] = useState("layer-1");
   const [activeDragId, setActiveDragId] = useState(null);
   const [activeTab, setActiveTab] = useState("desktop");
   const [exportSize, setExportSize] = useState("YouTube (2560 x 1440)");
@@ -397,8 +409,8 @@ export default function CustomizeClient({ params }) {
       label: `Text ${count}`,
       font: "Orbitron",
       size: count === 1 ? 1.0 : 0.7,
-      color: count === 1 ? "#00d4ff" : "#ffffff",
-      glow: count === 1 ? 70 : 0,
+      color: "#ffffff", // Default WHITE color
+      glow: count === 1 ? 60 : 0,
       posX: 50,
       posY: Math.min(85, 45 + (count - 1) * 12)
     };

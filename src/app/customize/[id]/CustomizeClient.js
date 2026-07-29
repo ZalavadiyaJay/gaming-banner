@@ -383,7 +383,7 @@ export default function CustomizeClient({ params }) {
     {
       id: "layer-title",
       text: "STORM",
-      label: "Channel Name",
+      label: "Text 1",
       isTitle: true,
       font: "Orbitron",
       size: 1.0,
@@ -395,7 +395,7 @@ export default function CustomizeClient({ params }) {
     {
       id: "layer-sub",
       text: "RANKED / K/D 2.5",
-      label: "Subtitle",
+      label: "Text 2",
       isSubtitle: true,
       font: "Inter",
       size: 0.7,

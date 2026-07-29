@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, use, useEffect } from "react";
+import { useState, use, useEffect, useRef } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 
@@ -445,6 +445,8 @@ export default function CustomizeClient({ params }) {
     setTextLayers(prev => prev.map(l => l.id === layerId ? { ...l, [key]: value } : l));
   };
 
+  const dragRafRef = useRef(null);
+
   const handleDragMove = (clientX, clientY, containerRect) => {
     if (!containerRect || !activeDragId) return;
     const x = ((clientX - containerRect.left) / containerRect.width) * 100;
@@ -452,8 +454,11 @@ export default function CustomizeClient({ params }) {
     const clampedX = Math.max(5, Math.min(95, x));
     const clampedY = Math.max(8, Math.min(92, y));
 
-    updateLayer(activeDragId, "posX", clampedX);
-    updateLayer(activeDragId, "posY", clampedY);
+    if (dragRafRef.current) cancelAnimationFrame(dragRafRef.current);
+    dragRafRef.current = requestAnimationFrame(() => {
+      updateLayer(activeDragId, "posX", clampedX);
+      updateLayer(activeDragId, "posY", clampedY);
+    });
   };
 
   // Initialize template defaults ONLY when template ID changes
@@ -790,9 +795,13 @@ export default function CustomizeClient({ params }) {
                       position: "absolute",
                       left: `${layer.posX}%`,
                       top: `${layer.posY}%`,
-                      transform: "translate(-50%, -50%)"
+                      transform: "translate(-50%, -50%)",
+                      touchAction: "none",
+                      willChange: activeDragId === layer.id ? "left, top" : "auto"
                     }}
-                    className={`z-20 p-1.5 rounded-lg border-2 border-dashed transition-all group cursor-grab active:cursor-grabbing pointer-events-auto ${
+                    className={`z-20 p-1.5 rounded-lg border-2 border-dashed group cursor-grab active:cursor-grabbing pointer-events-auto ${
+                      activeDragId === layer.id ? "transition-none" : "transition-all duration-150"
+                    } ${
                       selectedLayerId === layer.id
                         ? "border-primary-container bg-primary-container/10 ring-2 ring-primary-container/30"
                         : "border-transparent hover:border-white/40"
@@ -815,7 +824,9 @@ export default function CustomizeClient({ params }) {
                           ? `clamp(${14 * (layer.size || 1)}px, ${9 * (layer.size || 1)}cqw, ${52 * (layer.size || 1)}px)`
                           : `clamp(${10 * (layer.size || 1)}px, ${4 * (layer.size || 1)}cqw, ${26 * (layer.size || 1)}px)`
                       }}
-                      className="font-black uppercase tracking-wider select-none relative z-10 transition-all leading-none drop-shadow-md block whitespace-nowrap"
+                      className={`font-black uppercase tracking-wider select-none relative z-10 leading-none drop-shadow-md block whitespace-nowrap ${
+                        activeDragId === layer.id ? "transition-none" : "transition-all duration-150"
+                      }`}
                     >
                       {layer.text || "EMPTY TEXT"}
                     </span>

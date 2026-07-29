@@ -805,12 +805,8 @@ export default function CustomizeClient({ params }) {
                       touchAction: "none",
                       willChange: activeDragId === layer.id ? "left, top" : "auto"
                     }}
-                    className={`z-20 p-1.5 rounded-lg border-2 border-dashed group cursor-grab active:cursor-grabbing pointer-events-auto ${
+                    className={`z-20 p-1 group cursor-grab active:cursor-grabbing pointer-events-auto ${
                       activeDragId === layer.id ? "transition-none" : "transition-all duration-150"
-                    } ${
-                      selectedLayerId === layer.id
-                        ? "border-primary-container bg-primary-container/10 ring-2 ring-primary-container/30"
-                        : "border-transparent hover:border-white/40"
                     }`}
                   >
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-5 left-1/2 -translate-x-1/2 bg-black/90 px-1.5 py-0.5 rounded shadow pointer-events-none whitespace-nowrap border border-primary-container/40 flex items-center gap-1">

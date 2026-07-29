@@ -66,12 +66,6 @@ export default function TwitterHeaders() {
           {templates.map((template, idx) => (
             <div key={idx} className="bento-card overflow-hidden rounded-xl shadow-lg border-outline-variant/50">
               <div className="aspect-video relative flex items-center justify-end font-gamertag uppercase p-lg overflow-hidden pr-[8%]" style={{ ...template.style, containerType: "inline-size" }}>
-                <div className="text-right flex flex-col items-end">
-                  <span className="font-black tracking-wide leading-none" style={{ fontSize: "clamp(12px, 7cqw, 22px)" }}>@YOURHANDLE</span>
-                  <span className="tracking-widest text-white/60 mt-xs font-sans font-semibold normal-case leading-none" style={{ fontSize: "clamp(5px, 2.2cqw, 9px)" }}>
-                    twitch.tv/username
-                  </span>
-                </div>
               </div>
               <div className="p-lg bg-surface-container-high flex flex-col justify-between h-40">
                 <div>

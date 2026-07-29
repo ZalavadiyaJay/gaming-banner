@@ -88,28 +88,6 @@ export default function TwitchBanners() {
                 {/* Left/Right Symmetrical Shading */}
                 <div className="absolute inset-y-0 left-0 w-[22%] bg-gradient-to-r from-black/60 to-transparent pointer-events-none z-0" />
                 <div className="absolute inset-y-0 right-0 w-[22%] bg-gradient-to-l from-black/60 to-transparent pointer-events-none z-0" />
-
-                {/* Huge stylized Gamertag */}
-                <span
-                  style={{
-                    ...template.textStyle,
-                    fontSize: "clamp(16px, 9cqw, 36px)",
-                    lineHeight: "1"
-                  }}
-                  className="font-black uppercase tracking-wider select-none relative z-10 text-center"
-                >
-                  YOUR NAME
-                </span>
-
-                {/* Subtitle / Status pill underneath */}
-                <span
-                  style={{
-                    fontSize: "clamp(6px, 2.2cqw, 10px)"
-                  }}
-                  className="font-bold tracking-widest uppercase mt-xs relative z-10 select-none font-sans px-2 py-0.5 rounded bg-black/60 border border-white/10 text-white/90"
-                >
-                  {template.sub}
-                </span>
               </div>
               <div className="p-lg bg-surface-container-high flex flex-col justify-between h-40">
                 <div>

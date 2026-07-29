@@ -82,12 +82,6 @@ export default function YouTubeBanners() {
           {templates.map((template, idx) => (
             <div key={idx} className="bento-card overflow-hidden rounded-xl shadow-lg border-outline-variant/50">
               <div className="aspect-video relative flex flex-col items-center justify-center p-md overflow-hidden" style={{ ...template.style, containerType: "inline-size" }}>
-                <span style={{ ...template.textStyle, fontSize: "clamp(12px, 8cqw, 24px)" }} className="font-black uppercase tracking-wider select-none relative z-10 text-center leading-none">
-                  {template.gamertag}
-                </span>
-                <span style={{ fontSize: "clamp(6px, 2.5cqw, 10px)" }} className="font-bold text-white/80 tracking-widest uppercase mt-xs relative z-10 select-none font-sans leading-none">
-                  {template.sub}
-                </span>
               </div>
               <div className="p-lg bg-surface-container-high flex flex-col justify-between h-40">
                 <div>

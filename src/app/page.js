@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const [gamertag, setGamertag] = useState("STORM");
+  const [gamertag, setGamertag] = useState("");
   const [activeFaq, setActiveFaq] = useState(null);
   const [selectedUniverse, setSelectedUniverse] = useState("All");
 
@@ -242,9 +242,11 @@ export default function Home() {
                   {/* Canvas Preview Area */}
                   <div className="relative aspect-video flex items-center justify-center overflow-hidden" style={{ ...template.style, containerType: "inline-size" }}>
                     {template.decor}
-                    <span className="relative z-10 uppercase select-none font-black tracking-wider leading-none text-center" style={{ fontSize: "clamp(12px, 7.5cqw, 24px)" }}>
-                      {gamertag || "YOUR NAME"}
-                    </span>
+                    {gamertag && (
+                      <span className="relative z-10 uppercase select-none font-black tracking-wider leading-none text-center" style={{ fontSize: "clamp(12px, 7.5cqw, 24px)" }}>
+                        {gamertag}
+                      </span>
+                    )}
                   </div>
 
                   {/* Info Footer */}

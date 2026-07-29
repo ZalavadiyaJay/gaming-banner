@@ -544,16 +544,22 @@ export default function CustomizeClient({ params }) {
     Impact: "Impact, sans-serif",
   };
 
-  // Color Swatch grid
+  // Color Swatch grid (Expanded palette of popular gaming colors)
   const accentColorsList = [
-    "#00d4ff",
-    "#8b5cf6",
-    "#ef4444",
-    "#10b981",
-    "#f59e0b",
-    "#ec4899",
-    "#f0f4f8",
-    "#ff6b35",
+    "#00d4ff", // Neon Cyan
+    "#8b5cf6", // Electric Purple
+    "#ef4444", // Crimson Red
+    "#10b981", // Toxic Lime Green
+    "#f59e0b", // Cyber Gold / Amber
+    "#ec4899", // Hot Pink / Fuchsia
+    "#ffffff", // Pure White
+    "#ff6b35", // Sunset Orange
+    "#3b82f6", // Royal Blue
+    "#a855f7", // Deep Violet
+    "#06b6d4", // Aqua
+    "#84cc16", // Lime
+    "#facc15", // Bright Yellow
+    "#94a3b8", // Slate Gray
   ];
 
   const handleDownload = () => {
@@ -970,19 +976,59 @@ export default function CustomizeClient({ params }) {
                 />
               </div>
 
-              {/* Accent Color picker */}
-              <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-outline">Layer Color</label>
-                <div className="flex flex-wrap gap-xs">
+              {/* Full Color Customization & Picker */}
+              <div className="flex flex-col gap-2">
+                <div className="flex justify-between items-center text-xs font-semibold text-outline">
+                  <span>Layer Color & Custom Shade</span>
+                  <span className="font-data-mono text-primary-container font-bold uppercase">{selectedLayer.color || "#00d4ff"}</span>
+                </div>
+
+                <div className="flex items-center gap-xs flex-wrap">
+                  {/* Custom Color Wheel / Palette Trigger */}
+                  <label className="relative flex items-center gap-1.5 px-2.5 py-1 bg-surface-container border border-outline-variant/60 hover:border-primary-container rounded-lg cursor-pointer transition-all shadow text-xs font-bold text-on-background group">
+                    <input
+                      type="color"
+                      value={selectedLayer.color || "#00d4ff"}
+                      onChange={(e) => updateLayer(selectedLayer.id, "color", e.target.value)}
+                      className="opacity-0 absolute inset-0 w-full h-full cursor-pointer z-10"
+                    />
+                    <span
+                      className="h-5 w-5 rounded-full border border-white/50 shadow-inner transition-transform group-hover:scale-110 flex items-center justify-center text-[10px]"
+                      style={{ backgroundColor: selectedLayer.color || "#00d4ff" }}
+                    >
+                      🎨
+                    </span>
+                    <span className="text-[11px] font-bold">Pick Any Color</span>
+                  </label>
+
+                  {/* Hex Code Direct Input */}
+                  <div className="flex items-center bg-surface-container border border-outline-variant/60 rounded-lg px-2 py-1 gap-1">
+                    <span className="text-[10px] text-outline font-data-mono">HEX:</span>
+                    <input
+                      type="text"
+                      value={selectedLayer.color || "#00d4ff"}
+                      onChange={(e) => {
+                        let val = e.target.value;
+                        if (!val.startsWith("#")) val = "#" + val;
+                        updateLayer(selectedLayer.id, "color", val.slice(0, 7));
+                      }}
+                      className="w-16 bg-transparent text-xs font-data-mono font-bold text-on-background outline-none uppercase"
+                    />
+                  </div>
+                </div>
+
+                {/* Preset Gaming Color Swatches */}
+                <div className="flex flex-wrap gap-xs mt-1">
                   {accentColorsList.map((color, idx) => (
                     <button
                       key={idx}
                       onClick={() => updateLayer(selectedLayer.id, "color", color)}
                       style={{ backgroundColor: color }}
-                      className={`h-8 w-8 rounded-full border transition-all ${
+                      title={`Select ${color}`}
+                      className={`h-7 w-7 rounded-full border transition-all ${
                         selectedLayer.color === color
-                          ? "border-white ring-2 ring-primary-container scale-105"
-                          : "border-outline-variant/60 hover:scale-102"
+                          ? "border-white ring-2 ring-primary-container scale-110"
+                          : "border-outline-variant/60 hover:scale-105"
                       }`}
                     />
                   ))}

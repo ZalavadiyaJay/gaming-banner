@@ -42,9 +42,7 @@ export default function Home() {
         textShadow: "0 0 16px rgba(0, 212, 255, 0.6)",
         letterSpacing: "0.15em",
       },
-      decor: (
-        <div className="absolute inset-0 bg-black/45 z-0" />
-      ),
+      decor: null,
     },
     {
       id: "streaming",
@@ -59,9 +57,7 @@ export default function Home() {
         color: "#ffffff",
         textShadow: "0 0 20px rgba(139, 92, 246, 0.7)",
       },
-      decor: (
-        <div className="absolute inset-0 bg-black/40 z-0" />
-      ),
+      decor: null,
     },
     {
       id: "minimalist",
@@ -76,9 +72,7 @@ export default function Home() {
         color: "#ffffff",
         textShadow: "0 2px 8px rgba(0,0,0,0.8)",
       },
-      decor: (
-        <div className="absolute inset-0 bg-black/40 z-0" />
-      ),
+      decor: null,
     },
     {
       id: "rpg",
@@ -92,9 +86,7 @@ export default function Home() {
         color: "#dfc8a5",
         textShadow: "0 2px 8px rgba(0,0,0,0.9)",
       },
-      decor: (
-        <div className="absolute inset-0 bg-black/50 z-0" />
-      ),
+      decor: null,
     },
     {
       id: "modern-apex",
@@ -109,9 +101,7 @@ export default function Home() {
         color: "#ff3e3e",
         textShadow: "0 0 12px rgba(255, 62, 62, 0.8), 0 2px 6px rgba(0,0,0,0.9)",
       },
-      decor: (
-        <div className="absolute inset-0 bg-black/45 z-0" />
-      ),
+      decor: null,
     },
     {
       id: "gamer-profile",
@@ -125,9 +115,7 @@ export default function Home() {
         color: "#00d4ff",
         textShadow: "0 2px 6px rgba(0,0,0,0.9)",
       },
-      decor: (
-        <div className="absolute inset-0 bg-black/40 z-0" />
-      ),
+      decor: null,
     },
   ];
   // Filtering templates based on universe explorer
@@ -299,9 +287,7 @@ export default function Home() {
                     color: "#ffffff",
                     textShadow: "0 0 16px rgba(0, 212, 255, 0.6)",
                   },
-                  decor: (
-                    <div className="absolute inset-0 bg-black/45 z-0" />
-                  ),
+                  decor: null,
                 },
                 {
                   game: "Minecraft",
@@ -314,9 +300,7 @@ export default function Home() {
                     color: "#55ff55",
                     textShadow: "0 2px 6px rgba(0,0,0,0.9)",
                   },
-                  decor: (
-                    <div className="absolute inset-0 bg-black/40 z-0" />
-                  ),
+                  decor: null,
                 },
                 {
                   game: "Fortnite",
@@ -330,9 +314,7 @@ export default function Home() {
                     color: "#ffffff",
                     textShadow: "0 0 20px rgba(139, 92, 246, 0.7)",
                   },
-                  decor: (
-                    <div className="absolute inset-0 bg-black/40 z-0" />
-                  ),
+                  decor: null,
                 },
                 {
                   game: "Call of Duty",
@@ -346,9 +328,7 @@ export default function Home() {
                     letterSpacing: "0.08em",
                     textShadow: "0 2px 8px rgba(0,0,0,0.8)",
                   },
-                  decor: (
-                    <div className="absolute inset-0 bg-black/40 z-0" />
-                  ),
+                  decor: null,
                 },
                 {
                   game: "GTA V",
@@ -362,9 +342,7 @@ export default function Home() {
                     textShadow: "2px 2px 8px rgba(0,0,0,0.9)",
                     fontStyle: "italic",
                   },
-                  decor: (
-                    <div className="absolute inset-0 bg-black/45 z-0" />
-                  ),
+                  decor: null,
                 },
                 {
                   game: "League",
@@ -377,9 +355,7 @@ export default function Home() {
                     color: "#c8aa6e",
                     textShadow: "0 2px 8px rgba(0,0,0,0.9)",
                   },
-                  decor: (
-                    <div className="absolute inset-0 bg-black/50 z-0" />
-                  ),
+                  decor: null,
                 },
               ].map((template, idx) => (
                 <div

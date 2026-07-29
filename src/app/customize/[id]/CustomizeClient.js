@@ -10,102 +10,102 @@ const templateConfig = {
   esports: {
     name: "Valorant",
     sub: "Ranked / K/D 2.5",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_valorant.jpg') center/cover no-repeat", color: "#ffffff" }
+    style: { background: "url('/banner_valorant.jpg') center/cover no-repeat", color: "#ffffff" }
   },
   "cs2-tactical": {
     name: "CS2 / CS:GO",
     sub: "TACTICAL LOADOUT",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_cod.jpg') center/cover no-repeat", color: "#ffffff" }
+    style: { background: "url('/banner_cod.jpg') center/cover no-repeat", color: "#ffffff" }
   },
   streaming: {
     name: "Fortnite",
     sub: "STREAMING NOW",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_fortnite.jpg') center/cover no-repeat", color: "#ffffff" }
+    style: { background: "url('/banner_fortnite.jpg') center/cover no-repeat", color: "#ffffff" }
   },
   minimalist: {
     name: "Minecraft",
     sub: "Est. 2018",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_minecraft.jpg') center/cover no-repeat", color: "#ffffff" }
+    style: { background: "url('/banner_minecraft.jpg') center/cover no-repeat", color: "#ffffff" }
   },
   "modern-apex": {
     name: "Apex Legends",
     sub: "Ranked Master",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_apex.jpg') center/cover no-repeat", color: "#ff3e3e" }
+    style: { background: "url('/banner_apex.jpg') center/cover no-repeat", color: "#ff3e3e" }
   },
   "overwatch-hero": {
     name: "Overwatch 2",
     sub: "HERO SELECT",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_overwatch.jpg') center/cover no-repeat", color: "#f99e1a" }
+    style: { background: "url('/banner_overwatch.jpg') center/cover no-repeat", color: "#f99e1a" }
   },
   "gta-street": {
     name: "GTA V / Roleplay",
     sub: "LOS SANTOS",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_gtav.jpg') center/cover no-repeat", color: "#ffffff" }
+    style: { background: "url('/banner_gtav.jpg') center/cover no-repeat", color: "#ffffff" }
   },
   rpg: {
     name: "League of Legends",
     sub: "Lv 100 Mage",
-    style: { background: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/banner_league.jpg') center/cover no-repeat", color: "#dfc8a5" }
+    style: { background: "url('/banner_league.jpg') center/cover no-repeat", color: "#dfc8a5" }
   },
   "rocket-league": {
     name: "Rocket League",
     sub: "BOOST ON",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_rocketleague.jpg') center/cover no-repeat", color: "#00d4ff" }
+    style: { background: "url('/banner_rocketleague.jpg') center/cover no-repeat", color: "#00d4ff" }
   },
   "pubg-mobile": {
     name: "PUBG Mobile",
     sub: "Tactical Battlegrounds",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_pubg.jpg') center/cover no-repeat", color: "#eab308" }
+    style: { background: "url('/banner_pubg.jpg') center/cover no-repeat", color: "#eab308" }
   },
   "clash-of-clans": {
     name: "Clash of Clans",
     sub: "Clan Leader",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_coc_game.jpg') center/cover no-repeat", color: "#f59e0b" }
+    style: { background: "url('/banner_coc_game.jpg') center/cover no-repeat", color: "#f59e0b" }
   },
   "forza-horizon": {
     name: "Forza Horizon",
     sub: "Horizon Festival",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_forza.jpg') center/cover no-repeat", color: "#f43f5e" }
+    style: { background: "url('/banner_forza.jpg') center/cover no-repeat", color: "#f43f5e" }
   },
   "asphalt-9": {
     name: "Asphalt 9",
     sub: "Legendary Driver",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_asphalt.jpg') center/cover no-repeat", color: "#ec4899" }
+    style: { background: "url('/banner_asphalt.jpg') center/cover no-repeat", color: "#ec4899" }
   },
   "genshin-impact": {
     name: "Genshin Impact",
     sub: "Traveler of Teyvat",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_genshin.jpg') center/cover no-repeat", color: "#38bdf8" }
+    style: { background: "url('/banner_genshin.jpg') center/cover no-repeat", color: "#38bdf8" }
   },
   "roblox-virtual": {
     name: "Roblox",
     sub: "Vibrant Virtual World",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_roblox.jpg') center/cover no-repeat", color: "#f43f5e" }
+    style: { background: "url('/banner_roblox.jpg') center/cover no-repeat", color: "#f43f5e" }
   },
   "fifa-soccer": {
     name: "FIFA / FC 24",
     sub: "Ultimate Team",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_fifa.jpg') center/cover no-repeat", color: "#10b981" }
+    style: { background: "url('/banner_fifa.jpg') center/cover no-repeat", color: "#10b981" }
   },
   "cyberpunk-2077": {
     name: "Cyberpunk 2077",
     sub: "Night City Mercenary",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_cyberpunk.jpg') center/cover no-repeat", color: "#facc15" }
+    style: { background: "url('/banner_cyberpunk.jpg') center/cover no-repeat", color: "#facc15" }
   },
   "elden-ring": {
     name: "Elden Ring",
     sub: "Tarnished Lord",
-    style: { background: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/banner_eldenring.jpg') center/cover no-repeat", color: "#fbbf24" }
+    style: { background: "url('/banner_eldenring.jpg') center/cover no-repeat", color: "#fbbf24" }
   },
   "among-us": {
     name: "Among Us",
     sub: "Spaceship Crewmate",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_amongus.jpg') center/cover no-repeat", color: "#ef4444" }
+    style: { background: "url('/banner_amongus.jpg') center/cover no-repeat", color: "#ef4444" }
   },
   "clash-royale": {
     name: "Clash Royale",
     sub: "Arena Challenger",
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/banner_clashroyale.jpg') center/cover no-repeat", color: "#3b82f6" }
+    style: { background: "url('/banner_clashroyale.jpg') center/cover no-repeat", color: "#3b82f6" }
   },
 
   // Twitch templates
@@ -113,121 +113,121 @@ const templateConfig = {
     name: "Valorant Offline",
     sub: "OFFLINE • Season 12 Live Soon",
     textStyle: { fontFamily: "var(--font-gamertag)", fontStyle: "italic", color: "#00d4ff", textShadow: "0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #005f73", letterSpacing: "0.15em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_valorant.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_valorant.jpg') center/cover no-repeat" }
   },
   "twitch-cod": {
     name: "Warzone Offline",
     sub: "STARTING SOON • Mon-Fri 8PM",
     textStyle: { fontFamily: "Impact, sans-serif", color: "#ffffff", textShadow: "3px 3px 0px #1e293b, -3px -3px 0px #1e293b, 3px -3px 0px #1e293b, -3px 3px 0px #1e293b", letterSpacing: "0.05em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_cod.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_cod.jpg') center/cover no-repeat" }
   },
   "twitch-fortnite": {
     name: "Fortnite Offline",
     sub: "OFFLINE • Follow for Rank Push",
     textStyle: { fontFamily: "var(--font-sans)", fontWeight: "900", color: "#ffffff", textShadow: "0 0 10px #c084fc, 0 0 20px #8b5cf6, 0 0 30px #6d28d9", letterSpacing: "0.08em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_fortnite.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_fortnite.jpg') center/cover no-repeat" }
   },
   "twitch-minecraft": {
     name: "Minecraft Offline",
     sub: "BE RIGHT BACK • Building spawn",
     textStyle: { fontFamily: "var(--font-data-mono)", color: "#10b981", textShadow: "2px 2px 0px #064e3b, 4px 4px 0px #022c22", letterSpacing: "0.1em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_minecraft.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_minecraft.jpg') center/cover no-repeat" }
   },
   "twitch-apex": {
     name: "Apex Legends Offline",
     sub: "STREAMING SOON • Predator Grind",
     textStyle: { fontFamily: "var(--font-gamertag)", fontStyle: "italic", color: "#ff3e3e", textShadow: "0 0 8px #ea580c, 3px 3px 0px #000000", letterSpacing: "0.05em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_apex.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_apex.jpg') center/cover no-repeat" }
   },
   "twitch-overwatch": {
     name: "Overwatch Offline",
     sub: "OFFLINE • Comp Grind Tomorrow",
     textStyle: { fontFamily: "Impact, sans-serif", color: "#f99e1a", textShadow: "0 2px 0px #78350f, 0 4px 0px #451a03, 0 8px 12px rgba(0,0,0,0.8)", letterSpacing: "0.05em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_overwatch.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_overwatch.jpg') center/cover no-repeat" }
   },
   "twitch-gtav": {
     name: "GTA RP Offline",
     sub: "OFFLINE • Back at 7PM EST",
     textStyle: { fontFamily: "var(--font-gamertag)", fontStyle: "italic", color: "#f472b6", textShadow: "0 0 10px #f472b6, 0 0 20px #db2777, 0 0 30px #00d4ff", letterSpacing: "0.12em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_gtav.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_gtav.jpg') center/cover no-repeat" }
   },
   "twitch-league": {
     name: "League of Legends Offline",
     sub: "STARTING SOON • Mid Lane Carry",
     textStyle: { fontFamily: "Georgia, serif", color: "#dfc8a5", textShadow: "0 2px 4px #78350f, 0 0 12px rgba(223, 200, 165, 0.4)", letterSpacing: "0.2em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_league.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_league.jpg') center/cover no-repeat" }
   },
   "twitch-rocketleague": {
     name: "Rocket League Offline",
     sub: "BE RIGHT BACK • Grand Champ ELO",
     textStyle: { fontFamily: "var(--font-gamertag)", color: "#06b6d4", textShadow: "0 0 15px #06b6d4, 0 0 25px #0891b2, 2px 2px 0px #000000", letterSpacing: "0.15em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_rocketleague.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_rocketleague.jpg') center/cover no-repeat" }
   },
   "twitch-pubg": {
     name: "PUBG Offline",
     sub: "OFFLINE • Winner Winner Dinner",
     textStyle: { fontFamily: "Impact, sans-serif", color: "#eab308", textShadow: "2px 2px 0px #451a03, -2px -2px 0px #451a03, 0px 4px 8px rgba(0,0,0,0.9)", letterSpacing: "0.05em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_pubg.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_pubg.jpg') center/cover no-repeat" }
   },
   "twitch-coc": {
     name: "Clash of Clans Offline",
     sub: "OFFLINE • Town Hall 15 Live",
     textStyle: { fontFamily: "Impact, sans-serif", color: "#fbbf24", textShadow: "0 4px 0px #b45309, 0 8px 0px #78350f, 0 12px 16px rgba(0,0,0,0.8)", letterSpacing: "0.06em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_coc.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_coc.jpg') center/cover no-repeat" }
   },
   "twitch-forza": {
     name: "Forza Horizon Offline",
     sub: "STARTING SOON • Wheel Cam Setup",
     textStyle: { fontFamily: "var(--font-gamertag)", fontStyle: "italic", color: "#f43f5e", textShadow: "0 0 12px #f43f5e, 0 0 24px #be123c", letterSpacing: "0.2em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_forza.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_forza.jpg') center/cover no-repeat" }
   },
   "twitch-asphalt": {
     name: "Asphalt Offline",
     sub: "BE RIGHT BACK • Custom Lobby Runs",
     textStyle: { fontFamily: "Impact, sans-serif", color: "#ec4899", textShadow: "0 0 8px #db2777, 0 0 16px #4a044e, 3px 3px 0px #000", letterSpacing: "0.1em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_asphalt.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_asphalt.jpg') center/cover no-repeat" }
   },
   "twitch-genshin": {
     name: "Genshin Impact Offline",
     sub: "OFFLINE • Farming Materials",
     textStyle: { fontFamily: "Georgia, serif", color: "#38bdf8", textShadow: "0 0 10px #0284c7, 0 2px 4px rgba(0,0,0,0.8)", letterSpacing: "0.25em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_genshin.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_genshin.jpg') center/cover no-repeat" }
   },
   "twitch-roblox": {
     name: "Roblox Offline",
     sub: "STREAMING SOON • Custom Mini-games",
     textStyle: { fontFamily: "var(--font-sans)", fontWeight: "900", color: "#ef4444", textShadow: "4px 4px 0px #7f1d1d, 8px 8px 12px rgba(0,0,0,0.8)", letterSpacing: "0.05em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_roblox.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_roblox.jpg') center/cover no-repeat" }
   },
   "twitch-fifa": {
     name: "FC 24 Offline",
     sub: "OFFLINE • FUT Champions Weekend",
     textStyle: { fontFamily: "var(--font-gamertag)", color: "#10b981", textShadow: "0 0 10px #10b981, 0 0 20px #047857, 2px 2px 0px #000000", letterSpacing: "0.15em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_fifa.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_fifa.jpg') center/cover no-repeat" }
   },
   "twitch-cyberpunk": {
     name: "Cyberpunk Offline",
     sub: "STARTING SOON • Netrunner Build",
     textStyle: { fontFamily: "Impact, sans-serif", color: "#facc15", textShadow: "3px 3px 0px #000000, -3px -3px 0px #000000, 0 0 15px #facc15", letterSpacing: "0.1em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_cyberpunk.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_cyberpunk.jpg') center/cover no-repeat" }
   },
   "twitch-eldenring": {
     name: "Elden Ring Offline",
     sub: "OFFLINE • Rune Level 1 runs",
     textStyle: { fontFamily: "Georgia, serif", color: "#fbbf24", textShadow: "0 2px 8px #78350f, 0 0 20px #b45309", letterSpacing: "0.25em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_eldenring.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_eldenring.jpg') center/cover no-repeat" }
   },
   "twitch-amongus": {
     name: "Among Us Offline",
     sub: "BE RIGHT BACK • Who is Impostor?",
     textStyle: { fontFamily: "var(--font-sans)", fontWeight: "900", color: "#ef4444", textShadow: "3px 3px 0px #000, -3px -3px 0px #000, 3px -3px 0px #000, -3px 3px 0px #000", letterSpacing: "0.08em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_amongus.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_amongus.jpg') center/cover no-repeat" }
   },
   "twitch-clashroyale": {
     name: "Clash Royale Offline",
     sub: "OFFLINE • Midladder Trophy Push",
     textStyle: { fontFamily: "var(--font-sans)", fontWeight: "900", color: "#3b82f6", textShadow: "0 3px 0px #1d4ed8, 0 6px 0px #1e3a8a, 0 10px 12px rgba(0,0,0,0.8)", letterSpacing: "0.1em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/twitch_clashroyale.jpg') center/cover no-repeat" }
+    style: { background: "url('/twitch_clashroyale.jpg') center/cover no-repeat" }
   },
 
   // Discord templates
@@ -241,13 +241,13 @@ const templateConfig = {
     name: "Gold Tactical Grid",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "Impact, sans-serif", color: "#fef08a", textShadow: "3px 3px 0px #000, -1px -1px 0px #78350f, 0 0 15px #fbbf24", letterSpacing: "0.08em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/discord_gold_tactical.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_gold_tactical.jpg') center/cover no-repeat" }
   },
   "discord-liquid-ice": {
     name: "Liquid Ice",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "var(--font-gamertag)", color: "#ffffff", textShadow: "0 0 8px #0ea5e9, 0 0 16px #0369a1, 3px 3px 0px #0f172a", letterSpacing: "0.15em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/discord_liquid_ice.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_liquid_ice.jpg') center/cover no-repeat" }
   },
   "discord-synth-clouds": {
     name: "Synth Horizon",
@@ -265,73 +265,73 @@ const templateConfig = {
     name: "Amethyst Smoke",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "Impact, sans-serif", color: "#ffffff", textShadow: "0 0 10px #c084fc, 0 0 20px #7e22ce, 2px 2px 0px #000000", letterSpacing: "0.05em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/discord_purple_shorts.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_purple_shorts.jpg') center/cover no-repeat" }
   },
   "discord-phase-freak": {
     name: "Phase Pink Lightning",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "Georgia, serif", color: "#fca5a5", textShadow: "0 0 12px #f43f5e, 0 0 24px #9f1239, 3px 3px 0px #000", letterSpacing: "0.2em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/discord_phase_freak.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_phase_freak.jpg') center/cover no-repeat" }
   },
   "discord-frantox-blue": {
     name: "Frantox Glacial Blue",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "var(--font-gamertag)", fontStyle: "italic", color: "#e0f7fa", textShadow: "0 0 8px #06b6d4, 0 0 16px #0891b2, 3px 3px 0px #000", letterSpacing: "0.15em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/discord_frantox_blue.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_frantox_blue.jpg') center/cover no-repeat" }
   },
   "discord-zephyr-red": {
     name: "Zephyr Red Speed",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "Impact, sans-serif", color: "#fca5a5", textShadow: "2px 2px 0px #000, -2px -2px 0px #7f1d1d, 0 0 10px #ef4444", letterSpacing: "0.06em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/discord_zephyr_red.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_zephyr_red.jpg') center/cover no-repeat" }
   },
   "discord-thumb-green": {
     name: "Toxic Emerald Glow",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "var(--font-data-mono)", color: "#a7f3d0", textShadow: "2px 2px 0px #064e3b, 4px 4px 0px #022c22, 0 0 12px #10b981", letterSpacing: "0.1em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/discord_thumb_green.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_thumb_green.jpg') center/cover no-repeat" }
   },
   "discord-cyberpunk-yellow": {
     name: "Cyber Matrix Yellow",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "Impact, sans-serif", color: "#fef08a", textShadow: "3px 3px 0px #000000, 0 0 12px #eab308", letterSpacing: "0.1em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/discord_cyberpunk_yellow.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_cyberpunk_yellow.jpg') center/cover no-repeat" }
   },
   "discord-toxic-glow": {
     name: "Acid Biohazard",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "var(--font-gamertag)", fontStyle: "italic", color: "#34d399", textShadow: "0 0 10px #10b981, 0 0 20px #047857", letterSpacing: "0.12em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/discord_toxic_glow.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_toxic_glow.jpg') center/cover no-repeat" }
   },
   "discord-angelic-grace": {
     name: "Angelic Light",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "Georgia, serif", color: "#fef08a", textShadow: "0 2px 4px #78350f, 0 0 15px rgba(251, 191, 36, 0.5)", letterSpacing: "0.25em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/discord_angelic_grace.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_angelic_grace.jpg') center/cover no-repeat" }
   },
   "discord-abyssal-void": {
     name: "Abyssal Singularity",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "var(--font-sans)", fontWeight: "900", color: "#93c5fd", textShadow: "0 0 12px #3b82f6, 3px 3px 0px #1e3a8a", letterSpacing: "0.08em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/discord_abyssal_void.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_abyssal_void.jpg') center/cover no-repeat" }
   },
   "discord-crimson-slayer": {
     name: "Crimson Ninja",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "Impact, sans-serif", color: "#fca5a5", textShadow: "3px 3px 0px #000000, 0 0 10px #dc2626", letterSpacing: "0.08em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/discord_crimson_slayer.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_crimson_slayer.jpg') center/cover no-repeat" }
   },
   "discord-glitch-system": {
     name: "Green System Glitch",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "var(--font-data-mono)", color: "#86efac", textShadow: "2px 2px 0px #14532d, 4px 4px 0px #052e16", letterSpacing: "0.12em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/discord_glitch_system.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_glitch_system.jpg') center/cover no-repeat" }
   },
   "discord-frost-bite": {
     name: "Frost Bite Dragon",
     sub: "Discord Server Active",
     textStyle: { fontFamily: "var(--font-gamertag)", fontStyle: "italic", color: "#ffffff", textShadow: "0 0 10px #06b6d4, 0 0 20px #0891b2", letterSpacing: "0.15em" },
-    style: { background: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/discord_frost_bite.jpg') center/cover no-repeat" }
+    style: { background: "url('/discord_frost_bite.jpg') center/cover no-repeat" }
   },
   "discord-solar-flare": {
     name: "Solar Phoenix",

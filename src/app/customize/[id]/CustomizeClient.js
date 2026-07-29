@@ -378,35 +378,9 @@ const templateConfig = {
 export default function CustomizeClient({ params }) {
   const { id } = use(params);
 
-  // Dynamic Multi-Text Layer Studio State
-  const [textLayers, setTextLayers] = useState([
-    {
-      id: "layer-title",
-      text: "STORM",
-      label: "Text 1",
-      isTitle: true,
-      font: "Orbitron",
-      size: 1.0,
-      color: "#00d4ff",
-      glow: 70,
-      posX: 50,
-      posY: 44
-    },
-    {
-      id: "layer-sub",
-      text: "RANKED / K/D 2.5",
-      label: "Text 2",
-      isSubtitle: true,
-      font: "Inter",
-      size: 0.7,
-      color: "#ffffff",
-      glow: 0,
-      posX: 50,
-      posY: 58
-    }
-  ]);
-
-  const [selectedLayerId, setSelectedLayerId] = useState("layer-title");
+  // Dynamic Multi-Text Layer Studio State (Default empty [] for textless banner initially)
+  const [textLayers, setTextLayers] = useState([]);
+  const [selectedLayerId, setSelectedLayerId] = useState(null);
   const [activeDragId, setActiveDragId] = useState(null);
   const [activeTab, setActiveTab] = useState("desktop");
   const [exportSize, setExportSize] = useState("YouTube (2560 x 1440)");
@@ -419,14 +393,14 @@ export default function CustomizeClient({ params }) {
     const count = textLayers.length + 1;
     const newLayer = {
       id: newId,
-      text: `TEXT LAYER ${count}`,
+      text: `TEXT ${count}`,
       label: `Text ${count}`,
       font: "Orbitron",
-      size: 0.8,
-      color: "#00d4ff",
-      glow: 60,
+      size: count === 1 ? 1.0 : 0.7,
+      color: count === 1 ? "#00d4ff" : "#ffffff",
+      glow: count === 1 ? 70 : 0,
       posX: 50,
-      posY: Math.min(85, 30 + count * 10)
+      posY: Math.min(85, 45 + (count - 1) * 12)
     };
     setTextLayers(prev => [...prev, newLayer]);
     setSelectedLayerId(newId);
@@ -461,66 +435,25 @@ export default function CustomizeClient({ params }) {
     });
   };
 
-  // Initialize template defaults ONLY when template ID changes
-  useEffect(() => {
-    const tpl = templateConfig[id] || templateConfig.esports;
-    if (tpl) {
-      // Guess font from style or textStyle
-      let defaultFont = "Orbitron";
-      if (tpl.textStyle?.fontFamily) {
-        const family = tpl.textStyle.fontFamily;
-        if (family.includes("Impact")) defaultFont = "Impact";
-        else if (family.includes("sans")) defaultFont = "Inter";
-        else if (family.includes("mono")) defaultFont = "JetBrains Mono";
-        else if (family.includes("Georgia")) defaultFont = "Georgia";
-      } else if (tpl.style?.fontFamily) {
-        const family = tpl.style.fontFamily;
-        if (family.includes("Impact")) defaultFont = "Impact";
-        else if (family.includes("sans")) defaultFont = "Inter";
-        else if (family.includes("mono")) defaultFont = "JetBrains Mono";
-        else if (family.includes("Georgia")) defaultFont = "Georgia";
-      }
-
-      // Guess accent color
-      let defaultColor = "#00d4ff";
-      if (tpl.textStyle?.color) defaultColor = tpl.textStyle.color;
-      else if (tpl.style?.color) defaultColor = tpl.style.color;
-
-      setTextLayers([
-        {
-          id: "layer-title",
-          text: "STORM",
-          label: "Channel Name",
-          isTitle: true,
-          font: defaultFont,
-          size: 1.0,
-          color: defaultColor,
-          glow: 70,
-          posX: 50,
-          posY: 44
-        },
-        {
-          id: "layer-sub",
-          text: tpl.sub || "RANKED / K/D 2.5",
-          label: "Subtitle",
-          isSubtitle: true,
-          font: "Inter",
-          size: 0.7,
-          color: "#ffffff",
-          glow: 0,
-          posX: 50,
-          posY: 58
-        }
-      ]);
-    }
-  }, [id]);
-
+  // Check URL search params for optional query name
   useEffect(() => {
     if (typeof window !== "undefined") {
       const urlParams = new URLSearchParams(window.location.search);
       const queryName = urlParams.get("name");
       if (queryName) {
-        setTextLayers(prev => prev.map(l => l.isTitle ? { ...l, text: queryName.toUpperCase() } : l));
+        const newLayer = {
+          id: `layer-${Date.now()}`,
+          text: queryName.toUpperCase(),
+          label: "Text 1",
+          font: "Orbitron",
+          size: 1.0,
+          color: "#00d4ff",
+          glow: 70,
+          posX: 50,
+          posY: 50
+        };
+        setTextLayers([newLayer]);
+        setSelectedLayerId(newLayer.id);
       }
     }
   }, []);

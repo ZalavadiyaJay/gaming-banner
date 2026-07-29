@@ -82,12 +82,6 @@ export default function TwitchBanners() {
           {templates.map((template, idx) => (
             <div key={idx} className="bento-card overflow-hidden rounded-xl shadow-lg border-outline-variant/50">
               <div className="aspect-video relative flex flex-col items-center justify-center p-md overflow-hidden" style={{ ...template.style, containerType: "inline-size" }}>
-                {/* Background Dimmer */}
-                <div className="absolute inset-0 bg-black/30 z-0" />
-
-                {/* Left/Right Symmetrical Shading */}
-                <div className="absolute inset-y-0 left-0 w-[22%] bg-gradient-to-r from-black/60 to-transparent pointer-events-none z-0" />
-                <div className="absolute inset-y-0 right-0 w-[22%] bg-gradient-to-l from-black/60 to-transparent pointer-events-none z-0" />
               </div>
               <div className="p-lg bg-surface-container-high flex flex-col justify-between h-40">
                 <div>

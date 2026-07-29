@@ -717,13 +717,7 @@ export default function CustomizeClient({ params }) {
                   style={{ backgroundColor: `rgba(0, 0, 0, ${bgOverlay / 100})` }}
                 />
 
-                {/* Additional Dimmer / Shading for Twitch Banners */}
-                {id.startsWith("twitch-") && (
-                  <>
-                    <div className="absolute inset-y-0 left-0 w-[22%] bg-gradient-to-r from-black/60 to-transparent pointer-events-none z-0" />
-                    <div className="absolute inset-y-0 right-0 w-[22%] bg-gradient-to-l from-black/60 to-transparent pointer-events-none z-0" />
-                  </>
-                )}
+
 
                 {currentTemplate.decor}
 

@@ -410,7 +410,7 @@ export default function CustomizeClient({ params }) {
   const [activeDragId, setActiveDragId] = useState(null);
   const [activeTab, setActiveTab] = useState("desktop");
   const [exportSize, setExportSize] = useState("YouTube (2560 x 1440)");
-  const [bgOverlay, setBgOverlay] = useState(15); // Percentage background darkener
+  const [bgOverlay, setBgOverlay] = useState(0); // Percentage background darkener (Default 0% for full bright original colors)
   const [isDownloading, setIsDownloading] = useState(false);
 
   // Helper to add a new custom text layer

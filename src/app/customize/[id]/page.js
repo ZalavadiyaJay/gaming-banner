@@ -53,7 +53,27 @@ export async function generateStaticParams() {
     { id: "esports-pro" },
     { id: "stream-schedule" },
     { id: "clan-tag" },
-    { id: "neon-glow" }
+    { id: "neon-glow" },
+    { id: "esports-v2" },
+    { id: "cs2-tactical-v2" },
+    { id: "streaming-v2" },
+    { id: "minimalist-v2" },
+    { id: "modern-apex-v2" },
+    { id: "overwatch-hero-v2" },
+    { id: "gta-street-v2" },
+    { id: "rpg-v2" },
+    { id: "rocket-league-v2" },
+    { id: "pubg-mobile-v2" },
+    { id: "clash-of-clans-v2" },
+    { id: "forza-horizon-v2" },
+    { id: "asphalt-9-v2" },
+    { id: "genshin-impact-v2" },
+    { id: "roblox-virtual-v2" },
+    { id: "fifa-soccer-v2" },
+    { id: "cyberpunk-2077-v2" },
+    { id: "elden-ring-v2" },
+    { id: "among-us-v2" },
+    { id: "clash-royale-v2" }
   ];
 }
 

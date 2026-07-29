@@ -6,104 +6,206 @@ import Header from "@/components/Header";
 
 // Template definitions static dictionary
 const templateConfig = {
-  // YouTube templates
+  // YouTube Original Templates
   esports: {
-    name: "Valorant",
+    name: "Valorant Classic",
+    sub: "Ranked / K/D 2.5",
+    style: { background: "url('/banner_valorant.jpg') center/cover no-repeat", color: "#ffffff" }
+  },
+  "cs2-tactical": {
+    name: "CS2 / CS:GO Classic",
+    sub: "TACTICAL LOADOUT",
+    style: { background: "url('/banner_cod.jpg') center/cover no-repeat", color: "#ffffff" }
+  },
+  streaming: {
+    name: "Fortnite Classic",
+    sub: "STREAMING NOW",
+    style: { background: "url('/banner_fortnite.jpg') center/cover no-repeat", color: "#ffffff" }
+  },
+  minimalist: {
+    name: "Minecraft Classic",
+    sub: "Est. 2018",
+    style: { background: "url('/banner_minecraft.jpg') center/cover no-repeat", color: "#ffffff" }
+  },
+  "modern-apex": {
+    name: "Apex Legends Classic",
+    sub: "Ranked Master",
+    style: { background: "url('/banner_apex.jpg') center/cover no-repeat", color: "#ff3e3e" }
+  },
+  "overwatch-hero": {
+    name: "Overwatch 2 Classic",
+    sub: "HERO SELECT",
+    style: { background: "url('/banner_overwatch.jpg') center/cover no-repeat", color: "#f99e1a" }
+  },
+  "gta-street": {
+    name: "GTA V / Roleplay Classic",
+    sub: "LOS SANTOS",
+    style: { background: "url('/banner_gtav.jpg') center/cover no-repeat", color: "#ffffff" }
+  },
+  rpg: {
+    name: "League of Legends Classic",
+    sub: "Lv 100 Mage",
+    style: { background: "url('/banner_league.jpg') center/cover no-repeat", color: "#dfc8a5" }
+  },
+  "rocket-league": {
+    name: "Rocket League Classic",
+    sub: "BOOST ON",
+    style: { background: "url('/banner_rocketleague.jpg') center/cover no-repeat", color: "#00d4ff" }
+  },
+  "pubg-mobile": {
+    name: "PUBG Mobile Classic",
+    sub: "Tactical Battlegrounds",
+    style: { background: "url('/banner_pubg.jpg') center/cover no-repeat", color: "#eab308" }
+  },
+  "clash-of-clans": {
+    name: "Clash of Clans Classic",
+    sub: "Clan Leader",
+    style: { background: "url('/banner_coc_game.jpg') center/cover no-repeat", color: "#f59e0b" }
+  },
+  "forza-horizon": {
+    name: "Forza Horizon Classic",
+    sub: "Horizon Festival",
+    style: { background: "url('/banner_forza.jpg') center/cover no-repeat", color: "#f43f5e" }
+  },
+  "asphalt-9": {
+    name: "Asphalt 9 Classic",
+    sub: "Legendary Driver",
+    style: { background: "url('/banner_asphalt.jpg') center/cover no-repeat", color: "#ec4899" }
+  },
+  "genshin-impact": {
+    name: "Genshin Impact Classic",
+    sub: "Traveler of Teyvat",
+    style: { background: "url('/banner_genshin.jpg') center/cover no-repeat", color: "#38bdf8" }
+  },
+  "roblox-virtual": {
+    name: "Roblox Classic",
+    sub: "Vibrant Virtual World",
+    style: { background: "url('/banner_roblox.jpg') center/cover no-repeat", color: "#f43f5e" }
+  },
+  "fifa-soccer": {
+    name: "FIFA / FC 24 Classic",
+    sub: "Ultimate Team",
+    style: { background: "url('/banner_fifa.jpg') center/cover no-repeat", color: "#10b981" }
+  },
+  "cyberpunk-2077": {
+    name: "Cyberpunk 2077 Classic",
+    sub: "Night City Mercenary",
+    style: { background: "url('/banner_cyberpunk.jpg') center/cover no-repeat", color: "#facc15" }
+  },
+  "elden-ring": {
+    name: "Elden Ring Classic",
+    sub: "Tarnished Lord",
+    style: { background: "url('/banner_eldenring.jpg') center/cover no-repeat", color: "#fbbf24" }
+  },
+  "among-us": {
+    name: "Among Us Classic",
+    sub: "Spaceship Crewmate",
+    style: { background: "url('/banner_amongus.jpg') center/cover no-repeat", color: "#ef4444" }
+  },
+  "clash-royale": {
+    name: "Clash Royale Classic",
+    sub: "Arena Challenger",
+    style: { background: "url('/banner_clashroyale.jpg') center/cover no-repeat", color: "#3b82f6" }
+  },
+
+  // YouTube V2 Authentic Banner Templates
+  "esports-v2": {
+    name: "Valorant Arena V2",
     sub: "Ranked / K/D 2.5",
     style: { background: "url('/banner_valorant_v2.jpg') center/cover no-repeat", color: "#ffffff" }
   },
-  "cs2-tactical": {
-    name: "CS2 / Call of Duty",
+  "cs2-tactical-v2": {
+    name: "Call of Duty / CS2 Warzone V2",
     sub: "TACTICAL LOADOUT",
     style: { background: "url('/banner_cod_v2.jpg') center/cover no-repeat", color: "#ffffff" }
   },
-  streaming: {
-    name: "Fortnite",
+  "streaming-v2": {
+    name: "Fortnite Storm V2",
     sub: "STREAMING NOW",
     style: { background: "url('/banner_fortnite_v2.jpg') center/cover no-repeat", color: "#ffffff" }
   },
-  minimalist: {
-    name: "Minecraft",
+  "minimalist-v2": {
+    name: "Minecraft Sunset V2",
     sub: "Est. 2018",
     style: { background: "url('/banner_minecraft_v2.jpg') center/cover no-repeat", color: "#ffffff" }
   },
-  "modern-apex": {
-    name: "Apex Legends",
+  "modern-apex-v2": {
+    name: "Apex Legends Canyon V2",
     sub: "Ranked Master",
     style: { background: "url('/banner_apex_v2.jpg') center/cover no-repeat", color: "#ff3e3e" }
   },
-  "overwatch-hero": {
-    name: "Overwatch 2",
+  "overwatch-hero-v2": {
+    name: "Overwatch 2 Hub V2",
     sub: "HERO SELECT",
     style: { background: "url('/banner_overwatch_v2.jpg') center/cover no-repeat", color: "#f99e1a" }
   },
-  "gta-street": {
-    name: "GTA V / Roleplay",
+  "gta-street-v2": {
+    name: "GTA V Los Santos V2",
     sub: "LOS SANTOS",
     style: { background: "url('/banner_gtav_v2.jpg') center/cover no-repeat", color: "#ffffff" }
   },
-  rpg: {
-    name: "League of Legends",
+  "rpg-v2": {
+    name: "League of Legends Rift V2",
     sub: "Lv 100 Mage",
     style: { background: "url('/banner_league_v2.jpg') center/cover no-repeat", color: "#dfc8a5" }
   },
-  "rocket-league": {
-    name: "Rocket League",
+  "rocket-league-v2": {
+    name: "Rocket League Dome V2",
     sub: "BOOST ON",
     style: { background: "url('/banner_rocketleague_v2.jpg') center/cover no-repeat", color: "#00d4ff" }
   },
-  "pubg-mobile": {
-    name: "PUBG Mobile",
+  "pubg-mobile-v2": {
+    name: "PUBG Mobile Air Drop V2",
     sub: "Tactical Battlegrounds",
     style: { background: "url('/banner_pubg_v2.jpg') center/cover no-repeat", color: "#eab308" }
   },
-  "clash-of-clans": {
-    name: "Clash of Clans",
+  "clash-of-clans-v2": {
+    name: "Clash of Clans Fortress V2",
     sub: "Clan Leader",
     style: { background: "url('/banner_coc_v2.jpg') center/cover no-repeat", color: "#f59e0b" }
   },
-  "forza-horizon": {
-    name: "Forza Horizon",
+  "forza-horizon-v2": {
+    name: "Forza Horizon Speed V2",
     sub: "Horizon Festival",
     style: { background: "url('/banner_forza_v2.jpg') center/cover no-repeat", color: "#f43f5e" }
   },
-  "asphalt-9": {
-    name: "Asphalt 9",
+  "asphalt-9-v2": {
+    name: "Asphalt 9 Neon V2",
     sub: "Legendary Driver",
     style: { background: "url('/banner_asphalt_v2.jpg') center/cover no-repeat", color: "#ec4899" }
   },
-  "genshin-impact": {
-    name: "Genshin Impact",
+  "genshin-impact-v2": {
+    name: "Genshin Impact Meadow V2",
     sub: "Traveler of Teyvat",
     style: { background: "url('/banner_genshin_v2.jpg') center/cover no-repeat", color: "#38bdf8" }
   },
-  "roblox-virtual": {
-    name: "Roblox",
+  "roblox-virtual-v2": {
+    name: "Roblox Parkour V2",
     sub: "Vibrant Virtual World",
     style: { background: "url('/banner_roblox_v2.jpg') center/cover no-repeat", color: "#f43f5e" }
   },
-  "fifa-soccer": {
-    name: "FIFA / FC 25",
+  "fifa-soccer-v2": {
+    name: "EA Sports FC 25 Pitch V2",
     sub: "Ultimate Team",
     style: { background: "url('/banner_fifa_v2.jpg') center/cover no-repeat", color: "#10b981" }
   },
-  "cyberpunk-2077": {
-    name: "Cyberpunk 2077",
+  "cyberpunk-2077-v2": {
+    name: "Cyberpunk 2077 City V2",
     sub: "Night City Mercenary",
     style: { background: "url('/banner_cyberpunk_v2.jpg') center/cover no-repeat", color: "#facc15" }
   },
-  "elden-ring": {
-    name: "Elden Ring",
+  "elden-ring-v2": {
+    name: "Elden Ring Erdtree V2",
     sub: "Tarnished Lord",
     style: { background: "url('/banner_eldenring_v2.jpg') center/cover no-repeat", color: "#fbbf24" }
   },
-  "among-us": {
-    name: "Among Us",
+  "among-us-v2": {
+    name: "Among Us Nebula V2",
     sub: "Spaceship Crewmate",
     style: { background: "url('/banner_amongus_v2.jpg') center/cover no-repeat", color: "#ef4444" }
   },
-  "clash-royale": {
-    name: "Clash Royale",
+  "clash-royale-v2": {
+    name: "Clash Royale Tower V2",
     sub: "Arena Challenger",
     style: { background: "url('/banner_clashroyale_v2.jpg') center/cover no-repeat", color: "#3b82f6" }
   },

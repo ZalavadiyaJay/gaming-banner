@@ -1035,47 +1035,7 @@ export default function CustomizeClient({ params }) {
                 </div>
               </div>
 
-              {/* Position Sliders & Reset */}
-              <div className="flex flex-col gap-1.5 border-t border-outline-variant/30 pt-md">
-                <div className="flex justify-between items-center text-xs font-semibold text-outline">
-                  <span>Position (Drag On Banner)</span>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      updateLayer(selectedLayer.id, "posX", 50);
-                      updateLayer(selectedLayer.id, "posY", 50);
-                    }}
-                    className="text-[10px] font-bold text-primary-container hover:underline"
-                  >
-                    Reset Center
-                  </button>
-                </div>
 
-                <div className="grid grid-cols-2 gap-md">
-                  <div className="flex flex-col gap-1">
-                    <span className="text-[10px] text-outline">Horizontal (X): {Math.round(selectedLayer.posX)}%</span>
-                    <input
-                      type="range"
-                      min="10"
-                      max="90"
-                      value={selectedLayer.posX}
-                      onChange={(e) => updateLayer(selectedLayer.id, "posX", parseFloat(e.target.value))}
-                      className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="text-[10px] text-outline">Vertical (Y): {Math.round(selectedLayer.posY)}%</span>
-                    <input
-                      type="range"
-                      min="10"
-                      max="90"
-                      value={selectedLayer.posY}
-                      onChange={(e) => updateLayer(selectedLayer.id, "posY", parseFloat(e.target.value))}
-                      className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
           ) : (
             <p className="text-xs text-outline text-center py-4">Click any text layer to edit or click + Add Text Layer</p>

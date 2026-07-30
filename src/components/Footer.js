@@ -8,14 +8,16 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-center gap-lg">
           {[
             { label: "Home", href: "/" },
-            { label: "Templates", href: "/youtube-banners" },
+            { label: "YouTube Banners", href: "/youtube-banners" },
+            { label: "Twitch Banners", href: "/twitch-banners" },
+            { label: "Discord Banners", href: "/discord-banners" },
+            { label: "Twitter Headers", href: "/twitter-headers" },
             { label: "Guides", href: "/guides" },
             { label: "Blog", href: "/blog" },
             { label: "About", href: "/about" },
             { label: "Contact", href: "/contact" },
             { label: "Privacy", href: "/privacy" },
             { label: "Terms", href: "/terms" },
-            { label: "Disclaimer", href: "/disclaimer" },
           ].map((link, idx) => (
             <Link key={idx} href={link.href} className="hover:text-on-background transition-colors">
               {link.label}

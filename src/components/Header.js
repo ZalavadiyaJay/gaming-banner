@@ -8,10 +8,12 @@ export default function Header() {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Templates", href: "/youtube-banners" },
-    // { label: "Gallery", href: "/gallery" },
+    { label: "YouTube Banners", href: "/youtube-banners" },
+    { label: "Twitch Banners", href: "/twitch-banners" },
+    { label: "Discord Banners", href: "/discord-banners" },
+    { label: "Twitter Headers", href: "/twitter-headers" },
+    { label: "Guides", href: "/guides" },
     { label: "Blog", href: "/blog" },
-    { label: "About", href: "/about" },
   ];
 
   return (

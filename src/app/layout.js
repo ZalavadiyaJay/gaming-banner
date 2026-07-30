@@ -32,7 +32,7 @@ export const metadata = {
     title: "GAMINGBANNER | Level Up Your Identity",
     description: "Create premium, custom gaming banners for YouTube, Twitch, Discord, and Twitter instantly.",
     url: "https://gamingbanner.com",
-    siteName: "GamingBanner",
+    siteName: "Gaming Banner",
     locale: "en_US",
     type: "website",
   },
@@ -47,10 +47,10 @@ export default function RootLayout({ children }) {
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "GamingBanner",
+    "name": "Gaming Banner",
     "alternateName": [
+      "GamingBanner",
       "GAMINGBANNER",
-      "Gaming Banner",
       "GamingBanners",
       "Gaming Banners",
       "Gaming Banner Maker",
@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
   const webAppJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "GamingBanner",
+    "name": "Gaming Banner",
     "url": "https://gamingbanner.com",
     "description": "Design premium, custom gaming banners for YouTube, Twitch, Discord, and Twitter instantly. Free template editor with safe zones.",
     "applicationCategory": "DesignApplication",

@@ -32,7 +32,7 @@ export const metadata = {
     title: "GAMINGBANNER | Level Up Your Identity",
     description: "Create premium, custom gaming banners for YouTube, Twitch, Discord, and Twitter instantly.",
     url: "https://gamingbanner.com",
-    siteName: "GAMINGBANNER",
+    siteName: "GamingBanner",
     locale: "en_US",
     type: "website",
   },
@@ -44,10 +44,36 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const jsonLd = {
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "GamingBanner",
+    "alternateName": [
+      "GAMINGBANNER",
+      "Gaming Banner",
+      "GamingBanners",
+      "Gaming Banners",
+      "Gaming Banner Maker",
+      "Gaming Banners Maker",
+      "Gaming Banner Generator",
+      "Gaming Banner Customization",
+      "Gaming Banner Customisation",
+      "Gaming Banner Editor",
+      "Gaming Channel Art Maker",
+      "Free Gaming Banner Maker",
+      "YouTube Gaming Banner Maker",
+      "Twitch Gaming Banner Maker",
+      "Discord Gaming Banner Maker",
+      "GamingBanner.com",
+      "GamingBanners.com"
+    ],
+    "url": "https://gamingbanner.com"
+  };
+
+  const webAppJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "GAMINGBANNER",
+    "name": "GamingBanner",
     "url": "https://gamingbanner.com",
     "description": "Design premium, custom gaming banners for YouTube, Twitch, Discord, and Twitter instantly. Free template editor with safe zones.",
     "applicationCategory": "DesignApplication",
@@ -79,7 +105,11 @@ export default function RootLayout({ children }) {
       <body className="min-h-full w-full overflow-x-hidden flex flex-col font-sans bg-background text-on-background antialiased">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }}
         />
         {children}
       </body>

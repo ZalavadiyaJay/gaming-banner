@@ -5,15 +5,13 @@ import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "YouTube Banners", href: "/youtube-banners" },
-    { label: "Twitch Banners", href: "/twitch-banners" },
-    { label: "Discord Banners", href: "/discord-banners" },
-    { label: "Twitter Headers", href: "/twitter-headers" },
-    { label: "Guides", href: "/guides" },
-    { label: "Blog", href: "/blog" },
+  const templateCategories = [
+    { label: "YouTube Banners", href: "/youtube-banners", icon: "🎬", desc: "Channel Art & Safe Zone Templates" },
+    { label: "Twitch Banners", href: "/twitch-banners", icon: "🟣", desc: "Offline Banners & Profile Headers" },
+    { label: "Discord Banners", href: "/discord-banners", icon: "💬", desc: "Animated & Server Profile Banners" },
+    { label: "Twitter Headers", href: "/twitter-headers", icon: "🐦", desc: "Esports & Gamer Header Designs" },
   ];
 
   return (
@@ -22,11 +20,8 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 transition-transform group-hover:scale-105">
-            {/* Outer Hexagon */}
             <polygon points="20,3 37,12.5 37,27.5 20,37 3,27.5 3,12.5" stroke="#00d4ff" strokeWidth="1.75" fill="none" opacity="0.45" strokeLinejoin="round" />
-            {/* Inner Accent Hexagon */}
             <polygon points="20,6 34,14 34,26 20,34 6,26 6,14" stroke="#00d4ff" strokeWidth="1" fill="none" opacity="0.15" strokeLinejoin="round" />
-            {/* Symmetrical Esports Gamepad Body */}
             <path
               d="M 12,15 h 16 c 3,0 6,2.5 6,5.5 v 2 c 0,3 -2.5,5.5 -5.5,5.5 c -1.2,0 -2.2,-0.5 -3,-1.2 c -1,-0.8 -2.2,-1.3 -3.5,-1.3 h -4 c -1.3,0 -2.5,0.5 -3.5,1.3 c -0.8,0.7 -1.8,1.2 -3,1.2 c -3,0 -5.5,-2.5 -5.5,-5.5 v -2 c 0,-3 2.5,-5.5 5.5,-5.5 z"
               stroke="#00d4ff"
@@ -34,14 +29,11 @@ export default function Header() {
               fill="rgba(0, 212, 255, 0.05)"
               strokeLinejoin="round"
             />
-            {/* D-Pad */}
             <path d="M 10,21 h 4 M 12,19 v 4" stroke="#00d4ff" strokeWidth="1.5" strokeLinecap="round" />
-            {/* Face Buttons */}
             <circle cx="28" cy="19.5" r="0.9" fill="#00d4ff" />
             <circle cx="30" cy="21.5" r="0.9" fill="#00d4ff" />
             <circle cx="28" cy="23.5" r="0.9" fill="#00d4ff" />
             <circle cx="26" cy="21.5" r="0.9" fill="#00d4ff" />
-            {/* Menu Buttons */}
             <line x1="18" y1="18.5" x2="19.5" y2="17.5" stroke="#00d4ff" strokeWidth="1" strokeLinecap="round" />
             <line x1="20.5" y1="18.5" x2="22" y2="17.5" stroke="#00d4ff" strokeWidth="1" strokeLinecap="round" />
           </svg>
@@ -53,15 +45,53 @@ export default function Header() {
 
         {/* Center Links (Desktop) */}
         <div className="hidden md:flex items-center gap-lg">
-          {navLinks.map((link, idx) => (
-            <Link
-              key={idx}
-              href={link.href}
-              className="text-sm font-semibold text-outline hover:text-on-background transition-colors relative py-1"
+          <Link href="/" className="text-sm font-semibold text-outline hover:text-on-background transition-colors py-1">
+            Home
+          </Link>
+
+          {/* Templates Dropdown */}
+          <div
+            className="relative group py-1"
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            <button
+              className="flex items-center gap-1 text-sm font-semibold text-outline hover:text-on-background transition-colors outline-none cursor-pointer"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
-              {link.label}
-            </Link>
-          ))}
+              <span>Templates</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? "rotate-180 text-primary-container" : "text-outline"}`}>
+                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </button>
+
+            {/* Dropdown Menu Box */}
+            <div className={`absolute top-full left-0 w-64 bg-surface-container-high/95 backdrop-blur-xl border border-outline-variant/80 rounded-xl p-2 shadow-2xl transition-all duration-200 z-50 ${isDropdownOpen ? "opacity-100 visible translate-y-1" : "opacity-0 invisible translate-y-0"}`}>
+              {templateCategories.map((cat, idx) => (
+                <Link
+                  key={idx}
+                  href={cat.href}
+                  className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item"
+                >
+                  <span className="text-xl">{cat.icon}</span>
+                  <div className="flex flex-col">
+                    <span className="text-xs font-bold text-on-background group-hover/item:text-primary-container transition-colors">{cat.label}</span>
+                    <span className="text-[10px] text-outline">{cat.desc}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <Link href="/guides" className="text-sm font-semibold text-outline hover:text-on-background transition-colors py-1">
+            Guides
+          </Link>
+          <Link href="/blog" className="text-sm font-semibold text-outline hover:text-on-background transition-colors py-1">
+            Blog
+          </Link>
+          <Link href="/about" className="text-sm font-semibold text-outline hover:text-on-background transition-colors py-1">
+            About
+          </Link>
         </div>
 
         {/* Right Actions */}
@@ -91,17 +121,35 @@ export default function Header() {
 
         {/* Mobile Dropdown Panel */}
         {isOpen && (
-          <div className="absolute top-16 left-0 w-full bg-surface-container-low border-b border-outline-variant/80 flex flex-col p-lg md:hidden gap-md animate-fade-in shadow-xl z-50">
-            {navLinks.map((link, idx) => (
-              <Link
-                key={idx}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="text-sm font-semibold text-outline hover:text-on-background transition-colors py-2 border-b border-outline-variant/20 last:border-none"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="absolute top-16 left-0 w-full bg-surface-container-low border-b border-outline-variant/80 flex flex-col p-lg md:hidden gap-md animate-fade-in shadow-xl z-50 max-h-[80vh] overflow-y-auto">
+            <Link href="/" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-outline hover:text-on-background transition-colors py-2 border-b border-outline-variant/20">
+              Home
+            </Link>
+
+            <div className="flex flex-col gap-xs py-2 border-b border-outline-variant/20">
+              <span className="text-xs font-bold text-primary-container uppercase tracking-wider">Templates</span>
+              {templateCategories.map((cat, idx) => (
+                <Link
+                  key={idx}
+                  href={cat.href}
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center gap-2 text-sm font-semibold text-on-background hover:text-primary-container transition-colors py-1.5 pl-2"
+                >
+                  <span>{cat.icon}</span>
+                  <span>{cat.label}</span>
+                </Link>
+              ))}
+            </div>
+
+            <Link href="/guides" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-outline hover:text-on-background transition-colors py-2 border-b border-outline-variant/20">
+              Guides
+            </Link>
+            <Link href="/blog" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-outline hover:text-on-background transition-colors py-2 border-b border-outline-variant/20">
+              Blog
+            </Link>
+            <Link href="/about" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-outline hover:text-on-background transition-colors py-2">
+              About
+            </Link>
           </div>
         )}
       </nav>

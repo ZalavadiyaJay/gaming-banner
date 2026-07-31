@@ -90,8 +90,51 @@ export default function Home() {
     (t) => selectedUniverse === "All" || t.universe === selectedUniverse
   );
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is GamingBanner really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! You can customize and download all templates completely free of charge. We do not apply any watermarks to exported high-resolution PNG files."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need graphic design experience?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "None at all. Just type your gamertag, choose a game style, adjust colors using our side panel options, and download. The tool takes care of dimensions automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are the dimensions accurate for my channel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. All templates are built according to platform specifications, including YouTube's central mobile safe-zone (1546 x 423 px) to ensure text renders perfectly on phone screens."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use these banners commercially?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you are free to use your downloaded banners to brand your monetized streams, channels, and social profiles."
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Header />
 
       <main className="flex-1 pt-16">

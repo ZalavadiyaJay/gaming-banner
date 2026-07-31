@@ -75,15 +75,34 @@ export default function RootLayout({ children }) {
     "@type": "WebApplication",
     "name": "Gaming Banner",
     "url": "https://gamingbanner.com",
-    "description": "Design premium, custom gaming banners for YouTube, Twitch, Discord, and Twitter instantly. Free template editor with safe zones.",
+    "description": "Design premium, custom gaming banners for YouTube, Twitch, Discord, and Twitter instantly. Free 4K template editor with safe zone overlays.",
     "applicationCategory": "DesignApplication",
     "operatingSystem": "All",
     "browserRequirements": "Requires HTML5 canvas support",
+    "featureList": [
+      "Instant 4K PNG Banner Export",
+      "Official 20 Top Game Background Artwork",
+      "YouTube Safe Zone Overlay Grid",
+      "Twitch Offline & Profile Header Creator",
+      "Discord Animated & Server Banner Editor",
+      "Twitter/X Header Banner Generator",
+      "Zero Watermark & 100% Free Forever"
+    ],
     "offers": {
       "@type": "Offer",
       "price": "0.00",
       "priceCurrency": "USD"
     }
+  };
+
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Gaming Banner",
+    "alternateName": ["GamingBanner", "GAMINGBANNER", "GamingBanners"],
+    "url": "https://gamingbanner.com",
+    "logo": "https://gamingbanner.com/favicon.ico",
+    "description": "Gaming Banner is the leading free online banner generator for YouTube creators, Twitch streamers, Discord servers, and esports gamers."
   };
 
   return (
@@ -110,6 +129,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
         {children}
       </body>

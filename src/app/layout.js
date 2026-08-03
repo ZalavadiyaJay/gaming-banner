@@ -19,6 +19,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://gamingbanner.com"),
+  alternates: {
+    canonical: "./",
+  },
   title: {
     default: "Gaming Banner | Level Up Your Identity",
     template: "%s | Gaming Banner"

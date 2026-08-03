@@ -27,7 +27,7 @@ export default function Footer() {
 
         {/* Right Copyright */}
         <span className="text-xs text-outline/65 font-data-mono">
-          &copy; 2025 GamingBanner. All rights reserved.
+          &copy; 2025 Gaming Banner. All rights reserved.
         </span>
       </div>
     </footer>

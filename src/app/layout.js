@@ -20,8 +20,8 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   metadataBase: new URL("https://gamingbanner.com"),
   title: {
-    default: "GAMINGBANNER | Level Up Your Identity",
-    template: "%s | GAMINGBANNER"
+    default: "Gaming Banner | Level Up Your Identity",
+    template: "%s | Gaming Banner"
   },
   description: "Create premium, custom gaming banners for YouTube, Twitch, Discord, and Twitter instantly.",
   keywords: ["gaming banner maker", "youtube banner template", "twitch offline banner maker", "discord server banner maker", "twitter header gaming", "free banner templates", "youtube banner size safe zone", "twitch banner size", "discord profile banner size", "cool gaming banners", "gaming youtube channel art", "valorant banner maker", "minecraft banner maker"],
@@ -29,7 +29,7 @@ export const metadata = {
     google: "VZg_9aVM21iFywiwLemiPb9BD_9v6SbT-Pk-l0Y2G5c",
   },
   openGraph: {
-    title: "GAMINGBANNER | Level Up Your Identity",
+    title: "Gaming Banner | Level Up Your Identity",
     description: "Create premium, custom gaming banners for YouTube, Twitch, Discord, and Twitter instantly.",
     url: "https://gamingbanner.com",
     siteName: "Gaming Banner",
@@ -38,7 +38,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GAMINGBANNER | Level Up Your Identity",
+    title: "Gaming Banner | Level Up Your Identity",
     description: "Create premium, custom gaming banners for YouTube, Twitch, Discord, and Twitter instantly.",
   }
 };

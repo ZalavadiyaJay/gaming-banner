@@ -38,8 +38,8 @@ export default function Header() {
             <line x1="20.5" y1="18.5" x2="22" y2="17.5" stroke="#00d4ff" strokeWidth="1" strokeLinecap="round" />
           </svg>
           <span className="font-extrabold text-lg tracking-wider font-sans select-none">
-            <span className="text-on-background">GAMING</span>
-            <span className="text-primary-container">BANNER</span>
+            <span className="text-on-background">Gaming</span>
+            <span className="text-primary-container">Banner</span>
           </span>
         </Link>
 

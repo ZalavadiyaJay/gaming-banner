@@ -2,8 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Terms of Service | GAMINGBANNER",
-  description: "Read the terms of service and usage conditions for the GAMINGBANNER platform and customizer tools.",
+  title: "Terms of Service | Gaming Banner",
+  description: "Read the terms of service and usage conditions for the Gaming Banner platform and customizer tools.",
 };
 
 export default function Terms() {

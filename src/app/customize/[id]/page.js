@@ -81,7 +81,7 @@ export async function generateMetadata({ params }) {
   const { id } = await params;
   const capitalized = id.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
   return {
-    title: `Customize ${capitalized} Gaming Banner | GAMINGBANNER`,
+    title: `Customize ${capitalized} Gaming Banner | Gaming Banner`,
     description: `Edit and download your personalized ${capitalized} gaming channel art. Adjust colors, text tags, and export size.`,
   };
 }

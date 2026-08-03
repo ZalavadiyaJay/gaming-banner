@@ -2,8 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "About Us | Professional Gaming Branding Made Easy | GAMINGBANNER",
-  description: "Learn about GAMINGBANNER, the ultimate branding hub helping gamers, streamers, and esports clans design professional headers instantly.",
+  title: "About Us | Professional Gaming Branding Made Easy | Gaming Banner",
+  description: "Learn about Gaming Banner, the ultimate branding hub helping gamers, streamers, and esports clans design professional headers instantly.",
 };
 
 export default function About() {

@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import TemplatesNav from "@/components/TemplatesNav";
 
 export const metadata = {
-  title: "Gaming Twitter Headers & Symmetrical Banner Maker | GAMINGBANNER",
+  title: "Gaming Twitter Headers & Symmetrical Banner Maker | Gaming Banner",
   description: "Generate gaming banners for Twitter/X profiles. Optimized dimensions, layout safe zones, and esports styles featuring glow text edits.",
 };
 

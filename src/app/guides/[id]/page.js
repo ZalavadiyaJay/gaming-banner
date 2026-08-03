@@ -55,7 +55,7 @@ export async function generateMetadata({ params }) {
   };
   const guide = guidesContent[id] || { title: "Gaming Guide", desc: "Design resources, guides, and tutorials for creators." };
   return {
-    title: `${guide.title} | GAMINGBANNER`,
+    title: `${guide.title} | Gaming Banner`,
     description: guide.desc,
   };
 }

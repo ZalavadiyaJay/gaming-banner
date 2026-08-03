@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import TemplatesNav from "@/components/TemplatesNav";
 
 export const metadata = {
-  title: "Twitch Offline Banner Maker & Gaming Banners | GAMINGBANNER",
+  title: "Twitch Offline Banner Maker & Gaming Banners | Gaming Banner",
   description: "Create custom Twitch offline screens and gaming banners. 20+ game-themed presets with centered typography and esports shading panels.",
 };
 

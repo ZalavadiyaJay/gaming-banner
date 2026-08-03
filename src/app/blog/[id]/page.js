@@ -40,7 +40,7 @@ export async function generateMetadata({ params }) {
   };
   const post = blogPostsContent[id] || { title: "Gaming Blog", desc: "Tips, tutorials, and inspiration for gaming graphic design and brand identity." };
   return {
-    title: `${post.title} | GAMINGBANNER`,
+    title: `${post.title} | Gaming Banner`,
     description: post.desc,
   };
 }

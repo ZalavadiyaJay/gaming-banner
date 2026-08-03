@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Gaming Brand Design & Streaming Growth Blog | GAMINGBANNER",
+  title: "Gaming Brand Design & Streaming Growth Blog | Gaming Banner",
   description: "Read expert guides, design trends, and growth strategies for streamers and content creators. Level up your gaming brand identity.",
 };
 

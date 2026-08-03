@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Twitch & YouTube Banner Size Guides & Tutorials | GAMINGBANNER",
+  title: "Twitch & YouTube Banner Size Guides & Tutorials | Gaming Banner",
   description: "Learn exact dimensions, safe zones, upload walkthroughs, and typography guidelines for YouTube, Twitch, Discord, and Twitter banners.",
 };
 

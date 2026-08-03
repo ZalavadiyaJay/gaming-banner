@@ -2,8 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Privacy Policy | GAMINGBANNER",
-  description: "Read the privacy policy for GAMINGBANNER. Understand how we collect, store, and protect your user data.",
+  title: "Privacy Policy | Gaming Banner",
+  description: "Read the privacy policy for Gaming Banner. Understand how we collect, store, and protect your user data.",
 };
 
 export default function PrivacyPolicy() {

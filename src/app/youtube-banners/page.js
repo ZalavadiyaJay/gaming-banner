@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import TemplatesNav from "@/components/TemplatesNav";
 
 export const metadata = {
-  title: "Free YouTube Gaming Banner Maker & Templates | GAMINGBANNER",
+  title: "Free YouTube Gaming Banner Maker & Templates | Gaming Banner",
   description: "Design high-quality YouTube gaming banners for free. Symmetrical layouts, neon glow, and modern esports templates for Valorant, Minecraft, COD, and more.",
 };
 

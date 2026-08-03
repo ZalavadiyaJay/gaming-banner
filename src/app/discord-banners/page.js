@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import TemplatesNav from "@/components/TemplatesNav";
 
 export const metadata = {
-  title: "Discord Server Banner Maker & Profile Banners | GAMINGBANNER",
+  title: "Discord Server Banner Maker & Profile Banners | Gaming Banner",
   description: "Make professional Discord server banners and profile headers. Choose from active community, clan, and cyberpunk themes optimized for Discord.",
 };
 

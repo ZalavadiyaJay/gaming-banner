@@ -2,8 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Legal Disclaimer | GAMINGBANNER",
-  description: "Read the legal disclaimer for GAMINGBANNER templates, assets, and third-party copyright details.",
+  title: "Legal Disclaimer | Gaming Banner",
+  description: "Read the legal disclaimer for Gaming Banner templates, assets, and third-party copyright details.",
 };
 
 export default function Disclaimer() {

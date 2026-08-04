@@ -27,7 +27,34 @@ export const metadata = {
     template: "%s | Gaming Banner"
   },
   description: "Create premium, custom gaming banners for YouTube, Twitch, Discord, and Twitter instantly.",
-  keywords: ["gaming banner maker", "youtube banner template", "twitch offline banner maker", "discord server banner maker", "twitter header gaming", "free banner templates", "youtube banner size safe zone", "twitch banner size", "discord profile banner size", "cool gaming banners", "gaming youtube channel art", "valorant banner maker", "minecraft banner maker"],
+  keywords: [
+    // Top Global High-Volume Queries (10k - 500k+ Monthly Searches)
+    "youtube banner maker", "youtube banner size", "free banner maker", "gaming banner maker", "youtube banner template", "twitch banner maker", "discord banner maker", "youtube channel art maker", "twitch banner size", "discord banner size", "twitter header maker", "valorant banner maker", "minecraft banner maker", "fortnite banner maker",
+    
+    // High-Intent Problem-Solving Queries
+    "how to make a youtube gaming banner without photoshop", "free gaming banner maker no watermark", "youtube banner generator no signup", "valorant banner maker safe zone", "twitch offline banner maker 4k",
+    
+    // Top High-Volume Spanish Queries (ES / LatAm)
+    "banner para youtube", "creador de banners", "banner para twitch", "plantillas de banners", "banner gaming", "como hacer un banner para youtube de gaming sin photoshop", "creador de banners para twitch gratis sin marca de agua",
+    
+    // Top High-Volume German Queries (DE)
+    "youtube banner erstellen", "twitch banner erstellen", "gaming banner erstellen", "youtube banner vorlage", "youtube gaming banner ohne photoshop erstellen", "kostenlos twitch banner generator ohne anmeldung",
+    
+    // Top High-Volume Portuguese Queries (BR)
+    "banner para youtube", "criador de banner", "banner para twitch", "fazer banner para youtube", "como fazer banner de jogos para youtube sem photoshop", "banner para canal de gaming grátis sem marca d'água",
+    
+    // Top High-Volume French Queries (FR)
+    "créer une bannière youtube", "bannière twitch", "bannière gaming", "comment faire une bannière youtube gaming sans photoshop", "créateur de bannière twitch gratuit sans inscription",
+    
+    // Top High-Volume Asian Queries (JP / KR)
+    "YouTube バナー 作成", "ゲーミングバナー 作成", "YouTube ゲーミング バナー 簡単 作成 フォトショなし",
+    "유튜브 배너 만들기", "게이밍 배너 제작", "포토샵 없이 유튜브 게이밍 배너 만들기",
+    
+    // High-Volume Polish, Turkish, Indonesian Queries
+    "baner youtube", "kreator banerów", "darmowy kreator banerów dla graczy",
+    "youtube banner", "banner yapma", "ücretsiz oyun banner yapma",
+    "banner youtube", "buat banner", "buat banner gaming gratis"
+  ],
   verification: {
     google: "VZg_9aVM21iFywiwLemiPb9BD_9v6SbT-Pk-l0Y2G5c",
   },
@@ -47,10 +74,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const targetLanguages = [
+    "en-US", "en-GB", "en-CA", "en-AU", "en-NZ",
+    "de-DE", "fr-FR", "es-ES", "es-MX", "pt-BR",
+    "ja-JP", "ko-KR", "it-IT", "nl-NL", "sv-SE",
+    "no-NO", "pl-PL", "tr-TR", "id-ID", "ar-SA"
+  ];
+
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Gaming Banner",
+    "inLanguage": targetLanguages,
     "alternateName": [
       "GamingBanner",
       "GAMINGBANNER",
@@ -77,6 +112,7 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Gaming Banner",
+    "inLanguage": targetLanguages,
     "url": "https://gamingbanner.com",
     "description": "Design premium, custom gaming banners for YouTube, Twitch, Discord, and Twitter instantly. Free 4K template editor with safe zone overlays.",
     "applicationCategory": "DesignApplication",
@@ -102,6 +138,7 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Gaming Banner",
+    "inLanguage": targetLanguages,
     "alternateName": ["GamingBanner", "GAMINGBANNER", "GamingBanners"],
     "url": "https://gamingbanner.com",
     "logo": "https://gamingbanner.com/favicon.ico",

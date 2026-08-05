@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import TemplatesNav from "@/components/TemplatesNav";
+import CategoryCatalog from "@/components/CategoryCatalog";
 
 export const metadata = {
   title: "Twitch Offline Banner Maker & Gaming Banners | Gaming Banner",
@@ -63,8 +63,6 @@ export default function TwitchBanners() {
       <Header />
 
       <main className="flex-1 min-h-screen py-24 px-md md:px-xl w-full max-w-[1440px] mx-auto flex flex-col gap-xl overflow-x-hidden">
-        <TemplatesNav activeTab="twitch" />
-
         {/* Page Hero */}
         <section className="text-center py-lg border-b border-outline-variant/60 flex flex-col items-center gap-sm">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-on-background">
@@ -73,34 +71,10 @@ export default function TwitchBanners() {
           <p className="max-w-[620px] text-sm text-outline leading-relaxed">
             Create stunning profile graphics with our free Twitch offline banner maker. Choose from 20+ templates optimized for the recommended Twitch banner size (1200 x 480 pixels) to fit stream overlays correctly.
           </p>
-
-
         </section>
 
-        {/* Template Catalog Grid */}
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
-          {templates.map((template, idx) => (
-            <div key={idx} className="bento-card overflow-hidden rounded-xl shadow-lg border-outline-variant/50">
-              <div className="aspect-video relative flex flex-col items-center justify-center p-md overflow-hidden" style={{ ...template.style, containerType: "inline-size" }}>
-              </div>
-              <div className="p-lg bg-surface-container-high flex flex-col justify-between h-40">
-                <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-on-background">{template.name}</span>
-                  </div>
-                  <p className="text-xs text-outline mt-1">{template.desc}</p>
-                </div>
-
-                <Link
-                  href={`/customize/${template.id}`}
-                  className="w-full bg-primary-container hover:bg-primary-container/90 text-on-primary-container text-center font-bold text-xs py-2.5 rounded transition-all block mt-md"
-                >
-                  Customize & Download
-                </Link>
-              </div>
-            </div>
-          ))}
-        </section>
+        {/* Category Catalog Grid with Game Filter Pills */}
+        <CategoryCatalog templates={templates} />
 
         {/* Size Guide & Upload specs */}
         <section className="max-w-[800px] mx-auto w-full py-lg border-t border-outline-variant/65 flex flex-col gap-lg">

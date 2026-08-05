@@ -18,6 +18,7 @@ export default function Footer() {
             { label: "Contact", href: "/contact" },
             { label: "Privacy", href: "/privacy" },
             { label: "Terms", href: "/terms" },
+            { label: "Disclaimer", href: "/disclaimer" },
           ].map((link, idx) => (
             <Link key={idx} href={link.href} className="hover:text-on-background transition-colors">
               {link.label}

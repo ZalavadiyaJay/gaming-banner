@@ -66,7 +66,7 @@ export default function TwitchBanners() {
         {/* Page Hero */}
         <section className="text-center py-2 flex flex-col items-center gap-2">
           <h1 className="text-2xl md:text-3xl font-extrabold text-on-background tracking-tight">
-            Free Twitch Offline Banner Maker – 1200x480 Stream Headers
+            Free Twitch Offline Banner Maker – Stream Overlays & Headers
           </h1>
           <p className="max-w-[760px] text-xs md:text-sm text-outline leading-relaxed">
             Design custom Twitch offline banners and stream headers in 4K resolution. Pre-configured for official 1200 x 480 px Twitch dimensions with esports neon glow typography. 100% free download.

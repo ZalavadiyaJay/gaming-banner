@@ -68,7 +68,7 @@ export default function DiscordBanners() {
         {/* Page Hero */}
         <section className="text-center py-2 flex flex-col items-center gap-2">
           <h1 className="text-2xl md:text-3xl font-extrabold text-on-background tracking-tight">
-            Free Discord Server Banner Maker – Nitro Profile Cover Art
+            Free Discord Server Banner Maker – Animated & Profile Covers
           </h1>
           <p className="max-w-[760px] text-xs md:text-sm text-outline leading-relaxed">
             Create high-resolution Discord server banners (960 x 540 px) and Nitro profile headers (680 x 240 px) for free. Animated GIFs, anime aesthetics, and cyberpunk esports presets.

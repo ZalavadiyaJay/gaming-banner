@@ -51,8 +51,8 @@ export default function TemplatesNav({ selectedGame = "All", onSelectGame }) {
         {/* Scrollable Container */}
         <div
           ref={scrollRef}
-          className="flex items-center gap-xs overflow-x-auto scroll-smooth py-xs px-xs w-full"
-          style={{ scrollbarWidth: "thin" }}
+          className="flex items-center gap-xs overflow-x-auto scroll-smooth py-xs px-xs w-full [::-webkit-scrollbar]:hidden"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {games.map((game, idx) => {
             const isActive = (selectedGame || "All") === game;

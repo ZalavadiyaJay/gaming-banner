@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import CategoryCatalog from "@/components/CategoryCatalog";
 
 export const metadata = {
-  title: "Free YouTube Gaming Banner Maker & Templates | Gaming Banner",
+  title: "Free YouTube Gaming Banner Maker (2025) | Gaming Banner",
   description: "Design high-quality YouTube gaming banners for free. Symmetrical layouts, neon glow, and modern esports templates for Valorant, Minecraft, COD, and more.",
 };
 

@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 import CategoryCatalog from "@/components/CategoryCatalog";
 
 export const metadata = {
-  title: "Gaming Twitter Headers & Symmetrical Banner Maker | Gaming Banner",
-  description: "Generate gaming banners for Twitter/X profiles. Optimized dimensions, layout safe zones, and esports styles featuring glow text edits.",
+  title: "Free Twitter/X Gaming Headers & Banners | Gaming Banner",
+  description: "Create free gaming headers for Twitter/X profiles. Pre-configured 1500 x 500 px dimensions with avatar safe zones and glowing esports typography.",
 };
 
 export default function TwitterHeaders() {

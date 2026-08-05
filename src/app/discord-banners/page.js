@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 import CategoryCatalog from "@/components/CategoryCatalog";
 
 export const metadata = {
-  title: "Discord Server Banner Maker & Profile Banners | Gaming Banner",
-  description: "Make professional Discord server banners and profile headers. Choose from active community, clan, and cyberpunk themes optimized for Discord.",
+  title: "Discord Server Banner Maker & Profiles | Gaming Banner",
+  description: "Create free 4K Discord server banners and profile headers. Custom anime, gaming, and cyberpunk themes optimized for Discord Nitro dimensions.",
 };
 
 export default function DiscordBanners() {

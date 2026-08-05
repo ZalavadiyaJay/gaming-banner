@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 import CategoryCatalog from "@/components/CategoryCatalog";
 
 export const metadata = {
-  title: "Twitch Offline Banner Maker & Gaming Banners | Gaming Banner",
-  description: "Create custom Twitch offline screens and gaming banners. 20+ game-themed presets with centered typography and esports shading panels.",
+  title: "Twitch Offline Banner Maker & Overlays | Gaming Banner",
+  description: "Create custom 4K Twitch offline banners and stream headers for free. 20+ esports game-themed presets with centered typography and safe zone overlays.",
 };
 
 export default function TwitchBanners() {

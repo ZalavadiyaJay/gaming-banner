@@ -53,7 +53,7 @@ export default function TwitterHeaders() {
             Free Twitter/X Gaming Headers & Cool Banners
           </h1>
           <p className="max-w-[720px] text-xs md:text-sm text-outline leading-relaxed">
-            Generate cool gaming headers for Twitter/X profiles (1500 x 500 px).
+            Generate cool gaming banners and headers for your Twitter/X profile. Pre-configured to fit the standard Twitter header size (1500 x 500 pixels) with avatar safe zones.
           </p>
         </section>
 

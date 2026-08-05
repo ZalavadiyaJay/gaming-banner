@@ -69,7 +69,7 @@ export default function TwitchBanners() {
             Free Twitch Offline Banner Maker & Stream Banners
           </h1>
           <p className="max-w-[720px] text-xs md:text-sm text-outline leading-relaxed">
-            Create stunning profile graphics with our free Twitch offline banner maker (1200 x 480 px).
+            Create stunning profile graphics with our free Twitch offline banner maker. Choose from 20+ templates optimized for the recommended Twitch banner size (1200 x 480 pixels) to fit stream overlays correctly.
           </p>
         </section>
 

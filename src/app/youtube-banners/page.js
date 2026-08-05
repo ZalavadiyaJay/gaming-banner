@@ -89,10 +89,10 @@ export default function YouTubeBanners() {
         {/* Page Hero */}
         <section className="text-center py-2 flex flex-col items-center gap-2">
           <h1 className="text-2xl md:text-3xl font-extrabold text-on-background tracking-tight">
-            Free YouTube Gaming Banner Templates & Channel Art
+            Free YouTube Gaming Banner Maker (2025) – 2560x1440 4K Templates
           </h1>
-          <p className="max-w-[720px] text-xs md:text-sm text-outline leading-relaxed">
-            Download professional gaming youtube channel art templates. Our customizer is fully calibrated to fit the official youtube banner size safe zone (2560 x 1440 pixels) perfectly on mobile, tablet, and desktop views.
+          <p className="max-w-[760px] text-xs md:text-sm text-outline leading-relaxed">
+            Create free 4K gaming YouTube channel art instantly. Fully calibrated for the official 2560 x 1440 px YouTube banner size with mobile safe zone overlays. No watermark & no signup required.
           </p>
         </section>
 

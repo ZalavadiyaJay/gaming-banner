@@ -62,14 +62,14 @@ export default function TwitchBanners() {
       />
       <Header />
 
-      <main className="flex-1 min-h-screen py-24 px-md md:px-xl w-full max-w-[1440px] mx-auto flex flex-col gap-xl overflow-x-hidden">
+      <main className="flex-1 min-h-screen pt-16 pb-6 px-md md:px-xl w-full max-w-[1440px] mx-auto flex flex-col gap-sm overflow-x-hidden">
         {/* Page Hero */}
-        <section className="text-center py-lg border-b border-outline-variant/60 flex flex-col items-center gap-sm">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-on-background">
+        <section className="text-center py-1 flex flex-col items-center gap-xs">
+          <h1 className="text-xl md:text-2xl font-extrabold text-on-background tracking-tight">
             Free Twitch Offline Banner Maker & Stream Banners
           </h1>
-          <p className="max-w-[620px] text-sm text-outline leading-relaxed">
-            Create stunning profile graphics with our free Twitch offline banner maker. Choose from 20+ templates optimized for the recommended Twitch banner size (1200 x 480 pixels) to fit stream overlays correctly.
+          <p className="max-w-[720px] text-xs text-outline leading-relaxed">
+            Create stunning profile graphics with our free Twitch offline banner maker. 20+ templates optimized for official Twitch banner size (1200 x 480 px).
           </p>
         </section>
 

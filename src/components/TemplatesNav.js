@@ -37,7 +37,7 @@ export default function TemplatesNav({ selectedGame = "All", onSelectGame }) {
   };
 
   return (
-    <div className="w-full border-b border-outline-variant/40 bg-surface-container/20 py-xs mb-lg relative">
+    <div className="w-full border-b border-outline-variant/40 bg-surface-container/20 py-1 mb-sm relative">
       <div className="w-full max-w-[1440px] mx-auto px-sm md:px-xl flex items-center relative">
         {/* Left Scroll Arrow */}
         <button

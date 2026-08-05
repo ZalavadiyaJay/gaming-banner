@@ -46,14 +46,14 @@ export default function TwitterHeaders() {
       />
       <Header />
 
-      <main className="flex-1 min-h-screen py-24 px-md md:px-xl w-full max-w-[1440px] mx-auto flex flex-col gap-xl overflow-x-hidden">
+      <main className="flex-1 min-h-screen pt-16 pb-6 px-md md:px-xl w-full max-w-[1440px] mx-auto flex flex-col gap-sm overflow-x-hidden">
         {/* Page Hero */}
-        <section className="text-center py-lg border-b border-outline-variant/60 flex flex-col items-center gap-sm">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-on-background">
+        <section className="text-center py-1 flex flex-col items-center gap-xs">
+          <h1 className="text-xl md:text-2xl font-extrabold text-on-background tracking-tight">
             Free Twitter/X Gaming Headers & Cool Banners
           </h1>
-          <p className="max-w-[620px] text-sm text-outline leading-relaxed">
-            Generate cool gaming banners and headers for your Twitter/X profile. Pre-configured to fit the standard Twitter header size (1500 x 500 pixels) with avatar safe zones.
+          <p className="max-w-[720px] text-xs text-outline leading-relaxed">
+            Generate cool gaming headers for your Twitter/X profile. Pre-configured for standard Twitter header size (1500 x 500 px) with avatar safe zones.
           </p>
         </section>
 

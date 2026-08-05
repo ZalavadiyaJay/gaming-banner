@@ -85,9 +85,9 @@ export default function YouTubeBanners() {
       />
       <Header />
 
-      <main className="flex-1 min-h-screen pt-20 pb-10 px-md md:px-xl w-full max-w-[1440px] mx-auto flex flex-col gap-md overflow-x-hidden">
+      <main className="flex-1 min-h-screen py-24 px-md md:px-xl w-full max-w-[1440px] mx-auto flex flex-col gap-xl overflow-x-hidden">
         {/* Page Hero */}
-        <section className="text-center py-xs border-b border-outline-variant/40 flex flex-col items-center gap-xs">
+        <section className="text-center py-lg border-b border-outline-variant/60 flex flex-col items-center gap-sm">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-on-background">
             Free YouTube Gaming Banner Templates & Channel Art
           </h1>

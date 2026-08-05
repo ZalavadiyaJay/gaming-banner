@@ -50,10 +50,10 @@ export default function TwitterHeaders() {
         {/* Page Hero */}
         <section className="text-center py-2 flex flex-col items-center gap-2">
           <h1 className="text-2xl md:text-3xl font-extrabold text-on-background tracking-tight">
-            Free Twitter/X Gaming Header Maker – Esports Banner Designs
+            Free Twitter/X Gaming Header Maker (Instant 4K PNG Export)
           </h1>
           <p className="max-w-[760px] text-xs md:text-sm text-outline leading-relaxed">
-            Generate custom gaming banners and headers for your Twitter/X profile. Calibrated for official 1500 x 500 px Twitter header size with avatar safe zones. Fast 1-click 4K PNG export.
+            Generate pro esports headers for your Twitter/X profile. Pre-calibrated for official 1500x500 dimensions with profile picture safe zones and 100% free 4K PNG downloads.
           </p>
         </section>
 

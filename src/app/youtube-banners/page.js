@@ -89,10 +89,10 @@ export default function YouTubeBanners() {
         {/* Page Hero */}
         <section className="text-center py-2 flex flex-col items-center gap-2">
           <h1 className="text-2xl md:text-3xl font-extrabold text-on-background tracking-tight">
-            Free YouTube Gaming Banner Maker – 4K Channel Art Templates
+            Free YouTube Gaming Banner Maker (No Watermark & No Signup)
           </h1>
           <p className="max-w-[760px] text-xs md:text-sm text-outline leading-relaxed">
-            Create free 4K gaming YouTube channel art instantly. Fully calibrated for the official 2560 x 1440 px YouTube banner size with mobile safe zone overlays. No watermark & no signup required.
+            Create custom 4K YouTube channel art without Photoshop or paid subscriptions. Unlike generic design tools, Gaming Banner is 100% free with zero watermarks, no account registration, and built-in mobile safe zone overlays.
           </p>
         </section>
 

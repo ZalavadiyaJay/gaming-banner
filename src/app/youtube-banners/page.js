@@ -85,14 +85,14 @@ export default function YouTubeBanners() {
       />
       <Header />
 
-      <main className="flex-1 min-h-screen pt-16 pb-6 px-md md:px-xl w-full max-w-[1440px] mx-auto flex flex-col gap-sm overflow-x-hidden">
+      <main className="flex-1 min-h-screen pt-14 pb-4 px-4 md:px-8 w-full max-w-[1440px] mx-auto flex flex-col gap-2 overflow-x-hidden">
         {/* Page Hero */}
-        <section className="text-center py-1 flex flex-col items-center gap-xs">
-          <h1 className="text-xl md:text-2xl font-extrabold text-on-background tracking-tight">
+        <section className="text-center py-0 flex flex-col items-center gap-1">
+          <h1 className="text-lg md:text-xl font-extrabold text-on-background tracking-tight my-1">
             Free YouTube Gaming Banner Templates & Channel Art
           </h1>
-          <p className="max-w-[720px] text-xs text-outline leading-relaxed">
-            Free 4K gaming YouTube channel art templates. Fully calibrated to fit the official YouTube banner safe zone (2560 x 1440 px) on mobile, tablet, and desktop screens.
+          <p className="max-w-[720px] text-xs text-outline leading-tight my-0">
+            Free 4K gaming YouTube channel art templates. Fully calibrated to fit the official YouTube banner safe zone (2560 x 1440 px).
           </p>
         </section>
 

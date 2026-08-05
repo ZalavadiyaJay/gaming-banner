@@ -30,9 +30,29 @@ export default function CategoryCatalog({ templates }) {
           filteredTemplates.map((template, idx) => (
             <div key={idx} className="bento-card overflow-hidden rounded-xl shadow-lg border-outline-variant/50">
               <div
-                className="aspect-video relative flex flex-col items-center justify-center p-md overflow-hidden"
+                className="aspect-video relative flex flex-col items-center justify-center p-md overflow-hidden select-none"
                 style={{ ...template.style, containerType: "inline-size" }}
-              ></div>
+              >
+                {/* Contrast overlay tint */}
+                <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+
+                {/* Styled Gamertag Preview Text */}
+                {template.gamertag && (
+                  <span
+                    className="relative z-10 font-bold uppercase tracking-wider text-center text-[min(7cqi,26px)] leading-tight"
+                    style={template.textStyle}
+                  >
+                    {template.gamertag}
+                  </span>
+                )}
+
+                {/* Subtitle tag overlay */}
+                {template.sub && (
+                  <span className="relative z-10 text-[min(3.6cqi,12px)] font-semibold text-white/90 uppercase tracking-widest mt-1 text-center font-data-mono drop-shadow">
+                    {template.sub}
+                  </span>
+                )}
+              </div>
               <div className="p-lg bg-surface-container-high flex flex-col justify-between h-40">
                 <div>
                   <div className="flex items-center justify-between">

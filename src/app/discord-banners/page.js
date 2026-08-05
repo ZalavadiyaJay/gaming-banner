@@ -64,13 +64,13 @@ export default function DiscordBanners() {
       />
       <Header />
 
-      <main className="flex-1 min-h-screen pt-14 pb-4 px-4 md:px-8 w-full max-w-[1440px] mx-auto flex flex-col gap-2 overflow-x-hidden">
+      <main className="flex-1 min-h-screen pt-24 pb-6 px-4 md:px-8 w-full max-w-[1440px] mx-auto flex flex-col gap-6 overflow-x-hidden">
         {/* Page Hero */}
-        <section className="text-center py-0 flex flex-col items-center gap-1">
-          <h1 className="text-lg md:text-xl font-extrabold text-on-background tracking-tight my-1">
+        <section className="text-center py-2 flex flex-col items-center gap-2">
+          <h1 className="text-2xl md:text-3xl font-extrabold text-on-background tracking-tight">
             Free Discord Server Banner Maker & Profile Cover Art
           </h1>
-          <p className="max-w-[720px] text-xs text-outline leading-tight my-0">
+          <p className="max-w-[720px] text-xs md:text-sm text-outline leading-relaxed">
             Design gorgeous assets matching Discord server banners (960 x 540 px) and profile banners (680 x 240 px).
           </p>
         </section>

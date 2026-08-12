@@ -225,8 +225,8 @@ export default async function CustomizePage({ params }) {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Customizer",
-          "item": "https://gamingbanner.com/templates",
+          "name": "YouTube Banners",
+          "item": "https://gamingbanner.com/youtube-banners",
         },
         {
           "@type": "ListItem",
@@ -296,7 +296,7 @@ export default async function CustomizePage({ params }) {
             <nav className="flex items-center gap-2 text-xs text-outline font-medium">
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <span>/</span>
-              <Link href="/templates" className="hover:text-primary transition-colors">Customizer</Link>
+              <Link href="/youtube-banners" className="hover:text-primary transition-colors">YouTube Banners</Link>
               <span>/</span>
               <span className="text-on-background font-semibold">{template.gameName}</span>
               <span>/</span>

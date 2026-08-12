@@ -20,7 +20,6 @@ export default function sitemap() {
     "/terms",
     "/terms-of-service",
     "/terms-and-conditions",
-    "/templates",
     "/disclaimer",
   ];
 

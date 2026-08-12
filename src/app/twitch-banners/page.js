@@ -47,43 +47,197 @@ export default function TwitchBanners() {
     ]
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the official Twitch offline banner size?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The recommended size for a Twitch video player offline banner is 1920 x 1080 pixels (16:9 aspect ratio). This matches Full HD stream resolutions and ensures crisp display on desktop and mobile player windows."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a Twitch Profile Banner and Offline Banner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Twitch Profile Banner (1200 x 480 px) sits behind your avatar and channel header, while a Video Player Offline Banner (1920 x 1080 px) appears in place of your stream player when you are offline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I upload an offline banner to Twitch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Go to your Twitch Creator Dashboard > Settings > Channel. Under the Brand tab, scroll down to Video Player Banner and upload your 1920x1080 PNG or JPG file."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use these Twitch banners in OBS Studio or Streamlabs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! All banners download as lossless, uncompressed PNG files with zero watermarks. You can add them directly as Image Sources in OBS Studio, Streamlabs Desktop, or Twitch Studio."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Header />
 
       <main className="flex-1 min-h-screen pt-24 pb-6 px-4 md:px-8 w-full max-w-[1440px] mx-auto flex flex-col gap-6 overflow-x-hidden">
         {/* Page Hero */}
         <section className="text-center py-2 flex flex-col items-center gap-2">
-          <h1 className="text-2xl md:text-3xl font-extrabold text-on-background tracking-tight">
-            Free Twitch Offline Banner Maker (100% Free 4K Downloads)
+          <h1 className="text-2xl md:text-4xl font-extrabold text-on-background tracking-tight">
+            Free Twitch Offline Banner Maker (100% Free 4K PNG)
           </h1>
-          <p className="max-w-[760px] text-xs md:text-sm text-outline leading-relaxed">
-            Design custom Twitch offline banners and stream headers in seconds. Enjoy full commercial usage rights, zero watermarks, and instant PNG downloads tailored for gaming creators.
+          <p className="max-w-[800px] text-xs md:text-sm text-outline leading-relaxed">
+            Create professional 1920×1080 Twitch offline screens, stream schedule cards, and channel headers in seconds. Zero watermarks, full commercial streaming rights, and instant 4K lossless downloads.
           </p>
         </section>
 
         {/* Category Catalog Grid with Game Filter Pills */}
         <CategoryCatalog templates={templates} />
 
-        {/* Size Guide & Upload specs */}
-        <section className="max-w-[800px] mx-auto w-full py-lg border-t border-outline-variant/65 flex flex-col gap-lg">
-          <div className="border-l-4 border-primary-container pl-lg">
-            <h2 className="text-2xl font-bold text-on-background">Twitch Banner Size Guide</h2>
-            <p className="text-sm text-outline mt-1 leading-relaxed">
-              Twitch channel graphics display centered above the video feed player on desktop browsers, and are clipped on mobile profiles. Keeping dimensions calibrated to 1200 x 480 px ensures clean display.
+        {/* Deep Educational Publisher Section (AdSense High Authority & Anti-Thin Content) */}
+        <section className="max-w-[960px] mx-auto w-full py-12 border-t border-outline-variant/60 flex flex-col gap-10">
+          
+          {/* Header Overview */}
+          <div>
+            <span className="text-xs font-bold font-data-mono text-primary-container uppercase tracking-widest bg-primary-container/10 border border-primary-container/20 px-3 py-1 rounded-full">
+              Twitch Graphics Standard 2025
+            </span>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-on-background mt-4">
+              Complete Guide to Twitch Channel Art & Offline Banners
+            </h2>
+            <p className="text-sm text-outline leading-relaxed mt-2">
+              When you are offline, your video player banner is the prime real estate on your channel. It tells prospective followers your streaming schedule, social handles, Discord links, and esports games. Having a high-contrast 1080p offline card boosts conversion rates from channel visitors into long-term subscribers.
             </p>
           </div>
 
-          <div className="p-lg bg-surface-container-high border-l-4 border-emerald-500 rounded-r-lg">
-            <span className="font-bold text-sm text-on-background">Recommended Dimensions:</span>
-            <p className="text-xs font-data-mono text-outline mt-1">
-              Profile Banner Size: 1200 x 480 px | Video Player Offset: 1920 x 1080 px
+          {/* Technical Resolution Table */}
+          <div className="bg-surface-container rounded-2xl p-6 border border-outline-variant/50 shadow-md">
+            <h3 className="text-lg font-bold text-on-background flex items-center gap-2 mb-2">
+              📐 Official Twitch Graphic Dimensions & Aspect Ratios
+            </h3>
+            <p className="text-xs text-outline mb-6">
+              Use these exact dimensions when configuring your channel branding to avoid blurry scaling and awkward mobile cropping.
             </p>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr className="border-b border-outline-variant text-outline font-data-mono uppercase tracking-wider">
+                    <th className="py-3 px-4">Asset Type</th>
+                    <th className="py-3 px-4">Optimal Resolution</th>
+                    <th className="py-3 px-4">Aspect Ratio</th>
+                    <th className="py-3 px-4">Max File Size</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-outline-variant/30 text-on-surface-variant font-medium">
+                  <tr className="hover:bg-surface-container-high/50 transition-colors">
+                    <td className="py-3 px-4 font-bold text-on-background">Video Player Offline Screen</td>
+                    <td className="py-3 px-4 font-data-mono text-primary-container">1920 × 1080 px</td>
+                    <td className="py-3 px-4">16:9 Standard</td>
+                    <td className="py-3 px-4">10 MB (PNG/JPG)</td>
+                  </tr>
+                  <tr className="hover:bg-surface-container-high/50 transition-colors">
+                    <td className="py-3 px-4 font-bold text-on-background">Profile Header Banner</td>
+                    <td className="py-3 px-4 font-data-mono text-primary-container">1200 × 480 px</td>
+                    <td className="py-3 px-4">5:2 Wide</td>
+                    <td className="py-3 px-4">10 MB (PNG/JPG)</td>
+                  </tr>
+                  <tr className="hover:bg-surface-container-high/50 transition-colors">
+                    <td className="py-3 px-4 font-bold text-on-background">Stream Info Panels</td>
+                    <td className="py-3 px-4 font-data-mono text-primary-container">320 × 160 px</td>
+                    <td className="py-3 px-4">2:1 Compact</td>
+                    <td className="py-3 px-4">2.9 MB</td>
+                  </tr>
+                  <tr className="hover:bg-surface-container-high/50 transition-colors">
+                    <td className="py-3 px-4 font-bold text-on-background">Twitch Avatar Icon</td>
+                    <td className="py-3 px-4 font-data-mono text-primary-container">800 × 800 px</td>
+                    <td className="py-3 px-4">1:1 Square</td>
+                    <td className="py-3 px-4">10 MB</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
+
+          {/* OBS Walkthrough */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-surface-container/60 rounded-xl p-5 border border-outline-variant/40">
+              <span className="w-8 h-8 rounded-full bg-primary-container/20 text-primary-container font-bold flex items-center justify-center text-sm mb-3">
+                1
+              </span>
+              <h4 className="font-bold text-on-background text-sm">Design Offline Card</h4>
+              <p className="text-xs text-outline leading-relaxed mt-2">
+                Select your favorite game theme above, customize your channel schedule and gamertag, and download the high-res PNG.
+              </p>
+            </div>
+
+            <div className="bg-surface-container/60 rounded-xl p-5 border border-outline-variant/40">
+              <span className="w-8 h-8 rounded-full bg-primary-container/20 text-primary-container font-bold flex items-center justify-center text-sm mb-3">
+                2
+              </span>
+              <h4 className="font-bold text-on-background text-sm">Upload to Twitch Dashboard</h4>
+              <p className="text-xs text-outline leading-relaxed mt-2">
+                Open Creator Dashboard &gt; Settings &gt; Channel &gt; Brand. Scroll down to Video Player Banner and upload your 1920x1080 file.
+              </p>
+            </div>
+
+            <div className="bg-surface-container/60 rounded-xl p-5 border border-outline-variant/40">
+              <span className="w-8 h-8 rounded-full bg-primary-container/20 text-primary-container font-bold flex items-center justify-center text-sm mb-3">
+                3
+              </span>
+              <h4 className="font-bold text-on-background text-sm">Add to OBS Studio Scenes</h4>
+              <p className="text-xs text-outline leading-relaxed mt-2">
+                Import as an Image Source into your OBS scenes for "Starting Soon" and "Be Right Back" stream transition intervals.
+              </p>
+            </div>
+          </div>
+
+          {/* Twitch FAQs */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-on-background">
+              Frequently Asked Questions (Twitch Banners)
+            </h3>
+            
+            <div className="bg-surface-container/50 rounded-xl p-5 border border-outline-variant/40">
+              <h4 className="font-bold text-sm text-on-background">What is the best resolution for Twitch offline screens?</h4>
+              <p className="text-xs text-outline leading-relaxed mt-1">
+                The optimal resolution is 1920 × 1080 pixels (Full HD, 16:9 aspect ratio). This fills modern desktop and mobile video players with zero black bars.
+              </p>
+            </div>
+
+            <div className="bg-surface-container/50 rounded-xl p-5 border border-outline-variant/40">
+              <h4 className="font-bold text-sm text-on-background">Do I need Twitch Affiliate or Partner to use offline banners?</h4>
+              <p className="text-xs text-outline leading-relaxed mt-1">
+                No! Every Twitch streamer (even brand new accounts) can upload custom Video Player Banners and Profile Headers for free in their Creator Dashboard.
+              </p>
+            </div>
+
+            <div className="bg-surface-container/50 rounded-xl p-5 border border-outline-variant/40">
+              <h4 className="font-bold text-sm text-on-background">Are these Twitch banners free for commercial streaming?</h4>
+              <p className="text-xs text-outline leading-relaxed mt-1">
+                Yes, 100%. All banner graphics created on GamingBanner.com come with full commercial rights and zero watermarks.
+              </p>
+            </div>
+          </div>
+
         </section>
       </main>
 

@@ -501,11 +501,8 @@ export default function Home() {
 
                   {/* Info Footer */}
                   <div className="p-lg bg-surface-container-high">
-                    <div className="flex items-center justify-between">
-                      <span className="font-bold text-on-background">{template.name}</span>
-                      <span className="text-xs bg-surface-container-low border border-outline-variant px-2 py-0.5 rounded text-outline font-data-mono">
-                        {template.universe}
-                      </span>
+                    <div>
+                      <h3 className="font-bold text-on-background">{template.name}</h3>
                     </div>
                     <p className="text-xs text-outline mt-1">{template.sub}</p>
 

@@ -712,7 +712,77 @@ export function getTemplate(game, bannerSlug) {
 }
 
 export function getTemplateByLegacyId(id) {
-  return TEMPLATES.find((t) => t.id === id || (t.legacyIds && t.legacyIds.includes(id)));
+  if (!id) return undefined;
+  const cleanId = id.toLowerCase().trim();
+
+  // 1. Direct match on ID
+  const direct = TEMPLATES.find((t) => t.id.toLowerCase() === cleanId);
+  if (direct) return direct;
+
+  // 2. Match on legacyIds
+  const legacy = TEMPLATES.find((t) => t.legacyIds && t.legacyIds.some((lid) => lid.toLowerCase() === cleanId));
+  if (legacy) return legacy;
+
+  // 3. Match on game name / slug
+  const byGame = TEMPLATES.find((t) => t.game.toLowerCase() === cleanId);
+  if (byGame) return byGame;
+
+  // 4. Match on bannerSlug
+  const bySlug = TEMPLATES.find((t) => t.bannerSlug.toLowerCase() === cleanId);
+  if (bySlug) return bySlug;
+
+  // 5. Common aliases / shorthand mappings
+  const aliasMap = {
+    "valorant": "valorant-protocol",
+    "minecraft": "minecraft-overworld-nether",
+    "fortnite": "fortnite-mega-city",
+    "cod": "cod-warzone",
+    "call-of-duty": "cod-warzone",
+    "warzone": "cod-warzone",
+    "gta": "gta-street",
+    "gtav": "gta-street",
+    "gta-v": "gta-street",
+    "apex": "apex-canyon",
+    "apex-legends": "apex-canyon",
+    "league": "league-rift",
+    "league-of-legends": "league-rift",
+    "lol": "league-rift",
+    "rocket-league": "rocket-league",
+    "pubg": "pubg-mobile",
+    "pubg-mobile": "pubg-mobile",
+    "coc": "clash-of-clans",
+    "clash-of-clans": "clash-of-clans",
+    "forza": "forza-horizon",
+    "forza-horizon": "forza-horizon",
+    "asphalt": "asphalt-9",
+    "asphalt-9": "asphalt-9",
+    "genshin": "genshin-impact",
+    "genshin-impact": "genshin-impact",
+    "roblox": "roblox-virtual",
+    "cyberpunk": "cyberpunk-2077",
+    "cyberpunk-2077": "cyberpunk-2077",
+    "elden-ring": "elden-ring",
+    "eldenring": "elden-ring",
+    "among-us": "among-us",
+    "amongus": "among-us",
+    "clash-royale": "clash-royale",
+    "clashroyale": "clash-royale",
+    "overwatch": "overwatch-2",
+    "overwatch-2": "overwatch-2",
+    "cs2": "cs2-tactical",
+    "counter-strike": "cs2-tactical",
+    "counter-strike-2": "cs2-tactical",
+    "fifa": "fifa-soccer",
+    "ea-sports-fc": "fifa-soccer",
+    "fc-25": "fifa-soccer"
+  };
+
+  const targetId = aliasMap[cleanId];
+  if (targetId) {
+    return TEMPLATES.find((t) => t.id === targetId);
+  }
+
+  return undefined;
 }
 
 export function getAllTemplatePaths() {

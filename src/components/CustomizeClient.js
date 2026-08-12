@@ -542,9 +542,35 @@ export default function CustomizeClient({ params }) {
   const [selectedLayerId, setSelectedLayerId] = useState("layer-1");
   const [activeDragId, setActiveDragId] = useState(null);
   const [activeTab, setActiveTab] = useState("desktop");
-  const [exportSize, setExportSize] = useState("YouTube (2560 x 1440)");
   const [bgOverlay, setBgOverlay] = useState(0); // Percentage background darkener (Default 0% for full bright original colors)
   const [isDownloading, setIsDownloading] = useState(false);
+
+  // Determine platform specific dimensions automatically based on template ID
+  const isTwitch = Boolean(id && (id.startsWith("twitch-") || id.includes("twitch")));
+  const isDiscord = Boolean(id && (id.startsWith("discord-") || id.includes("discord")));
+  const isTwitter = Boolean(id && (id.startsWith("twitter-") || ["esports-pro", "stream-schedule", "clan-tag", "neon-glow", "glacial-frost", "synth-sunset", "acid-biohazard", "dark-singularity"].includes(id)));
+
+  let targetWidth = 2560;
+  let targetHeight = 1440;
+  let platformName = "YouTube Channel Art";
+  let resolutionString = "2560 × 1440 px";
+
+  if (isTwitch) {
+    targetWidth = 1920;
+    targetHeight = 1080;
+    platformName = "Twitch Offline Banner";
+    resolutionString = "1920 × 1080 px";
+  } else if (isDiscord) {
+    targetWidth = 960;
+    targetHeight = 540;
+    platformName = "Discord Server / Nitro";
+    resolutionString = "960 × 540 px";
+  } else if (isTwitter) {
+    targetWidth = 1500;
+    targetHeight = 500;
+    platformName = "Twitter / X Header";
+    resolutionString = "1500 × 500 px";
+  }
 
   // Helper to add a new custom text layer
   const addTextLayer = () => {
@@ -558,55 +584,43 @@ export default function CustomizeClient({ params }) {
       size: count === 1 ? 1.0 : 0.7,
       color: "#ffffff", // Default WHITE color
       glow: count === 1 ? 60 : 0,
+      glowColor: "#00d4ff",
       posX: 50,
-      posY: Math.min(85, 45 + (count - 1) * 12)
+      posY: 50 + (count - 1) * 12,
     };
-    setTextLayers(prev => [...prev, newLayer]);
+    setTextLayers([...textLayers, newLayer]);
     setSelectedLayerId(newId);
   };
 
-  // Helper to remove a text layer
-  const removeTextLayer = (layerId) => {
-    setTextLayers(prev => prev.filter(l => l.id !== layerId));
+  // Helper to update a specific text layer
+  const updateLayer = (layerId, field, value) => {
+    setTextLayers(textLayers.map((l) => (l.id === layerId ? { ...l, [field]: value } : l)));
+  };
+
+  // Helper to delete a text layer
+  const deleteLayer = (layerId) => {
+    if (textLayers.length <= 1) return;
+    const filtered = textLayers.filter((l) => l.id !== layerId);
+    setTextLayers(filtered);
     if (selectedLayerId === layerId) {
-      setSelectedLayerId(null);
+      setSelectedLayerId(filtered[0]?.id || null);
     }
   };
 
-  // Helper to update layer property
-  const updateLayer = (layerId, key, value) => {
-    setTextLayers(prev => prev.map(l => l.id === layerId ? { ...l, [key]: value } : l));
-  };
-
-  const dragRafRef = useRef(null);
-
-  const handleDragMove = (clientX, clientY, containerRect) => {
-    if (!containerRect || !activeDragId) return;
-    const x = ((clientX - containerRect.left) / containerRect.width) * 100;
-    const y = ((clientY - containerRect.top) / containerRect.height) * 100;
-    const clampedX = Math.max(5, Math.min(95, x));
-    const clampedY = Math.max(8, Math.min(92, y));
-
-    if (dragRafRef.current) cancelAnimationFrame(dragRafRef.current);
-    dragRafRef.current = requestAnimationFrame(() => {
-      updateLayer(activeDragId, "posX", clampedX);
-      updateLayer(activeDragId, "posY", clampedY);
-    });
-  };
-
-  // Check URL search params for optional query name
+  // Initialize text layer from URL query param if present
   useEffect(() => {
     if (typeof window !== "undefined") {
       const urlParams = new URLSearchParams(window.location.search);
       const queryName = urlParams.get("name");
-      if (queryName) {
+      if (queryName && queryName.trim() !== "") {
         const newLayer = {
-          id: `layer-${Date.now()}`,
-          text: queryName.toUpperCase(),
-          label: "Text 1",
+          id: "layer-query",
+          text: queryName.trim().toUpperCase(),
+          label: "Gamertag",
           font: "Orbitron",
           size: 1.0,
-          color: "#00d4ff",
+          color: "#ffffff",
+          glowColor: "#00d4ff",
           glow: 70,
           posX: 50,
           posY: 50
@@ -621,10 +635,8 @@ export default function CustomizeClient({ params }) {
 
   // Aspect ratio calculator for live preview
   const getPreviewAspectStyle = () => {
-    if (exportSize.includes("Twitch")) return { aspectRatio: "1200 / 480" };
-    if (exportSize.includes("Discord")) return { aspectRatio: "960 / 540" };
-    if (exportSize.includes("Twitter")) return { aspectRatio: "1500 / 500" };
-    return { aspectRatio: "2560 / 1440" };
+    if (isTwitter) return { aspectRatio: "1500 / 500" };
+    return { aspectRatio: "16 / 9" };
   };
 
   // Font family loader helper
@@ -657,20 +669,8 @@ export default function CustomizeClient({ params }) {
   const handleDownload = () => {
     setIsDownloading(true);
 
-    // 1. Resolve target dimensions
-    let width = 2560;
-    let height = 1440;
-    if (exportSize.includes("Twitch")) {
-      width = 1200;
-      height = 480;
-    } else if (exportSize.includes("Discord")) {
-      width = 960;
-      height = 540;
-    } else if (exportSize.includes("Twitter")) {
-      width = 1500;
-      height = 500;
-    }
-
+    const width = targetWidth;
+    const height = targetHeight;
     const canvas = document.createElement("canvas");
     canvas.width = width;
     canvas.height = height;
@@ -1146,19 +1146,18 @@ export default function CustomizeClient({ params }) {
             />
           </div>
 
-          {/* Platform dimensions */}
-          <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-semibold text-outline">Export Size</label>
-            <select
-              value={exportSize}
-              onChange={(e) => setExportSize(e.target.value)}
-              className="bg-surface-container border border-outline-variant rounded p-sm text-sm outline-none text-on-background focus:border-primary-container font-semibold"
-            >
-              <option>YouTube (2560 x 1440)</option>
-              <option>Twitch (1200 x 480)</option>
-              <option>Discord (960 x 540)</option>
-              <option>Twitter/X (1500 x 500)</option>
-            </select>
+          {/* Dedicated Platform Dimension Indicator */}
+          <div className="flex flex-col gap-1.5 border-t border-outline-variant/40 pt-md">
+            <div className="flex items-center justify-between">
+              <label className="text-xs font-semibold text-outline">Target Dimension</label>
+              <span className="text-[10px] bg-primary-container/10 border border-primary-container/30 px-1.5 py-0.5 rounded text-primary-container font-data-mono font-bold">
+                {platformName}
+              </span>
+            </div>
+            <div className="bg-surface-container border border-outline-variant/60 rounded px-3 py-2 text-xs font-data-mono text-on-background flex items-center justify-between">
+              <span>{resolutionString}</span>
+              <span className="text-[10px] text-emerald-400 font-sans font-bold">Lossless PNG</span>
+            </div>
           </div>
 
           <div className="mt-auto border-t border-outline-variant/40 pt-lg flex flex-col gap-sm">

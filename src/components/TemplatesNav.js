@@ -11,6 +11,7 @@ export default function TemplatesNav({ selectedGame = "All", onSelectGame }) {
     "Minecraft",
     "Fortnite",
     "Call of Duty",
+    "Counter Strike 2",
     "GTA V",
     "Apex Legends",
     "League of Legends",

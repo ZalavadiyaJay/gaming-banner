@@ -1,3 +1,5 @@
+import { TEMPLATES } from "@/data/templates";
+
 export const dynamic = 'force-static';
 
 export default function sitemap() {
@@ -41,48 +43,10 @@ export default function sitemap() {
     "/guides/gaming-color-palettes",
   ];
 
-  const customizers = [
-    "/customize/esports",
-    "/customize/cs2-tactical",
-    "/customize/streaming",
-    "/customize/minimalist",
-    "/customize/modern-apex",
-    "/customize/overwatch-hero",
-    "/customize/gta-street",
-    "/customize/rpg",
-    "/customize/rocket-league",
-    "/customize/pubg-mobile",
-    "/customize/clash-of-clans",
-    "/customize/forza-horizon",
-    "/customize/asphalt-9",
-    "/customize/genshin-impact",
-    "/customize/roblox-virtual",
-    "/customize/fifa-soccer",
-    "/customize/cyberpunk-2077",
-    "/customize/elden-ring",
-    "/customize/among-us",
-    "/customize/clash-royale",
-    "/customize/esports-v2",
-    "/customize/cs2-tactical-v2",
-    "/customize/streaming-v2",
-    "/customize/minimalist-v2",
-    "/customize/modern-apex-v2",
-    "/customize/overwatch-hero-v2",
-    "/customize/gta-street-v2",
-    "/customize/rpg-v2",
-    "/customize/rocket-league-v2",
-    "/customize/pubg-mobile-v2",
-    "/customize/clash-of-clans-v2",
-    "/customize/forza-horizon-v2",
-    "/customize/asphalt-9-v2",
-    "/customize/genshin-impact-v2",
-    "/customize/roblox-virtual-v2",
-    "/customize/fifa-soccer-v2",
-    "/customize/cyberpunk-2077-v2",
-    "/customize/elden-ring-v2",
-    "/customize/among-us-v2",
-    "/customize/clash-royale-v2"
-  ];
+  // Dynamic canonical nested customizer URLs
+  const customizers = TEMPLATES.map(
+    (t) => `/customize/${t.game}/${t.bannerSlug}`
+  );
 
   const allUrls = [...staticPages, ...blogPosts, ...guides, ...customizers];
 

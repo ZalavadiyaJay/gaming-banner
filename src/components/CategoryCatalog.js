@@ -13,11 +13,14 @@ export default function CategoryCatalog({ templates }) {
     const cat = (template.category || "").toLowerCase();
     const game = selectedGame.toLowerCase();
     
-    if (game === "call of duty" && (name.includes("cod") || name.includes("cs2") || name.includes("warzone") || cat.includes("tactical"))) return true;
-    if (game === "ea sports fc" && (name.includes("fifa") || name.includes("fc 24") || name.includes("fc 25") || name.includes("soccer"))) return true;
-    if (game === "gta v" && (name.includes("gta") || name.includes("los santos") || name.includes("street"))) return true;
+    if (game.includes("counter strike") || game.includes("counter-strike") || game === "cs2") {
+      return name.includes("counter-strike") || name.includes("counter strike") || name.includes("cs2") || template.game === "cs2";
+    }
+    if (game === "call of duty" && (name.includes("cod") || name.includes("warzone") || template.game === "call-of-duty")) return true;
+    if (game === "ea sports fc" && (name.includes("fifa") || name.includes("fc 24") || name.includes("fc 25") || name.includes("soccer") || template.game === "ea-sports-fc")) return true;
+    if (game === "gta v" && (name.includes("gta") || name.includes("los santos") || name.includes("street") || template.game === "gta-v")) return true;
     
-    return name.includes(game) || cat.includes(game);
+    return name.includes(game) || cat.includes(game) || (template.game && template.game.toLowerCase().includes(game.replace(/\s+/g, '-')));
   });
 
   return (
@@ -42,7 +45,7 @@ export default function CategoryCatalog({ templates }) {
                 </div>
 
                 <Link
-                  href={`/customize/${template.id}`}
+                  href={template.game && template.bannerSlug ? `/customize/${template.game}/${template.bannerSlug}` : `/customize/${template.id}`}
                   className="w-full bg-primary-container hover:bg-primary-container/90 text-on-primary-container text-center font-bold text-xs py-2.5 rounded transition-all block mt-md"
                 >
                   Customize & Download

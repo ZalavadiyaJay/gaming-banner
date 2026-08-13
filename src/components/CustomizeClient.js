@@ -1146,19 +1146,6 @@ export default function CustomizeClient({ params }) {
             />
           </div>
 
-          {/* Dedicated Platform Dimension Indicator */}
-          <div className="flex flex-col gap-1.5 border-t border-outline-variant/40 pt-md">
-            <div className="flex items-center justify-between">
-              <label className="text-xs font-semibold text-outline">Target Dimension</label>
-              <span className="text-[10px] bg-primary-container/10 border border-primary-container/30 px-1.5 py-0.5 rounded text-primary-container font-data-mono font-bold">
-                {platformName}
-              </span>
-            </div>
-            <div className="bg-surface-container border border-outline-variant/60 rounded px-3 py-2 text-xs font-data-mono text-on-background flex items-center justify-between">
-              <span>{resolutionString}</span>
-              <span className="text-[10px] text-emerald-400 font-sans font-bold">Lossless PNG</span>
-            </div>
-          </div>
 
           <div className="mt-auto border-t border-outline-variant/40 pt-lg flex flex-col gap-sm">
             <button

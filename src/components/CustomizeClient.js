@@ -950,29 +950,31 @@ export default function CustomizeClient({ params }) {
           </span>
         </section>
 
-        {/* Right Editor sidebar (Height-Matched to Canvas Preview) */}
-        <section className="w-full md:w-[420px] bg-surface-container-high p-4 md:p-5 flex flex-col gap-3 border-t md:border-t-0 md:border-l border-outline-variant/60 justify-between">
+        {/* Right Editor sidebar (Pixel-Perfect Layout & Proper Proportions) */}
+        <section className="w-full md:w-[440px] bg-surface-container-high p-5 md:p-6 flex flex-col gap-4 border-t md:border-t-0 md:border-l border-outline-variant/60 justify-start">
           
-          {/* Header Row: Title + Add Layer + Delete Layer on the same line */}
-          <div className="flex items-center justify-between gap-2 pb-2 border-b border-outline-variant/30">
-            <div className="flex items-center gap-2">
-              <h2 className="text-sm md:text-base font-bold text-on-background">Studio Editor</h2>
-              <span className="text-[10px] text-outline font-data-mono hidden sm:inline truncate max-w-[110px]">
+          {/* Header Row: Title & Action Buttons */}
+          <div className="flex items-center justify-between gap-3 pb-3 border-b border-outline-variant/40">
+            <div>
+              <h2 className="text-base md:text-lg font-extrabold text-on-background tracking-tight">
+                Studio Editor
+              </h2>
+              <p className="text-[11px] text-outline font-data-mono truncate max-w-[150px]">
                 {currentTemplate.name}
-              </span>
+              </p>
             </div>
             
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-2">
               <button
                 onClick={addTextLayer}
-                className="bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-extrabold text-[11px] px-2.5 py-1 rounded-md transition-all flex items-center gap-1 shadow active:scale-95"
+                className="bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-extrabold text-xs px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 shadow-sm active:scale-95 whitespace-nowrap"
               >
                 + Add Layer
               </button>
               {selectedLayer && (
                 <button
                   onClick={() => removeTextLayer(selectedLayer.id)}
-                  className="bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 font-bold text-[11px] px-2 py-1 rounded-md transition-all flex items-center gap-1 shadow active:scale-95"
+                  className="bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/25 font-bold text-xs px-2.5 py-1.5 rounded-lg transition-all flex items-center gap-1 shadow-sm active:scale-95 whitespace-nowrap"
                 >
                   🗑️ Delete
                 </button>
@@ -980,17 +982,20 @@ export default function CustomizeClient({ params }) {
             </div>
           </div>
 
-          {/* Simple Layer Selector Chips */}
+          {/* Layer Selector Chips */}
           {textLayers.length > 0 && (
-            <div className="flex items-center gap-1.5 overflow-x-auto py-0.5 scrollbar-none">
+            <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+              <span className="text-[11px] font-bold text-outline uppercase font-data-mono flex-shrink-0">
+                Layers:
+              </span>
               {textLayers.map((layer) => (
                 <button
                   key={layer.id}
                   onClick={() => setSelectedLayerId(layer.id)}
-                  className={`px-2.5 py-1 rounded-md text-[11px] font-bold transition-all border whitespace-nowrap ${
+                  className={`px-3 py-1 rounded-lg text-xs font-bold transition-all border whitespace-nowrap ${
                     selectedLayerId === layer.id
-                      ? "bg-primary-container text-on-primary-container border-primary-container shadow"
-                      : "bg-surface-container text-outline border-outline-variant/60 hover:text-on-background"
+                      ? "bg-primary-container text-on-primary-container border-primary-container shadow-sm ring-1 ring-primary-container/40"
+                      : "bg-surface-container text-outline border-outline-variant/60 hover:text-on-background hover:border-outline"
                   }`}
                 >
                   {layer.label || layer.text || "Text"}
@@ -999,29 +1004,29 @@ export default function CustomizeClient({ params }) {
             </div>
           )}
 
-          {/* Compact 2-Column Controls for Selected Layer */}
+          {/* Controls for Selected Layer */}
           {selectedLayer ? (
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-3.5">
               
               {/* Row 1: Text Content + Font Selector */}
-              <div className="grid grid-cols-2 gap-2.5">
-                <div className="flex flex-col gap-1">
-                  <label className="text-[11px] font-semibold text-outline">Text Content</label>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-bold text-outline">Text Content</label>
                   <input
                     type="text"
                     value={selectedLayer.text}
                     placeholder="Enter text..."
                     onChange={(e) => updateLayer(selectedLayer.id, "text", e.target.value.toUpperCase().slice(0, 30))}
-                    className="bg-surface-container border border-outline-variant rounded-md px-2.5 py-1.5 text-xs outline-none text-on-background focus:border-primary-container font-bold"
+                    className="w-full bg-surface-container border border-outline-variant/70 focus:border-primary-container rounded-lg px-3 py-2 text-xs font-bold text-on-background outline-none transition-all shadow-inner"
                   />
                 </div>
 
-                <div className="flex flex-col gap-1">
-                  <label className="text-[11px] font-semibold text-outline">Select Font</label>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-bold text-outline">Select Font</label>
                   <select
                     value={selectedLayer.font}
                     onChange={(e) => updateLayer(selectedLayer.id, "font", e.target.value)}
-                    className="bg-surface-container border border-outline-variant rounded-md px-2.5 py-1.5 text-xs outline-none text-on-background focus:border-primary-container font-semibold cursor-pointer"
+                    className="w-full bg-surface-container border border-outline-variant/70 focus:border-primary-container rounded-lg px-3 py-2 text-xs font-bold text-on-background outline-none transition-all shadow-inner cursor-pointer"
                   >
                     {Object.keys(fontStyles).map((font) => (
                       <option key={font}>{font}</option>
@@ -1031,11 +1036,11 @@ export default function CustomizeClient({ params }) {
               </div>
 
               {/* Row 2: Text Size Slider + Glow Intensity Slider */}
-              <div className="grid grid-cols-2 gap-2.5">
-                <div className="flex flex-col gap-1">
-                  <div className="flex justify-between items-center text-[11px] font-semibold text-outline">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex flex-col gap-1.5 bg-surface-container/40 p-2.5 rounded-xl border border-outline-variant/30">
+                  <div className="flex justify-between items-center text-xs font-bold text-outline">
                     <span>Text Size</span>
-                    <span className="font-data-mono text-primary-container font-bold">{Math.round((selectedLayer.size || 1) * 100)}%</span>
+                    <span className="font-data-mono text-primary-container font-extrabold">{Math.round((selectedLayer.size || 1) * 100)}%</span>
                   </div>
                   <input
                     type="range"
@@ -1044,14 +1049,14 @@ export default function CustomizeClient({ params }) {
                     step="0.05"
                     value={selectedLayer.size || 1}
                     onChange={(e) => updateLayer(selectedLayer.id, "size", parseFloat(e.target.value))}
-                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none mt-1"
                   />
                 </div>
 
-                <div className="flex flex-col gap-1">
-                  <div className="flex justify-between items-center text-[11px] font-semibold text-outline">
+                <div className="flex flex-col gap-1.5 bg-surface-container/40 p-2.5 rounded-xl border border-outline-variant/30">
+                  <div className="flex justify-between items-center text-xs font-bold text-outline">
                     <span>Glow & Shadow</span>
-                    <span className="font-data-mono text-primary-container font-bold">{selectedLayer.glow}%</span>
+                    <span className="font-data-mono text-primary-container font-extrabold">{selectedLayer.glow}%</span>
                   </div>
                   <input
                     type="range"
@@ -1060,17 +1065,17 @@ export default function CustomizeClient({ params }) {
                     step="5"
                     value={selectedLayer.glow}
                     onChange={(e) => updateLayer(selectedLayer.id, "glow", parseInt(e.target.value))}
-                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none mt-1"
                   />
                 </div>
               </div>
 
               {/* Row 3: Poster Background Dimmer + Color Picker Button */}
-              <div className="grid grid-cols-2 gap-2.5 items-end">
-                <div className="flex flex-col gap-1">
-                  <div className="flex justify-between items-center text-[11px] font-semibold text-outline">
-                    <span>Dimmer</span>
-                    <span className="font-data-mono text-primary-container font-bold">{bgOverlay}%</span>
+              <div className="grid grid-cols-2 gap-3 items-end">
+                <div className="flex flex-col gap-1.5 bg-surface-container/40 p-2.5 rounded-xl border border-outline-variant/30">
+                  <div className="flex justify-between items-center text-xs font-bold text-outline">
+                    <span>Background Dimmer</span>
+                    <span className="font-data-mono text-primary-container font-extrabold">{bgOverlay}%</span>
                   </div>
                   <input
                     type="range"
@@ -1079,12 +1084,12 @@ export default function CustomizeClient({ params }) {
                     step="5"
                     value={bgOverlay}
                     onChange={(e) => setBgOverlay(parseInt(e.target.value))}
-                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none"
+                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none mt-1"
                   />
                 </div>
 
-                <div className="flex items-center gap-1.5">
-                  <label className="relative flex items-center gap-1.5 px-2 py-1.5 bg-surface-container border border-outline-variant/60 hover:border-primary-container rounded-md cursor-pointer transition-all shadow text-[11px] font-bold text-on-background group flex-1">
+                <div className="flex items-center gap-2">
+                  <label className="relative flex items-center gap-2 px-3 py-2 bg-surface-container border border-outline-variant/70 hover:border-primary-container rounded-lg cursor-pointer transition-all shadow-sm text-xs font-bold text-on-background group flex-1">
                     <input
                       type="color"
                       value={selectedLayer.color || "#00d4ff"}
@@ -1092,13 +1097,13 @@ export default function CustomizeClient({ params }) {
                       className="opacity-0 absolute inset-0 w-full h-full cursor-pointer z-10"
                     />
                     <span
-                      className="h-3.5 w-3.5 rounded-full border border-white/50 shadow-inner flex-shrink-0"
+                      className="h-4 w-4 rounded-full border border-white/50 shadow-inner flex-shrink-0"
                       style={{ backgroundColor: selectedLayer.color || "#00d4ff" }}
                     />
-                    <span className="text-[10px] font-bold truncate">Pick Color</span>
+                    <span className="text-xs font-bold truncate">Pick Color</span>
                   </label>
 
-                  <div className="flex items-center bg-surface-container border border-outline-variant/60 rounded-md px-1.5 py-1.5 w-16">
+                  <div className="flex items-center bg-surface-container border border-outline-variant/70 rounded-lg px-2.5 py-2 w-20">
                     <input
                       type="text"
                       value={selectedLayer.color || "#00d4ff"}
@@ -1107,47 +1112,50 @@ export default function CustomizeClient({ params }) {
                         if (!val.startsWith("#")) val = "#" + val;
                         updateLayer(selectedLayer.id, "color", val.slice(0, 7));
                       }}
-                      className="w-full bg-transparent text-[11px] font-data-mono font-bold text-on-background outline-none uppercase"
+                      className="w-full bg-transparent text-xs font-data-mono font-bold text-on-background outline-none uppercase text-center"
                     />
                   </div>
                 </div>
               </div>
 
-              {/* Row 4: Compact Preset Color Swatches */}
-              <div className="flex items-center justify-between gap-1 flex-wrap pt-0.5">
-                {accentColorsList.map((color, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => updateLayer(selectedLayer.id, "color", color)}
-                    style={{ backgroundColor: color }}
-                    title={`Select ${color}`}
-                    className={`h-5 w-5 rounded-full border transition-all ${
-                      selectedLayer.color === color
-                        ? "border-white ring-2 ring-primary-container scale-110"
-                        : "border-outline-variant/60 hover:scale-110"
-                    }`}
-                  />
-                ))}
+              {/* Row 4: Preset Gaming Color Swatches */}
+              <div className="flex flex-col gap-1.5 pt-1">
+                <span className="text-[11px] font-bold text-outline">Preset Accent Colors:</span>
+                <div className="flex items-center justify-between gap-1.5 flex-wrap">
+                  {accentColorsList.map((color, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => updateLayer(selectedLayer.id, "color", color)}
+                      style={{ backgroundColor: color }}
+                      title={`Select ${color}`}
+                      className={`h-6 w-6 rounded-full border transition-all ${
+                        selectedLayer.color === color
+                          ? "border-white ring-2 ring-primary-container scale-110 shadow"
+                          : "border-outline-variant/60 hover:scale-115"
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
 
             </div>
           ) : (
-            <div className="p-4 bg-surface-container rounded-xl text-center border border-outline-variant/40 my-auto">
-              <span className="text-xs font-bold text-outline block">Textless Mode</span>
-              <span className="text-[11px] text-outline/80">Click "+ Add Layer" to customize text.</span>
+            <div className="p-6 bg-surface-container rounded-xl text-center border border-outline-variant/40 my-auto">
+              <span className="text-sm font-bold text-outline block mb-1">Textless Mode</span>
+              <span className="text-xs text-outline/80">Click "+ Add Layer" to add custom channel handles or clan tags.</span>
             </div>
           )}
 
           {/* Bottom Download Action Bar */}
-          <div className="pt-2 border-t border-outline-variant/30 flex flex-col gap-1">
+          <div className="pt-3 border-t border-outline-variant/40 flex flex-col gap-1.5 mt-auto">
             <button
               onClick={handleDownload}
               disabled={isDownloading}
-              className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-xs py-2.5 rounded-lg transition-all shadow-lg shadow-emerald-500/20 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-sm py-3 rounded-xl transition-all shadow-lg shadow-emerald-500/20 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isDownloading ? "Generating 4K PNG..." : "Download Free 4K PNG"}
             </button>
-            <span className="text-[9px] text-outline/70 text-center font-data-mono">
+            <span className="text-[10px] text-outline/70 text-center font-data-mono">
               High-resolution 4K PNG • Zero Watermark • Free Commercial Use
             </span>
           </div>

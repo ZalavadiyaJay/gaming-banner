@@ -394,7 +394,11 @@ export const TEMPLATES = [
     "category": "Battle Royale",
     "sub": "OFFLINE • Follow for Rank Push",
     "legacyIds": [
-      "twitch-fortnite"
+      "twitch-fortnite",
+      "purple-rift-offline-banner",
+      "purple-rift",
+      "fortnite-offline",
+      "fortnite-rift"
     ],
     "image": "/twitch_fortnite.jpg",
     "themeColor": "#8b5cf6",
@@ -776,7 +780,10 @@ export const TEMPLATES = [
     "category": "Roleplay",
     "sub": "OFFLINE • Back at 7PM EST",
     "legacyIds": [
-      "twitch-gtav"
+      "twitch-gtav",
+      "los-santos-offline-banner",
+      "gtav-offline",
+      "los-santos-rp"
     ],
     "image": "/twitch_gtav.jpg",
     "themeColor": "#f472b6",
@@ -927,7 +934,10 @@ export const TEMPLATES = [
     "category": "Battle Royale",
     "sub": "STREAMING SOON • Predator Grind",
     "legacyIds": [
-      "twitch-apex"
+      "twitch-apex",
+      "volcanic-hazard-offline-banner",
+      "apex-offline",
+      "volcanic-hazard"
     ],
     "image": "/twitch_apex.jpg",
     "themeColor": "#ff3e3e",
@@ -1078,7 +1088,10 @@ export const TEMPLATES = [
     "category": "MOBA",
     "sub": "STARTING SOON • Mid Lane Carry",
     "legacyIds": [
-      "twitch-league"
+      "twitch-league",
+      "golden-rune-offline-banner",
+      "league-offline",
+      "golden-rune"
     ],
     "image": "/twitch_league.jpg",
     "themeColor": "#dfc8a5",
@@ -1228,7 +1241,10 @@ export const TEMPLATES = [
     "category": "Sports Action",
     "sub": "BE RIGHT BACK • Grand Champ ELO",
     "legacyIds": [
-      "twitch-rocketleague"
+      "twitch-rocketleague",
+      "stadium-lights-offline-banner",
+      "rocketleague-offline",
+      "stadium-lights"
     ],
     "image": "/twitch_rocketleague.jpg",
     "themeColor": "#06b6d4",
@@ -3899,7 +3915,25 @@ export const TEMPLATES = [
 
 // Helper Functions
 export function getTemplate(game, bannerSlug) {
-  return TEMPLATES.find((t) => t.game === game && t.bannerSlug === bannerSlug);
+  if (!game || !bannerSlug) return undefined;
+  const cleanGame = game.toLowerCase().trim();
+  const cleanSlug = bannerSlug.toLowerCase().trim();
+
+  // 1. Direct match on game and bannerSlug
+  const direct = TEMPLATES.find((t) => t.game.toLowerCase() === cleanGame && t.bannerSlug.toLowerCase() === cleanSlug);
+  if (direct) return direct;
+
+  // 2. Match on game and legacyIds / aliases
+  const byLegacy = TEMPLATES.find((t) => 
+    t.game.toLowerCase() === cleanGame && (
+      (t.legacyIds && t.legacyIds.some((lid) => lid.toLowerCase() === cleanSlug)) ||
+      t.id.toLowerCase() === cleanSlug
+    )
+  );
+  if (byLegacy) return byLegacy;
+
+  // 3. Fallback: match by legacy ID across entire registry
+  return getTemplateByLegacyId(cleanSlug);
 }
 
 export function getTemplateByLegacyId(id) {

@@ -11,9 +11,14 @@ export const dynamicParams = false;
 export async function generateStaticParams() {
   const paths = [];
 
-  // 1. Canonical Nested 2-segment routes: /customize/[game]/[banner]
+  // 1. Canonical Nested 2-segment routes & 2-segment aliases: /customize/[game]/[banner]
   TEMPLATES.forEach((t) => {
     paths.push({ slug: [t.game, t.bannerSlug] });
+    if (t.legacyIds) {
+      t.legacyIds.forEach((lid) => {
+        paths.push({ slug: [t.game, lid] });
+      });
+    }
   });
 
   // 2. Legacy 1-segment routes: /customize/[id]
@@ -239,13 +244,18 @@ export default async function CustomizePage({ params }) {
     permanentRedirect("/youtube-banners");
   }
 
-  // Handle 2-segment canonical URLs
+  // Handle 2-segment canonical URLs & aliases
   if (slug.length === 2) {
     const [game, banner] = slug;
     const template = getTemplate(game, banner);
 
     if (!template) {
       notFound();
+    }
+
+    // If accessing via an alias slug, 308 redirect to canonical route
+    if (banner !== template.bannerSlug) {
+      permanentRedirect(`/customize/${template.game}/${template.bannerSlug}`);
     }
 
     const isYouTube = template.platform === "youtube";

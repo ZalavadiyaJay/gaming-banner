@@ -4,8 +4,34 @@ import Footer from "@/components/Footer";
 import CategoryCatalog from "@/components/CategoryCatalog";
 
 export const metadata = {
-  title: "Free YouTube Gaming Banner Maker (2025) | Gaming Banner",
-  description: "Design high-quality YouTube gaming banners for free. Symmetrical layouts, neon glow, and modern esports templates for Valorant, Minecraft, COD, and more.",
+  title: "Free YouTube Gaming Banner Maker (4K No Watermark) - 21+ Channel Art Templates | Gaming Banner",
+  description: "Create free 4K YouTube gaming banners (2560×1440 UHD) with mobile safe zone calibration. Custom banner maker for Valorant, Minecraft, Fortnite, Warzone, GTA V, Apex Legends, CS2, Roblox, and more. 100% free lossless PNG export.",
+  keywords: [
+    "free YouTube gaming banner maker",
+    "YouTube banner 4K",
+    "gaming channel art maker",
+    "YouTube banner size 2560x1440",
+    "YouTube banner safe zone 1546x423",
+    "Valorant YouTube banner",
+    "Minecraft YouTube banner",
+    "Fortnite YouTube banner",
+    "Warzone YouTube banner",
+    "GTA 5 YouTube banner",
+    "Apex Legends banner maker",
+    "CS2 YouTube banner",
+    "free banner generator without watermark"
+  ],
+  openGraph: {
+    title: "Free YouTube Gaming Banner Maker (4K No Watermark) | Gaming Banner",
+    description: "Create free 4K YouTube gaming banners (2560×1440 UHD) with mobile safe zone calibration for all 21 top competitive games.",
+    images: [{ url: "/banner_valorant_v3.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free YouTube Gaming Banner Maker (4K No Watermark) | Gaming Banner",
+    description: "Design 4K YouTube channel art for Valorant, Minecraft, Fortnite, Warzone, CS2, and more.",
+    images: ["/banner_valorant_v3.jpg"],
+  }
 };
 
 export default function YouTubeBanners() {

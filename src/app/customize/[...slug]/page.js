@@ -161,16 +161,38 @@ export async function generateMetadata({ params }) {
     const [game, banner] = slug;
     const template = getTemplate(game, banner);
     if (template) {
-      const title = `Free ${template.name} Maker (4K No Watermark) | Gaming Banner`;
-      const description = `Customize the ${template.name} for ${template.gameName}. Add your gamertag, adjust colors, and export high-resolution PNG channel art with safe-zone compliance.`;
+      const isYouTube = template.platform === "youtube";
+      const title = isYouTube
+        ? `Free ${template.gameName} YouTube Banner 4K Maker (2560x1440) - ${template.name} | Gaming Banner`
+        : `Free ${template.gameName} Twitch Offline Banner 1080p - ${template.name} | Gaming Banner`;
+      const description = isYouTube
+        ? `Design your custom ${template.gameName} YouTube banner 4K (2560×1440 UHD). Free channel art maker with 1546×423 mobile safe zone calibration, 3D gamertag fonts, and instant PNG export without watermark.`
+        : `Create your custom ${template.gameName} Twitch offline screen (1920×1080 Full HD). Free stream schedule banner creator with custom fonts, colors, and OBS compatibility.`;
+
       return {
         title,
         description,
+        keywords: [
+          `${template.gameName} YouTube banner`,
+          `${template.gameName} banner 4K`,
+          `${template.gameName} banner maker`,
+          `${template.gameName} channel art`,
+          `${template.gameName} banner size 2560x1440`,
+          `${template.gameName} safe zone banner`,
+          `free gaming banner maker no watermark`,
+          `${template.name}`
+        ],
         openGraph: {
           title,
           description,
           images: [{ url: template.image }],
         },
+        twitter: {
+          card: "summary_large_image",
+          title,
+          description,
+          images: [template.image],
+        }
       };
     }
   }
@@ -179,14 +201,14 @@ export async function generateMetadata({ params }) {
     const template = getTemplateByLegacyId(slug[0]);
     const title = template ? template.name : slug[0];
     return {
-      title: `Customize ${title} | Gaming Banner`,
-      description: `Edit and download your personalized ${title} gaming channel art. Adjust colors, text tags, and export size.`,
+      title: `Free ${title} Gaming Banner Maker (4K No Watermark) | Gaming Banner`,
+      description: `Edit and download your personalized ${title} gaming channel art. Customize gamertags, fonts, colors, and export high-resolution 2560x1440 PNG banner.`,
     };
   }
 
   return {
-    title: "Gaming Banner Customizer | Gaming Banner",
-    description: "Customize and download free 4K gaming banners.",
+    title: "Free Gaming Banner Maker (4K YouTube & Twitch Channel Art) | Gaming Banner",
+    description: "Create custom 4K gaming banners and Twitch offline screens for Valorant, Minecraft, Fortnite, Warzone, GTA V, and more. 100% free with no watermarks.",
   };
 }
 

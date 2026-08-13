@@ -33,7 +33,7 @@ export const TEMPLATES = [
     },
     "description": "High-octane tactical combat banner inspired by Valorant Radiant agents. Features a cell-shaded female operative holding an energy-shielded rifle against a destroyed city under a swirling purple portal with radianite crystals sprouting from the ground.",
     "story": "Set on a futuristic battleground reminiscent of Haven and Bind, this banner captures the intensity of an overtime match point. A tactical female operative stands ready with an energy-shielded assault rifle while a swirling purple Radianite rift illuminates a shattered city skyline and glowing crystal shards.",
-    "artAnalysis": "The tactical operative and glowing purple energy rift are placed on the outer flanks to frame the scene. The center 1546 × 423 px safe zone is kept as a dark, clean carbon-fiber field so your channel name and ranked rating glow with maximum sharpness without covering the character art.",
+    "artAnalysis": "The tactical operative and swirling purple Radianite rift are anchored on the outer left and right flanks to frame the scene. The central 1546 × 423 px safe zone is kept as a dark, clean carbon-fiber battlefield so your gamertag, VCT team tag, and ranked rating glow with maximum sharpness without covering character artwork on mobile screens.",
     "palette": [
       {
         "name": "Radianite Cyan",
@@ -185,7 +185,7 @@ export const TEMPLATES = [
     },
     "description": "Create a custom Minecraft banner 4K (2560×1440 UHD) for your YouTube channel art. Features a vibrant split-screen panoramic scene of a sunny Overworld castle and fiery Nether fortress with lava, Ghasts, and a gold-armored warrior.",
     "story": "This artwork captures the two most iconic dimensions of Minecraft in a panoramic split-screen. On the left, a peaceful green Overworld castle stands under sunny skies; on the right, a dangerous Nether fortress glows with red-hot lava, flying Ghasts, and a gold-armored adventurer.",
-    "artAnalysis": "The split-screen composition creates a natural frame on both sides. The central transition zone is softened with ambient mist, leaving clean space for blocky 3D gamertag text, SMP series titles, and subscriber milestones.",
+    "artAnalysis": "The panoramic split-screen composition places the sunny Overworld castle and diamond builder on the left, and the fiery Nether fortress with Ghasts on the right. Ambient atmospheric mist softens the central transition zone, leaving a clean, high-contrast focal area for blocky 3D gamertags and survival channel titles on all devices.",
     "palette": [
       {
         "name": "Emerald Green",
@@ -337,7 +337,7 @@ export const TEMPLATES = [
     },
     "description": "Epic wide panoramic battle royale key art featuring an all-star character lineup across building ramp towers, a neon cyberpunk skyline under a purple rift sky with the Battle Bus and dragon glider.",
     "story": "Under a glowing Zero Point rift sky, an all-star battle royale squad charges into combat. A cyberpunk skyscraper city sparkles in the background while the Battle Bus and a mechanical dragon glide through the clouds.",
-    "artAnalysis": "Hero characters and building ramps frame the left and right borders. The center sky stays dark and open with purple atmospheric lighting, making bold white or neon magenta text pop.",
+    "artAnalysis": "Hero characters and building ramp towers frame the left and right borders beneath a glowing Zero Point rift sky and flying Battle Bus. The central twilight sky provides an open, dark atmospheric canvas where bold white and neon magenta gamertags pop cleanly across both desktop monitors and mobile phones.",
     "palette": [
       {
         "name": "Rift Purple",
@@ -489,7 +489,7 @@ export const TEMPLATES = [
     },
     "description": "Action-packed military special forces battlefield scene featuring tactical operators advancing with assault rifles through a burning war-torn city with attack helicopters in the sky.",
     "story": "An elite special forces fireteam moves through a warzone. Military helicopters hover above burning skyscraper ruins while tactical operators aim suppressed assault rifles through flying embers and smoke.",
-    "artAnalysis": "Operators and heavy military equipment frame the sides. The center is bathed in warm tactical smoke, creating a high-contrast backdrop for bold, stencil-style lettering.",
+    "artAnalysis": "Tactical special forces operators aiming assault rifles and hovering attack helicopters frame the outer edges amidst burning city ruins. The center is bathed in warm, dark tactical smoke that creates a high-contrast backdrop, ensuring your clan tag, loadout title, and gamertag remain razor-sharp without obscuring the combat art.",
     "palette": [
       {
         "name": "Tactical Amber",
@@ -640,7 +640,7 @@ export const TEMPLATES = [
     },
     "description": "Action-packed tactical squad firefight on desert bomb site with Counter-Terrorists firing M4, AWP sniper, muzzle flash, glowing tracers, & volumetric smoke.",
     "story": "A tense standoff at Bomb Site A on an iconic desert map. Three tactical Counter-Terrorist operators hold the sandstone archway with M4 rifles and AWP snipers amidst orange muzzle flashes, flying bullet tracers, and drifting smoke.",
-    "artAnalysis": "The CT operators and desert archways frame the left and right borders. The center bomb-site pavement provides an open, dark background where gold or cyan gamertags stand out with pin-sharp clarity.",
+    "artAnalysis": "Counter-Terrorist operators holding M4 rifles and AWP snipers frame the sandstone archways of the desert bomb site amidst flying bullet tracers. The central pavement area is kept dark and clear of clutter so gold Premier ratings, FACEIT ranks, and esports team tags pop with tournament-grade clarity.",
     "palette": [
       {
         "name": "Premier Gold",
@@ -719,7 +719,7 @@ export const TEMPLATES = [
     },
     "description": "Iconic GTA comic-book panel collage featuring Los Santos skyline sunset, supercars, stunt bikes, heist operators, and high-speed police chases.",
     "story": "Set in the sun-drenched, high-crime streets of Los Santos, this artwork combines Vinewood hills sunsets, exotic supercars, heist crews, and speeding police cruisers in classic comic-book style.",
-    "artAnalysis": "The bustling city action frames the borders, while the dusky sunset sky in the center gives your channel name maximum contrast and style.",
+    "artAnalysis": "Comic-book style action panels featuring Vinewood hills, exotic supercars, stunt bikes, and speeding police cruisers frame the outer borders. A warm dusky Los Santos sunset sky fills the center, giving your channel handle, FiveM roleplay title, or crew name maximum contrast, depth, and retro synthwave style.",
     "palette": [
       {
         "name": "Cash Green",
@@ -870,7 +870,7 @@ export const TEMPLATES = [
     },
     "description": "Cinematic sci-fi legends battleground key art with five dynamic legends in combat stances across a volcanic canyon with glowing lava fissures, dropships, and embers.",
     "story": "Five legends prepare for the final ring standoff in a volcanic canyon. Glowing lava fissures cut through the rocky ground while dropships fly through a fiery orange sky filled with embers.",
-    "artAnalysis": "Armored legends flank the left and right sides in ready stances. The central volcanic sky provides an open, high-energy backdrop for glowing red and orange gamertags.",
+    "artAnalysis": "Armored legends prepare for the final ring standoff along the left and right volcanic canyon walls. Glowing lava fissures illuminate the lower frame while the central sunset sky provides an open, high-energy backdrop for glowing red and orange gamertags, damage badges, and Predator rank callouts across all screen sizes.",
     "palette": [
       {
         "name": "Predator Crimson",
@@ -1021,7 +1021,7 @@ export const TEMPLATES = [
     },
     "description": "Cinematic MOBA fantasy team splash art featuring champions charging across a ruined stone bridge with fiery shotgun blasts, radiant arcane magic orbs, and nexus energy beams.",
     "story": "Champions charge across a ruined stone bridge on Summoner's Rift. Fiery shotgun blasts, radiant arcane magic orbs, and blue Nexus energy beams clash in an epic 5v5 teamfight.",
-    "artAnalysis": "Spell effects and champion silhouettes frame the sides. The center Nexus energy glow provides an atmospheric, magical backdrop for gold fantasy lettering.",
+    "artAnalysis": "Explosive champion spell effects, fiery shotgun blasts, and arcane orbs frame the left and right stone archways of Summoner's Rift. A luminous blue Nexus energy beam illuminates the center, giving fantasy serif gamertags, lane roles, and Challenger rank badges mythic elegance on desktop and mobile displays.",
     "palette": [
       {
         "name": "Rune Gold",
@@ -1171,7 +1171,7 @@ export const TEMPLATES = [
     },
     "description": "High-octane rocket-powered cars in mid-air aerial collision around an explosive metallic game ball inside a futuristic sports stadium arena.",
     "story": "Rocket-powered cars launch into a mid-air aerial freestyle inside a packed neon sports stadium. Boost trails blaze in blue and orange as cars collide around an explosive metallic game ball.",
-    "artAnalysis": "Flying cars and stadium spotlights frame the edges. The central stadium dome is kept clean and open for vibrant electric cyan or orange gamertags.",
+    "artAnalysis": "High-octane rocket cars and stadium floodlights frame the outer edges, creating dynamic aerial motion blur around the metallic game ball. The central stadium dome is kept dark and clear of clutter so electric cyan and orange boost gamertags glow with sharp readability against the arena crowd.",
     "palette": [
       {
         "name": "Nitro Cyan",
@@ -1322,7 +1322,7 @@ export const TEMPLATES = [
     },
     "description": "Tense Erangel sunset battleground illustration featuring Level 3 helmet operators, burning UAZ vehicle, and supply air-drop crate with smoke signals.",
     "story": "A tense final-circle battle on Erangel. Level 3 helmet operators advance past a burning UAZ vehicle toward a red supply air-drop crate billowing red smoke signals under a golden sunset sky.",
-    "artAnalysis": "Operators, vehicles, and air drops flank the sides. The warm sunset sky in the center provides clear contrast for bold yellow or white military text.",
+    "artAnalysis": "Level 3 helmet operators, a burning UAZ vehicle, and a billowing red supply air-drop crate frame the Erangel coastline on the flanks. The warm golden sunset sky in the center provides clear contrast for bold yellow or white military text, ensuring your Conqueror tier and clan tag remain readable on mobile and PC.",
     "palette": [
       {
         "name": "Winner Gold",
@@ -1473,7 +1473,7 @@ export const TEMPLATES = [
     },
     "description": "Isometric fantasy siege illustration featuring Town Hall 12, Golems, Barbarian King, Archer Queen, Dragons, Wizards, and lightning strikes.",
     "story": "An epic Clan War attack underway! Giant Golems, the Barbarian King, and the Archer Queen storm a fortified village while Dragons and Wizards summon lightning strikes from the sky.",
-    "artAnalysis": "Hero troops and fiery defense towers flank the sides. The center sky provides an open, illuminated area where bold gold or orange clan names glow prominently.",
+    "artAnalysis": "The Barbarian King, Archer Queen, giant Golems, and fiery defense towers frame the outer boundaries of the village during a full-scale siege. The starry night sky above the village leaves ample room for bold cartoon clan tags, Town Hall levels, and war leader titles to shine brightly on all devices.",
     "palette": [
       {
         "name": "Gold Star",
@@ -1623,7 +1623,7 @@ export const TEMPLATES = [
     },
     "description": "High-performance orange hypercar drifting at speed around a winding alpine mountain road with golden autumn trees and snow-capped peaks.",
     "story": "A hypercar powerslides around a mountain hairpin at sunset. Golden autumn trees line the asphalt while snow-capped alpine peaks and festival fireworks glow in the background.",
-    "artAnalysis": "The drifting hypercar and scenic mountain peaks frame the sides. The glowing sunset sky in the center gives your racing gamertag high visibility and speed aesthetic.",
+    "artAnalysis": "A high-performance orange hypercar drifting at speed and snow-capped alpine mountain peaks frame the winding asphalt borders. Warm sunset skies in the center highlight slanted racing typography, speed ratings, and festival champion badges with razor-sharp clarity across mobile and desktop displays.",
     "palette": [
       {
         "name": "Festival Rose",
@@ -1775,7 +1775,7 @@ export const TEMPLATES = [
     },
     "description": "High-octane night street race through Times Square featuring a blue hypercar drifting on wet asphalt with sparks, police pursuits, and neon billboards.",
     "story": "A hypercar drifts through Times Square at midnight on wet, reflective asphalt. Shockwave nitro flames erupt from the exhaust while neon skyscrapers and police pursuit lights reflect in the rain.",
-    "artAnalysis": "The hypercar and neon skyscrapers frame the edges. The dark wet asphalt and night sky in the center create a high-contrast zone for glowing pink and cyan lettering.",
+    "artAnalysis": "A blue hypercar drifting on wet asphalt amidst nitro shockwave flames and neon Times Square skyscrapers frame the outer edges of the scene. The dark reflective asphalt in the center creates a high-contrast canvas for glowing magenta and cyan arcade speed gamertags and tournament ratings.",
     "palette": [
       {
         "name": "Nitro Magenta",
@@ -1926,7 +1926,7 @@ export const TEMPLATES = [
     },
     "description": "Lineup of six anime fantasy heroes on a cliff overlook with elemental abilities against a vast panoramic landscape of mountains, harbors, pagodas, and windmills under a twilight sky.",
     "story": "A party of anime heroes stands atop a scenic cliff overlooking the continent of Teyvat. Elemental energy shimmers around them as pagodas, windmills, and distant celestial islands glow under a starry twilight sky.",
-    "artAnalysis": "The anime characters and scenic landscape frame the sides. The starry twilight sky in the center leaves ample room for glowing gold or celestial cyan traveler names.",
+    "artAnalysis": "A party of anime fantasy heroes on a scenic cliff overlook with elemental abilities frames the mountains, harbors, and distant pagodas. The starry twilight sky in the center leaves generous room for golden serif traveler names, Adventure Rank numbers, and spiral abyss milestones on all screen sizes.",
     "palette": [
       {
         "name": "Primogem Gold",
@@ -2078,7 +2078,7 @@ export const TEMPLATES = [
     },
     "description": "Sprawling Roblox multiverse key art featuring a heroic avatar party on a rocky cliff overlook with city skyline, floating parkour obby, and fantasy kingdom.",
     "story": "A party of colorful blocky avatars stands atop a cliff overlooking a massive virtual world. Floating obstacle courses (obbys), neon city skyscrapers, and fantasy castles stretch into the horizon.",
-    "artAnalysis": "The animated avatars and floating islands frame the sides. The bright sky in the center leaves ample room for fun, chunky, drop-shadowed gamertags.",
+    "artAnalysis": "Heroic blocky avatars, floating obstacle course (obby) islands, and futuristic city skyscrapers frame the outer multiverse horizon. Bright open skies in the center allow chunky drop-shadowed gamertags, studio developer credits, and visit counters to pop with playful energy on all screen sizes.",
     "palette": [
       {
         "name": "Blox Blue",
@@ -2230,7 +2230,7 @@ export const TEMPLATES = [
     },
     "description": "Gritty rainy Night City skyline key art featuring a mercenary in a demon Oni jacket with thermal mantis blade and assault rifle on a reflective rooftop platform.",
     "story": "High above a rainy, neon-drenched Night City, a cyber-enhanced mercenary stands on a reflective rooftop. Glowing yellow Oni cyberware flares as flying AV transports cruise between towering megabuildings.",
-    "artAnalysis": "The cyber-mercenary and towering neon megastructures frame the sides. The center rainy sky provides a dark, glowing canvas where bright yellow and electric cyan gamertags shine intensely.",
+    "artAnalysis": "A cyber-enhanced mercenary with thermal mantis blades and towering neon megabuildings frame the outer flanks of rainy Night City. The dark reflective rooftop platform in the center creates a high-voltage backdrop for neon yellow and matrix cyan cyberware gamertags without covering character art.",
     "palette": [
       {
         "name": "Cyber Yellow",
@@ -2381,7 +2381,7 @@ export const TEMPLATES = [
     },
     "description": "Dark fantasy digital painting featuring Messmer the Impaler seated on a gothic throne holding a coiled serpent staff before the burning Erdtree and misty candle-lit ruins.",
     "story": "In the misty realm of Shadow, a demigod sits atop a gothic stone throne with a coiled serpent staff. In the distance, the burning Erdtree casts an ominous golden-amber glow over gothic castle ruins.",
-    "artAnalysis": "The gothic throne and demigod silhouette frame the sides. The burning Erdtree in the center provides an epic, mythic gold backdrop for glowing fantasy lettering.",
+    "artAnalysis": "Messmer the Impaler seated on a gothic stone throne with a coiled serpent staff frames the candle-lit castle ruins on the flanks. The burning Erdtree in the distance casts a mythic golden glow across the center, giving dark fantasy serif titles and Elden Lord handles epic atmosphere across mobile and desktop displays.",
     "palette": [
       {
         "name": "Grace Gold",
@@ -2532,7 +2532,7 @@ export const TEMPLATES = [
     },
     "description": "Sci-fi spaceship corridor illustration featuring crewmates in spacesuits reacting to an emergency sabotage alarm with red flashing warning lights.",
     "story": "Inside the metallic corridors of The Skeld spaceship, a sabotage alarm flashes in emergency red. Astronaut crewmates scramble to complete tasks while an Impostor lurks near the vent.",
-    "artAnalysis": "Spaceship airlocks and crewmate characters frame the sides. The center corridor is bathed in moody red emergency lighting, providing a clean spot for funny gamertags.",
+    "artAnalysis": "Cartoon space crewmates doing tasks and an impostor lurking in the ventilation shaft frame the metallic spaceship corridors on the sides. The deep starry cosmos and red emergency lighting in the center provide a clean, playful background for colorful creator names, discord handles, and stream roles.",
     "palette": [
       {
         "name": "Impostor Red",
@@ -2684,7 +2684,7 @@ export const TEMPLATES = [
     },
     "description": "Packed esports stadium arena illustration with King Towers, Mega Knight, Princess, Electro Wizard, and flying spells exploding in mid-air.",
     "story": "Overtime in Legendary Arena! The King Towers fire cannonballs while Mega Knight leaps into the river bridge surrounded by Electro Wizard sparks, Princess arrows, and flying fireballs.",
-    "artAnalysis": "The King Towers and fighting troops frame the left and right sides. The vibrant arena sky in the center gives your ladder gamertag and trophy count clean focus.",
+    "artAnalysis": "Red and blue King Towers, attacking Mega Knights, and flying Electro Wizards frame the outer arena bridge. The illuminated center river creates a vibrant, high-contrast zone for ultimate champion ranks, trophy counts, and deck guide channel handles across all viewing devices.",
     "palette": [
       {
         "name": "Trophy Gold",
@@ -2836,7 +2836,7 @@ export const TEMPLATES = [
     },
     "description": "Futuristic city payload standoff illustration with cyber ninja, armored tank, flying support hero, and glowing laser beams.",
     "story": "A high-stakes payload push through a futuristic neon city. A cyber ninja and an armored tank hero clash on the front lines while a flying support hero casts healing light beams from above.",
-    "artAnalysis": "The hero characters and payload robots frame the sides. The vibrant orange and cyan sky in the center provides an open, illuminated spot for esports gamertags.",
+    "artAnalysis": "A dynamic squad of frontline tanks and damage heroes using ultimate abilities frame the futuristic rooftop skyline. The open city sky in the center ensures your Grandmaster rank title, hero main callout, and gamertag glow stand out sharply on all screen sizes.",
     "palette": [
       {
         "name": "Hero Orange",
@@ -2987,7 +2987,7 @@ export const TEMPLATES = [
     },
     "description": "Photorealistic soccer match key art featuring a high-flying bicycle kick strike towards a glowing match ball under dazzling mega-stadium floodlights and golden confetti.",
     "story": "90th-minute stoppage time in a mega-stadium! A superstar striker executes a mid-air bicycle kick volley toward the top corner as stadium floodlights blaze and golden confetti showers down on the pitch.",
-    "artAnalysis": "The acrobatic striker and cheering stadium crowds frame the sides. The glowing stadium lights in the center create a high-contrast backdrop for vibrant green and gold soccer gamertags.",
+    "artAnalysis": "A superstar striker executing a mid-air bicycle kick volley towards glowing match balls and roaring stadium crowds frame the outer flanks. Atmospheric stadium lighting in the center provides a clean, premium sports broadcast aesthetic for Ultimate Team division handles and club names.",
     "palette": [
       {
         "name": "Pitch Green",

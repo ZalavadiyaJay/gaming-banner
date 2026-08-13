@@ -403,9 +403,9 @@ export default async function CustomizePage({ params }) {
                       {isTwitter && "Header Cover Art"}
                     </span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl font-black text-on-background tracking-tight">
+                  <h1 className="text-3xl md:text-5xl font-black text-on-background tracking-tight">
                     About {template.name}
-                  </h2>
+                  </h1>
                 </div>
 
                 {/* Quick Specs Chips */}

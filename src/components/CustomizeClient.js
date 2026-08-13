@@ -572,6 +572,8 @@ export default function CustomizeClient({ params }) {
     resolutionString = "1500 × 500 px";
   }
 
+  const canvasContainerRef = useRef(null);
+
   // Helper to add a new custom text layer
   const addTextLayer = () => {
     const newId = `layer-${Date.now()}`;
@@ -586,7 +588,7 @@ export default function CustomizeClient({ params }) {
       glow: count === 1 ? 60 : 0,
       glowColor: "#00d4ff",
       posX: 50,
-      posY: 50 + (count - 1) * 12,
+      posY: 50 + ((count - 1) % 5) * 10,
     };
     setTextLayers([...textLayers, newLayer]);
     setSelectedLayerId(newId);
@@ -599,13 +601,63 @@ export default function CustomizeClient({ params }) {
 
   // Helper to delete a text layer
   const deleteLayer = (layerId) => {
-    if (textLayers.length <= 1) return;
+    if (!layerId) return;
     const filtered = textLayers.filter((l) => l.id !== layerId);
     setTextLayers(filtered);
     if (selectedLayerId === layerId) {
       setSelectedLayerId(filtered[0]?.id || null);
     }
   };
+  const removeTextLayer = deleteLayer;
+
+  // Dragging movement calculator
+  const handleDragMove = (clientX, clientY) => {
+    if (!activeDragId || !canvasContainerRef.current) return;
+    const rect = canvasContainerRef.current.getBoundingClientRect();
+    const relX = clientX - rect.left;
+    const relY = clientY - rect.top;
+
+    let percentX = Math.round((relX / rect.width) * 100);
+    let percentY = Math.round((relY / rect.height) * 100);
+
+    percentX = Math.max(5, Math.min(95, percentX));
+    percentY = Math.max(5, Math.min(95, percentY));
+
+    setTextLayers((prev) =>
+      prev.map((l) => (l.id === activeDragId ? { ...l, posX: percentX, posY: percentY } : l))
+    );
+  };
+
+  // Global window listeners for ultra-smooth dragging
+  useEffect(() => {
+    if (!activeDragId) return;
+
+    const handleWindowMouseMove = (e) => {
+      handleDragMove(e.clientX, e.clientY);
+    };
+
+    const handleWindowTouchMove = (e) => {
+      if (e.touches && e.touches[0]) {
+        handleDragMove(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    };
+
+    const handleWindowMouseUp = () => {
+      setActiveDragId(null);
+    };
+
+    window.addEventListener("mousemove", handleWindowMouseMove);
+    window.addEventListener("mouseup", handleWindowMouseUp);
+    window.addEventListener("touchmove", handleWindowTouchMove);
+    window.addEventListener("touchend", handleWindowMouseUp);
+
+    return () => {
+      window.removeEventListener("mousemove", handleWindowMouseMove);
+      window.removeEventListener("mouseup", handleWindowMouseUp);
+      window.removeEventListener("touchmove", handleWindowTouchMove);
+      window.removeEventListener("touchend", handleWindowMouseUp);
+    };
+  }, [activeDragId]);
 
   // Initialize text layer from URL query param if present
   useEffect(() => {
@@ -825,7 +877,7 @@ export default function CustomizeClient({ params }) {
     }
   };
 
-  const selectedLayer = textLayers.find(l => l.id === selectedLayerId) || textLayers[0];
+  const selectedLayer = textLayers.find((l) => l.id === selectedLayerId) || (textLayers.length > 0 ? textLayers[0] : null);
 
   return (
     <>
@@ -839,20 +891,8 @@ export default function CustomizeClient({ params }) {
             <div className="w-full max-w-4xl border border-outline-variant rounded-xl overflow-hidden bg-surface-container shadow-2xl">
               {/* Mockup Canvas */}
               <div
+                ref={canvasContainerRef}
                 onClick={() => setSelectedLayerId(null)}
-                onMouseMove={(e) => {
-                  if (activeDragId) {
-                    handleDragMove(e.clientX, e.clientY, e.currentTarget.getBoundingClientRect());
-                  }
-                }}
-                onMouseUp={() => setActiveDragId(null)}
-                onMouseLeave={() => setActiveDragId(null)}
-                onTouchMove={(e) => {
-                  if (activeDragId && e.touches && e.touches[0]) {
-                    handleDragMove(e.touches[0].clientX, e.touches[0].clientY, e.currentTarget.getBoundingClientRect());
-                  }
-                }}
-                onTouchEnd={() => setActiveDragId(null)}
                 className={`w-full relative flex flex-col p-lg justify-center transition-all duration-300 select-none ${
                   activeDragId ? "cursor-grabbing" : "cursor-default"
                 }`}

@@ -583,30 +583,35 @@ export default function CustomizeClient({ params }) {
       text: `TEXT ${count}`,
       label: `Text ${count}`,
       font: "Orbitron",
-      size: count === 1 ? 1.0 : 0.7,
+      size: 1.0,
       color: "#ffffff", // Default WHITE color
-      glow: count === 1 ? 60 : 0,
+      glow: 60,
       glowColor: "#00d4ff",
       posX: 50,
       posY: 50 + ((count - 1) % 5) * 10,
     };
-    setTextLayers([...textLayers, newLayer]);
+    setTextLayers((prev) => [...prev, newLayer]);
     setSelectedLayerId(newId);
   };
 
   // Helper to update a specific text layer
   const updateLayer = (layerId, field, value) => {
-    setTextLayers(textLayers.map((l) => (l.id === layerId ? { ...l, [field]: value } : l)));
+    if (!layerId) return;
+    setTextLayers((prev) =>
+      prev.map((l) => (l.id === layerId ? { ...l, [field]: value } : l))
+    );
   };
 
   // Helper to delete a text layer
   const deleteLayer = (layerId) => {
     if (!layerId) return;
-    const filtered = textLayers.filter((l) => l.id !== layerId);
-    setTextLayers(filtered);
-    if (selectedLayerId === layerId) {
-      setSelectedLayerId(filtered[0]?.id || null);
-    }
+    setTextLayers((prev) => {
+      const filtered = prev.filter((l) => l.id !== layerId);
+      if (selectedLayerId === layerId) {
+        setSelectedLayerId(filtered[0]?.id || null);
+      }
+      return filtered;
+    });
   };
   const removeTextLayer = deleteLayer;
 
@@ -892,7 +897,6 @@ export default function CustomizeClient({ params }) {
               {/* Mockup Canvas */}
               <div
                 ref={canvasContainerRef}
-                onClick={() => setSelectedLayerId(null)}
                 className={`w-full relative flex flex-col p-lg justify-center transition-all duration-300 select-none ${
                   activeDragId ? "cursor-grabbing" : "cursor-default"
                 }`}
@@ -907,9 +911,13 @@ export default function CustomizeClient({ params }) {
                 {currentTemplate.decor}
 
                 {/* Render All Dynamic Text Layers */}
-                {textLayers.map((layer) => (
+                {textLayers.map((layer, idx) => (
                   <div
                     key={layer.id}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedLayerId(layer.id);
+                    }}
                     onMouseDown={(e) => {
                       e.stopPropagation();
                       setActiveDragId(layer.id);
@@ -928,7 +936,7 @@ export default function CustomizeClient({ params }) {
                       touchAction: "none",
                       willChange: activeDragId === layer.id ? "left, top" : "auto"
                     }}
-                    className={`z-20 p-1.5 rounded-lg border-2 pointer-events-auto transition-all ${
+                    className={`z-20 p-1.5 rounded-lg border-2 pointer-events-auto transition-all cursor-pointer ${
                       activeDragId === layer.id ? "transition-none" : ""
                     } ${
                       selectedLayerId === layer.id
@@ -940,7 +948,7 @@ export default function CustomizeClient({ params }) {
                     {(selectedLayerId === layer.id || activeDragId === layer.id) && (
                       <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-black/90 px-2 py-0.5 rounded shadow pointer-events-none whitespace-nowrap border border-primary-container/50 flex items-center gap-1 z-30">
                         <span className="text-[9px] text-primary-container font-extrabold uppercase font-data-mono">
-                          🖐️ Drag {layer.label || "Text"}
+                          🖐️ Drag {layer.label || `Text ${idx + 1}`}
                         </span>
                       </div>
                     )}

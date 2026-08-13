@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import CategoryCatalog from "@/components/CategoryCatalog";
+import TwitchCategoryCatalog from "@/components/TwitchCategoryCatalog";
 
 export const metadata = {
-  title: "Twitch Offline Banner Maker & Overlays | Gaming Banner",
-  description: "Create custom 4K Twitch offline banners and stream headers for free. 20+ esports game-themed presets with centered typography and safe zone overlays.",
+  title: "Free Twitch Stream Pack & Banner Maker | Gaming Banner",
+  description: "Create complete 4K Twitch stream packages, 1080p offline screens, 1200x480 profile headers, and matching bio panels for free. 20+ esports game themes.",
 };
 
 export default function TwitchBanners() {
@@ -107,17 +107,25 @@ export default function TwitchBanners() {
 
       <main className="flex-1 min-h-screen pt-24 pb-6 px-4 md:px-8 w-full max-w-[1440px] mx-auto flex flex-col gap-6 overflow-x-hidden">
         {/* Page Hero */}
-        <section className="text-center py-2 flex flex-col items-center gap-2">
-          <h1 className="text-2xl md:text-4xl font-extrabold text-on-background tracking-tight">
-            Free Twitch Offline Banner Maker (100% Free 4K PNG)
+        <section className="text-center py-4 flex flex-col items-center gap-3">
+          <div className="flex items-center gap-2">
+            <span className="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-primary-container/15 text-primary-container border border-primary-container/30">
+              🟣 Twitch Streamer Suite 2026
+            </span>
+            <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-surface-container border border-outline-variant/40 text-outline font-data-mono">
+              20 Esports Themes
+            </span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-black text-on-background tracking-tight">
+            Free Twitch Stream Pack & Banner Maker
           </h1>
-          <p className="max-w-[800px] text-xs md:text-sm text-outline leading-relaxed">
-            Create professional 1920×1080 Twitch offline screens, stream schedule cards, and channel headers in seconds. Zero watermarks, full commercial streaming rights, and instant 4K lossless downloads.
+          <p className="max-w-[850px] text-xs md:text-sm text-outline leading-relaxed">
+            Create complete matching Twitch stream packages in 30 seconds. Includes 1080p video player offline screens, 1200×480 channel profile headers, starting soon scenes, and 5 bio panels. 100% free with zero watermarks.
           </p>
         </section>
 
-        {/* Category Catalog Grid with Game Filter Pills */}
-        <CategoryCatalog templates={templates} />
+        {/* Interactive Multi-Tier Twitch Category Catalog */}
+        <TwitchCategoryCatalog templates={templates} />
 
         {/* Deep Educational Publisher Section (AdSense High Authority & Anti-Thin Content) */}
         <section className="max-w-[960px] mx-auto w-full py-12 border-t border-outline-variant/60 flex flex-col gap-10">

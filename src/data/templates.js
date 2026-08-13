@@ -515,24 +515,24 @@ export const TEMPLATES = [
     "fontTip": "Use the Impact font in bold. Its tall, compressed letters give your channel an aggressive military esports look.",
     "faqs": [
       {
-        "q": "What is the recommended size for a Call of Duty Warzone YouTube banner?",
-        "a": "The standard dimension is 2560 × 1440 pixels. Text and loadout callouts remain strictly inside the 1546 × 423 px safe zone for flawless mobile rendering."
+        "q": "What is the official resolution and safe area for a Call of Duty Warzone YouTube banner?",
+        "a": "The full canvas exports at 2560 × 1440 pixels (16:9 4K UHD standard). All gamertags, clan tags, and loadout specs are calibrated strictly inside the central 1546 × 423 pixel safe zone, guaranteeing 100% visibility without cut-off across mobile phones, tablets, laptops, and 4K displays."
       },
       {
-        "q": "Can I add my Call of Duty clan tag to this banner?",
-        "a": "Yes! Simply type your clan tag in brackets (e.g. '[FAZE] GHOST_ACTUAL') in the gamertag input."
+        "q": "How do I add my Call of Duty clan tag or squad name to this banner?",
+        "a": "Type your clan tag in brackets directly into the gamertag field (e.g., '[FAZE] GHOST_ACTUAL' or '[TASK] REAPER'). Our customizer automatically renders high-contrast stencil outlines so your squad tag stands out against battlefield smoke."
       },
       {
-        "q": "What subtitle works best for a Warzone content channel?",
-        "a": "Top creators write 'WARZONE META LOADOUTS', 'DAILY REBIRTH ISLAND HIGHLIGHTS', or 'SEARCH & DESTROY SPECIALIST'."
+        "q": "What subtitle text works best for Warzone meta loadout and Rebirth Island channels?",
+        "a": "Top creators use 'WARZONE META LOADOUTS • REBIRTH ISLAND', 'SEARCH & DESTROY SPECIALIST', 'RANKED PLAY TOP 250', or 'TACTICAL SNIPER HIGHLIGHTS' with desert tan (#de9b35) or bright white text."
       },
       {
-        "q": "How do I ensure text remains readable over the smoke background?",
-        "a": "Our studio applies dark outline extrusion and amber neon glow to keep your lettering razor-sharp."
+        "q": "How do I upload this 4K Warzone banner to YouTube Studio without pixelation?",
+        "a": "Download your uncompressed 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the file under Banner Image, check the device preview, and click Publish. Because our studio renders lossless 4K, YouTube applies zero compression blur."
       },
       {
-        "q": "Is this banner free for monetized YouTube channels?",
-        "a": "Yes, 100% free with no watermarks and full commercial usage rights."
+        "q": "Is this Call of Duty banner 100% free for monetized channels and tournament teams?",
+        "a": "Yes! All templates on GamingBanner.com include full commercial broadcast and monetization rights with zero watermarks for monetized YouTube channels, Twitch streams, Kick broadcasts, and Discord teams."
       }
     ]
   },
@@ -666,24 +666,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron in bold. These heavy fonts capture the high-stakes competitive esports feeling of CS2 Premier matches.",
     "faqs": [
       {
-        "q": "What is the official banner size for a CS2 YouTube channel?",
-        "a": "The standard resolution is 2560 × 1440 pixels. Text and rating stats are locked inside the 1546 × 423 px safe zone so they never get cropped on smartphones."
+        "q": "What are the official YouTube banner dimensions for a Counter-Strike 2 channel?",
+        "a": "The full canvas renders at 2560 × 1440 pixels (16:9 4K UHD). All player handles, team rosters, and Premier Rating badges are anchored inside the central 1546 × 423 px safe zone, guaranteeing 100% visibility on iOS, Android, and PC displays."
       },
       {
-        "q": "How do I show my CS2 Premier Rating or FACEIT level?",
-        "a": "Add a subtitle line like '25,000+ PREMIER RATING • FACEIT LEVEL 10' with glowing Premier gold typography."
+        "q": "How do I display my CS2 Premier Rating, Global Elite rank, or FACEIT level?",
+        "a": "Add a secondary subtitle line like '25,000+ PREMIER RATING • FACEIT LEVEL 10' or 'AWP ENTRY FRAGGER' with glowing Premier gold (#f59e0b) or clean white typography."
       },
       {
-        "q": "What font best matches Counter-Strike 2 esports branding?",
-        "a": "Impact Bold or Orbitron with dark outlines captures the heavy tactical look of Major tournament broadcasts."
+        "q": "What typography and color schemes match Counter-Strike 2 Major esports broadcasts?",
+        "a": "Use Impact Bold or Orbitron with stacked black outlines. Pair Premier Gold (#f59e0b) with CT Navy (#1e3a8a) and Bomb Site Crimson (#ef4444) for an authentic Valve Major broadcast aesthetic."
       },
       {
-        "q": "How to upload this CS2 banner to YouTube Studio?",
-        "a": "Open YouTube Studio > Customization > Branding. Upload your downloaded 4K PNG under Banner Image and click Publish."
+        "q": "How do I upload this CS2 banner to YouTube Studio with 4K clarity?",
+        "a": "In YouTube Studio (studio.youtube.com), navigate to Customization > Branding. Click Upload under Banner Image, select your downloaded 2560x1440 PNG, check the safe-zone crop, and click Publish."
       },
       {
-        "q": "Is this CS2 channel art royalty-free?",
-        "a": "Yes, 100% royalty-free with full commercial monetization rights and no watermarks."
+        "q": "Is this Counter-Strike 2 channel art royalty-free for commercial use?",
+        "a": "Yes, 100% royalty-free with full commercial monetization rights and zero watermarks for personal YouTube channels, Twitch partner streams, and competitive esports team rosters."
       }
     ]
   },
@@ -745,24 +745,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron Italic. They match the street-racing energy of GTA Online and FiveM roleplay communities.",
     "faqs": [
       {
-        "q": "What is the recommended banner size for GTA 5 & FiveM channels?",
-        "a": "The standard format is 2560 × 1440 px (16:9). All server names and roleplay titles are kept inside the 1546 × 423 px safe zone for phone users."
+        "q": "What is the recommended YouTube banner size for GTA 5 & FiveM roleplay channels?",
+        "a": "The official format is 2560 × 1440 pixels (16:9 aspect ratio). All server names, crew handles, and character titles remain strictly inside the 1546 × 423 px safe zone, guaranteeing 100% visibility on mobile phones, tablets, and PCs."
       },
       {
-        "q": "Is this banner template good for NoPixel 4.0 and GTA RP streamers?",
-        "a": "Yes! Many roleplay creators write their character name and server (e.g. 'NOPIXEL 4.0 • OFFICER BAIT') in the text fields."
+        "q": "Can I customize this banner for NoPixel 4.0, FiveM RP servers, or GTA Online crews?",
+        "a": "Yes! Enter your character name and server title into the customizer (e.g., 'NOPIXEL 4.0 • OFFICER BAIT' or 'LOS SANTOS HEIST CREW LEADER'). Choose cash green (#10b981) or sunset pink (#f43f5e) for authentic roleplay branding."
       },
       {
-        "q": "What colors match the Los Santos synthwave vibe?",
-        "a": "Use cash green (#10b981) and sunset pink (#f43f5e) with glowing text outlines."
+        "q": "What colors and fonts capture the retro synthwave Los Santos aesthetic?",
+        "a": "Pair Cash Green (#10b981) and Vinewood Sunset Rose (#f43f5e) with Impact or Orbitron Italic. Add stacked black drop shadows to match classic Rockstar Games comic-book panel styling."
       },
       {
-        "q": "How do I upload this banner to YouTube Studio?",
-        "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this GTA V banner in YouTube Studio without mobile cut-off?",
+        "a": "Download the lossless 4K PNG file from our studio, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, and click Publish. Our template's pre-aligned safe zone ensures 0% cutoff on phones."
       },
       {
-        "q": "Are these GTA banners free for monetized channels?",
-        "a": "Yes, 100% free with full commercial rights and zero watermarks."
+        "q": "Is this GTA 5 banner free to use on monetized YouTube channels and Kick streams?",
+        "a": "Yes, 100% free with no watermarks and full commercial usage rights for monetized YouTube channels, Twitch affiliate broadcasts, Kick streams, and FiveM community hubs."
       }
     ]
   },
@@ -896,24 +896,24 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic with a strong glow. The sharp slanted letters match Apex Legends' speed and movement mechanics.",
     "faqs": [
       {
-        "q": "What is the recommended size for an Apex Legends YouTube banner?",
-        "a": "The standard size is 2560 × 1440 pixels. The central safe area (1546 × 423 px) guarantees your gamertag remains visible on smartphones."
+        "q": "What are the official banner dimensions and safe area for an Apex Legends YouTube channel?",
+        "a": "The full banner exports at 2560 × 1440 pixels (16:9 4K UHD). The central 1546 × 423 px safe zone guarantees your gamertag, main legend role, and Predator badge remain 100% visible on smartphones without edge cropping."
       },
       {
-        "q": "How do I show my Predator rank or main legend on the banner?",
-        "a": "Type 'APEX PREDATOR • WRAITH MAIN' or '4K DAMAGE 20 BOMB' in the subtitle field with glowing crimson text."
+        "q": "How do I display my Apex Predator rank, main legend, or 4K 20-bomb badges?",
+        "a": "Type your competitive achievements into the subtitle input (e.g., 'APEX PREDATOR #15 • WRAITH & HORIZON MAIN' or '4K DAMAGE 20 BOMB BADGE') with glowing crimson (#ff3e3e) or volcanic orange text."
       },
       {
-        "q": "What font best suits Apex Legends channel branding?",
-        "a": "Orbitron Italic with dual red and orange drop shadows captures the high-velocity movement style of Apex."
+        "q": "What font and glow styling best suits high-speed Apex Legends movement channels?",
+        "a": "Use Orbitron Italic with dual red (#ff3e3e) and orange (#f97316) drop shadows. The aerodynamic slanted typography captures the high-velocity slide-jump mechanics of Apex Legends."
       },
       {
-        "q": "How to upload this banner to YouTube Studio?",
-        "a": "In YouTube Studio, navigate to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this 4K Apex Legends banner to YouTube Studio?",
+        "a": "In YouTube Studio (studio.youtube.com), click Customization > Branding. Under Banner Image, upload the downloaded 2560x1440 PNG, check the safe-zone preview, and click Publish."
       },
       {
-        "q": "Is this Apex Legends banner free for commercial channels?",
-        "a": "Yes, 100% free with zero watermarks and full commercial rights."
+        "q": "Is this Apex Legends banner free for commercial esports and monetized channels?",
+        "a": "Yes! All graphics generated on GamingBanner.com are 100% free with zero watermarks and full commercial rights for monetized YouTube channels, Twitch streams, and ALGS esports teams."
       }
     ]
   },
@@ -1047,24 +1047,24 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia or serif typography with subtle gold glow. Its classical fantasy elegance matches League of Legends' mythic champion lore.",
     "faqs": [
       {
-        "q": "What is the recommended YouTube banner size for League of Legends channels?",
-        "a": "The standard size is 2560 × 1440 pixels. The central 1546 × 423 px safe zone ensures your summoner name and rank stay visible on mobile."
+        "q": "What is the official YouTube banner size and safe zone for League of Legends channels?",
+        "a": "The standard canvas size is 2560 × 1440 pixels (16:9 4K UHD). All summoner names, lane roles, and Challenger rank badges are centered inside the 1546 × 423 px mobile safe zone, ensuring zero cut-off across mobile phones, tablets, and desktop displays."
       },
       {
-        "q": "What subtitle works best for a LoL gaming channel?",
-        "a": "Popular choices include 'CHALLENGER MID LANER', 'ADC MONTAGE & GUIDES', or 'ROAD TO GRANDMASTER'."
+        "q": "How do I feature my Challenger rank, champion main, or lane role on the banner?",
+        "a": "Type your role into the subtitle field (e.g., 'CHALLENGER MID LANER • YASUO & AHRI MAIN' or 'ROAD TO GRANDMASTER') and apply Rune Gold (#dfc8a5) or Arcane Blue (#38bdf8) glow for premium broadcast appeal."
       },
       {
-        "q": "How do I match this banner with my stream overlay?",
-        "a": "Use hex code #dfc8a5 for your gold UI borders and scoreboard webcam frames."
+        "q": "What typography and hex colors match Summoner's Rift and mythic LoL champion lore?",
+        "a": "Use Georgia Serif with Rune Gold (#dfc8a5) and subtle dark amber drop shadows. The classical serif lettering mirrors the official Riot Games client UI and LEC/LCK tournament broadcast graphics."
       },
       {
-        "q": "How to upload this LoL banner in YouTube Studio?",
-        "a": "Go to YouTube Studio > Customization > Branding. Upload the 4K PNG file under Banner Image and click Publish."
+        "q": "How do I upload this LoL banner to YouTube Studio without quality loss?",
+        "a": "Download your uncompressed 2560x1440 PNG file, navigate to studio.youtube.com > Customization > Branding, upload the image under Banner Image, and click Publish."
       },
       {
-        "q": "Is this banner free with full commercial rights?",
-        "a": "Yes! 100% free with no watermarks and full commercial usage rights."
+        "q": "Can monetized creators and League tournament teams use this banner for free?",
+        "a": "Yes! All designs on GamingBanner.com are 100% free with zero watermarks and full commercial rights for monetized YouTube channels, Twitch streams, and amateur MOBA tournament teams."
       }
     ]
   },
@@ -1197,24 +1197,24 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic with strong neon glow. Its aerodynamic futuristic curves match high-speed aerial mechanics.",
     "faqs": [
       {
-        "q": "What is the best banner size for a Rocket League YouTube channel?",
-        "a": "The standard resolution is 2560 × 1440 px. Text is centered in the 1546 × 423 px safe zone to prevent mobile viewport clipping."
+        "q": "What is the recommended banner size and safe zone for a Rocket League YouTube channel?",
+        "a": "The official resolution is 2560 × 1440 pixels (16:9 4K UHD). All gamertags, rank tiers, and team names are anchored strictly inside the central 1546 × 423 pixel safe area, preventing mobile viewport clipping while filling the entire screen on 4K TVs."
       },
       {
-        "q": "How to showcase my rank on this Rocket League banner?",
-        "a": "Add a subtitle line like 'GRAND CHAMPION II' or 'SUPERSONIC LEGEND' with neon orange or cyan glow."
+        "q": "How do I display my Grand Champion, Supersonic Legend (SSL), or freestyle rank?",
+        "a": "Type your competitive rank in the subtitle field (e.g., 'SUPERSONIC LEGEND • FREESTYLE GOD' or 'GRAND CHAMPION II 2v2 PUSH') and apply Flame Orange (#f97316) or Nitro Cyan (#00d4ff) neon glow."
       },
       {
-        "q": "What font works best for Rocket League graphics?",
-        "a": "Orbitron Italic gives letters an aerodynamic, speed-boost look."
+        "q": "What font and color scheme best matches aerodynamic Rocket League esports graphics?",
+        "a": "Orbitron Italic with dual Nitro Cyan (#00d4ff) and Flame Orange (#f97316) glow. The aerodynamic, slanted typography matches rocket boost speed trails and competitive RLCS broadcast telemetry."
       },
       {
-        "q": "How do I upload this banner in YouTube Studio?",
-        "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this Rocket League banner to YouTube Studio without blur?",
+        "a": "Download your uncompressed 2560x1440 PNG file from our studio, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, and click Publish. Our lossless 4K export ensures zero pixelation."
       },
       {
-        "q": "Is this free for esports tournament teams?",
-        "a": "Yes, 100% free with full commercial rights and zero watermarks."
+        "q": "Is this Rocket League banner free for monetized channels and RLCS community teams?",
+        "a": "Yes! All templates on GamingBanner.com include full commercial rights and zero watermarks for monetized YouTube channels, Twitch streams, and amateur RLCS esports rosters."
       }
     ]
   },
@@ -1348,24 +1348,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact with black outlines. The heavy stencil lettering fits PUBG's realistic survival combat atmosphere.",
     "faqs": [
       {
-        "q": "What is the recommended size for a PUBG Mobile YouTube banner?",
-        "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your Conqueror tier text stays visible on phones."
+        "q": "What are the exact safe zone dimensions for a PUBG Mobile YouTube banner?",
+        "a": "The full canvas is 2560 × 1440 pixels (16:9 4K standard). All squad tags, Conqueror badges, and gamertags are positioned strictly within the 1546 × 423 px safe zone, guaranteeing zero cut-off on iPhone, Android, tablet, and PC screens."
       },
       {
-        "q": "What subtitle works best for PUBG channels?",
-        "a": "Try 'WINNER WINNER CHICKEN DINNER', 'CONQUEROR RANK PUSH', or 'SNIPER HIGHLIGHTS'."
+        "q": "How do I showcase my Conqueror tier, squad clan tag, or Chicken Dinner stats?",
+        "a": "Type your clan tag in brackets and stats into the subtitle field (e.g., '[SOUL] MORTAL • CONQUEROR RANK' or 'WINNER WINNER CHICKEN DINNER • TOP SNIPER') in glowing Winner Gold (#eab308)."
       },
       {
-        "q": "What font best matches PUBG battlegrounds branding?",
-        "a": "Impact with bold drop shadow provides the heavy stencil look of military gear."
+        "q": "What font and color scheme best suits realistic PUBG military battlegrounds?",
+        "a": "Use Impact with heavy black outlines. Pair Winner Gold (#eab308) with Air Drop Red (#ef4444) and Tactical Slate (#1e293b) to match realistic military survival battlegrounds."
       },
       {
-        "q": "How to upload this banner to YouTube Studio?",
-        "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this 4K PUBG Mobile banner to YouTube Studio without pixelation?",
+        "a": "Download your uncompressed 2560x1440 PNG file, navigate to studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish."
       },
       {
-        "q": "Is this PUBG banner free with no watermark?",
-        "a": "Yes, 100% free with full commercial rights."
+        "q": "Is this PUBG Mobile banner free for commercial monetization on YouTube and Facebook Gaming?",
+        "a": "Yes, 100% free with full commercial monetization rights and zero watermarks for YouTube creators, Twitch streamers, and Facebook Gaming mobile broadcasters."
       }
     ]
   },
@@ -1499,24 +1499,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact with layered dark amber drop shadows. The bold cartoon lettering captures the playful, high-energy fantasy style of Clash of Clans.",
     "faqs": [
       {
-        "q": "What is the recommended size for a Clash of Clans YouTube banner?",
-        "a": "The standard size is 2560 × 1440 px. Town Hall levels and clan tags are kept inside the 1546 × 423 px safe zone for phone displays."
+        "q": "What is the official YouTube banner size and safe area for Clash of Clans channels?",
+        "a": "The standard canvas size is 2560 × 1440 pixels (16:9 4K UHD). All clan tags, Town Hall indicators, and war leader handles are anchored inside the 1546 × 423 px mobile safe zone, ensuring 100% visibility on all smartphone screens."
       },
       {
-        "q": "Can I show my Town Hall level and Clan Tag on the banner?",
-        "a": "Yes! Add a subtitle line like 'TOWN HALL 16 MAX • CLAN: #LEGENDS' with glowing gold letters."
+        "q": "How do I add my Town Hall level, Clan War League (CWL) rank, or clan tag to this banner?",
+        "a": "Use the subtitle field to type 'TOWN HALL 16 MAX • CLAN: #LEGENDS' or 'CWL CHAMPION III • WAR SPECIALIST' in glowing Gold Star (#f59e0b) or Elixir Pink (#ec4899) lettering."
       },
       {
-        "q": "What colors work best for Clash of Clans branding?",
-        "a": "Gold (#f59e0b) and Elixir pink (#ec4899) match in-game resources and troop upgrades."
+        "q": "What typography and colors match Clash of Clans fantasy gold and elixir resources?",
+        "a": "Use Impact with stacked dark amber drop shadows (#78350f). Pair Gold Star (#f59e0b) with Elixir Pink (#ec4899) and Dark Elixir Purple (#7c3aed) for authentic cartoon strategy branding."
       },
       {
-        "q": "How to upload this banner in YouTube Studio?",
-        "a": "Go to YouTube Studio > Customization > Branding, upload your downloaded 4K PNG under Banner Image, and click Publish."
+        "q": "How do I upload this Clash of Clans banner to YouTube Studio without cropping?",
+        "a": "Go to studio.youtube.com > Customization > Branding. Upload the downloaded 4K PNG file under Banner Image, check the device preview, and click Publish."
       },
       {
-        "q": "Is this banner free with full commercial rights?",
-        "a": "Yes, 100% free with no watermarks."
+        "q": "Is this Clash of Clans banner 100% free with full commercial rights?",
+        "a": "Yes! All designs on GamingBanner.com are 100% free with zero watermarks and full commercial rights for monetized YouTube channels, Twitch streams, and clan Discord communities."
       }
     ]
   },
@@ -1649,24 +1649,24 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic. The dynamic slanted angles match high-speed drift physics and modern supercar dashboards.",
     "faqs": [
       {
-        "q": "What is the recommended size for a Forza Horizon YouTube banner?",
-        "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone ensures your gamertag stays visible on all mobile devices."
+        "q": "What is the recommended YouTube banner size and safe zone for Forza Horizon channels?",
+        "a": "The standard canvas size is 2560 × 1440 pixels (16:9 4K UHD). The central 1546 × 423 px safe zone guarantees your driver gamertag, wheel setup notes, and speed stats stay 100% visible on mobile devices."
       },
       {
-        "q": "What subtitle works best for a Forza racing channel?",
-        "a": "Try 'HORIZON FESTIVAL CHAMPION', 'STEERING WHEEL DRIFTING', or 'CUSTOM TUNING & BUILDS'."
+        "q": "How do I highlight my Horizon Festival Champion status, sim wheel setup, or car club?",
+        "a": "Enter 'HORIZON FESTIVAL CHAMPION • LOGITECH G29 WHEEL' or 'TANDEM DRIFT & ENGINE TUNING' into the subtitle field with glowing Festival Rose (#f43f5e) or Sunset Gold typography."
       },
       {
-        "q": "Will this banner look crisp on 4K TVs?",
-        "a": "Yes! It exports in uncompressed 2560 x 1440 resolution, looking razor sharp on big screens."
+        "q": "What font and color palette best captures high-speed supercar racing aesthetics?",
+        "a": "Orbitron Italic with Festival Rose (#f43f5e) and Sunset Gold (#f59e0b). The slanted, aerodynamic typography captures high-velocity drift physics and digital dashboard telemetry."
       },
       {
-        "q": "How to upload this banner in YouTube Studio?",
-        "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this 4K Forza Horizon banner to YouTube Studio without quality loss?",
+        "a": "Download the lossless 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish."
       },
       {
-        "q": "Is it free for commercial use?",
-        "a": "Yes, 100% free with no watermarks."
+        "q": "Is this Forza Horizon banner free for monetized racing channels and wheel streamers?",
+        "a": "Yes! All banner templates on GamingBanner.com include full commercial rights and zero watermarks for monetized YouTube channels, Twitch racing wheel streams, and sim racing Discord hubs."
       }
     ]
   },
@@ -1801,24 +1801,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron Italic with dual pink and cyan drop shadows for an authentic neon arcade racing look.",
     "faqs": [
       {
-        "q": "What is the recommended size for an Asphalt 9 YouTube banner?",
-        "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone prevents mobile cropping."
+        "q": "What is the official YouTube banner resolution and safe zone for Asphalt 9 / Legends Unite?",
+        "a": "The full banner exports at 2560 × 1440 pixels (16:9 4K standard). The central 1546 × 423 px safe zone guarantees your racer name, club tag, and division rating remain 100% visible on smartphones without cropping."
       },
       {
-        "q": "What subtitle works best for Asphalt 9 channels?",
-        "a": "Popular choices include 'LEGENDS DIVISION • TOP 100', 'SHOCKWAVE NITRO SPECIALIST', or 'CAR UNLOCK GUIDES'."
+        "q": "How do I showcase my Legends Division rating, car garage value, or club tag?",
+        "a": "Type your club credentials into the subtitle input (e.g., 'LEGENDS DIVISION • TOP 100 CLUB' or 'SHOCKWAVE NITRO SPECIALIST • GARAGE LEVEL 18') with glowing Nitro Magenta (#ec4899) lettering."
       },
       {
-        "q": "What font best suits neon arcade racing?",
-        "a": "Impact with pink and cyan drop shadows matches arcade speed aesthetics."
+        "q": "What font and neon glow styling best matches high-octane arcade drift racing?",
+        "a": "Use Impact or Orbitron Italic with dual Nitro Magenta (#ec4899) and Shockwave Cyan (#00d4ff) outlines. The high-contrast neon drop shadows capture the street-racing energy of Times Square at midnight."
       },
       {
-        "q": "How to upload this banner in YouTube Studio?",
-        "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this Asphalt 9 banner to YouTube Studio with crisp 4K fidelity?",
+        "a": "In YouTube Studio (studio.youtube.com), navigate to Customization > Branding. Under Banner Image, upload the 2560x1440 PNG file, verify the safe-zone preview, and click Publish."
       },
       {
-        "q": "Is it free for commercial use?",
-        "a": "Yes, 100% free with zero watermarks."
+        "q": "Is this Asphalt 9 banner free for monetized gaming channels and esports teams?",
+        "a": "Yes, 100% free with full commercial monetization rights and zero watermarks for YouTube creators, Twitch streamers, and competitive arcade racing clubs."
       }
     ]
   },
@@ -1952,24 +1952,24 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia or serif typography with soft golden glow. The elegant fantasy lettering matches Genshin Impact's orchestral and lore-rich world.",
     "faqs": [
       {
-        "q": "What is the recommended banner size for Genshin Impact YouTube channels?",
-        "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your Adventure Rank and traveler handle stay visible on phones."
+        "q": "What is the official YouTube banner size and safe zone for Genshin Impact channels?",
+        "a": "The standard format is 2560 × 1440 pixels (16:9 4K UHD). The central 1546 × 423 px safe zone guarantees your Adventure Rank, Traveler handle, and Spiral Abyss milestones stay 100% visible on smartphones, iPads, and PC browsers."
       },
       {
-        "q": "What subtitle works best for a Genshin channel?",
-        "a": "Popular choices include 'ADVENTURE RANK 60', 'SPIRAL ABYSS 36 STARS', or 'PRIMOGEM & BANNER GUIDES'."
+        "q": "How do I display my Adventure Rank (AR 60), Spiral Abyss clears, or Traveler main?",
+        "a": "Enter 'ADVENTURE RANK 60 • SPIRAL ABYSS 36★' or 'PRIMOGEM & BANNER WISH GUIDES' into the subtitle field with glowing Primogem Gold (#fde047) or Anemo Cyan (#38bdf8) accents."
       },
       {
-        "q": "What typography matches anime fantasy RPGs?",
-        "a": "Georgia Serif with gold glow highlights matches the elegant orchestral atmosphere of Genshin."
+        "q": "What typography and celestial colors match Genshin Impact's fantasy anime aesthetic?",
+        "a": "Use Georgia Serif with Primogem Gold (#fde047) and Anemo Cyan (#38bdf8) soft drop shadows. The classical serif typography mirrors the official Hoyoverse UI and orchestral anime fantasy tone."
       },
       {
-        "q": "How to upload this banner in YouTube Studio?",
-        "a": "Go to YouTube Studio > Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this Genshin Impact banner to YouTube Studio without compression blur?",
+        "a": "Download the lossless 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, and click Publish."
       },
       {
-        "q": "Is it free for commercial use on monetized channels?",
-        "a": "Yes, 100% free with no watermarks."
+        "q": "Is this Genshin Impact banner free for monetized YouTube and Twitch creators?",
+        "a": "Yes! All graphics on GamingBanner.com are 100% free with zero watermarks and full commercial rights for monetized YouTube channels, Twitch partner streams, and Discord community hubs."
       }
     ]
   },
@@ -2104,24 +2104,24 @@ export const TEMPLATES = [
     "fontTip": "Use Inter or heavy sans-serif with thick black or navy outlines. The chunky comic lettering captures Roblox's fun, creative multiplayer spirit.",
     "faqs": [
       {
-        "q": "What is the recommended size for a Roblox YouTube banner?",
-        "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees no cropping on phone screens."
+        "q": "What is the recommended YouTube banner size and safe zone for Roblox channels?",
+        "a": "The standard canvas size is 2560 × 1440 pixels (16:9 4K UHD). All studio developer names, avatar gamertags, and game visit counters are calibrated strictly inside the central 1546 × 423 pixel safe area, guaranteeing zero cut-off on mobile phones, tablets, and desktop displays."
       },
       {
-        "q": "What subtitle works best for a Roblox channel?",
-        "a": "Try 'TOP OBBY CREATOR', 'BEDWARS & BLOX FRUITS', or 'FUNNY MULTIPLAYER MOMENTS'."
+        "q": "How do I feature my Roblox studio name, Blox Fruits level, or top obby game title?",
+        "a": "Type your channel branding into the subtitle field (e.g., 'TOP OBBY CREATOR • BLOX FRUITS LEVEL 2550' or 'BEDWARS & BROOKHAVEN RP') and choose Obby Yellow (#facc15) or Blox Blue (#3b82f6) for maximum vibrant contrast."
       },
       {
-        "q": "What font best suits cartoon avatar games?",
-        "a": "Inter Heavy with thick navy 3D shadows captures Roblox's fun arcade energy."
+        "q": "What font and color styling best suits fun, vibrant Roblox multiverse creators?",
+        "a": "Use Inter Heavy with thick navy or dark crimson drop shadows (#1e3a8a). The chunky 3D comic typography captures the playful multiplayer spirit of Roblox experiences and dev studios."
       },
       {
-        "q": "How to upload this banner in YouTube Studio?",
-        "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this 4K Roblox banner to YouTube Studio without phone cut-offs?",
+        "a": "Download your uncompressed 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish. Our pre-aligned safe zone ensures 100% full visibility across all devices."
       },
       {
-        "q": "Is it free for commercial use on YouTube?",
-        "a": "Yes, 100% free with no watermarks."
+        "q": "Is this Roblox channel banner 100% free for monetized creators and dev studios?",
+        "a": "Yes! All designs on GamingBanner.com include full commercial rights and zero watermarks for monetized YouTube channels, Twitch streams, and Roblox developer Discord communities."
       }
     ]
   },
@@ -2256,24 +2256,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron Italic with yellow and cyan double shadows. It perfectly captures the gritty high-tech aesthetic of Night City.",
     "faqs": [
       {
-        "q": "What is the recommended size for a Cyberpunk 2077 YouTube banner?",
-        "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your gamertag stays visible on smartphones."
+        "q": "What is the official YouTube banner size and safe zone for Cyberpunk 2077 channels?",
+        "a": "The full canvas exports at 2560 × 1440 pixels (16:9 4K UHD). The central 1546 × 423 px safe zone guarantees your Netrunner handle, build spec, and cyberware role remain 100% visible on smartphones without edge cropping."
       },
       {
-        "q": "What subtitle works best for a Cyberpunk channel?",
-        "a": "Try 'NIGHT CITY MERCENARY', 'NETRUNNER & SANDEVISTAN BUILDS', or 'EDGERUNNER HIGHLIGHTS'."
+        "q": "How do I customize my Netrunner build, Sandevistan loadout, or mercenary title?",
+        "a": "Type your combat build into the subtitle field (e.g., 'SANDEVISTAN BLADE SPECIALIST • TIER 5 CYBERWARE' or 'NETRUNNER OVERCLOCK BUILD') with Cyber Yellow (#facc15) and Matrix Cyan (#06b6d4) neon outlines."
       },
       {
-        "q": "What font best suits futuristic cyberpunk aesthetics?",
-        "a": "Orbitron Italic or Impact with neon yellow (#facc15) and cyan glow."
+        "q": "What typography and neon colors match the high-tech Night City edgerunner aesthetic?",
+        "a": "Orbitron Italic or Impact with Cyber Yellow (#facc15) and Matrix Cyan (#06b6d4) dual drop shadows. The high-voltage neon glow mirrors Night City megastructures and in-game cyberware telemetry."
       },
       {
-        "q": "How to upload this banner in YouTube Studio?",
-        "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this Cyberpunk banner to YouTube Studio with razor-sharp 4K clarity?",
+        "a": "Download your uncompressed 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish."
       },
       {
-        "q": "Is it free for commercial use on YouTube?",
-        "a": "Yes, 100% free with no watermarks."
+        "q": "Is this Cyberpunk 2077 banner free for commercial monetization and stream headers?",
+        "a": "Yes! All graphics generated on GamingBanner.com include full commercial rights and zero watermarks for monetized YouTube channels, Twitch streams, and Phantom Liberty community hubs."
       }
     ]
   },
@@ -2407,24 +2407,24 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia or serif typography with golden glow. The mythic classical lettering matches Elden Ring's epic dark fantasy tone.",
     "faqs": [
       {
-        "q": "What is the recommended size for an Elden Ring YouTube banner?",
-        "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your build title stays visible on phone displays."
+        "q": "What is the recommended YouTube banner size and safe zone for Elden Ring channels?",
+        "a": "The official resolution is 2560 × 1440 pixels (16:9 4K standard). All Tarnished handles, build names, and lore titles are anchored inside the 1546 × 423 px safe area, ensuring 100% visibility on smartphones and big-screen displays."
       },
       {
-        "q": "What subtitle works best for an Elden Ring channel?",
-        "a": "Try 'ELDEN LORD • LEVEL 1 RUNS', 'SHADOW OF THE ERDTREE', or 'LORE & BOSS GUIDES'."
+        "q": "How do I showcase my Elden Lord title, Shadow of the Erdtree build, or Rune Level 1 runs?",
+        "a": "Type your challenge run details into the subtitle input (e.g., 'ELDEN LORD • RUNE LEVEL 1 NO HIT RUNS' or 'SHADOW OF THE ERDTREE • MESSMER FLAME BUILD') with glowing Grace Gold (#fde047) typography."
       },
       {
-        "q": "What font best suits dark fantasy Soulslike channels?",
-        "a": "Georgia Serif with golden grace aura matches the mythic atmosphere."
+        "q": "What font and golden aura best captures the dark fantasy Soulslike atmosphere?",
+        "a": "Use Georgia Serif with Grace Gold (#fde047) and subtle crimson drop shadows. The mythic classical lettering matches FromSoftware's lore-rich dark fantasy aesthetic."
       },
       {
-        "q": "How to upload this banner in YouTube Studio?",
-        "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this 4K Elden Ring banner to YouTube Studio without quality loss?",
+        "a": "Download the lossless 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish."
       },
       {
-        "q": "Is it free for commercial use on YouTube?",
-        "a": "Yes, 100% free with no watermarks."
+        "q": "Is this Elden Ring banner free for monetized YouTube channels and lore creators?",
+        "a": "Yes! All graphics on GamingBanner.com include full commercial broadcast rights and zero watermarks for monetized YouTube channels, Twitch challenge runs, and Discord communities."
       }
     ]
   },
@@ -2558,24 +2558,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Inter with thick black outlines. The chunky comic lettering matches Among Us' playful cartoon party vibe.",
     "faqs": [
       {
-        "q": "What is the recommended size for an Among Us YouTube banner?",
-        "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your gamertag stays visible on all mobile devices."
+        "q": "What is the official YouTube banner size and safe zone for Among Us channels?",
+        "a": "The standard canvas size is 2560 × 1440 pixels (16:9 4K UHD). All crewmate gamertags, Impostor callouts, and Discord tags are placed inside the central 1546 × 423 px safe zone, guaranteeing 100% visibility on all smartphone screens."
       },
       {
-        "q": "What subtitle works best for an Among Us channel?",
-        "a": "Try 'IMPOSTOR IQ 200', 'PRO DETECTIVE CREWMATE', or 'FUNNY LOBBY MOMENTS'."
+        "q": "How do I customize funny Impostor callouts, detective titles, or Discord server handles?",
+        "a": "Enter 'IMPOSTOR IQ 200 • PRO DETECTIVE' or 'MODDED LOBBIES • DISCORD: /PARTY' into the subtitle field with glowing Impostor Red (#ef4444) or Crewmate Cyan (#06b6d4) lettering."
       },
       {
-        "q": "What font best suits cartoon party games?",
-        "a": "Impact with black comic-book outline for maximum legibility."
+        "q": "What font and color scheme best matches playful cartoon space party games?",
+        "a": "Use Impact or Inter with thick 4-directional black comic outlines. Pair Impostor Red (#ef4444) with Crewmate Cyan (#06b6d4) for authentic sci-fi cartoon fun."
       },
       {
-        "q": "How to upload this banner in YouTube Studio?",
-        "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this Among Us banner to YouTube Studio without compression blur?",
+        "a": "In YouTube Studio (studio.youtube.com), click Customization > Branding. Under Banner Image, upload the 2560x1440 PNG file, verify the safe-zone crop, and click Publish."
       },
       {
-        "q": "Is it free for commercial use on YouTube?",
-        "a": "Yes, 100% free with no watermarks."
+        "q": "Is this Among Us channel banner free for monetized creators and Discord lobbies?",
+        "a": "Yes! All banner templates on GamingBanner.com are 100% free with zero watermarks and full commercial rights for monetized YouTube channels, Twitch streams, and Discord community servers."
       }
     ]
   },
@@ -2710,24 +2710,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or heavy sans fonts with gold and blue layered outlines for authentic competitive arena energy.",
     "faqs": [
       {
-        "q": "What is the recommended size for a Clash Royale YouTube banner?",
-        "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your trophy count stays visible on smartphones."
+        "q": "What is the official YouTube banner size and safe zone for Clash Royale channels?",
+        "a": "The official resolution is 2560 × 1440 pixels (16:9 4K standard). All trophy records, deck names, and creator tags are locked within the 1546 × 423 px safe zone, guaranteeing zero cut-off on mobile phones."
       },
       {
-        "q": "What subtitle works best for a Clash Royale channel?",
-        "a": "Try 'ULTIMATE CHAMPION • TOP 100', 'BEST META DECKS 2025', or 'ROAD TO 9000 TROPHIES'."
+        "q": "How do I display my Ultimate Champion rank, 9000 trophy count, or favorite meta deck?",
+        "a": "Type your competitive stats into the subtitle field (e.g., 'ULTIMATE CHAMPION #1 • 9000 TROPHIES' or 'BEST META 2.6 HOG DECK') in glowing Trophy Gold (#fbbf24) and King Tower Blue (#3b82f6)."
       },
       {
-        "q": "What font best suits Clash Royale branding?",
-        "a": "Impact with layered gold and blue outlines matches arena energy."
+        "q": "What font and layered color outlines match Clash Royale competitive arena energy?",
+        "a": "Use Impact with layered Trophy Gold (#fbbf24) and deep royal blue outlines (#1e3a8a). The bold 3D lettering mirrors in-game card mastery badges and competitive CRL broadcast overlays."
       },
       {
-        "q": "How to upload this banner in YouTube Studio?",
-        "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this Clash Royale banner to YouTube Studio with 4K clarity?",
+        "a": "Download the lossless 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish."
       },
       {
-        "q": "Is it free for commercial use on YouTube?",
-        "a": "Yes, 100% free with no watermarks."
+        "q": "Is this Clash Royale banner free for monetized channels and tournament creators?",
+        "a": "Yes! All graphics generated on GamingBanner.com include 100% royalty-free commercial rights with zero watermarks for monetized YouTube channels, Twitch streams, and clan Discord hubs."
       }
     ]
   },
@@ -2862,24 +2862,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron Italic with bright orange and cyan glow. The sharp angles match Overwatch 2's high-mobility hero action.",
     "faqs": [
       {
-        "q": "What is the recommended size for an Overwatch 2 YouTube banner?",
-        "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your gamertag stays visible on all mobile devices."
+        "q": "What is the recommended YouTube banner size and safe zone for Overwatch 2 channels?",
+        "a": "The standard format is 2560 × 1440 pixels (16:9 4K standard). All player names, hero role callouts, and Top 500 badges are positioned inside the central 1546 × 423 px safe zone, guaranteeing 100% visibility on all smartphone displays."
       },
       {
-        "q": "What subtitle works best for an Overwatch 2 channel?",
-        "a": "Try 'TOP 500 DPS MAIN', 'GRANDMASTER SUPPORT', or 'TANK CLUTCHES & HIGHLIGHTS'."
+        "q": "How do I display my Grandmaster / Top 500 rank, hero role, or team clan tag?",
+        "a": "Type your competitive specs into the subtitle field (e.g., 'TOP 500 DPS MAIN • GENJI & TRACER' or 'GRANDMASTER 1 SUPPORT CARRY') with glowing Hero Orange (#f97316) and Top 500 Gold (#facc15) accents."
       },
       {
-        "q": "What typography best suits hero shooters?",
-        "a": "Orbitron Italic with bright orange glow matches high-mobility team combat."
+        "q": "What typography and glowing colors match Overwatch 2 futuristic hero shooter graphics?",
+        "a": "Orbitron Italic or Impact with Hero Orange (#f97316) and Cyber Cyan (#06b6d4) neon drop shadows. The dynamic angular lettering captures high-mobility team shooter action and OWCS esports broadcast overlays."
       },
       {
-        "q": "How to upload this banner in YouTube Studio?",
-        "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this Overwatch 2 banner to YouTube Studio without blur?",
+        "a": "In YouTube Studio (studio.youtube.com), click Customization > Branding. Under Banner Image, upload your uncompressed 2560x1440 PNG, check the safe-zone crop preview, and click Publish."
       },
       {
-        "q": "Is it free for commercial use on YouTube?",
-        "a": "Yes, 100% free with no watermarks."
+        "q": "Is this Overwatch 2 banner free for monetized YouTube channels and esports teams?",
+        "a": "Yes! All graphics on GamingBanner.com are 100% free with zero watermarks and full commercial rights for monetized YouTube channels, Twitch streams, and OWCS competitive rosters."
       }
     ]
   },
@@ -3013,24 +3013,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or bold athletic sans fonts with green and gold shadows. It gives your channel the high-energy look of televised championship soccer.",
     "faqs": [
       {
-        "q": "What is the recommended size for an EA Sports FC 25 YouTube banner?",
-        "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your division and gamertag stay visible on all mobile devices."
+        "q": "What is the official YouTube banner resolution and safe zone for EA Sports FC 25 channels?",
+        "a": "The full canvas exports at 2560 × 1440 pixels (16:9 4K standard). All club names, Division Rivals badges, and FUT Champions ranks are anchored inside the 1546 × 423 px safe zone, ensuring 100% visibility on mobile, iPad, and desktop viewports."
       },
       {
-        "q": "What subtitle works best for an EA FC channel?",
-        "a": "Try 'FUT CHAMPIONS RANK 1', 'WEEKEND LEAGUE REWARDS', or 'TACTICS & SQUAD BUILDERS'."
+        "q": "How do I showcase my FUT Champions Rank 1 record, Division Rivals tier, or club name?",
+        "a": "Type your competitive record into the subtitle field (e.g., 'FUT CHAMPIONS RANK 1 • 20-0 WEEKEND' or 'DIVISION 1 • SQUAD BUILDERS & PACKS') with Pitch Green (#34d399) or FUT Gold (#f59e0b) typography."
       },
       {
-        "q": "What font best suits sports soccer channels?",
-        "a": "Impact with pitch green (#34d399) and gold glow captures stadium broadcast energy."
+        "q": "What font and color palette best captures championship stadium soccer broadcasts?",
+        "a": "Use Impact or athletic sans-serif fonts with Pitch Green (#34d399) and FUT Champions Gold (#f59e0b). The high-impact typography captures televised Premier League and Champions League broadcast aesthetics."
       },
       {
-        "q": "How to upload this banner in YouTube Studio?",
-        "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
+        "q": "How do I upload this EA Sports FC 25 banner to YouTube Studio without pixelation?",
+        "a": "Download the uncompressed 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish."
       },
       {
-        "q": "Is it free for commercial use on YouTube?",
-        "a": "Yes, 100% free with no watermarks."
+        "q": "Is this EA FC 25 channel art free for monetized creators and esports teams?",
+        "a": "Yes! All designs on GamingBanner.com are 100% free with zero watermarks and full commercial usage rights for monetized YouTube channels, Twitch streams, and pro FIFA / FC esports teams."
       }
     ]
   },

@@ -309,18 +309,8 @@ export default async function CustomizePage({ params }) {
 
           <div className="max-w-6xl mx-auto space-y-10 relative z-10">
             
-            {/* Breadcrumbs Navigation & Header */}
+            {/* Page Header */}
             <div className="flex flex-col gap-4">
-              <nav className="flex items-center gap-2 text-xs text-outline font-medium">
-                <Link href="/" className="hover:text-primary transition-colors">Home</Link>
-                <span className="text-outline/40">/</span>
-                <Link href="/youtube-banners" className="hover:text-primary transition-colors">YouTube Banners</Link>
-                <span className="text-outline/40">/</span>
-                <span className="text-on-background/70 font-semibold">{template.gameName}</span>
-                <span className="text-outline/40">/</span>
-                <span className="text-primary font-bold">{template.name}</span>
-              </nav>
-
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                   <div className="flex items-center gap-2 mb-2">

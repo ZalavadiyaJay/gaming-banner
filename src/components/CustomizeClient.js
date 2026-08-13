@@ -889,102 +889,100 @@ export default function CustomizeClient({ params }) {
       <Header />
 
       <main className="flex-1 pt-20 pb-8 px-4 md:px-8 w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row items-start justify-center gap-6">
-        {/* Left Canvas Preview Panel (60%) */}
-        <section className="w-full lg:flex-1 bg-surface-container/60 p-4 md:p-6 rounded-2xl border border-outline-variant/50 flex flex-col justify-start items-center gap-4 shadow-xl">
+        {/* Left Canvas Preview Panel (Direct Full-Sized View) */}
+        <section className="w-full lg:flex-1 flex flex-col justify-start items-center gap-3">
           {/* Render Mockup Container */}
-          <div className="w-full flex justify-center items-start">
-            <div className="w-full max-w-4xl border border-outline-variant rounded-xl overflow-hidden bg-surface-container shadow-2xl">
-              {/* Mockup Canvas */}
+          <div className="w-full border border-outline-variant/60 rounded-2xl overflow-hidden bg-surface-container shadow-2xl">
+            {/* Mockup Canvas */}
+            <div
+              ref={canvasContainerRef}
+              className={`w-full relative flex flex-col p-lg justify-center transition-all duration-300 select-none ${
+                activeDragId ? "cursor-grabbing" : "cursor-default"
+              }`}
+              style={{ ...currentTemplate.style, ...getPreviewAspectStyle(), containerType: "inline-size" }}
+            >
+              {/* Dynamic User Background Darkener / Overlay */}
               <div
-                ref={canvasContainerRef}
-                className={`w-full relative flex flex-col p-lg justify-center transition-all duration-300 select-none ${
-                  activeDragId ? "cursor-grabbing" : "cursor-default"
-                }`}
-                style={{ ...currentTemplate.style, ...getPreviewAspectStyle(), containerType: "inline-size" }}
-              >
-                {/* Dynamic User Background Darkener / Overlay */}
+                className="absolute inset-0 z-0 pointer-events-none transition-all duration-200"
+                style={{ backgroundColor: `rgba(0, 0, 0, ${bgOverlay / 100})` }}
+              />
+
+              {currentTemplate.decor}
+
+              {/* Render All Dynamic Text Layers */}
+              {textLayers.map((layer, idx) => (
                 <div
-                  className="absolute inset-0 z-0 pointer-events-none transition-all duration-200"
-                  style={{ backgroundColor: `rgba(0, 0, 0, ${bgOverlay / 100})` }}
-                />
+                  key={layer.id}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedLayerId(layer.id);
+                  }}
+                  onMouseDown={(e) => {
+                    e.stopPropagation();
+                    setActiveDragId(layer.id);
+                    setSelectedLayerId(layer.id);
+                  }}
+                  onTouchStart={(e) => {
+                    e.stopPropagation();
+                    setActiveDragId(layer.id);
+                    setSelectedLayerId(layer.id);
+                  }}
+                  style={{
+                    position: "absolute",
+                    left: `${layer.posX}%`,
+                    top: `${layer.posY}%`,
+                    transform: "translate(-50%, -50%)",
+                    touchAction: "none",
+                    willChange: activeDragId === layer.id ? "left, top" : "auto"
+                  }}
+                  className={`z-20 p-1.5 rounded-lg border-2 pointer-events-auto transition-all cursor-pointer ${
+                    activeDragId === layer.id ? "transition-none" : ""
+                  } ${
+                    selectedLayerId === layer.id
+                      ? "border-dashed border-primary-container bg-primary-container/10 ring-2 ring-primary-container/30"
+                      : "border-transparent hover:border-white/30"
+                  }`}
+                >
+                  {/* Show Drag badge indicator ONLY when this layer is selected or actively being dragged */}
+                  {(selectedLayerId === layer.id || activeDragId === layer.id) && (
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-black/90 px-2 py-0.5 rounded shadow pointer-events-none whitespace-nowrap border border-primary-container/50 flex items-center gap-1 z-30">
+                      <span className="text-[9px] text-primary-container font-extrabold uppercase font-data-mono">
+                        🖐️ Drag {layer.label || `Text ${idx + 1}`}
+                      </span>
+                    </div>
+                  )}
 
-                {currentTemplate.decor}
-
-                {/* Render All Dynamic Text Layers */}
-                {textLayers.map((layer, idx) => (
-                  <div
-                    key={layer.id}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setSelectedLayerId(layer.id);
-                    }}
-                    onMouseDown={(e) => {
-                      e.stopPropagation();
-                      setActiveDragId(layer.id);
-                      setSelectedLayerId(layer.id);
-                    }}
-                    onTouchStart={(e) => {
-                      e.stopPropagation();
-                      setActiveDragId(layer.id);
-                      setSelectedLayerId(layer.id);
-                    }}
+                  <span
                     style={{
-                      position: "absolute",
-                      left: `${layer.posX}%`,
-                      top: `${layer.posY}%`,
-                      transform: "translate(-50%, -50%)",
-                      touchAction: "none",
-                      willChange: activeDragId === layer.id ? "left, top" : "auto"
+                      fontFamily: fontStyles[layer.font] || "var(--font-gamertag)",
+                      color: layer.color || "#00d4ff",
+                      textShadow: layer.glow > 0
+                        ? `0 0 ${Math.round(15 * (layer.size || 1) * (layer.glow / 50))}px ${layer.color}, 0 0 ${Math.round(35 * (layer.size || 1) * (layer.glow / 50))}px ${layer.color}, 3px 3px 6px rgba(0,0,0,0.9)`
+                        : "3px 3px 6px rgba(0,0,0,0.9)",
+                      fontSize: layer.isTitle
+                        ? `clamp(${14 * (layer.size || 1)}px, ${9 * (layer.size || 1)}cqw, ${52 * (layer.size || 1)}px)`
+                        : `clamp(${10 * (layer.size || 1)}px, ${4 * (layer.size || 1)}cqw, ${26 * (layer.size || 1)}px)`
                     }}
-                    className={`z-20 p-1.5 rounded-lg border-2 pointer-events-auto transition-all cursor-pointer ${
-                      activeDragId === layer.id ? "transition-none" : ""
-                    } ${
-                      selectedLayerId === layer.id
-                        ? "border-dashed border-primary-container bg-primary-container/10 ring-2 ring-primary-container/30"
-                        : "border-transparent hover:border-white/30"
+                    className={`font-black uppercase tracking-wider select-none relative z-10 leading-none drop-shadow-md block whitespace-nowrap ${
+                      activeDragId === layer.id ? "transition-none" : "transition-all duration-150"
                     }`}
                   >
-                    {/* Show Drag badge indicator ONLY when this layer is selected or actively being dragged */}
-                    {(selectedLayerId === layer.id || activeDragId === layer.id) && (
-                      <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-black/90 px-2 py-0.5 rounded shadow pointer-events-none whitespace-nowrap border border-primary-container/50 flex items-center gap-1 z-30">
-                        <span className="text-[9px] text-primary-container font-extrabold uppercase font-data-mono">
-                          🖐️ Drag {layer.label || `Text ${idx + 1}`}
-                        </span>
-                      </div>
-                    )}
-
-                    <span
-                      style={{
-                        fontFamily: fontStyles[layer.font] || "var(--font-gamertag)",
-                        color: layer.color || "#00d4ff",
-                        textShadow: layer.glow > 0
-                          ? `0 0 ${Math.round(15 * (layer.size || 1) * (layer.glow / 50))}px ${layer.color}, 0 0 ${Math.round(35 * (layer.size || 1) * (layer.glow / 50))}px ${layer.color}, 3px 3px 6px rgba(0,0,0,0.9)`
-                          : "3px 3px 6px rgba(0,0,0,0.9)",
-                        fontSize: layer.isTitle
-                          ? `clamp(${14 * (layer.size || 1)}px, ${9 * (layer.size || 1)}cqw, ${52 * (layer.size || 1)}px)`
-                          : `clamp(${10 * (layer.size || 1)}px, ${4 * (layer.size || 1)}cqw, ${26 * (layer.size || 1)}px)`
-                      }}
-                      className={`font-black uppercase tracking-wider select-none relative z-10 leading-none drop-shadow-md block whitespace-nowrap ${
-                        activeDragId === layer.id ? "transition-none" : "transition-all duration-150"
-                      }`}
-                    >
-                      {layer.text || "EMPTY TEXT"}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Simulated Channel info strip */}
-              <div className="p-4 bg-surface-container-high border-t border-outline-variant/40 flex items-center gap-3">
-                <div className="h-9 w-9 rounded-full bg-surface-container-low border border-outline-variant/60 flex items-center justify-center font-bold text-outline text-sm">
-                  {textLayers.length > 0 && textLayers[0].text ? textLayers[0].text[0] : "S"}
-                </div>
-                <div>
-                  <span className="font-bold text-sm text-on-background block leading-tight">
-                    {textLayers.length > 0 && textLayers[0].text ? textLayers[0].text : "STORM"}
+                    {layer.text || "EMPTY TEXT"}
                   </span>
-                  <span className="text-[11px] text-outline font-data-mono">12.4K subscribers &bull; 42 videos</span>
                 </div>
+              ))}
+            </div>
+
+            {/* Simulated Channel info strip */}
+            <div className="p-4 bg-surface-container-high border-t border-outline-variant/40 flex items-center gap-3">
+              <div className="h-9 w-9 rounded-full bg-surface-container-low border border-outline-variant/60 flex items-center justify-center font-bold text-outline text-sm">
+                {textLayers.length > 0 && textLayers[0].text ? textLayers[0].text[0] : "S"}
+              </div>
+              <div>
+                <span className="font-bold text-sm text-on-background block leading-tight">
+                  {textLayers.length > 0 && textLayers[0].text ? textLayers[0].text : "STORM"}
+                </span>
+                <span className="text-[11px] text-outline font-data-mono">12.4K subscribers &bull; 42 videos</span>
               </div>
             </div>
           </div>

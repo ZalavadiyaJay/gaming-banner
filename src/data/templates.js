@@ -59,27 +59,22 @@ export const TEMPLATES = [
     "fontTip": "We recommend using Orbitron in Italic weight. Its sharp geometry, diagonal cuts, and futuristic telemetry styling match the in-game Valorant HUD, agent select screen, and esports broadcast graphics.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What are the exact safe zone dimensions for this Valorant YouTube banner?",
         "a": "The full canvas exports at 2560 × 1440 pixels (16:9 4K standard). All essential text layers and gamertags are calibrated strictly inside the central 1546 × 423 pixel safe zone, guaranteeing 100% visibility across iPhones, Android devices, tablets, and desktop displays."
       },
       {
-        "tag": "AEO CREATOR",
         "q": "How do I create a free 4K Valorant channel banner without a watermark?",
         "a": "Type your gamertag into the text input, select glowing colors like Radianite Cyan (#00d4ff), customize the font size, and click 'Download 4K PNG'. You get an uncompressed, lossless 2560x1440 PNG file with zero watermarks and no signup required."
       },
       {
-        "tag": "ESPORTS BRANDING",
         "q": "What colors and typography match Radiant and Immortal rank stream branding?",
         "a": "Pair electric Radianite Cyan (#00d4ff) or Void Violet (#7c3aed) with Orbitron Italic font. Use hex #ef4444 for ranked badges or 'LIVE' callouts to mirror official VCT esports broadcast telemetry."
       },
       {
-        "tag": "YOUTUBE STUDIO",
         "q": "How do I upload this banner to YouTube Studio?",
         "a": "Open studio.youtube.com on your computer, click 'Customization' in the left menu, select the 'Branding' tab, click 'Upload' or 'Change' under Banner Image, select your downloaded 4K PNG, and click 'Publish'."
       },
       {
-        "tag": "COMMERCIAL RIGHTS",
         "q": "Can I use this Valorant banner on monetized YouTube channels and Twitch streams?",
         "a": "Yes! All templates on GamingBanner.com include full commercial broadcast and monetization rights. You can freely use your downloaded graphics on YouTube, Twitch, Kick, Discord, and Twitter/X."
       }
@@ -137,27 +132,22 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Bold with glowing drop shadows for an authentic esports broadcast aesthetic.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What is the official resolution for this Twitch offline screen?",
         "a": "This template exports at native 1920 × 1080 pixels (16:9 Full HD), perfectly matching Twitch's video player offline banner specification."
       },
       {
-        "tag": "TWITCH SETUP",
         "q": "How do I upload this banner to my Twitch channel?",
         "a": "Go to your Twitch Creator Dashboard > Settings > Channel > Brand tab. Scroll down to 'Video Player Banner' and upload your downloaded 1080p PNG file."
       },
       {
-        "tag": "OBS OVERLAY",
         "q": "Can I use this graphic in OBS Studio or Streamlabs?",
         "a": "Yes! Add the image as an Image Source in OBS Studio or Streamlabs to create starting soon, intermission, or stream ending scenes."
       },
       {
-        "tag": "SCHEDULE DISPLAY",
         "q": "How do I display my weekly streaming schedule?",
         "a": "Use the secondary subtitle input to type your broadcast days (e.g., 'STREAMING MON-FRI 7PM EST') with high-contrast glowing text."
       },
       {
-        "tag": "LICENSE",
         "q": "Are these Twitch offline banners royalty-free?",
         "a": "Yes, 100% royalty-free with full commercial rights for Twitch Affiliates, Partners, and Kick streamers."
       }
@@ -221,27 +211,22 @@ export const TEMPLATES = [
     "fontTip": "Use JetBrains Mono or blocky monospace fonts with layered drop shadows. This gives your letters the authentic 16-bit voxel look of Minecraft grass and stone blocks.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the best banner size for a Minecraft YouTube channel?",
         "a": "The standard YouTube banner dimension is 2560 × 1440 pixels. Our Minecraft template keeps all gamertags and SMP titles inside the 1546 × 423 px safe zone, guaranteeing no cropping on mobile apps."
       },
       {
-        "tag": "AEO 3D EFFECT",
         "q": "How do I make my Minecraft gamertag look 3D and blocky?",
         "a": "Our studio automatically renders stacked 3D shadow layers (emerald green over obsidian slate) beneath your gamertag, replicating authentic Minecraft voxel geometry."
       },
       {
-        "tag": "CREATOR TIPS",
         "q": "What should I write in the subtitle for a Minecraft YouTube banner?",
         "a": "Popular gaming channels use 'HARDCORE 100 DAYS SURVIVAL', 'SMP SEASON 4', 'REDSTONE TUTORIALS', or 'SPEEDRUNNER & BUILDER'."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How do I upload this banner to YouTube without blur?",
         "a": "Download the 4K PNG file from our studio. Because it is rendered at full 2560x1440 uncompressed quality, YouTube will process it with zero pixelation or compression artifacts."
       },
       {
-        "tag": "COMMERCIAL RIGHTS",
         "q": "Can I use this Minecraft banner on monetized channels?",
         "a": "Yes! All background artwork is custom-rendered digital art and 100% royalty-free for monetized YouTube channels, Twitch streams, and Discord servers."
       }
@@ -298,27 +283,22 @@ export const TEMPLATES = [
     "fontTip": "Use JetBrains Mono with 3D drop-shadow extrusion for classic Minecraft voxel charm.",
     "faqs": [
       {
-        "tag": "SMP BROADCAST",
         "q": "Can I use this for my Minecraft SMP server banner?",
         "a": "Yes! Add your SMP server name, server IP address, and streaming hours directly into the customizer text fields."
       },
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "It downloads as a crisp 1920 × 1080 px Full HD PNG file matching Twitch's video player banner standards."
       },
       {
-        "tag": "OBS SCENES",
         "q": "How do I add this to OBS Studio as a BRB screen?",
         "a": "In OBS Studio, add a new 'Image' source in your Scene collection and select the downloaded PNG file."
       },
       {
-        "tag": "CUSTOMIZATION",
         "q": "Is it easy to update the stream schedule later?",
         "a": "Yes! You can return anytime, modify your stream hours, and download an updated banner in seconds."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is this free for Twitch Affiliates and Partners?",
         "a": "Yes, 100% free with zero watermarks and full commercial streaming rights."
       }
@@ -383,27 +363,22 @@ export const TEMPLATES = [
     "fontTip": "Choose Inter or Heavy Sans with boldest weight. Chunky bold lettering fits Fortnite's fun, animated art style.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the official YouTube banner size for Fortnite gaming channels?",
         "a": "The standard format is 2560 × 1440 pixels (16:9 aspect ratio). Our Fortnite generator aligns all gamertags and Victory Crown counters within the 1546 × 423 px mobile safe zone."
       },
       {
-        "tag": "AEO CROWN WINS",
         "q": "How can I display my Fortnite Victory Crown wins on the banner?",
         "a": "Use the secondary subtitle field to type '99 CROWN WINS', 'UNREAL RANK', or 'CHAPTER 5 CHAMPION' with glowing gold or purple accents."
       },
       {
-        "tag": "MOBILE DISPLAY",
         "q": "Will the Battle Bus and heroes be visible on smartphone screens?",
         "a": "Yes! The heroes frame the outer boundaries for desktop and TV viewing, while the Battle Bus sits high enough to remain visible in the mobile header."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How do I upload my Fortnite banner to YouTube?",
         "a": "Go to YouTube Studio > Customization > Branding. Click Upload under Banner Image, select your downloaded 4K PNG, and click Publish."
       },
       {
-        "tag": "COMMERCIAL RIGHTS",
         "q": "Is this Fortnite channel banner free for clan teams and creators?",
         "a": "Yes, 100% free with no watermarks and full commercial rights for personal or esports team branding."
       }
@@ -461,27 +436,22 @@ export const TEMPLATES = [
     "fontTip": "Use Inter Extra-Bold or Impact with vibrant purple glow.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this Fortnite offline screen export in?",
         "a": "Standard 1920 × 1080 pixels (Full HD 16:9), matching Twitch video player standards."
       },
       {
-        "tag": "TWITCH SETUP",
         "q": "How to set this as my Twitch offline screen?",
         "a": "Upload the downloaded 1920x1080 PNG in Twitch Creator Dashboard under Settings > Channel > Brand > Video Player Banner."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Does this work in OBS Studio for stream intermission?",
         "a": "Yes! Add it as an Image Source for stream waiting, BRB, or intermission screens."
       },
       {
-        "tag": "SOCIAL HANDLES",
         "q": "Can I add my TikTok and YouTube links?",
         "a": "Yes, you can add multiple text lines to showcase all your social handles."
       },
       {
-        "tag": "LICENSE",
         "q": "Are there any watermarks or hidden fees?",
         "a": "Zero watermarks and 100% free for all streamers."
       }
@@ -545,27 +515,22 @@ export const TEMPLATES = [
     "fontTip": "Use the Impact font in bold. Its tall, compressed letters give your channel an aggressive military esports look.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for a Call of Duty Warzone YouTube banner?",
         "a": "The standard dimension is 2560 × 1440 pixels. Text and loadout callouts remain strictly inside the 1546 × 423 px safe zone for flawless mobile rendering."
       },
       {
-        "tag": "AEO CLAN TAGS",
         "q": "Can I add my Call of Duty clan tag to this banner?",
         "a": "Yes! Simply type your clan tag in brackets (e.g. '[FAZE] GHOST_ACTUAL') in the gamertag input."
       },
       {
-        "tag": "CREATOR TIPS",
         "q": "What subtitle works best for a Warzone content channel?",
         "a": "Top creators write 'WARZONE META LOADOUTS', 'DAILY REBIRTH ISLAND HIGHLIGHTS', or 'SEARCH & DESTROY SPECIALIST'."
       },
       {
-        "tag": "READABILITY",
         "q": "How do I ensure text remains readable over the smoke background?",
         "a": "Our studio applies dark outline extrusion and amber neon glow to keep your lettering razor-sharp."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is this banner free for monetized YouTube channels?",
         "a": "Yes, 100% free with no watermarks and full commercial usage rights."
       }
@@ -622,27 +587,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact font with dark outline for military precision.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution is this stream banner?",
         "a": "Official 1920 x 1080 Full HD matching Twitch video players."
       },
       {
-        "tag": "OBS SETUP",
         "q": "Can I use this for OBS starting screens?",
         "a": "Yes, add it as a 1080p Image Source in OBS Studio."
       },
       {
-        "tag": "FORMAT",
         "q": "Are downloads free with no watermark?",
         "a": "Yes, 100% free lossless PNG export."
       },
       {
-        "tag": "SCHEDULE",
         "q": "Can I show my weekly stream hours?",
         "a": "Yes, customize the subtitle text to state your stream times."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -706,27 +666,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron in bold. These heavy fonts capture the high-stakes competitive esports feeling of CS2 Premier matches.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the official banner size for a CS2 YouTube channel?",
         "a": "The standard resolution is 2560 × 1440 pixels. Text and rating stats are locked inside the 1546 × 423 px safe zone so they never get cropped on smartphones."
       },
       {
-        "tag": "AEO PREMIER RATING",
         "q": "How do I show my CS2 Premier Rating or FACEIT level?",
         "a": "Add a subtitle line like '25,000+ PREMIER RATING • FACEIT LEVEL 10' with glowing Premier gold typography."
       },
       {
-        "tag": "ESPORTS FONT",
         "q": "What font best matches Counter-Strike 2 esports branding?",
         "a": "Impact Bold or Orbitron with dark outlines captures the heavy tactical look of Major tournament broadcasts."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this CS2 banner to YouTube Studio?",
         "a": "Open YouTube Studio > Customization > Branding. Upload your downloaded 4K PNG under Banner Image and click Publish."
       },
       {
-        "tag": "COMMERCIAL RIGHTS",
         "q": "Is this CS2 channel art royalty-free?",
         "a": "Yes, 100% royalty-free with full commercial monetization rights and no watermarks."
       }
@@ -790,27 +745,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron Italic. They match the street-racing energy of GTA Online and FiveM roleplay communities.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended banner size for GTA 5 & FiveM channels?",
         "a": "The standard format is 2560 × 1440 px (16:9). All server names and roleplay titles are kept inside the 1546 × 423 px safe zone for phone users."
       },
       {
-        "tag": "AEO FIVEM RP",
         "q": "Is this banner template good for NoPixel 4.0 and GTA RP streamers?",
         "a": "Yes! Many roleplay creators write their character name and server (e.g. 'NOPIXEL 4.0 • OFFICER BAIT') in the text fields."
       },
       {
-        "tag": "COLOR PALETTE",
         "q": "What colors match the Los Santos synthwave vibe?",
         "a": "Use cash green (#10b981) and sunset pink (#f43f5e) with glowing text outlines."
       },
       {
-        "tag": "YOUTUBE SETUP",
         "q": "How do I upload this banner to YouTube Studio?",
         "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Are these GTA banners free for monetized channels?",
         "a": "Yes, 100% free with full commercial rights and zero watermarks."
       }
@@ -868,27 +818,22 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic for retro 80s synthwave roleplay aesthetics.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px matching Twitch offline video player dimensions."
       },
       {
-        "tag": "PLATFORMS",
         "q": "Can I use it on Kick or YouTube Gaming?",
         "a": "Yes! The 16:9 ratio works on Twitch, Kick, and YouTube Gaming streams."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use this for BRB screens?",
         "a": "Yes, add directly into OBS as an Image source."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -951,27 +896,22 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic with a strong glow. The sharp slanted letters match Apex Legends' speed and movement mechanics.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for an Apex Legends YouTube banner?",
         "a": "The standard size is 2560 × 1440 pixels. The central safe area (1546 × 423 px) guarantees your gamertag remains visible on smartphones."
       },
       {
-        "tag": "AEO PREDATOR RANK",
         "q": "How do I show my Predator rank or main legend on the banner?",
         "a": "Type 'APEX PREDATOR • WRAITH MAIN' or '4K DAMAGE 20 BOMB' in the subtitle field with glowing crimson text."
       },
       {
-        "tag": "FONTS",
         "q": "What font best suits Apex Legends channel branding?",
         "a": "Orbitron Italic with dual red and orange drop shadows captures the high-velocity movement style of Apex."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner to YouTube Studio?",
         "a": "In YouTube Studio, navigate to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is this Apex Legends banner free for commercial channels?",
         "a": "Yes, 100% free with zero watermarks and full commercial rights."
       }
@@ -1029,27 +969,22 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic for high-velocity competitive stream graphics.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What size does this download in?",
         "a": "Standard 1920 x 1080 Full HD PNG format."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it as an OBS intermission screen?",
         "a": "Yes, add it as an Image Source in OBS Studio or Streamlabs."
       },
       {
-        "tag": "WATERMARKS",
         "q": "Are there any watermarks?",
         "a": "Zero watermarks and 100% free."
       },
       {
-        "tag": "SCHEDULE",
         "q": "Can I edit stream times?",
         "a": "Yes, update text in the subtitle input."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -1112,27 +1047,22 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia or serif typography with subtle gold glow. Its classical fantasy elegance matches League of Legends' mythic champion lore.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended YouTube banner size for League of Legends channels?",
         "a": "The standard size is 2560 × 1440 pixels. The central 1546 × 423 px safe zone ensures your summoner name and rank stay visible on mobile."
       },
       {
-        "tag": "AEO RANK CALLOUT",
         "q": "What subtitle works best for a LoL gaming channel?",
         "a": "Popular choices include 'CHALLENGER MID LANER', 'ADC MONTAGE & GUIDES', or 'ROAD TO GRANDMASTER'."
       },
       {
-        "tag": "STREAM OVERLAYS",
         "q": "How do I match this banner with my stream overlay?",
         "a": "Use hex code #dfc8a5 for your gold UI borders and scoreboard webcam frames."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this LoL banner in YouTube Studio?",
         "a": "Go to YouTube Studio > Customization > Branding. Upload the 4K PNG file under Banner Image and click Publish."
       },
       {
-        "tag": "COMMERCIAL RIGHTS",
         "q": "Is this banner free with full commercial rights?",
         "a": "Yes! 100% free with no watermarks and full commercial usage rights."
       }
@@ -1189,27 +1119,22 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia Serif with wide letter spacing for mythic fantasy elegance.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 pixel PNG format."
       },
       {
-        "tag": "PLATFORMS",
         "q": "Can I use it on Twitch and Kick?",
         "a": "Yes, standard 16:9 offline dimensions work on both platforms."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it for BRB screens?",
         "a": "Yes, add directly into OBS as an Image source."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -1272,27 +1197,22 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic with strong neon glow. Its aerodynamic futuristic curves match high-speed aerial mechanics.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the best banner size for a Rocket League YouTube channel?",
         "a": "The standard resolution is 2560 × 1440 px. Text is centered in the 1546 × 423 px safe zone to prevent mobile viewport clipping."
       },
       {
-        "tag": "AEO RANK TAG",
         "q": "How to showcase my rank on this Rocket League banner?",
         "a": "Add a subtitle line like 'GRAND CHAMPION II' or 'SUPERSONIC LEGEND' with neon orange or cyan glow."
       },
       {
-        "tag": "ESPORTS FONT",
         "q": "What font works best for Rocket League graphics?",
         "a": "Orbitron Italic gives letters an aerodynamic, speed-boost look."
       },
       {
-        "tag": "YOUTUBE SETUP",
         "q": "How do I upload this banner in YouTube Studio?",
         "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is this free for esports tournament teams?",
         "a": "Yes, 100% free with full commercial rights and zero watermarks."
       }
@@ -1349,27 +1269,22 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron with wide tracking for high-velocity sports branding.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution is this stream card?",
         "a": "1920 x 1080 pixels (Full HD 16:9)."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it as a BRB screen in OBS?",
         "a": "Yes, add it directly as an Image Source."
       },
       {
-        "tag": "WATERMARKS",
         "q": "Are there any watermarks?",
         "a": "Zero watermarks and 100% free."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -1433,27 +1348,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact with black outlines. The heavy stencil lettering fits PUBG's realistic survival combat atmosphere.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for a PUBG Mobile YouTube banner?",
         "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your Conqueror tier text stays visible on phones."
       },
       {
-        "tag": "AEO CHICKEN DINNER",
         "q": "What subtitle works best for PUBG channels?",
         "a": "Try 'WINNER WINNER CHICKEN DINNER', 'CONQUEROR RANK PUSH', or 'SNIPER HIGHLIGHTS'."
       },
       {
-        "tag": "MILITARY FONT",
         "q": "What font best matches PUBG battlegrounds branding?",
         "a": "Impact with bold drop shadow provides the heavy stencil look of military gear."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner to YouTube Studio?",
         "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is this PUBG banner free with no watermark?",
         "a": "Yes, 100% free with full commercial rights."
       }
@@ -1510,27 +1420,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact font with dark outline for military survival aesthetics.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px for Twitch."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it in OBS Studio?",
         "a": "Yes, add as an Image Source for stream intermission scenes."
       },
       {
-        "tag": "WATERMARKS",
         "q": "Are there any watermarks?",
         "a": "Zero watermarks and 100% free."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -1594,27 +1499,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact with layered dark amber drop shadows. The bold cartoon lettering captures the playful, high-energy fantasy style of Clash of Clans.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for a Clash of Clans YouTube banner?",
         "a": "The standard size is 2560 × 1440 px. Town Hall levels and clan tags are kept inside the 1546 × 423 px safe zone for phone displays."
       },
       {
-        "tag": "AEO CLAN TAG",
         "q": "Can I show my Town Hall level and Clan Tag on the banner?",
         "a": "Yes! Add a subtitle line like 'TOWN HALL 16 MAX • CLAN: #LEGENDS' with glowing gold letters."
       },
       {
-        "tag": "COLOR PALETTE",
         "q": "What colors work best for Clash of Clans branding?",
         "a": "Gold (#f59e0b) and Elixir pink (#ec4899) match in-game resources and troop upgrades."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner in YouTube Studio?",
         "a": "Go to YouTube Studio > Customization > Branding, upload your downloaded 4K PNG under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is this banner free with full commercial rights?",
         "a": "Yes, 100% free with no watermarks."
       }
@@ -1671,27 +1571,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact font with 3D stacked amber drop shadows.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px for Twitch video players."
       },
       {
-        "tag": "PLATFORMS",
         "q": "Can I use it on YouTube Gaming?",
         "a": "Yes, 16:9 works across all streaming platforms."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it for BRB screens?",
         "a": "Yes, add directly into OBS as an Image source."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -1754,27 +1649,22 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic. The dynamic slanted angles match high-speed drift physics and modern supercar dashboards.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for a Forza Horizon YouTube banner?",
         "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone ensures your gamertag stays visible on all mobile devices."
       },
       {
-        "tag": "AEO RACING WHEEL",
         "q": "What subtitle works best for a Forza racing channel?",
         "a": "Try 'HORIZON FESTIVAL CHAMPION', 'STEERING WHEEL DRIFTING', or 'CUSTOM TUNING & BUILDS'."
       },
       {
-        "tag": "4K QUALITY",
         "q": "Will this banner look crisp on 4K TVs?",
         "a": "Yes! It exports in uncompressed 2560 x 1440 resolution, looking razor sharp on big screens."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner in YouTube Studio?",
         "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it free for commercial use?",
         "a": "Yes, 100% free with no watermarks."
       }
@@ -1832,27 +1722,22 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic for aerodynamic supercar aesthetics.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px for Twitch."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it as a wheel cam starting screen?",
         "a": "Yes, add it to OBS Studio as an Image Source."
       },
       {
-        "tag": "WATERMARKS",
         "q": "Are there any watermarks?",
         "a": "Zero watermarks and 100% free."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -1916,27 +1801,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron Italic with dual pink and cyan drop shadows for an authentic neon arcade racing look.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for an Asphalt 9 YouTube banner?",
         "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone prevents mobile cropping."
       },
       {
-        "tag": "AEO DIVISION",
         "q": "What subtitle works best for Asphalt 9 channels?",
         "a": "Popular choices include 'LEGENDS DIVISION • TOP 100', 'SHOCKWAVE NITRO SPECIALIST', or 'CAR UNLOCK GUIDES'."
       },
       {
-        "tag": "ARCADE FONT",
         "q": "What font best suits neon arcade racing?",
         "a": "Impact with pink and cyan drop shadows matches arcade speed aesthetics."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner in YouTube Studio?",
         "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it free for commercial use?",
         "a": "Yes, 100% free with zero watermarks."
       }
@@ -1993,27 +1873,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact font with bold neon magenta glow.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px for Twitch."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it as a BRB screen in OBS?",
         "a": "Yes, add directly as an Image Source in OBS Studio."
       },
       {
-        "tag": "WATERMARKS",
         "q": "Are there any watermarks?",
         "a": "Zero watermarks and 100% free."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -2077,27 +1952,22 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia or serif typography with soft golden glow. The elegant fantasy lettering matches Genshin Impact's orchestral and lore-rich world.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended banner size for Genshin Impact YouTube channels?",
         "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your Adventure Rank and traveler handle stay visible on phones."
       },
       {
-        "tag": "AEO ADVENTURE RANK",
         "q": "What subtitle works best for a Genshin channel?",
         "a": "Popular choices include 'ADVENTURE RANK 60', 'SPIRAL ABYSS 36 STARS', or 'PRIMOGEM & BANNER GUIDES'."
       },
       {
-        "tag": "ANIME FONT",
         "q": "What typography matches anime fantasy RPGs?",
         "a": "Georgia Serif with gold glow highlights matches the elegant orchestral atmosphere of Genshin."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner in YouTube Studio?",
         "a": "Go to YouTube Studio > Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it free for commercial use on monetized channels?",
         "a": "Yes, 100% free with no watermarks."
       }
@@ -2154,27 +2024,22 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia Serif with wide letter spacing for anime fantasy elegance.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px for Twitch."
       },
       {
-        "tag": "WISH PULLING",
         "q": "Can I use it for wish-pulling stream schedules?",
         "a": "Yes, easily add your next wish-pulling stream date in the text inputs."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it for BRB screens?",
         "a": "Yes, add directly into OBS as an Image source."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -2239,27 +2104,22 @@ export const TEMPLATES = [
     "fontTip": "Use Inter or heavy sans-serif with thick black or navy outlines. The chunky comic lettering captures Roblox's fun, creative multiplayer spirit.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for a Roblox YouTube banner?",
         "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees no cropping on phone screens."
       },
       {
-        "tag": "AEO COMMUNITY",
         "q": "What subtitle works best for a Roblox channel?",
         "a": "Try 'TOP OBBY CREATOR', 'BEDWARS & BLOX FRUITS', or 'FUNNY MULTIPLAYER MOMENTS'."
       },
       {
-        "tag": "COMIC FONT",
         "q": "What font best suits cartoon avatar games?",
         "a": "Inter Heavy with thick navy 3D shadows captures Roblox's fun arcade energy."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner in YouTube Studio?",
         "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it free for commercial use on YouTube?",
         "a": "Yes, 100% free with no watermarks."
       }
@@ -2317,27 +2177,22 @@ export const TEMPLATES = [
     "fontTip": "Use Inter Heavy with 3D drop-shadow for playful cartoon gaming.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px for Twitch."
       },
       {
-        "tag": "PLATFORMS",
         "q": "Can I use it on YouTube and Kick?",
         "a": "Yes, standard 16:9 offline dimensions work across platforms."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it for BRB screens?",
         "a": "Yes, add directly into OBS as an Image source."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -2401,27 +2256,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron Italic with yellow and cyan double shadows. It perfectly captures the gritty high-tech aesthetic of Night City.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for a Cyberpunk 2077 YouTube banner?",
         "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your gamertag stays visible on smartphones."
       },
       {
-        "tag": "AEO MERCENARY BUILD",
         "q": "What subtitle works best for a Cyberpunk channel?",
         "a": "Try 'NIGHT CITY MERCENARY', 'NETRUNNER & SANDEVISTAN BUILDS', or 'EDGERUNNER HIGHLIGHTS'."
       },
       {
-        "tag": "CYBER FONT",
         "q": "What font best suits futuristic cyberpunk aesthetics?",
         "a": "Orbitron Italic or Impact with neon yellow (#facc15) and cyan glow."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner in YouTube Studio?",
         "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it free for commercial use on YouTube?",
         "a": "Yes, 100% free with no watermarks."
       }
@@ -2478,27 +2328,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact with heavy contrast for cyberpunk aesthetic.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px for Twitch."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it as a stream starting screen?",
         "a": "Yes, add directly as an Image Source in OBS Studio."
       },
       {
-        "tag": "WATERMARKS",
         "q": "Are there any watermarks?",
         "a": "Zero watermarks and 100% free."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -2562,27 +2407,22 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia or serif typography with golden glow. The mythic classical lettering matches Elden Ring's epic dark fantasy tone.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for an Elden Ring YouTube banner?",
         "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your build title stays visible on phone displays."
       },
       {
-        "tag": "AEO LORE RUNS",
         "q": "What subtitle works best for an Elden Ring channel?",
         "a": "Try 'ELDEN LORD • LEVEL 1 RUNS', 'SHADOW OF THE ERDTREE', or 'LORE & BOSS GUIDES'."
       },
       {
-        "tag": "DARK FANTASY FONT",
         "q": "What font best suits dark fantasy Soulslike channels?",
         "a": "Georgia Serif with golden grace aura matches the mythic atmosphere."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner in YouTube Studio?",
         "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it free for commercial use on YouTube?",
         "a": "Yes, 100% free with no watermarks."
       }
@@ -2639,27 +2479,22 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia Serif with wide spacing for dark fantasy atmosphere.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px for Twitch."
       },
       {
-        "tag": "CHALLENGE RUNS",
         "q": "Can I use it for challenge run stream schedules?",
         "a": "Yes, add your run goals and schedule in the text inputs."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it for BRB screens?",
         "a": "Yes, add directly into OBS as an Image source."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -2723,27 +2558,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Inter with thick black outlines. The chunky comic lettering matches Among Us' playful cartoon party vibe.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for an Among Us YouTube banner?",
         "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your gamertag stays visible on all mobile devices."
       },
       {
-        "tag": "AEO PARTY LOBBY",
         "q": "What subtitle works best for an Among Us channel?",
         "a": "Try 'IMPOSTOR IQ 200', 'PRO DETECTIVE CREWMATE', or 'FUNNY LOBBY MOMENTS'."
       },
       {
-        "tag": "COMIC FONT",
         "q": "What font best suits cartoon party games?",
         "a": "Impact with black comic-book outline for maximum legibility."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner in YouTube Studio?",
         "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it free for commercial use on YouTube?",
         "a": "Yes, 100% free with no watermarks."
       }
@@ -2801,27 +2631,22 @@ export const TEMPLATES = [
     "fontTip": "Use Inter Heavy with 4-directional sticker outlines for comic fun.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px for Twitch."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it as a BRB screen?",
         "a": "Yes, perfect for stream breaks and game lobby intervals."
       },
       {
-        "tag": "WATERMARKS",
         "q": "Are there any watermarks?",
         "a": "Zero watermarks and 100% free."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -2885,27 +2710,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or heavy sans fonts with gold and blue layered outlines for authentic competitive arena energy.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for a Clash Royale YouTube banner?",
         "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your trophy count stays visible on smartphones."
       },
       {
-        "tag": "AEO TROPHY PUSH",
         "q": "What subtitle works best for a Clash Royale channel?",
         "a": "Try 'ULTIMATE CHAMPION • TOP 100', 'BEST META DECKS 2025', or 'ROAD TO 9000 TROPHIES'."
       },
       {
-        "tag": "ROYALE FONT",
         "q": "What font best suits Clash Royale branding?",
         "a": "Impact with layered gold and blue outlines matches arena energy."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner in YouTube Studio?",
         "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it free for commercial use on YouTube?",
         "a": "Yes, 100% free with no watermarks."
       }
@@ -2963,27 +2783,22 @@ export const TEMPLATES = [
     "fontTip": "Use Inter Heavy with blue 3D drop shadows.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px for Twitch."
       },
       {
-        "tag": "PLATFORMS",
         "q": "Can I use it on Kick and YouTube?",
         "a": "Yes, standard 16:9 offline dimensions work across platforms."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it for BRB screens?",
         "a": "Yes, add directly into OBS as an Image source."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -3047,27 +2862,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron Italic with bright orange and cyan glow. The sharp angles match Overwatch 2's high-mobility hero action.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for an Overwatch 2 YouTube banner?",
         "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your gamertag stays visible on all mobile devices."
       },
       {
-        "tag": "AEO TOP 500",
         "q": "What subtitle works best for an Overwatch 2 channel?",
         "a": "Try 'TOP 500 DPS MAIN', 'GRANDMASTER SUPPORT', or 'TANK CLUTCHES & HIGHLIGHTS'."
       },
       {
-        "tag": "HERO FONT",
         "q": "What typography best suits hero shooters?",
         "a": "Orbitron Italic with bright orange glow matches high-mobility team combat."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner in YouTube Studio?",
         "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it free for commercial use on YouTube?",
         "a": "Yes, 100% free with no watermarks."
       }
@@ -3124,27 +2934,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact font with 3D stacked amber drop shadows.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px for Twitch."
       },
       {
-        "tag": "PLATFORMS",
         "q": "Can I use it on Kick and YouTube?",
         "a": "Yes, standard 16:9 offline dimensions work across platforms."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it for BRB screens?",
         "a": "Yes, add directly into OBS as an Image source."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }
@@ -3208,27 +3013,22 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or bold athletic sans fonts with green and gold shadows. It gives your channel the high-energy look of televised championship soccer.",
     "faqs": [
       {
-        "tag": "SEO SIZING",
         "q": "What is the recommended size for an EA Sports FC 25 YouTube banner?",
         "a": "The standard size is 2560 × 1440 px. The central 1546 × 423 px safe zone guarantees your division and gamertag stay visible on all mobile devices."
       },
       {
-        "tag": "AEO FUT CHAMPIONS",
         "q": "What subtitle works best for an EA FC channel?",
         "a": "Try 'FUT CHAMPIONS RANK 1', 'WEEKEND LEAGUE REWARDS', or 'TACTICS & SQUAD BUILDERS'."
       },
       {
-        "tag": "SOCCER FONT",
         "q": "What font best suits sports soccer channels?",
         "a": "Impact with pitch green (#34d399) and gold glow captures stadium broadcast energy."
       },
       {
-        "tag": "YOUTUBE UPLOAD",
         "q": "How to upload this banner in YouTube Studio?",
         "a": "In YouTube Studio, go to Customization > Branding, upload the 4K PNG file under Banner Image, and click Publish."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it free for commercial use on YouTube?",
         "a": "Yes, 100% free with no watermarks."
       }
@@ -3285,27 +3085,22 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron or athletic sans for clean soccer broadcast typography.",
     "faqs": [
       {
-        "tag": "RESOLUTION",
         "q": "What resolution does this download in?",
         "a": "Full HD 1920 x 1080 px for Twitch."
       },
       {
-        "tag": "PLATFORMS",
         "q": "Can I use it on Kick and YouTube?",
         "a": "Yes, standard 16:9 offline dimensions work across platforms."
       },
       {
-        "tag": "OBS SCENES",
         "q": "Can I use it for BRB screens?",
         "a": "Yes, add directly into OBS as an Image source."
       },
       {
-        "tag": "SCHEDULE",
         "q": "How to edit stream hours?",
         "a": "Type your schedule in the subtitle field and download."
       },
       {
-        "tag": "COMMERCIAL USE",
         "q": "Is it commercial safe?",
         "a": "Yes, 100% royalty-free for commercial use."
       }

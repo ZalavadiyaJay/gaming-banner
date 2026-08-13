@@ -632,16 +632,9 @@ export default async function CustomizePage({ params }) {
                     key={idx}
                     className="bg-surface-container/60 backdrop-blur-xl rounded-2xl p-6 border border-outline-variant/40 hover:border-outline-variant transition-all shadow-md flex flex-col gap-2"
                   >
-                    <div className="flex items-center gap-3">
-                      {faq.tag && (
-                        <span className="px-2 py-0.5 rounded text-[10px] font-extrabold font-data-mono bg-primary/10 text-primary border border-primary/20 flex-shrink-0">
-                          {faq.tag}
-                        </span>
-                      )}
-                      <h4 className="font-bold text-sm md:text-base text-on-background">
-                        {faq.q}
-                      </h4>
-                    </div>
+                    <h4 className="font-bold text-sm md:text-base text-on-background">
+                      {faq.q}
+                    </h4>
                     <p className="text-xs md:text-sm text-outline leading-relaxed pl-0 md:pl-1">
                       {faq.a}
                     </p>

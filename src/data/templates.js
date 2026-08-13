@@ -1,5 +1,5 @@
 // src/data/templates.js
-// Centralized Registry for all GamingBanner.com Templates
+// Canonical template registry for GamingBanner.com
 
 export const TEMPLATES = [
   {
@@ -59,24 +59,24 @@ export const TEMPLATES = [
     "fontTip": "We recommend using Orbitron in Italic weight. Its sharp geometry, diagonal cuts, and futuristic telemetry styling match the in-game Valorant HUD, agent select screen, and esports broadcast graphics.",
     "faqs": [
       {
-        "q": "What are the exact safe zone dimensions for this Valorant YouTube banner?",
-        "a": "The full canvas exports at 2560 × 1440 pixels (16:9 4K standard). All essential text layers and gamertags are calibrated strictly inside the central 1546 × 423 pixel safe zone, guaranteeing 100% visibility across iPhones, Android devices, tablets, and desktop displays."
+        "q": "How do I match this banner's aesthetic to my main agent (Jett, Reyna, Omen, or Sova)?",
+        "a": "You can customize the text styling and glow accents to mirror your main agent's ability colors — such as Radianite Cyan (#00d4ff) for Jett or Sova, Void Violet (#7c3aed) for Reyna or Omen, and Spike Crimson (#ef4444) for Phoenix or Brimstone."
       },
       {
-        "q": "How do I create a free 4K Valorant channel banner without a watermark?",
-        "a": "Type your gamertag into the text input, select glowing colors like Radianite Cyan (#00d4ff), customize the font size, and click 'Download 4K PNG'. You get an uncompressed, lossless 2560x1440 PNG file with zero watermarks and no signup required."
+        "q": "Will my Immortal/Radiant leaderboard rank text remain centered on mobile screens?",
+        "a": "Yes! All custom gamertags, rank subtitles (like 'IMMORTAL 3 • 450 RR'), and VCT tags are locked inside the central 1546 × 423 px safe area, ensuring zero text clipping on iPhones and Android devices while the background fills 4K TVs."
       },
       {
-        "q": "What colors and typography match Radiant and Immortal rank stream branding?",
-        "a": "Pair electric Radianite Cyan (#00d4ff) or Void Violet (#7c3aed) with Orbitron Italic font. Use hex #ef4444 for ranked badges or 'LIVE' callouts to mirror official VCT esports broadcast telemetry."
+        "q": "Can I add my VCT Premier team tag and competitive scrim schedule to this header?",
+        "a": "Absolutely. You can type bracketed team tags (e.g. '[SEN] RADIANT') into the main name field and add your Premier match days or Twitch broadcast schedule in the subtitle input."
       },
       {
-        "q": "How do I upload this banner to YouTube Studio?",
-        "a": "Open studio.youtube.com on your computer, click 'Customization' in the left menu, select the 'Branding' tab, click 'Upload' or 'Change' under Banner Image, select your downloaded 4K PNG, and click 'Publish'."
+        "q": "Why is Orbitron Italic the recommended font for Valorant channel art?",
+        "a": "Orbitron Italic features sharp geometric angles and diagonal chamfers that perfectly match Riot's in-game tactical HUD, agent select telemetry, and VCT Champions esports broadcast graphics."
       },
       {
-        "q": "Can I use this Valorant banner on monetized YouTube channels and Twitch streams?",
-        "a": "Yes! All templates on GamingBanner.com include full commercial broadcast and monetization rights. You can freely use your downloaded graphics on YouTube, Twitch, Kick, Discord, and Twitter/X."
+        "q": "Are these Valorant graphics safe to use on YouTube channels with active AdSense monetization?",
+        "a": "Yes, 100%. All banner backgrounds on GamingBanner.com are original fan-art digital illustrations created for content creators, granting full commercial broadcast and monetization rights without copyright claims."
       }
     ]
   },
@@ -211,24 +211,24 @@ export const TEMPLATES = [
     "fontTip": "Use JetBrains Mono or blocky monospace fonts with layered drop shadows. This gives your letters the authentic 16-bit voxel look of Minecraft grass and stone blocks.",
     "faqs": [
       {
-        "q": "What is the best banner size for a Minecraft YouTube channel?",
-        "a": "The standard YouTube banner dimension is 2560 × 1440 pixels. Our Minecraft template keeps all gamertags and SMP titles inside the 1546 × 423 px safe zone, guaranteeing no cropping on mobile apps."
+        "q": "Can I customize this banner for a multiplayer SMP series or Hardcore 100 Days challenge?",
+        "a": "Yes! Enter your series name (such as 'HARDCORE 100 DAYS SURVIVAL', 'LIFESTEAL SMP SEASON 4', or 'REDSTONE ACADEMY') in the subtitle field to give viewers an instant preview of your content format."
       },
       {
-        "q": "How do I make my Minecraft gamertag look 3D and blocky?",
-        "a": "Our studio automatically renders stacked 3D shadow layers (emerald green over obsidian slate) beneath your gamertag, replicating authentic Minecraft voxel geometry."
+        "q": "How do the 3D voxel drop shadows keep my gamertag readable against the Nether background?",
+        "a": "Our generator renders dual-layer dark moss (#064e3b) and obsidian drop shadows behind your text, creating high-contrast depth that stays razor-sharp whether viewed against bright Overworld grass or glowing Nether lava."
       },
       {
-        "q": "What should I write in the subtitle for a Minecraft YouTube banner?",
-        "a": "Popular gaming channels use 'HARDCORE 100 DAYS SURVIVAL', 'SMP SEASON 4', 'REDSTONE TUTORIALS', or 'SPEEDRUNNER & BUILDER'."
+        "q": "What is the best way to display my Java/Bedrock server IP address on this YouTube header?",
+        "a": "Use the secondary subtitle box to write your server connection address (e.g. 'PLAY.MYSERVER.NET • JAVA & BEDROCK'). The monospace font preserves clean character spacing for easy typing."
       },
       {
-        "q": "How do I upload this banner to YouTube without blur?",
-        "a": "Download the 4K PNG file from our studio. Because it is rendered at full 2560x1440 uncompressed quality, YouTube will process it with zero pixelation or compression artifacts."
+        "q": "Does the split Overworld vs Nether artwork stay balanced on smartphone displays?",
+        "a": "Yes. The castle and Nether fortress flank the outer borders while the central atmospheric fog creates a clean, uncluttered canvas for your gamertag inside the 1546 × 423 px mobile safe zone."
       },
       {
-        "q": "Can I use this Minecraft banner on monetized channels?",
-        "a": "Yes! All background artwork is custom-rendered digital art and 100% royalty-free for monetized YouTube channels, Twitch streams, and Discord servers."
+        "q": "Is this Minecraft channel art royalty-free for content creators uploading modded gameplay?",
+        "a": "100% royalty-free. All artwork is custom digital painting with zero official in-game textures, granting full commercial rights for monetized YouTube channels, Twitch streams, and community Discord servers."
       }
     ]
   },
@@ -363,24 +363,24 @@ export const TEMPLATES = [
     "fontTip": "Choose Inter or Heavy Sans with boldest weight. Chunky bold lettering fits Fortnite's fun, animated art style.",
     "faqs": [
       {
-        "q": "What is the official YouTube banner size for Fortnite gaming channels?",
-        "a": "The standard format is 2560 × 1440 pixels (16:9 aspect ratio). Our Fortnite generator aligns all gamertags and Victory Crown counters within the 1546 × 423 px mobile safe zone."
+        "q": "How can I highlight my FNCS tournament placements or Unreal rank in this header?",
+        "a": "Type your competitive standing into the subtitle field (e.g. 'UNREAL RANK #42 • FNCS FINALIST' or '99 VICTORY CROWN WINS') and apply glowing Victory Gold (#f59e0b) to match championship badges."
       },
       {
-        "q": "How can I display my Fortnite Victory Crown wins on the banner?",
-        "a": "Use the secondary subtitle field to type '99 CROWN WINS', 'UNREAL RANK', or 'CHAPTER 5 CHAMPION' with glowing gold or purple accents."
+        "q": "Why does the bold comic-style font outline work best for high-energy Battle Royale channels?",
+        "a": "Inter Heavy with stacked purple and magenta glow shadows captures the playful comic aesthetic of Fortnite's UI, ensuring your name stays prominent over complex ramp building structures."
       },
       {
-        "q": "Will the Battle Bus and heroes be visible on smartphone screens?",
-        "a": "Yes! The heroes frame the outer boundaries for desktop and TV viewing, while the Battle Bus sits high enough to remain visible in the mobile header."
+        "q": "Can I include my Support-A-Creator (SAC) code and daily item shop stream schedule on the banner?",
+        "a": "Yes! You can add text lines such as 'CODE: CREATOR (AD) • DAILY ITEM SHOP 8PM EST' to maximize creator code earnings from your channel audience."
       },
       {
-        "q": "How do I upload my Fortnite banner to YouTube?",
-        "a": "Go to YouTube Studio > Customization > Branding. Click Upload under Banner Image, select your downloaded 4K PNG, and click Publish."
+        "q": "Will the purple rift sky and cyberpunk Mega City buildings look sharp on 4K TVs?",
+        "a": "Yes. Our studio exports at full uncompressed 2560 × 1440 4K UHD, ensuring glowing storm rift portals and neon skyscrapers render with zero compression artifacts on living room screens."
       },
       {
-        "q": "Is this Fortnite channel banner free for clan teams and creators?",
-        "a": "Yes, 100% free with no watermarks and full commercial rights for personal or esports team branding."
+        "q": "Do I need Epic Games permission to use this Fortnite-inspired art for my monetized channel?",
+        "a": "No permission is needed. The artwork is original digital concept art that contains no copyrighted 3D game models, granting 100% royalty-free commercial usage for YouTube and Twitch creators."
       }
     ]
   },
@@ -515,24 +515,24 @@ export const TEMPLATES = [
     "fontTip": "Use the Impact font in bold. Its tall, compressed letters give your channel an aggressive military esports look.",
     "faqs": [
       {
-        "q": "What is the official resolution and safe area for a Call of Duty Warzone YouTube banner?",
-        "a": "The full canvas exports at 2560 × 1440 pixels (16:9 4K UHD standard). All gamertags, clan tags, and loadout specs are calibrated strictly inside the central 1546 × 423 pixel safe zone, guaranteeing 100% visibility without cut-off across mobile phones, tablets, laptops, and 4K displays."
+        "q": "How do I format military clan tags like [FAZE] or [TASK] on this Warzone banner?",
+        "a": "Type your clan tag enclosed in brackets directly into the gamertag field (e.g. '[FAZE] GHOST_ACTUAL'). The customizer automatically renders high-contrast gunmetal drop shadows for military realism."
       },
       {
-        "q": "How do I add my Call of Duty clan tag or squad name to this banner?",
-        "a": "Type your clan tag in brackets directly into the gamertag field (e.g., '[FAZE] GHOST_ACTUAL' or '[TASK] REAPER'). Our customizer automatically renders high-contrast stencil outlines so your squad tag stands out against battlefield smoke."
+        "q": "What makes high-contrast stencil typography ideal for tactical FPS channels?",
+        "a": "Impact bold stencil typography cuts through dense background smoke and muzzle flash lighting, ensuring your channel name remains instantly legible in small YouTube search thumbnails."
       },
       {
-        "q": "What subtitle text works best for Warzone meta loadout and Rebirth Island channels?",
-        "a": "Top creators use 'WARZONE META LOADOUTS • REBIRTH ISLAND', 'SEARCH & DESTROY SPECIALIST', 'RANKED PLAY TOP 250', or 'TACTICAL SNIPER HIGHLIGHTS' with desert tan (#de9b35) or bright white text."
+        "q": "Will my Rebirth Island kill records and Ranked Resurgence stats fit in the safe zone?",
+        "a": "Yes! Subtitle lines such as 'REBIRTH ISLAND 30-BOMB • TOP 250 RANKED' are calibrated within the 1546 × 423 px safe boundary, preventing phone interface cut-offs."
       },
       {
-        "q": "How do I upload this 4K Warzone banner to YouTube Studio without pixelation?",
-        "a": "Download your uncompressed 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the file under Banner Image, check the device preview, and click Publish. Because our studio renders lossless 4K, YouTube applies zero compression blur."
+        "q": "Can I export this header in lossless format to avoid YouTube's compression blur?",
+        "a": "Yes. Our studio exports uncompressed 2560 × 1440 PNG files that bypass YouTube's re-compression artifacts, keeping edge lines sharp across both 1080p monitors and 4K screens."
       },
       {
-        "q": "Is this Call of Duty banner 100% free for monetized channels and tournament teams?",
-        "a": "Yes! All templates on GamingBanner.com include full commercial broadcast and monetization rights with zero watermarks for monetized YouTube channels, Twitch streams, Kick broadcasts, and Discord teams."
+        "q": "Are there any copyright restrictions when using this banner for paid sponsorships and tournament broadcasts?",
+        "a": "None whatsoever. All background artwork is custom-illustrated military action concept art with full commercial monetization and brand sponsorship rights."
       }
     ]
   },
@@ -587,24 +587,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact font with dark outline for military precision.",
     "faqs": [
       {
-        "q": "What resolution is this stream banner?",
-        "a": "Official 1920 x 1080 Full HD matching Twitch video players."
+        "q": "How do I format my Call of Duty Warzone scrim schedule on this offline card?",
+        "a": "Enter your weekly squad scrim hours or tournament timetable (e.g. 'WARZONE RANKED • MON-FRI 8PM EST') in the subtitle field before downloading."
       },
       {
-        "q": "Can I use this for OBS starting screens?",
-        "a": "Yes, add it as a 1080p Image Source in OBS Studio."
+        "q": "Can I use this Warzone graphic as an OBS Starting Soon intermission scene?",
+        "a": "Yes! Add the 1920 × 1080 px PNG file directly as an Image Source in OBS Studio or Streamlabs to create tactical stream intro scenes."
       },
       {
-        "q": "Are downloads free with no watermark?",
-        "a": "Yes, 100% free lossless PNG export."
+        "q": "How does the gunmetal grid texture stay readable behind white gamertag text?",
+        "a": "Our generator applies quadruple-direction dark drop shadows (3px solid stroke) behind your letters to ensure high contrast against battleground smoke."
       },
       {
-        "q": "Can I show my weekly stream hours?",
-        "a": "Yes, customize the subtitle text to state your stream times."
+        "q": "Is this Call of Duty stream banner sized properly for Kick and YouTube Gaming?",
+        "a": "Yes. The standard 16:9 Full HD (1920 × 1080 px) resolution works universally across Twitch video player banners, Kick offline screens, and YouTube stream breaks."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Are commercial monetization rights included for Twitch Affiliates and Partners?",
+        "a": "100% royalty-free with full commercial rights for monetized Twitch broadcasts, YouTube live streams, and sponsor overlays."
       }
     ]
   },
@@ -666,24 +666,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron in bold. These heavy fonts capture the high-stakes competitive esports feeling of CS2 Premier matches.",
     "faqs": [
       {
-        "q": "What are the official YouTube banner dimensions for a Counter-Strike 2 channel?",
-        "a": "The full canvas renders at 2560 × 1440 pixels (16:9 4K UHD). All player handles, team rosters, and Premier Rating badges are anchored inside the central 1546 × 423 px safe zone, guaranteeing 100% visibility on iOS, Android, and PC displays."
+        "q": "How should I display my Premier Rating (20,000+) or FACEIT Level 10 on this CS2 banner?",
+        "a": "Type your competitive rating into the subtitle field (e.g. '22,450 PREMIER RATING • FACEIT LVL 10' or 'AWP ENTRY FRAGGER') with glowing Premier Gold (#f59e0b) to match official Valve Major leaderboard graphics."
       },
       {
-        "q": "How do I display my CS2 Premier Rating, Global Elite rank, or FACEIT level?",
-        "a": "Add a secondary subtitle line like '25,000+ PREMIER RATING • FACEIT LEVEL 10' or 'AWP ENTRY FRAGGER' with glowing Premier gold (#f59e0b) or clean white typography."
+        "q": "Why is tactical gold and navy typography preferred for competitive esports rosters?",
+        "a": "The high-contrast contrast between Premier Gold text and CT Navy drop shadows cuts through desert dust and bomb site smoke, ensuring crisp readability on both smartphone screens and PC monitors."
       },
       {
-        "q": "What typography and color schemes match Counter-Strike 2 Major esports broadcasts?",
-        "a": "Use Impact Bold or Orbitron with stacked black outlines. Pair Premier Gold (#f59e0b) with CT Navy (#1e3a8a) and Bomb Site Crimson (#ef4444) for an authentic Valve Major broadcast aesthetic."
+        "q": "Can I customize this banner for my 5-stack team or collegiate Counter-Strike squad?",
+        "a": "Yes! You can format your team tag in brackets (such as '[NAVI] S1MPLE') and add your collegiate roster or tournament schedule in the secondary text layer."
       },
       {
-        "q": "How do I upload this CS2 banner to YouTube Studio with 4K clarity?",
-        "a": "In YouTube Studio (studio.youtube.com), navigate to Customization > Branding. Click Upload under Banner Image, select your downloaded 2560x1440 PNG, check the safe-zone crop, and click Publish."
+        "q": "How does the safe zone prevent the CT operator and AWP sniper art from covering my handle?",
+        "a": "The CT squad and sandstone archways are placed along the outer edges, leaving the central 1546 × 423 px safe zone completely clear for player names and clan tags."
       },
       {
-        "q": "Is this Counter-Strike 2 channel art royalty-free for commercial use?",
-        "a": "Yes, 100% royalty-free with full commercial monetization rights and zero watermarks for personal YouTube channels, Twitch partner streams, and competitive esports team rosters."
+        "q": "Is this CS2 header completely free to download without watermarks or subscription fees?",
+        "a": "Yes, 100% free with zero watermarks. You receive an uncompressed 2560 × 1440 4K PNG file with full commercial rights for monetized YouTube channels and Twitch broadcasts."
       }
     ]
   },
@@ -745,24 +745,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron Italic. They match the street-racing energy of GTA Online and FiveM roleplay communities.",
     "faqs": [
       {
-        "q": "What is the recommended YouTube banner size for GTA 5 & FiveM roleplay channels?",
-        "a": "The official format is 2560 × 1440 pixels (16:9 aspect ratio). All server names, crew handles, and character titles remain strictly inside the 1546 × 423 px safe zone, guaranteeing 100% visibility on mobile phones, tablets, and PCs."
+        "q": "Can I customize this banner with my FiveM server name and NoPixel character persona?",
+        "a": "Yes! Enter your character's alias or department role (e.g. 'NOPIXEL 4.0 • OFFICER BAIT' or 'LOS SANTOS HEIST CREW LEADER') to give your roleplay streams instant brand identity."
       },
       {
-        "q": "Can I customize this banner for NoPixel 4.0, FiveM RP servers, or GTA Online crews?",
-        "a": "Yes! Enter your character name and server title into the customizer (e.g., 'NOPIXEL 4.0 • OFFICER BAIT' or 'LOS SANTOS HEIST CREW LEADER'). Choose cash green (#10b981) or sunset pink (#f43f5e) for authentic roleplay branding."
+        "q": "What typography captures the vintage Los Santos comic book and Vinewood aesthetic?",
+        "a": "Impact bold with stacked black drop shadows and Cash Green (#10b981) fill replicates Rockstar's iconic graphic novel illustration style used across GTA loading screens."
       },
       {
-        "q": "What colors and fonts capture the retro synthwave Los Santos aesthetic?",
-        "a": "Pair Cash Green (#10b981) and Vinewood Sunset Rose (#f43f5e) with Impact or Orbitron Italic. Add stacked black drop shadows to match classic Rockstar Games comic-book panel styling."
+        "q": "How do I add my weekly roleplay streaming schedule and community Discord link?",
+        "a": "Use the subtitle line to type your stream days (e.g. 'LIVE MON-FRI 8PM EST • DISCORD.GG/MYCREW'). It renders cleanly below your gamertag inside the mobile safe zone."
       },
       {
-        "q": "How do I upload this GTA V banner in YouTube Studio without mobile cut-off?",
-        "a": "Download the lossless 4K PNG file from our studio, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, and click Publish. Our template's pre-aligned safe zone ensures 0% cutoff on phones."
+        "q": "Does the high-contrast Cash Green outline ensure text legibility over busy heist artwork?",
+        "a": "Yes. The customizer applies double-stroke black borders behind the green lettering so your name pops whether viewed against Vinewood sunset skies or police cruiser sirens."
       },
       {
-        "q": "Is this GTA 5 banner free to use on monetized YouTube channels and Kick streams?",
-        "a": "Yes, 100% free with no watermarks and full commercial usage rights for monetized YouTube channels, Twitch affiliate broadcasts, Kick streams, and FiveM community hubs."
+        "q": "Are FiveM content creators allowed to use this channel art for monetized RP streams?",
+        "a": "100% yes. All graphics are original digital fan paintings with full commercial broadcast and monetization rights for YouTube, Twitch, Kick, and FiveM server hubs."
       }
     ]
   },
@@ -818,24 +818,24 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic for retro 80s synthwave roleplay aesthetics.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px matching Twitch offline video player dimensions."
+        "q": "How do I display my FiveM roleplay character name and department on this screen?",
+        "a": "Use the main gamertag box for your character alias (e.g. 'OFFICER_JOHNSON') and the subtitle field for your department or server (e.g. 'NOPLIX RP • PATROL SHIFT 7PM EST')."
       },
       {
-        "q": "Can I use it on Kick or YouTube Gaming?",
-        "a": "Yes! The 16:9 ratio works on Twitch, Kick, and YouTube Gaming streams."
+        "q": "Can I use this retro Los Santos neon card on Kick and YouTube Gaming?",
+        "a": "Yes! The 1920 × 1080 px canvas matches standard 16:9 stream viewports across Twitch, Kick, YouTube, and Facebook Gaming."
       },
       {
-        "q": "Can I use this for BRB screens?",
-        "a": "Yes, add directly into OBS as an Image source."
+        "q": "What OBS scene transitions work best with this purple neon GTA RP backdrop?",
+        "a": "A smooth 300ms stinger or fade transition between this offline card and your live gameplay camera creates a seamless retro atmosphere."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "How do I ensure the pink neon glow doesn't overpower my streaming timetable?",
+        "a": "The editor balances the outer neon magenta halo while keeping the central font fill crisp white for maximum mobile legibility."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Is this GTA V RP stream graphic watermark-free for partnered content creators?",
+        "a": "Yes, zero watermarks and completely free for personal roleplay streams and monetized creator channels."
       }
     ]
   },
@@ -896,24 +896,24 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic with a strong glow. The sharp slanted letters match Apex Legends' speed and movement mechanics.",
     "faqs": [
       {
-        "q": "What are the official banner dimensions and safe area for an Apex Legends YouTube channel?",
-        "a": "The full banner exports at 2560 × 1440 pixels (16:9 4K UHD). The central 1546 × 423 px safe zone guarantees your gamertag, main legend role, and Predator badge remain 100% visible on smartphones without edge cropping."
+        "q": "How can I showcase my Apex Predator rank badge, 4K Damage badge, or 20-bomb achievement?",
+        "a": "Type your competitive stats into the subtitle field (e.g. 'TOP 50 PREDATOR • WRAITH & PATHFINDER MAIN' or '4K DAMAGE 20-BOMB GRINDER') with glowing Predator Crimson (#ff3e3e) to match in-game badges."
       },
       {
-        "q": "How do I display my Apex Predator rank, main legend, or 4K 20-bomb badges?",
-        "a": "Type your competitive achievements into the subtitle input (e.g., 'APEX PREDATOR #15 • WRAITH & HORIZON MAIN' or '4K DAMAGE 20 BOMB BADGE') with glowing crimson (#ff3e3e) or volcanic orange text."
+        "q": "Why does volcanic crimson and orange lighting suit aggressive movement legend mains?",
+        "a": "The fiery volcanic palette mirrors World's Edge lava aesthetics, creating high energy that reflects fast-paced slide-jumping, wall-bouncing, and close-quarters shotgun duels."
       },
       {
-        "q": "What font and glow styling best suits high-speed Apex Legends movement channels?",
-        "a": "Use Orbitron Italic with dual red (#ff3e3e) and orange (#f97316) drop shadows. The aerodynamic slanted typography captures the high-velocity slide-jump mechanics of Apex Legends."
+        "q": "Will my gamertag stay centered between the flanking dropships on mobile phones?",
+        "a": "Yes. The sci-fi dropships and combat legends frame the outer margins, keeping the center 1546 × 423 px safe area wide open so phone users see your full handle without obstruction."
       },
       {
-        "q": "How do I upload this 4K Apex Legends banner to YouTube Studio?",
-        "a": "In YouTube Studio (studio.youtube.com), click Customization > Branding. Under Banner Image, upload the downloaded 2560x1440 PNG, check the safe-zone preview, and click Publish."
+        "q": "Can I use this banner art across both my YouTube channel and Twitch offline screens?",
+        "a": "Yes. While this template is optimized for 2560 × 1440 YouTube headers, you can also export and scale the uncompressed file for Twitch offline cards, Twitter banners, and Discord hubs."
       },
       {
-        "q": "Is this Apex Legends banner free for commercial esports and monetized channels?",
-        "a": "Yes! All graphics generated on GamingBanner.com are 100% free with zero watermarks and full commercial rights for monetized YouTube channels, Twitch streams, and ALGS esports teams."
+        "q": "Is this Apex Legends design 100% royalty-free for ALGS community commentators?",
+        "a": "Yes! All digital art is custom-created fan concept work, granting full commercial monetization rights for ALGS watch-parties, tournament casters, and YouTube highlight creators."
       }
     ]
   },
@@ -969,24 +969,24 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic for high-velocity competitive stream graphics.",
     "faqs": [
       {
-        "q": "What size does this download in?",
-        "a": "Standard 1920 x 1080 Full HD PNG format."
+        "q": "How can I showcase my Apex Legends Predator rank push on this offline screen?",
+        "a": "Write your current RP or seasonal goal (e.g. 'ROAD TO APEX PREDATOR • SEASON 22') in the subtitle box with high-voltage orange text glow."
       },
       {
-        "q": "Can I use it as an OBS intermission screen?",
-        "a": "Yes, add it as an Image Source in OBS Studio or Streamlabs."
+        "q": "Can I use this volcanic World's Edge card as a Streamlabs BRB screen?",
+        "a": "Yes! Import the uncompressed 1080p PNG into Streamlabs Desktop as an Image Source for high-intensity bio-hazard intermission scenes."
       },
       {
-        "q": "Are there any watermarks?",
-        "a": "Zero watermarks and 100% free."
+        "q": "How does the italic velocity font emphasize competitive shooter gameplay?",
+        "a": "The angled Orbitron typography with black drop-shadow strokes mimics high-speed movement and tactical telemetry readouts."
       },
       {
-        "q": "Can I edit stream times?",
-        "a": "Yes, update text in the subtitle input."
+        "q": "What resolution does this Apex stream banner export in for Twitch?",
+        "a": "It exports in native 1920 × 1080 pixels (Full HD 16:9) to fit Twitch's video player offline banner specifications perfectly."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Are there any licensing restrictions when broadcasting Apex tournament scrims?",
+        "a": "None. You have full commercial rights to use this banner across tournament streams, clan broadcasts, and monetized VODs."
       }
     ]
   },
@@ -1047,24 +1047,24 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia or serif typography with subtle gold glow. Its classical fantasy elegance matches League of Legends' mythic champion lore.",
     "faqs": [
       {
-        "q": "What is the official YouTube banner size and safe zone for League of Legends channels?",
-        "a": "The standard canvas size is 2560 × 1440 pixels (16:9 4K UHD). All summoner names, lane roles, and Challenger rank badges are centered inside the 1546 × 423 px mobile safe zone, ensuring zero cut-off across mobile phones, tablets, and desktop displays."
+        "q": "How do I style my Challenger rank title, lane role (Mid/ADC/Jungle), and summoner name?",
+        "a": "Type your summoner name in the main input and add your lane role (e.g. 'CHALLENGER MID LANER • YASUO & AHRI MAIN') in the subtitle box. Choose Rune Gold (#dfc8a5) to replicate the in-game high-ELO client badge."
       },
       {
-        "q": "How do I feature my Challenger rank, champion main, or lane role on the banner?",
-        "a": "Type your role into the subtitle field (e.g., 'CHALLENGER MID LANER • YASUO & AHRI MAIN' or 'ROAD TO GRANDMASTER') and apply Rune Gold (#dfc8a5) or Arcane Blue (#38bdf8) glow for premium broadcast appeal."
+        "q": "Why do classical serif fonts and golden runic accents match League of Legends lore?",
+        "a": "Serif typography (like Georgia) mirrors the parchment text, champion lore tomes, and official LEC/LCK tournament broadcast graphics used throughout Runeterra."
       },
       {
-        "q": "What typography and hex colors match Summoner's Rift and mythic LoL champion lore?",
-        "a": "Use Georgia Serif with Rune Gold (#dfc8a5) and subtle dark amber drop shadows. The classical serif lettering mirrors the official Riot Games client UI and LEC/LCK tournament broadcast graphics."
+        "q": "Can I add my clash team roster and patch analysis schedule to this banner?",
+        "a": "Yes! You can list your tier-1 Clash roster or weekly patch review days (e.g. 'PATCH BREAKDOWNS EVERY WEDNESDAY • CLASH TIER 1') in the secondary subtitle line."
       },
       {
-        "q": "How do I upload this LoL banner to YouTube Studio without quality loss?",
-        "a": "Download your uncompressed 2560x1440 PNG file, navigate to studio.youtube.com > Customization > Branding, upload the image under Banner Image, and click Publish."
+        "q": "How does the composition keep Summoner's Rift champions visible without cluttering text?",
+        "a": "The gunslinger, fox mage, and stone golem frame the far left and right archways while the luminous central Nexus beam leaves an open, high-contrast focal area for your summoner name."
       },
       {
-        "q": "Can monetized creators and League tournament teams use this banner for free?",
-        "a": "Yes! All designs on GamingBanner.com are 100% free with zero watermarks and full commercial rights for monetized YouTube channels, Twitch streams, and amateur MOBA tournament teams."
+        "q": "Can monetized League partner creators use this header art without copyright issues?",
+        "a": "Yes. All artwork is custom fantasy digital concept art with full commercial broadcast and monetization rights for YouTube, Twitch, and esports team portals."
       }
     ]
   },
@@ -1119,24 +1119,24 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia Serif with wide letter spacing for mythic fantasy elegance.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 pixel PNG format."
+        "q": "How do I format my League of Legends rank and main role on this Twitch banner?",
+        "a": "Type your summoner name in the primary field and your main role and rank (e.g. 'CHALLENGER MID • STREAMING CLASH CUPS') in the secondary subtitle field."
       },
       {
-        "q": "Can I use it on Twitch and Kick?",
-        "a": "Yes, standard 16:9 offline dimensions work on both platforms."
+        "q": "Can I use this golden rune stream art on both Twitch and Kick channels?",
+        "a": "Yes! Standard 1920 × 1080 px dimensions ensure seamless display across Twitch video players, Kick channel headers, and Discord stream pings."
       },
       {
-        "q": "Can I use it for BRB screens?",
-        "a": "Yes, add directly into OBS as an Image source."
+        "q": "Why does classical serif typography work so well for League of Legends streams?",
+        "a": "Refined serif letterforms with soft golden ambient glows match the mythic fantasy lore and orchestral aesthetic of Runeterra."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "How do I update my weekly Clash tournament schedule on this banner?",
+        "a": "Re-open this template in our editor, type your new tournament schedule, and download an updated 1080p PNG in under 15 seconds."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Is this League of Legends stream artwork royalty-free for content creators?",
+        "a": "100% royalty-free. All artwork is original fan concept art with full commercial rights for stream monetization."
       }
     ]
   },
@@ -1197,24 +1197,24 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic with strong neon glow. Its aerodynamic futuristic curves match high-speed aerial mechanics.",
     "faqs": [
       {
-        "q": "What is the recommended banner size and safe zone for a Rocket League YouTube channel?",
-        "a": "The official resolution is 2560 × 1440 pixels (16:9 4K UHD). All gamertags, rank tiers, and team names are anchored strictly inside the central 1546 × 423 pixel safe area, preventing mobile viewport clipping while filling the entire screen on 4K TVs."
+        "q": "How do I feature my Supersonic Legend (SSL) rank and RLCS freestyle credentials?",
+        "a": "Type your rank into the subtitle field (e.g. 'SUPERSONIC LEGEND • AIR ROLL FREESTYLER' or 'RLCS OPEN QUALIFIER') and select Nitro Cyan (#00d4ff) or Flame Orange (#f97316) glow accents."
       },
       {
-        "q": "How do I display my Grand Champion, Supersonic Legend (SSL), or freestyle rank?",
-        "a": "Type your competitive rank in the subtitle field (e.g., 'SUPERSONIC LEGEND • FREESTYLE GOD' or 'GRAND CHAMPION II 2v2 PUSH') and apply Flame Orange (#f97316) or Nitro Cyan (#00d4ff) neon glow."
+        "q": "Why does slanted aerodynamic typography fit high-speed aerial mechanics?",
+        "a": "Orbitron Italic's forward-leaning velocity geometry echoes rocket booster trails and stadium speed telemetry, making high-speed plays feel dynamic right from your channel cover."
       },
       {
-        "q": "What font and color scheme best matches aerodynamic Rocket League esports graphics?",
-        "a": "Orbitron Italic with dual Nitro Cyan (#00d4ff) and Flame Orange (#f97316) glow. The aerodynamic, slanted typography matches rocket boost speed trails and competitive RLCS broadcast telemetry."
+        "q": "Can I include my 2v2 competitive duo partner's name or team tag on this banner?",
+        "a": "Yes! Format your squad tag (e.g. '[TEAM] AERO & FLIP') in the main input and use the subtitle line to list your 2v2 competitive rank or scrim schedule."
       },
       {
-        "q": "How do I upload this Rocket League banner to YouTube Studio without blur?",
-        "a": "Download your uncompressed 2560x1440 PNG file from our studio, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, and click Publish. Our lossless 4K export ensures zero pixelation."
+        "q": "How does the 4K UHD resolution prevent nitro boost trail blur on big displays?",
+        "a": "Exporting at full 2560 × 1440 uncompressed PNG preserves the crisp particles of metallic game ball collisions and supersonic boost trails even when viewed on 65-inch smart TVs."
       },
       {
-        "q": "Is this Rocket League banner free for monetized channels and RLCS community teams?",
-        "a": "Yes! All templates on GamingBanner.com include full commercial rights and zero watermarks for monetized YouTube channels, Twitch streams, and amateur RLCS esports rosters."
+        "q": "Is this Rocket League banner free for collegiate esports teams and community casters?",
+        "a": "Yes, 100% free with no watermarks and full commercial usage rights for collegiate clubs, community casters, Twitch affiliates, and monetized YouTube channels."
       }
     ]
   },
@@ -1269,24 +1269,24 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron with wide tracking for high-velocity sports branding.",
     "faqs": [
       {
-        "q": "What resolution is this stream card?",
-        "a": "1920 x 1080 pixels (Full HD 16:9)."
+        "q": "How do I display my Rocket League competitive rank and 2v2 team name?",
+        "a": "Enter your gamer handle and team rank (e.g. 'GRAND CHAMPION 2 • 2v2 ELO GRIND') in the customizer text fields before exporting."
       },
       {
-        "q": "Can I use it as a BRB screen in OBS?",
-        "a": "Yes, add it directly as an Image Source."
+        "q": "Can I add this cyber stadium banner to OBS Studio for stream intermission?",
+        "a": "Yes! Place the 1920 × 1080 px PNG into your OBS scene collection for high-energy intermission and controller cam break scenes."
       },
       {
-        "q": "Are there any watermarks?",
-        "a": "Zero watermarks and 100% free."
+        "q": "How do the stadium floodlight accents highlight my gamertag?",
+        "a": "Electric cyan spotlight beams frame the central text container, ensuring your name stays prominent against the cyber dome arena."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "What is the recommended font for Rocket League speed runners and freestylers?",
+        "a": "Orbitron with cyan neon drop shadows delivers an aerodynamic, high-velocity look that matches supersonic rocket boosts."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Is this Rocket League channel graphic free with no subscription required?",
+        "a": "Completely free with no hidden fees, subscriptions, or watermarks for personal and commercial gaming broadcasts."
       }
     ]
   },
@@ -1348,24 +1348,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact with black outlines. The heavy stencil lettering fits PUBG's realistic survival combat atmosphere.",
     "faqs": [
       {
-        "q": "What are the exact safe zone dimensions for a PUBG Mobile YouTube banner?",
-        "a": "The full canvas is 2560 × 1440 pixels (16:9 4K standard). All squad tags, Conqueror badges, and gamertags are positioned strictly within the 1546 × 423 px safe zone, guaranteeing zero cut-off on iPhone, Android, tablet, and PC screens."
+        "q": "How do I format my Conqueror tier status and squad clan tag on this Erangel banner?",
+        "a": "Enter your squad tag in brackets (e.g. '[SOUL] MORTAL') and write your tier status (e.g. 'CONQUEROR TIER • TOP 100 ASIA') in the subtitle box with Winner Gold (#eab308) lettering."
       },
       {
-        "q": "How do I showcase my Conqueror tier, squad clan tag, or Chicken Dinner stats?",
-        "a": "Type your clan tag in brackets and stats into the subtitle field (e.g., '[SOUL] MORTAL • CONQUEROR RANK' or 'WINNER WINNER CHICKEN DINNER • TOP SNIPER') in glowing Winner Gold (#eab308)."
+        "q": "Why does heavy stencil lettering with dark shadows work best for military battlegrounds?",
+        "a": "Impact font with dual-layer black borders delivers high visibility over battleground smoke, burning UAZ wrecks, and sunset sky gradients on small mobile viewports."
       },
       {
-        "q": "What font and color scheme best suits realistic PUBG military battlegrounds?",
-        "a": "Use Impact with heavy black outlines. Pair Winner Gold (#eab308) with Air Drop Red (#ef4444) and Tactical Slate (#1e293b) to match realistic military survival battlegrounds."
+        "q": "Can I add my BGMI / PMGC tournament achievements to the subtitle area?",
+        "a": "Yes! You can list achievements like 'PMGC 2025 FINALIST • 1000+ WINS' or 'CUSTOM ROOM SCRIMS HOST' to showcase competitive esports authority."
       },
       {
-        "q": "How do I upload this 4K PUBG Mobile banner to YouTube Studio without pixelation?",
-        "a": "Download your uncompressed 2560x1440 PNG file, navigate to studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish."
+        "q": "How does the safe zone ensure Level 3 helmet operators don't obscure my gamertag on mobile?",
+        "a": "The tactical operators and supply drop crate flank the far left and right edges, leaving the central 1546 × 423 px safe box completely clear for your handle."
       },
       {
-        "q": "Is this PUBG Mobile banner free for commercial monetization on YouTube and Facebook Gaming?",
-        "a": "Yes, 100% free with full commercial monetization rights and zero watermarks for YouTube creators, Twitch streamers, and Facebook Gaming mobile broadcasters."
+        "q": "Are mobile streamers on YouTube and Facebook Gaming free to monetize with this graphic?",
+        "a": "Yes, 100% royalty-free with full monetization rights across YouTube Gaming, Facebook Gaming, Rooter, Loco, and Twitch."
       }
     ]
   },
@@ -1420,24 +1420,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact font with dark outline for military survival aesthetics.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px for Twitch."
+        "q": "How do I format my PUBG Mobile Conqueror tier and squad tag on this header?",
+        "a": "Type your squad alias and competitive rank (e.g. 'CONQUEROR SQUAD • PMGC SCRIMS 9PM') in the high-contrast yellow text fields."
       },
       {
-        "q": "Can I use it in OBS Studio?",
-        "a": "Yes, add as an Image Source for stream intermission scenes."
+        "q": "Can I use this tactical smoke graphic as a stream countdown screen in OBS?",
+        "a": "Yes! Add the 1080p image source into OBS Studio and overlay a live countdown timer widget for professional stream intros."
       },
       {
-        "q": "Are there any watermarks?",
-        "a": "Zero watermarks and 100% free."
+        "q": "How does the military camouflage contrast improve legibility on mobile devices?",
+        "a": "Deep earth-brown outlines behind vibrant Winner Winner gold text ensure clear readability even on small smartphone screens."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "What resolution does this PUBG Mobile offline screen export in?",
+        "a": "It renders at lossless 1920 × 1080 pixels (16:9 Full HD) for crisp display on desktop monitors and mobile Twitch apps."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Is this PUBG banner safe to use on monetized YouTube and Twitch live streams?",
+        "a": "Yes, 100% royalty-free with full commercial monetization rights for esports players and gaming streamers."
       }
     ]
   },
@@ -1499,24 +1499,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact with layered dark amber drop shadows. The bold cartoon lettering captures the playful, high-energy fantasy style of Clash of Clans.",
     "faqs": [
       {
-        "q": "What is the official YouTube banner size and safe area for Clash of Clans channels?",
-        "a": "The standard canvas size is 2560 × 1440 pixels (16:9 4K UHD). All clan tags, Town Hall indicators, and war leader handles are anchored inside the 1546 × 423 px mobile safe zone, ensuring 100% visibility on all smartphone screens."
+        "q": "How do I display my Town Hall 16 level, Clan War League (CWL) division, and clan tag?",
+        "a": "Type your clan credentials into the subtitle field (e.g. 'TOWN HALL 16 MAX • CWL CHAMPION I • CLAN: #LEGENDS') in glowing Gold Star (#f59e0b) or Elixir Pink (#ec4899) text."
       },
       {
-        "q": "How do I add my Town Hall level, Clan War League (CWL) rank, or clan tag to this banner?",
-        "a": "Use the subtitle field to type 'TOWN HALL 16 MAX • CLAN: #LEGENDS' or 'CWL CHAMPION III • WAR SPECIALIST' in glowing Gold Star (#f59e0b) or Elixir Pink (#ec4899) lettering."
+        "q": "What color styling matches in-game gold resources and Dark Elixir troop upgrades?",
+        "a": "Pair Gold Star (#f59e0b) for your main handle with Dark Elixir Purple (#7c3aed) and Elixir Magenta (#ec4899) for subtitle callouts to match Supercell's iconic color hierarchy."
       },
       {
-        "q": "What typography and colors match Clash of Clans fantasy gold and elixir resources?",
-        "a": "Use Impact with stacked dark amber drop shadows (#78350f). Pair Gold Star (#f59e0b) with Elixir Pink (#ec4899) and Dark Elixir Purple (#7c3aed) for authentic cartoon strategy branding."
+        "q": "Can clan leaders customize this banner to recruit competitive war members on Discord?",
+        "a": "Yes! You can format your header with recruitment calls like 'RECRUITING TH15+ WAR FIGHTERS • DISCORD.GG/MYCLAN' to convert channel visitors into active clan members."
       },
       {
-        "q": "How do I upload this Clash of Clans banner to YouTube Studio without cropping?",
-        "a": "Go to studio.youtube.com > Customization > Branding. Upload the downloaded 4K PNG file under Banner Image, check the device preview, and click Publish."
+        "q": "How does the starry night sky create optimal contrast for cartoon strategy typography?",
+        "a": "The dark indigo night sky behind the defensive walls ensures bright yellow and pink text pops with extreme clarity without being obscured by troop battle effects."
       },
       {
-        "q": "Is this Clash of Clans banner 100% free with full commercial rights?",
-        "a": "Yes! All designs on GamingBanner.com are 100% free with zero watermarks and full commercial rights for monetized YouTube channels, Twitch streams, and clan Discord communities."
+        "q": "Can I use this Clash of Clans channel art for monetized attack strategy and base-building guides?",
+        "a": "Yes. All artwork is custom fantasy digital concept art, providing 100% royalty-free commercial rights for monetized YouTube channels, Twitch streams, and gaming blogs."
       }
     ]
   },
@@ -1571,24 +1571,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact font with 3D stacked amber drop shadows.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px for Twitch video players."
+        "q": "How do I announce our Clan War Leagues (CWL) timetable on this Twitch banner?",
+        "a": "Write your clan name and CWL schedule (e.g. 'TOWN HALL 16 CWL • WAR STARTS 8PM EST') in the subtitle box with golden 3D text."
       },
       {
-        "q": "Can I use it on YouTube Gaming?",
-        "a": "Yes, 16:9 works across all streaming platforms."
+        "q": "Can I use this Clash of Clans fortress art for YouTube Gaming live streams?",
+        "a": "Yes! Standard 1920 × 1080 px dimensions fit YouTube stream starting screens, Twitch offline players, and Discord community pings."
       },
       {
-        "q": "Can I use it for BRB screens?",
-        "a": "Yes, add directly into OBS as an Image source."
+        "q": "How do the multi-tiered 3D drop shadows mimic cartoon village architecture?",
+        "a": "Layered amber and dark brown text extrusion creates a chunky, playful 3D effect that matches the fantasy fortress aesthetic."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "Is this Clash of Clans banner optimized for tablet and mobile streamers?",
+        "a": "Yes. Centralized typography guarantees full visibility whether viewers watch on iPads, smartphones, or desktop monitors."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Are there any hidden watermarks on the downloaded Clash stream banner?",
+        "a": "Zero watermarks. All downloads from GamingBanner are 100% clean and royalty-free for community clan use."
       }
     ]
   },
@@ -1649,24 +1649,24 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic. The dynamic slanted angles match high-speed drift physics and modern supercar dashboards.",
     "faqs": [
       {
-        "q": "What is the recommended YouTube banner size and safe zone for Forza Horizon channels?",
-        "a": "The standard canvas size is 2560 × 1440 pixels (16:9 4K UHD). The central 1546 × 423 px safe zone guarantees your driver gamertag, wheel setup notes, and speed stats stay 100% visible on mobile devices."
+        "q": "How can I highlight my Horizon Festival Champion status, sim wheel setup, and car club?",
+        "a": "Type your driving credentials into the subtitle line (e.g. 'FESTIVAL CHAMPION • FANATEC DD PRO WHEEL' or 'TANDEM DRIFT & ENGINE TUNING') with glowing Festival Rose (#f43f5e) styling."
       },
       {
-        "q": "How do I highlight my Horizon Festival Champion status, sim wheel setup, or car club?",
-        "a": "Enter 'HORIZON FESTIVAL CHAMPION • LOGITECH G29 WHEEL' or 'TANDEM DRIFT & ENGINE TUNING' into the subtitle field with glowing Festival Rose (#f43f5e) or Sunset Gold typography."
+        "q": "Why does italicized digital dashboard typography match realistic supercar drifting?",
+        "a": "Orbitron Italic's slanted numbers and sharp angles mimic real-world telemetry displays, digital speedometers, and HUD tachometers used in modern GT racing cars."
       },
       {
-        "q": "What font and color palette best captures high-speed supercar racing aesthetics?",
-        "a": "Orbitron Italic with Festival Rose (#f43f5e) and Sunset Gold (#f59e0b). The slanted, aerodynamic typography captures high-velocity drift physics and digital dashboard telemetry."
+        "q": "Can I list my custom engine tuning specs and weekly festival playlist schedule on this header?",
+        "a": "Yes! You can specify your weekly festival playlist stream times or share tune codes (e.g. 'SEASONAL TUNES EVERY THURSDAY • DRIFT CLUB #1') in the secondary text input."
       },
       {
-        "q": "How do I upload this 4K Forza Horizon banner to YouTube Studio without quality loss?",
-        "a": "Download the lossless 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish."
+        "q": "How does the alpine mountain background preserve clean center focus for driver gamertags?",
+        "a": "The powersliding orange hypercar and snow peaks frame the outer curves, while the central dusk sky provides a clean, open safe area calibrated to 1546 × 423 px for phone screens."
       },
       {
-        "q": "Is this Forza Horizon banner free for monetized racing channels and wheel streamers?",
-        "a": "Yes! All banner templates on GamingBanner.com include full commercial rights and zero watermarks for monetized YouTube channels, Twitch racing wheel streams, and sim racing Discord hubs."
+        "q": "Is this Forza Horizon banner free for racing sim streamers on YouTube and Twitch?",
+        "a": "Yes, 100% free with no watermarks and full commercial monetization rights for sim racing creators, wheel cam streamers, and car review channels."
       }
     ]
   },
@@ -1722,24 +1722,24 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron Italic for aerodynamic supercar aesthetics.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px for Twitch."
+        "q": "How do I display my steering wheel and pedal cam setup schedule on this screen?",
+        "a": "Enter your racing rig details (e.g. 'LOGITECH G29 WHEEL CAM • HORIZON FESTIVAL 5') in the secondary text input with rose neon text."
       },
       {
-        "q": "Can I use it as a wheel cam starting screen?",
-        "a": "Yes, add it to OBS Studio as an Image Source."
+        "q": "Can I use this scenic alpine mountain artwork as a stream starting scene in OBS?",
+        "a": "Yes! Import the 1080p image into OBS Studio to create atmospheric starting scenes before your racing simulator stream begins."
       },
       {
-        "q": "Are there any watermarks?",
-        "a": "Zero watermarks and 100% free."
+        "q": "How does the italic velocity font complement racing and drifting broadcasts?",
+        "a": "Slanted sports typography with glowing rose outlines conveys speed and precision timing across high-octane racing streams."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "What export format is used for this Forza Horizon stream card?",
+        "a": "It exports as an uncompressed 24-bit PNG file at 1920 × 1080 pixels, eliminating compression noise on high-DPI displays."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Is this Forza stream banner licensed for commercial esports racing broadcasts?",
+        "a": "Yes, full commercial rights are included for competitive sim racers, Twitch Affiliates, and automotive content creators."
       }
     ]
   },
@@ -1801,24 +1801,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron Italic with dual pink and cyan drop shadows for an authentic neon arcade racing look.",
     "faqs": [
       {
-        "q": "What is the official YouTube banner resolution and safe zone for Asphalt 9 / Legends Unite?",
-        "a": "The full banner exports at 2560 × 1440 pixels (16:9 4K standard). The central 1546 × 423 px safe zone guarantees your racer name, club tag, and division rating remain 100% visible on smartphones without cropping."
+        "q": "How do I show off my Legends Division ranking, garage level, and club leaderboard status?",
+        "a": "Type your club credentials into the subtitle input (e.g. 'LEGENDS DIVISION • GARAGE LVL 18 • TOP 50 CLUB') with glowing Nitro Magenta (#ec4899) and Shockwave Cyan (#00d4ff) neon outlines."
       },
       {
-        "q": "How do I showcase my Legends Division rating, car garage value, or club tag?",
-        "a": "Type your club credentials into the subtitle input (e.g., 'LEGENDS DIVISION • TOP 100 CLUB' or 'SHOCKWAVE NITRO SPECIALIST • GARAGE LEVEL 18') with glowing Nitro Magenta (#ec4899) lettering."
+        "q": "Why do dual magenta and cyan neon drop shadows capture high-speed arcade drift racing?",
+        "a": "The high-voltage pink and cyan contrast mirrors Times Square neon reflections, nitro flame bursts, and police pursuit strobe effects seen during multiplayer street races."
       },
       {
-        "q": "What font and neon glow styling best matches high-octane arcade drift racing?",
-        "a": "Use Impact or Orbitron Italic with dual Nitro Magenta (#ec4899) and Shockwave Cyan (#00d4ff) outlines. The high-contrast neon drop shadows capture the street-racing energy of Times Square at midnight."
+        "q": "Can I customize this banner for competitive multiplayer tournaments and car review guides?",
+        "a": "Yes! Format your channel's focus (e.g. 'CAR REVIEWS & NITRO RUNS • MULTIPLAYER TOP 100') in the secondary text layer to instantly communicate your racing niche to new subscribers."
       },
       {
-        "q": "How do I upload this Asphalt 9 banner to YouTube Studio with crisp 4K fidelity?",
-        "a": "In YouTube Studio (studio.youtube.com), navigate to Customization > Branding. Under Banner Image, upload the 2560x1440 PNG file, verify the safe-zone preview, and click Publish."
+        "q": "How does the wet Times Square asphalt texture keep neon gamertags sharp on mobile?",
+        "a": "The dark rain-slicked pavement in the center acts as a natural backdrop, allowing high-contrast neon text inside the 1546 × 423 px safe box to remain readable without clashing with background buildings."
       },
       {
-        "q": "Is this Asphalt 9 banner free for monetized gaming channels and esports teams?",
-        "a": "Yes, 100% free with full commercial monetization rights and zero watermarks for YouTube creators, Twitch streamers, and competitive arcade racing clubs."
+        "q": "Are mobile racing creators allowed to use this artwork for monetized video uploads?",
+        "a": "100% yes. All artwork on GamingBanner.com is custom digital art with full commercial rights for monetized YouTube channels, Twitch streams, and competitive mobile racing leagues."
       }
     ]
   },
@@ -1873,24 +1873,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact font with bold neon magenta glow.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px for Twitch."
+        "q": "How do I showcase our Asphalt Legends club recruitment info on this Twitch banner?",
+        "a": "Add your club tag and daily milestone goal (e.g. 'LEGENDS CLUB TOP 100 • DAILY MILESTONES') in the glowing magenta text boxes."
       },
       {
-        "q": "Can I use it as a BRB screen in OBS?",
-        "a": "Yes, add directly as an Image Source in OBS Studio."
+        "q": "Can I use this Times Square neon drift scene for intermission breaks in OBS?",
+        "a": "Yes! Place the 1920 × 1080 px image source into OBS Studio or Streamlabs Desktop for high-energy arcade stream breaks."
       },
       {
-        "q": "Are there any watermarks?",
-        "a": "Zero watermarks and 100% free."
+        "q": "How does the neon magenta city lighting enhance nighttime stream aesthetics?",
+        "a": "Vibrant pink and purple reflections against wet asphalt create an electrifying cyberpunk atmosphere for arcade racing fans."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "What dimensions are recommended when uploading to Twitch Creator Dashboard?",
+        "a": "Upload at 1920 × 1080 pixels under Settings > Channel > Brand > Video Player Banner for optimal full-screen scaling."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Are all Asphalt 9 stream banners completely free to download?",
+        "a": "Yes! 100% free with no subscriptions, watermark restrictions, or download limits."
       }
     ]
   },
@@ -1952,24 +1952,24 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia or serif typography with soft golden glow. The elegant fantasy lettering matches Genshin Impact's orchestral and lore-rich world.",
     "faqs": [
       {
-        "q": "What is the official YouTube banner size and safe zone for Genshin Impact channels?",
-        "a": "The standard format is 2560 × 1440 pixels (16:9 4K UHD). The central 1546 × 423 px safe zone guarantees your Adventure Rank, Traveler handle, and Spiral Abyss milestones stay 100% visible on smartphones, iPads, and PC browsers."
+        "q": "How should I format my Adventure Rank (AR 60), Spiral Abyss 36-star clears, and Traveler handle?",
+        "a": "Type your traveler name in the primary field and enter 'ADVENTURE RANK 60 • SPIRAL ABYSS 36★' into the subtitle field with glowing Primogem Gold (#fde047) typography."
       },
       {
-        "q": "How do I display my Adventure Rank (AR 60), Spiral Abyss clears, or Traveler main?",
-        "a": "Enter 'ADVENTURE RANK 60 • SPIRAL ABYSS 36★' or 'PRIMOGEM & BANNER WISH GUIDES' into the subtitle field with glowing Primogem Gold (#fde047) or Anemo Cyan (#38bdf8) accents."
+        "q": "Why does golden serif lettering match Genshin Impact's orchestral and celestial fantasy world?",
+        "a": "Georgia serif with celestial golden glow echoes the in-game archon quests, lore artifacts, and Hoyoverse's orchestral aesthetic, giving your channel an elegant, premium look."
       },
       {
-        "q": "What typography and celestial colors match Genshin Impact's fantasy anime aesthetic?",
-        "a": "Use Georgia Serif with Primogem Gold (#fde047) and Anemo Cyan (#38bdf8) soft drop shadows. The classical serif typography mirrors the official Hoyoverse UI and orchestral anime fantasy tone."
+        "q": "Can I use this banner to advertise Primogem farming guides and character wish livestreams?",
+        "a": "Yes! Add text such as 'PRIMOGEM GUIDES & CHARACTER WISHES • NEW PATCH COVERAGE' to attract viewers searching for character build breakdowns and banner pull streams."
       },
       {
-        "q": "How do I upload this Genshin Impact banner to YouTube Studio without compression blur?",
-        "a": "Download the lossless 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, and click Publish."
+        "q": "How does the scenic Teyvat cliff overlook frame the central text without covering anime heroes?",
+        "a": "The party of elemental archons and scenic windmills are positioned on the outer flanks, keeping the center 1546 × 423 px safe box completely unobstructed for mobile viewers."
       },
       {
-        "q": "Is this Genshin Impact banner free for monetized YouTube and Twitch creators?",
-        "a": "Yes! All graphics on GamingBanner.com are 100% free with zero watermarks and full commercial rights for monetized YouTube channels, Twitch partner streams, and Discord community hubs."
+        "q": "Is this Genshin Impact banner royalty-free for Hoyoverse content creators and guides?",
+        "a": "Yes, 100% royalty-free with full commercial monetization rights for YouTube guides, Twitch partner livestreams, and Discord community servers."
       }
     ]
   },
@@ -2024,24 +2024,24 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia Serif with wide letter spacing for anime fantasy elegance.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px for Twitch."
+        "q": "How do I announce our character banner wish-pulling streams on this offline screen?",
+        "a": "Type your wish-pulling event (e.g. 'C6 ARCHON WISH PULLS • FRIDAY 7PM EST') in the subtitle field with soft celestial cyan text."
       },
       {
-        "q": "Can I use it for wish-pulling stream schedules?",
-        "a": "Yes, easily add your next wish-pulling stream date in the text inputs."
+        "q": "Can I use this floating skies artwork for Spiral Abyss Floor 12 clearing broadcasts?",
+        "a": "Yes! The serene floating island landscape provides a magical, atmospheric backdrop for competitive Abyss speed-clears."
       },
       {
-        "q": "Can I use it for BRB screens?",
-        "a": "Yes, add directly into OBS as an Image source."
+        "q": "Why is elegant serif typography recommended for Genshin Impact streamers?",
+        "a": "Classical serif letterforms with soft azure glows match the majestic fantasy lore and orchestral soundtrack of Teyvat."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "Does this Genshin offline graphic download without watermarks or compression?",
+        "a": "Yes. It downloads as a lossless, watermark-free 1920 × 1080 PNG file ready for immediate Twitch or Kick upload."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Can I use this banner for monetized Genshin Impact YouTube and Twitch channels?",
+        "a": "100% yes. You receive full commercial broadcasting rights for monetized streams, VODs, and community Discord servers."
       }
     ]
   },
@@ -2104,24 +2104,24 @@ export const TEMPLATES = [
     "fontTip": "Use Inter or heavy sans-serif with thick black or navy outlines. The chunky comic lettering captures Roblox's fun, creative multiplayer spirit.",
     "faqs": [
       {
-        "q": "What is the recommended YouTube banner size and safe zone for Roblox channels?",
-        "a": "The standard canvas size is 2560 × 1440 pixels (16:9 4K UHD). All studio developer names, avatar gamertags, and game visit counters are calibrated strictly inside the central 1546 × 423 pixel safe area, guaranteeing zero cut-off on mobile phones, tablets, and desktop displays."
+        "q": "How do I showcase my Roblox studio group name, Blox Fruits level, or top obby game visits?",
+        "a": "Type your achievements into the subtitle field (e.g. 'BLOX FRUITS MAX LEVEL 2550 • 1M+ VISITS' or 'STUDIO GAME DEV & OBBY BUILDER') in vibrant Obby Yellow (#facc15) or Blox Blue (#3b82f6)."
       },
       {
-        "q": "How do I feature my Roblox studio name, Blox Fruits level, or top obby game title?",
-        "a": "Type your channel branding into the subtitle field (e.g., 'TOP OBBY CREATOR • BLOX FRUITS LEVEL 2550' or 'BEDWARS & BROOKHAVEN RP') and choose Obby Yellow (#facc15) or Blox Blue (#3b82f6) for maximum vibrant contrast."
+        "q": "Why does bold 3D blocky comic typography resonate with the Roblox metaverse audience?",
+        "a": "Thick sans-serif fonts (like Inter Heavy) paired with stacked navy 3D drop shadows match the playful voxel geometry and user-generated games across Roblox."
       },
       {
-        "q": "What font and color styling best suits fun, vibrant Roblox multiverse creators?",
-        "a": "Use Inter Heavy with thick navy or dark crimson drop shadows (#1e3a8a). The chunky 3D comic typography captures the playful multiplayer spirit of Roblox experiences and dev studios."
+        "q": "Can I add my developer portfolio link and weekly update schedule to this header?",
+        "a": "Yes! You can add text lines like 'NEW MINI-GAMES EVERY SATURDAY • ROBLOX.COM/GROUPS/...' to drive group members and recurring players to your game experiences."
       },
       {
-        "q": "How do I upload this 4K Roblox banner to YouTube Studio without phone cut-offs?",
-        "a": "Download your uncompressed 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish. Our pre-aligned safe zone ensures 100% full visibility across all devices."
+        "q": "How does the central safe area protect avatar text from mobile clipping in the Roblox YouTube app?",
+        "a": "Floating obby platforms and avatar heroes frame the outer borders, ensuring your name and studio credits stay centered within the 1546 × 423 px safe box on phones."
       },
       {
-        "q": "Is this Roblox channel banner 100% free for monetized creators and dev studios?",
-        "a": "Yes! All designs on GamingBanner.com include full commercial rights and zero watermarks for monetized YouTube channels, Twitch streams, and Roblox developer Discord communities."
+        "q": "Are Roblox developers and UGC creators free to use this banner for monetized channels?",
+        "a": "Yes, 100% free with full commercial monetization rights for Roblox YouTube creators, Twitch streamers, and developer studio group pages."
       }
     ]
   },
@@ -2177,24 +2177,24 @@ export const TEMPLATES = [
     "fontTip": "Use Inter Heavy with 3D drop-shadow for playful cartoon gaming.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px for Twitch."
+        "q": "How do I share our Roblox VIP server codes and community stream times?",
+        "a": "Write your private server access code or group name (e.g. 'BLOX FRUITS RAID • VIP SERVER LINK IN CHAT') in the subtitle box."
       },
       {
-        "q": "Can I use it on YouTube and Kick?",
-        "a": "Yes, standard 16:9 offline dimensions work across platforms."
+        "q": "Can I use this colorful metaverse background for YouTube and Kick streams?",
+        "a": "Yes! Standard 16:9 Full HD dimensions (1920 × 1080 px) ensure crisp presentation across all streaming platforms."
       },
       {
-        "q": "Can I use it for BRB screens?",
-        "a": "Yes, add directly into OBS as an Image source."
+        "q": "How does the chunky bold font help younger viewers read text easily on mobile?",
+        "a": "Heavy sans-serif lettering with thick crimson drop-shadows maximizes letter contrast on compact phone and tablet screens."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "How quickly can I update my stream schedule when a new game update drops?",
+        "a": "Open the template in our web studio, edit your text, and download an updated 1080p banner in less than 30 seconds."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Is this Roblox offline screen safe for child-friendly family gaming streams?",
+        "a": "Yes! The design is 100% family-friendly, watermark-free, and suitable for all content ratings."
       }
     ]
   },
@@ -2256,24 +2256,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron Italic with yellow and cyan double shadows. It perfectly captures the gritty high-tech aesthetic of Night City.",
     "faqs": [
       {
-        "q": "What is the official YouTube banner size and safe zone for Cyberpunk 2077 channels?",
-        "a": "The full canvas exports at 2560 × 1440 pixels (16:9 4K UHD). The central 1546 × 423 px safe zone guarantees your Netrunner handle, build spec, and cyberware role remain 100% visible on smartphones without edge cropping."
+        "q": "How do I customize my Netrunner build specs, Sandevistan loadout, or mercenary street cred?",
+        "a": "Type your build details into the subtitle input (e.g. 'NETRUNNER OVERCLOCK BUILD • TIER 5++ CYBERWARE' or 'SANDEVISTAN KATANA MERCENARY') with glowing Cyber Yellow (#facc15) and Matrix Cyan (#06b6d4) drop shadows."
       },
       {
-        "q": "How do I customize my Netrunner build, Sandevistan loadout, or mercenary title?",
-        "a": "Type your combat build into the subtitle field (e.g., 'SANDEVISTAN BLADE SPECIALIST • TIER 5 CYBERWARE' or 'NETRUNNER OVERCLOCK BUILD') with Cyber Yellow (#facc15) and Matrix Cyan (#06b6d4) neon outlines."
+        "q": "What neon color combinations best mirror Night City megastructures and in-game cyberware UI?",
+        "a": "Electric Cyber Yellow paired with Matrix Cyan and Neon Magenta (#ec4899) captures the high-tech, low-life aesthetic of CD Projekt Red's dystopian metropolis."
       },
       {
-        "q": "What typography and neon colors match the high-tech Night City edgerunner aesthetic?",
-        "a": "Orbitron Italic or Impact with Cyber Yellow (#facc15) and Matrix Cyan (#06b6d4) dual drop shadows. The high-voltage neon glow mirrors Night City megastructures and in-game cyberware telemetry."
+        "q": "Can I use this header for Phantom Liberty DLC walk-throughs and lore breakdown channels?",
+        "a": "Yes! You can add text callouts like 'PHANTOM LIBERTY LORE & SECRET ENDINGS' to establish instant authority in the cyberpunk RPG community."
       },
       {
-        "q": "How do I upload this Cyberpunk banner to YouTube Studio with razor-sharp 4K clarity?",
-        "a": "Download your uncompressed 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish."
+        "q": "How does the dark reflective rooftop keep glowing yellow edgerunner gamertags readable?",
+        "a": "The wet asphalt and rainy rooftop platform create a high-contrast dark floor in the center, ensuring yellow text glows with maximum sharpness without background noise."
       },
       {
-        "q": "Is this Cyberpunk 2077 banner free for commercial monetization and stream headers?",
-        "a": "Yes! All graphics generated on GamingBanner.com include full commercial rights and zero watermarks for monetized YouTube channels, Twitch streams, and Phantom Liberty community hubs."
+        "q": "Is this Cyberpunk 2077 artwork 100% free with full commercial broadcast rights?",
+        "a": "Yes. All graphics are custom digital concept art with full commercial rights for monetized YouTube channels, Twitch streams, and lore blogs."
       }
     ]
   },
@@ -2328,24 +2328,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact with heavy contrast for cyberpunk aesthetic.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px for Twitch."
+        "q": "How do I customize this banner for a Cyberpunk 2077 Netrunner build playthrough?",
+        "a": "Enter your playthrough series title (e.g. 'NETRUNNER 2.0 PLAYTHROUGH • VERY HARD') in the high-voltage yellow subtitle field."
       },
       {
-        "q": "Can I use it as a stream starting screen?",
-        "a": "Yes, add directly as an Image Source in OBS Studio."
+        "q": "Can I use this Night City neon scene as an OBS starting stream screen?",
+        "a": "Yes! Import the 1920 × 1080 px PNG file into OBS Studio to establish an authentic sci-fi atmosphere before going live."
       },
       {
-        "q": "Are there any watermarks?",
-        "a": "Zero watermarks and 100% free."
+        "q": "How does the electric yellow neon glow stand out on dark Twitch interfaces?",
+        "a": "Cyber yellow (#facc15) provides the highest contrast against dark-mode stream players, immediately catching viewers' attention."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "What font should I use to match the Cyberpunk dystopian aesthetic?",
+        "a": "Impact or Orbitron Bold with black drop-shadow outlines simulates real neon signage across futuristic city skylines."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Is this Cyberpunk stream card free for partnered and affiliate streamers?",
+        "a": "Yes! 100% free with full commercial broadcasting and monetization rights."
       }
     ]
   },
@@ -2407,24 +2407,24 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia or serif typography with golden glow. The mythic classical lettering matches Elden Ring's epic dark fantasy tone.",
     "faqs": [
       {
-        "q": "What is the recommended YouTube banner size and safe zone for Elden Ring channels?",
-        "a": "The official resolution is 2560 × 1440 pixels (16:9 4K standard). All Tarnished handles, build names, and lore titles are anchored inside the 1546 × 423 px safe area, ensuring 100% visibility on smartphones and big-screen displays."
+        "q": "How can I highlight my Elden Lord title, Rune Level 1 challenge runs, or Shadow of the Erdtree builds?",
+        "a": "Type your challenge stats into the subtitle field (e.g. 'ELDEN LORD • RUNE LEVEL 1 NO-HIT RUNS' or 'SHADOW OF THE ERDTREE • BLEED & FLAME BUILD') with glowing Grace Gold (#fde047) typography."
       },
       {
-        "q": "How do I showcase my Elden Lord title, Shadow of the Erdtree build, or Rune Level 1 runs?",
-        "a": "Type your challenge run details into the subtitle input (e.g., 'ELDEN LORD • RUNE LEVEL 1 NO HIT RUNS' or 'SHADOW OF THE ERDTREE • MESSMER FLAME BUILD') with glowing Grace Gold (#fde047) typography."
+        "q": "Why does classical serif typography with golden grace aura suit dark fantasy Soulslike channels?",
+        "a": "Georgia serif paired with warm golden grace glow echoes the ancient runes, item lore descriptions, and somber medieval tone of the Lands Between."
       },
       {
-        "q": "What font and golden aura best captures the dark fantasy Soulslike atmosphere?",
-        "a": "Use Georgia Serif with Grace Gold (#fde047) and subtle crimson drop shadows. The mythic classical lettering matches FromSoftware's lore-rich dark fantasy aesthetic."
+        "q": "Can I customize this banner for no-hit boss guides, speedruns, and lore commentary?",
+        "a": "Yes! You can format your header to feature your channel specialty (e.g. 'NO-HIT BOSS GUIDES & EXPEDITIONS • ALL REMEMBRANCES') to establish credibility with Soulslike viewers."
       },
       {
-        "q": "How do I upload this 4K Elden Ring banner to YouTube Studio without quality loss?",
-        "a": "Download the lossless 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish."
+        "q": "How does the atmospheric burning Erdtree background balance with dark gothic ruin borders?",
+        "a": "Messmer and gothic ruins frame the outer margins, while the distant burning Erdtree casts a soft golden gradient behind the central safe area (1546 × 423 px) to keep text razor-sharp."
       },
       {
-        "q": "Is this Elden Ring banner free for monetized YouTube channels and lore creators?",
-        "a": "Yes! All graphics on GamingBanner.com include full commercial broadcast rights and zero watermarks for monetized YouTube channels, Twitch challenge runs, and Discord communities."
+        "q": "Are FromSoftware creators permitted to use this channel art for monetized videos and streams?",
+        "a": "Yes, 100% free with full commercial monetization rights for YouTube playthroughs, Twitch speedruns, and community Discord servers."
       }
     ]
   },
@@ -2479,24 +2479,24 @@ export const TEMPLATES = [
     "fontTip": "Use Georgia Serif with wide spacing for dark fantasy atmosphere.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px for Twitch."
+        "q": "How do I format our Elden Ring challenge run stream schedule on this card?",
+        "a": "Write your current challenge rules (e.g. 'RUNE LEVEL 1 NO HIT • MALENIA GRIND') in the subtitle box with warm golden grace glow."
       },
       {
-        "q": "Can I use it for challenge run stream schedules?",
-        "a": "Yes, add your run goals and schedule in the text inputs."
+        "q": "Can I use this Erdtree scene for Shadow of the Erdtree DLC playthroughs?",
+        "a": "Yes! The luminous golden Erdtree backdrop creates an epic, solemn atmosphere for Land of Shadow stream broadcasts."
       },
       {
-        "q": "Can I use it for BRB screens?",
-        "a": "Yes, add directly into OBS as an Image source."
+        "q": "How does classical serif typography enhance dark fantasy soulslike branding?",
+        "a": "Ornate serif lettering with golden halo glows reflects the medieval lore, ancient runes, and somber majesty of the Lands Between."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "What resolution does this Elden Ring offline screen export in?",
+        "a": "It exports as a pristine 1920 × 1080 px Full HD PNG file matching official Twitch video player dimensions."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Are commercial stream rights included for soulslike content creators?",
+        "a": "100% royalty-free with full commercial rights for monetized Twitch streams, YouTube playthroughs, and Kick broadcasts."
       }
     ]
   },
@@ -2558,24 +2558,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Inter with thick black outlines. The chunky comic lettering matches Among Us' playful cartoon party vibe.",
     "faqs": [
       {
-        "q": "What is the official YouTube banner size and safe zone for Among Us channels?",
-        "a": "The standard canvas size is 2560 × 1440 pixels (16:9 4K UHD). All crewmate gamertags, Impostor callouts, and Discord tags are placed inside the central 1546 × 423 px safe zone, guaranteeing 100% visibility on all smartphone screens."
+        "q": "How do I add funny Impostor callouts, detective IQ scores, or Discord party codes?",
+        "a": "Type your custom title into the subtitle input (e.g. 'IMPOSTOR IQ 200 • MODDED TOWN OF US' or 'DISCORD.GG/CREWMATES • DAILY PROX LOBBIES') with glowing Impostor Red (#ef4444) or Crewmate Cyan (#06b6d4) text."
       },
       {
-        "q": "How do I customize funny Impostor callouts, detective titles, or Discord server handles?",
-        "a": "Enter 'IMPOSTOR IQ 200 • PRO DETECTIVE' or 'MODDED LOBBIES • DISCORD: /PARTY' into the subtitle field with glowing Impostor Red (#ef4444) or Crewmate Cyan (#06b6d4) lettering."
+        "q": "Why do thick comic sticker outlines make cartoon spaceship names pop on mobile screens?",
+        "a": "The 4-directional black comic outlines create strong separation between bright cartoon lettering and emergency red corridor lighting, preventing visual clutter on small smartphone displays."
       },
       {
-        "q": "What font and color scheme best matches playful cartoon space party games?",
-        "a": "Use Impact or Inter with thick 4-directional black comic outlines. Pair Impostor Red (#ef4444) with Crewmate Cyan (#06b6d4) for authentic sci-fi cartoon fun."
+        "q": "Can I customize this banner for modded Town of Us lobbies and animated short channels?",
+        "a": "Yes! Format your channel's niche (such as 'ANIMATED SHORTS & DETECTIVE GAMEPLAY' or 'MODDED 15-PLAYER PROXIMITY CHAT') to give animation and party game fans an instant reason to subscribe."
       },
       {
-        "q": "How do I upload this Among Us banner to YouTube Studio without compression blur?",
-        "a": "In YouTube Studio (studio.youtube.com), click Customization > Branding. Under Banner Image, upload the 2560x1440 PNG file, verify the safe-zone crop, and click Publish."
+        "q": "How does the emergency red alarm ambiance frame the center text without cluttering crewmates?",
+        "a": "Crewmates running past vents and doing wiring tasks are positioned on the far left and right edges, keeping the central 1546 × 423 px safe box completely open for your gamertag."
       },
       {
-        "q": "Is this Among Us channel banner free for monetized creators and Discord lobbies?",
-        "a": "Yes! All banner templates on GamingBanner.com are 100% free with zero watermarks and full commercial rights for monetized YouTube channels, Twitch streams, and Discord community servers."
+        "q": "Is this Among Us channel art free to download with zero watermarks for gaming creators?",
+        "a": "100% free with zero watermarks. You receive an uncompressed 2560 × 1440 4K PNG with full commercial rights for monetized YouTube channels, Twitch streams, and TikTok clips."
       }
     ]
   },
@@ -2631,24 +2631,24 @@ export const TEMPLATES = [
     "fontTip": "Use Inter Heavy with 4-directional sticker outlines for comic fun.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px for Twitch."
+        "q": "How do I display our Among Us proximity chat lobby rules and stream schedule?",
+        "a": "Add your voice lobby times (e.g. 'PROXIMITY CHAT WITH VIEWERS • SUNDAYS 8PM') in the bold red emergency alert subtitle box."
       },
       {
-        "q": "Can I use it as a BRB screen?",
-        "a": "Yes, perfect for stream breaks and game lobby intervals."
+        "q": "Can I use this Skeld spaceship card as an OBS Be Right Back intermission screen?",
+        "a": "Yes! Import the 1080p PNG into OBS Studio or Streamlabs to entertain your audience during break times."
       },
       {
-        "q": "Are there any watermarks?",
-        "a": "Zero watermarks and 100% free."
+        "q": "How does the comic sans-serif font maintain readability against space backgrounds?",
+        "a": "Bold rounded lettering with quad-direction black borders ensures text stays crystal clear over deep space nebula textures."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "Does this template work across both desktop and mobile Twitch viewing apps?",
+        "a": "Yes. Centered text safe-zones ensure your crewmate handle is never cropped on smartphone or tablet screens."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Is this Among Us stream art free for community gaming lobbies?",
+        "a": "Yes! 100% free with zero watermarks and unlimited downloads for all creators."
       }
     ]
   },
@@ -2710,24 +2710,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or heavy sans fonts with gold and blue layered outlines for authentic competitive arena energy.",
     "faqs": [
       {
-        "q": "What is the official YouTube banner size and safe zone for Clash Royale channels?",
-        "a": "The official resolution is 2560 × 1440 pixels (16:9 4K standard). All trophy records, deck names, and creator tags are locked within the 1546 × 423 px safe zone, guaranteeing zero cut-off on mobile phones."
+        "q": "How do I feature my Ultimate Champion rank, 9000 trophy record, or favorite meta deck archetype?",
+        "a": "Type your stats into the subtitle field (e.g. 'ULTIMATE CHAMPION • 9000 TROPHIES • 2.6 HOG CYCLE') in glowing Trophy Gold (#fbbf24) and King Tower Blue (#3b82f6)."
       },
       {
-        "q": "How do I display my Ultimate Champion rank, 9000 trophy count, or favorite meta deck?",
-        "a": "Type your competitive stats into the subtitle field (e.g., 'ULTIMATE CHAMPION #1 • 9000 TROPHIES' or 'BEST META 2.6 HOG DECK') in glowing Trophy Gold (#fbbf24) and King Tower Blue (#3b82f6)."
+        "q": "Why do layered gold and royal blue outlines mirror official CRL esports broadcast graphics?",
+        "a": "The double-layer gold over deep royal blue (#1e3a8a) replicates Clash Royale League (CRL) championship trophy banners and in-game card evolution mastery badges."
       },
       {
-        "q": "What font and layered color outlines match Clash Royale competitive arena energy?",
-        "a": "Use Impact with layered Trophy Gold (#fbbf24) and deep royal blue outlines (#1e3a8a). The bold 3D lettering mirrors in-game card mastery badges and competitive CRL broadcast overlays."
+        "q": "Can I list my ladder push streams, deck guide schedules, and clan tag on this banner?",
+        "a": "Yes! Enter details such as 'TOP 200 LADDER PUSH DAILY • CLAN: #ROYAL' into the subtitle input to convert viewers into stream regulars."
       },
       {
-        "q": "How do I upload this Clash Royale banner to YouTube Studio with 4K clarity?",
-        "a": "Download the lossless 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish."
+        "q": "How does the illuminated arena river keep competitive rank titles sharp across all devices?",
+        "a": "The King Towers and attacking troops frame the outer bridge boundaries, leaving the glowing river center clear for player names within the 1546 × 423 px safe area."
       },
       {
-        "q": "Is this Clash Royale banner free for monetized channels and tournament creators?",
-        "a": "Yes! All graphics generated on GamingBanner.com include 100% royalty-free commercial rights with zero watermarks for monetized YouTube channels, Twitch streams, and clan Discord hubs."
+        "q": "Are mobile strategy creators free to use this Clash Royale header on monetized channels?",
+        "a": "Yes, 100% royalty-free with full monetization rights for YouTube Gaming channels, Twitch streams, and clan Discord servers."
       }
     ]
   },
@@ -2783,24 +2783,24 @@ export const TEMPLATES = [
     "fontTip": "Use Inter Heavy with blue 3D drop shadows.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px for Twitch."
+        "q": "How do I showcase our Clash Royale Ultimate Champion trophy push schedule?",
+        "a": "Type your ladder goal (e.g. 'ROAD TO ULTIMATE CHAMPION • TOP 1K PUSH') in the royal blue text container."
       },
       {
-        "q": "Can I use it on Kick and YouTube?",
-        "a": "Yes, standard 16:9 offline dimensions work across platforms."
+        "q": "Can I use this arena championship backdrop on Kick and YouTube Gaming?",
+        "a": "Yes! The 1920 × 1080 px Full HD resolution fits video player offline containers across all major live streaming platforms."
       },
       {
-        "q": "Can I use it for BRB screens?",
-        "a": "Yes, add directly into OBS as an Image source."
+        "q": "How do royal blue 3D drop shadows improve text contrast on mobile devices?",
+        "a": "Layered dark navy (#1e3a8a) text shadows create sharp vertical depth that makes white text pop over bright arena lights."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "How do I upload this banner to Twitch Studio or OBS?",
+        "a": "Download the PNG file and add it as an Image Source in your OBS scene or upload it under Twitch Channel Brand settings."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Are there any fees or watermarks for Clash Royale tournament streams?",
+        "a": "No fees and no watermarks. You receive a 100% royalty-free graphic for personal and commercial gaming broadcasts."
       }
     ]
   },
@@ -2862,24 +2862,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or Orbitron Italic with bright orange and cyan glow. The sharp angles match Overwatch 2's high-mobility hero action.",
     "faqs": [
       {
-        "q": "What is the recommended YouTube banner size and safe zone for Overwatch 2 channels?",
-        "a": "The standard format is 2560 × 1440 pixels (16:9 4K standard). All player names, hero role callouts, and Top 500 badges are positioned inside the central 1546 × 423 px safe zone, guaranteeing 100% visibility on all smartphone displays."
+        "q": "How should I format my Top 500 leaderboard standing, Grandmaster rank, or hero role main?",
+        "a": "Type your competitive specs into the subtitle box (e.g. 'TOP 500 DPS • GENJI & TRACER MAIN' or 'GRANDMASTER 1 SUPPORT CARRY') with glowing Hero Orange (#f97316) and Top 500 Gold (#facc15) accents."
       },
       {
-        "q": "How do I display my Grandmaster / Top 500 rank, hero role, or team clan tag?",
-        "a": "Type your competitive specs into the subtitle field (e.g., 'TOP 500 DPS MAIN • GENJI & TRACER' or 'GRANDMASTER 1 SUPPORT CARRY') with glowing Hero Orange (#f97316) and Top 500 Gold (#facc15) accents."
+        "q": "Why does dynamic angular lettering with bright orange neon match fast-paced hero action?",
+        "a": "Orbitron Italic and Impact bold feature sharp futuristic telemetry angles that match Overwatch's in-game hero select HUD and OWCS esports broadcast overlays."
       },
       {
-        "q": "What typography and glowing colors match Overwatch 2 futuristic hero shooter graphics?",
-        "a": "Orbitron Italic or Impact with Hero Orange (#f97316) and Cyber Cyan (#06b6d4) neon drop shadows. The dynamic angular lettering captures high-mobility team shooter action and OWCS esports broadcast overlays."
+        "q": "Can I customize this header for my collegiate esports team or OWCS tournament roster?",
+        "a": "Yes! Enter your collegiate team tag in brackets (e.g. '[TEAM] AERO') and write your tournament scrim times or role designations in the subtitle field."
       },
       {
-        "q": "How do I upload this Overwatch 2 banner to YouTube Studio without blur?",
-        "a": "In YouTube Studio (studio.youtube.com), click Customization > Branding. Under Banner Image, upload your uncompressed 2560x1440 PNG, check the safe-zone crop preview, and click Publish."
+        "q": "How does the futuristic rooftop composition keep heroes flanking the safe zone neatly?",
+        "a": "Reinhardt, Tracer, and Mercy frame the outer rooftop skyline, keeping the central 1546 × 423 px safe zone completely clear of character clutter on phone screens."
       },
       {
-        "q": "Is this Overwatch 2 banner free for monetized YouTube channels and esports teams?",
-        "a": "Yes! All graphics on GamingBanner.com are 100% free with zero watermarks and full commercial rights for monetized YouTube channels, Twitch streams, and OWCS competitive rosters."
+        "q": "Is this Overwatch 2 banner free for YouTube gaming channels and competitive Twitch casters?",
+        "a": "Yes, 100% free with full commercial rights for monetized YouTube channels, Twitch streams, and OWCS community watch-parties."
       }
     ]
   },
@@ -2934,24 +2934,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact font with 3D stacked amber drop shadows.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px for Twitch."
+        "q": "How do I format our Overwatch 2 Grandmaster role-queue stream timetable?",
+        "a": "Write your main role and rank (e.g. 'GRANDMASTER TANK & DPS • COMP GRIND 8PM') in the secondary text input with orange energy glow."
       },
       {
-        "q": "Can I use it on Kick and YouTube?",
-        "a": "Yes, standard 16:9 offline dimensions work across platforms."
+        "q": "Can I use this rooftop hero clash artwork as an OBS stream intro scene?",
+        "a": "Yes! Import the 1080p PNG into OBS Studio or Streamlabs Desktop to build anticipation before your competitive matches begin."
       },
       {
-        "q": "Can I use it for BRB screens?",
-        "a": "Yes, add directly into OBS as an Image source."
+        "q": "How does the Overwatch orange highlight color enhance streamer branding?",
+        "a": "The signature warm hero orange (#f97316) creates high-energy contrast that matches competitive hero shooter aesthetics."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "What is the official Twitch resolution for this Overwatch offline screen?",
+        "a": "It renders at exact 1920 × 1080 pixels (16:9 aspect ratio), fully matching Twitch video player banner standards."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Is this Overwatch 2 banner safe for monetized esports and tournament streams?",
+        "a": "100% royalty-free with full commercial broadcast rights for Twitch Affiliates, Partners, and esports teams."
       }
     ]
   },
@@ -3013,24 +3013,24 @@ export const TEMPLATES = [
     "fontTip": "Use Impact or bold athletic sans fonts with green and gold shadows. It gives your channel the high-energy look of televised championship soccer.",
     "faqs": [
       {
-        "q": "What is the official YouTube banner resolution and safe zone for EA Sports FC 25 channels?",
-        "a": "The full canvas exports at 2560 × 1440 pixels (16:9 4K standard). All club names, Division Rivals badges, and FUT Champions ranks are anchored inside the 1546 × 423 px safe zone, ensuring 100% visibility on mobile, iPad, and desktop viewports."
+        "q": "How do I highlight my FUT Champions Rank 1 record (20-0), Division Rivals tier, or Ultimate Team club?",
+        "a": "Type your competitive record into the subtitle input (e.g. 'FUT CHAMPIONS RANK 1 • 20-0 RECORD' or 'DIVISION 1 • SQUAD BUILDERS & PACKS') with Pitch Green (#34d399) or FUT Gold (#f59e0b) typography."
       },
       {
-        "q": "How do I showcase my FUT Champions Rank 1 record, Division Rivals tier, or club name?",
-        "a": "Type your competitive record into the subtitle field (e.g., 'FUT CHAMPIONS RANK 1 • 20-0 WEEKEND' or 'DIVISION 1 • SQUAD BUILDERS & PACKS') with Pitch Green (#34d399) or FUT Gold (#f59e0b) typography."
+        "q": "What athletic font styling and emerald pitch colors capture televised soccer broadcast aesthetics?",
+        "a": "Impact bold with Pitch Green (#34d399) and FUT Gold (#f59e0b) drop shadows mirrors televised Premier League, Champions League, and EA Sports FC tournament graphics."
       },
       {
-        "q": "What font and color palette best captures championship stadium soccer broadcasts?",
-        "a": "Use Impact or athletic sans-serif fonts with Pitch Green (#34d399) and FUT Champions Gold (#f59e0b). The high-impact typography captures televised Premier League and Champions League broadcast aesthetics."
+        "q": "Can I include my Weekend League schedule, squad builder tactics, and pack opening times?",
+        "a": "Yes! Format your schedule (e.g. 'WEEKEND LEAGUE LIVE SAT & SUN 2PM • REWARDS THURSDAY') in the secondary text layer to keep your community engaged."
       },
       {
-        "q": "How do I upload this EA Sports FC 25 banner to YouTube Studio without pixelation?",
-        "a": "Download the uncompressed 2560x1440 PNG file, open studio.youtube.com > Customization > Branding, upload the image under Banner Image, check the preview, and click Publish."
+        "q": "How does the stadium floodlight lighting maintain high contrast for club names on phone screens?",
+        "a": "The striker and stadium stands frame the outer edges, while the dark turf in the center ensures your club handle stays sharp inside the 1546 × 423 px mobile safe zone."
       },
       {
-        "q": "Is this EA FC 25 channel art free for monetized creators and esports teams?",
-        "a": "Yes! All designs on GamingBanner.com are 100% free with zero watermarks and full commercial usage rights for monetized YouTube channels, Twitch streams, and pro FIFA / FC esports teams."
+        "q": "Are EA FC creators allowed to use this channel header for monetized YouTube and Twitch broadcasts?",
+        "a": "Yes. All graphics are custom digital concept paintings, granting 100% royalty-free commercial rights for monetized YouTube channels, Twitch streams, and esports teams."
       }
     ]
   },
@@ -3085,24 +3085,813 @@ export const TEMPLATES = [
     "fontTip": "Use Orbitron or athletic sans for clean soccer broadcast typography.",
     "faqs": [
       {
-        "q": "What resolution does this download in?",
-        "a": "Full HD 1920 x 1080 px for Twitch."
+        "q": "How do I display our EA Sports FC 25 FUT Champions 20-game schedule?",
+        "a": "Type your Weekend League hours (e.g. 'FUT CHAMPIONS 20 GAMES • SATURDAY 6PM EST') in the emerald pitch text field."
       },
       {
-        "q": "Can I use it on Kick and YouTube?",
-        "a": "Yes, standard 16:9 offline dimensions work across platforms."
+        "q": "Can I use this soccer stadium floodlight graphic on Kick and YouTube Gaming?",
+        "a": "Yes! Standard 1920 × 1080 px dimensions provide clean, uncropped display across all modern live streaming platforms."
       },
       {
-        "q": "Can I use it for BRB screens?",
-        "a": "Yes, add directly into OBS as an Image source."
+        "q": "How do athletic sans-serif fonts elevate soccer broadcast branding?",
+        "a": "Clean athletic letterforms with deep green pitch shadows give your stream the polished look of professional television sports coverage."
       },
       {
-        "q": "How to edit stream hours?",
-        "a": "Type your schedule in the subtitle field and download."
+        "q": "How quickly can I edit this banner when Division Rivals rewards drop?",
+        "a": "Open the editor on GamingBanner, update your reward opening hours, and download an updated 1080p PNG in seconds."
       },
       {
-        "q": "Is it commercial safe?",
-        "a": "Yes, 100% royalty-free for commercial use."
+        "q": "Is this FC 25 stream graphic free for monetized Twitch and YouTube partners?",
+        "a": "Yes, 100% free with zero watermarks and full commercial rights for content creators and esports competitors."
+      }
+    ]
+  },
+  {
+    "id": "discord-cyber-red",
+    "game": "discord",
+    "bannerSlug": "cyber-red-mech-banner",
+    "name": "Discord Cyber Red Mech",
+    "gameName": "Discord",
+    "platform": "discord",
+    "category": "Mech",
+    "sub": "CLAN RECRUITMENT • Level 3 Boosted",
+    "legacyIds": [
+      "discord-cyber-red",
+      "discord-animated-cyber"
+    ],
+    "image": "/discord_cyber_red.jpg",
+    "themeColor": "#ef4444",
+    "glow": "shadow-[#ef4444]/10 border-[#ef4444]/30",
+    "gamertag": "CYBER_CORP",
+    "textStyle": {
+      "fontFamily": "var(--font-gamertag)",
+      "fontStyle": "italic",
+      "color": "#fca5a5",
+      "textShadow": "0 0 10px #ef4444, 0 0 20px #991b1b, 2px 2px 0px #000000",
+      "letterSpacing": "0.1em"
+    },
+    "dimensions": {
+      "width": 960,
+      "height": 540,
+      "safeWidth": 960,
+      "safeHeight": 540
+    },
+    "description": "Design a high-tech Cyber Red Mech banner for your Discord server header (960×540 px) or Nitro profile. Features glowing crimson circuit traces and armored mecha aesthetic with clean clan announcement typography.",
+    "story": "Designed for hardcore gaming syndicates, competitive scrim servers, and tech communities, this crimson mech header features angular armored plating and laser circuitry. The dark carbon central viewport leaves ample space for guild rules, member rankings, and custom server invite tags.",
+    "artAnalysis": "Crimson mechanical plating lines the upper and lower edges, leaving a high-contrast charcoal center. The upper 20% margin is darkened to ensure Discord server name titles and dropdown pills remain crisp and legible.",
+    "palette": [
+      {
+        "name": "Crimson Laser",
+        "hex": "#ef4444",
+        "desc": "Core Mech Glow & Tag"
+      },
+      {
+        "name": "Armored Silver",
+        "hex": "#fca5a5",
+        "desc": "Gamertag Lettering"
+      },
+      {
+        "name": "Obsidian Steel",
+        "hex": "#0f172a",
+        "desc": "Background Carbon Plate"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#ffffff",
+        "desc": "Server Tier Callout"
+      }
+    ],
+    "fontTip": "Use Orbitron Bold Italic or technical sans typefaces with wide letter-spacing (0.12em) and dual-layer crimson drop shadows to match the robotic mecha styling.",
+    "faqs": [
+      {
+        "q": "What Discord server boost level is required to upload this Server Banner?",
+        "a": "To upload static server banners (960 × 540 px), your Discord guild requires Server Boost Level 2 (7 boosts). Boost Level 3 unlocks animated GIF banner uploads."
+      },
+      {
+        "q": "Can I use this Cyber Red Mech banner as a Discord Nitro user profile header?",
+        "a": "Yes! While formatted at 960 × 540 px for server headers, this graphic scales down seamlessly to 600 × 240 px for Discord Nitro personal profile cards."
+      },
+      {
+        "q": "How do I prevent the Discord server title dropdown from covering my clan name?",
+        "a": "Discord overlays your guild name across the top 20% of the banner. Our customizer automatically centers your clan tag within the lower 80% safe zone."
+      },
+      {
+        "q": "What is the maximum file size Discord accepts for banner uploads?",
+        "a": "Discord allows banner files up to 10.0 MB. Our generator exports an optimized, lossless PNG file averaging under 1.2 MB for fast community loading."
+      },
+      {
+        "q": "Can I customize the secondary subtitle for scrim schedules or invite links?",
+        "a": "Yes! Enter your custom Discord vanity URL, community motto, or weekly tournament schedule directly into the subtitle field before exporting."
+      }
+    ]
+  },
+  {
+    "id": "discord-gold-tactical",
+    "game": "discord",
+    "bannerSlug": "gold-tactical-grid-banner",
+    "name": "Discord Gold Tactical Grid",
+    "gameName": "Discord",
+    "platform": "discord",
+    "category": "Military",
+    "sub": "ELITE ESPORTS • Scrim Hub",
+    "legacyIds": [
+      "discord-gold-tactical"
+    ],
+    "image": "/discord_gold_tactical.jpg",
+    "themeColor": "#fbbf24",
+    "glow": "shadow-[#fbbf24]/10 border-[#fbbf24]/30",
+    "gamertag": "TACTICAL_ELITE",
+    "textStyle": {
+      "fontFamily": "Impact, sans-serif",
+      "color": "#fef08a",
+      "textShadow": "3px 3px 0px #000, -1px -1px 0px #78350f, 0 0 15px #fbbf24",
+      "letterSpacing": "0.08em"
+    },
+    "dimensions": {
+      "width": 960,
+      "height": 540,
+      "safeWidth": 960,
+      "safeHeight": 540
+    },
+    "description": "Create an authoritative Gold Tactical Grid banner for Discord esports servers (960×540 px). Features military telemetry lines, championship gold accents, and bold stencil lettering.",
+    "story": "Engineered for competitive FPS clans and tournament organizers across CS2, Warzone, and Apex Legends. This gold-accented tactical grid background creates an elite, professional esports atmosphere for your community lounge.",
+    "artAnalysis": "A brushed military titanium mesh with gold telemetry crosshairs and gridlines framing the central community title. Heavy drop-shadow outlines guarantee high legibility over dark Discord UI themes.",
+    "palette": [
+      {
+        "name": "Championship Gold",
+        "hex": "#fbbf24",
+        "desc": "Primary Clan Text"
+      },
+      {
+        "name": "Desert Amber",
+        "hex": "#d97706",
+        "desc": "Border Grid Accents"
+      },
+      {
+        "name": "Gunmetal Slate",
+        "hex": "#1e293b",
+        "desc": "Base Armor Texture"
+      },
+      {
+        "name": "Bright Yellow",
+        "hex": "#fef08a",
+        "desc": "Highlight Fill"
+      }
+    ],
+    "fontTip": "Use Impact or condensed industrial typefaces with tight letter-spacing and dark amber outlines to give your esports clan an aggressive, disciplined look.",
+    "faqs": [
+      {
+        "q": "Is this Gold Tactical Grid banner optimized for both desktop and mobile Discord apps?",
+        "a": "Yes. The 960 × 540 px 16:9 aspect ratio maintains crisp proportions when viewed on Discord desktop client sidebars and the mobile app server overview."
+      },
+      {
+        "q": "How do I upload this banner to my community Discord server?",
+        "a": "Navigate to Server Settings > Overview > Server Banner Background > Upload Image, select the downloaded 960x540 PNG file, and click Save Changes."
+      },
+      {
+        "q": "Can I add our tournament schedule or scrim prize pool to the text?",
+        "a": "Yes! Use the secondary subtitle box to write your weekly scrim days (e.g., 'DAILY SCRIMS 8PM • $500 WEEKLY CUPS') or clan recruitment requirements."
+      },
+      {
+        "q": "Does this template work as a Discord Invite Splash screen?",
+        "a": "Yes! The high-resolution 16:9 composition looks stunning as a Server Invite Splash image for Level 1 boosted Discord communities."
+      },
+      {
+        "q": "Is this tactical graphic watermark-free for public community servers?",
+        "a": "100% watermark-free with full commercial rights for esports organizations, community hubs, and verified partnered Discord guilds."
+      }
+    ]
+  },
+  {
+    "id": "discord-liquid-ice",
+    "game": "discord",
+    "bannerSlug": "liquid-ice-banner",
+    "name": "Discord Liquid Ice",
+    "gameName": "Discord",
+    "platform": "discord",
+    "category": "Tactical",
+    "sub": "CHILL LOUNGE • 24/7 Voice",
+    "legacyIds": [
+      "discord-liquid-ice",
+      "discord-animated-frost",
+      "discord-frantox-blue"
+    ],
+    "image": "/discord_liquid_ice.jpg",
+    "themeColor": "#0ea5e9",
+    "glow": "shadow-[#0ea5e9]/10 border-[#0ea5e9]/30",
+    "gamertag": "FROST_SYNDICATE",
+    "textStyle": {
+      "fontFamily": "var(--font-gamertag)",
+      "color": "#ffffff",
+      "textShadow": "0 0 8px #0ea5e9, 0 0 16px #0369a1, 3px 3px 0px #0f172a",
+      "letterSpacing": "0.15em"
+    },
+    "dimensions": {
+      "width": 960,
+      "height": 540,
+      "safeWidth": 960,
+      "safeHeight": 540
+    },
+    "description": "Design a sub-zero Liquid Ice Discord banner (960×540 px). Features crystalline frost shards, glacial cyan ambient glow, and high-contrast glowing typography for community gaming servers.",
+    "story": "Built for gaming lounges, Minecraft SMP communities, and variety streaming hubs. The crystalline ice textures and refreshing glacial cyan lighting create a cool, inviting aesthetic for active voice channels and community hangouts.",
+    "artAnalysis": "Fractal ice crystal shards radiate outward from the borders toward a serene deep navy center, providing a pristine canvas for glowing white and cyan gamertags.",
+    "palette": [
+      {
+        "name": "Glacial Cyan",
+        "hex": "#0ea5e9",
+        "desc": "Ice Glow Aura"
+      },
+      {
+        "name": "Arctic Blue",
+        "hex": "#38bdf8",
+        "desc": "Crystalline Shards"
+      },
+      {
+        "name": "Deep Abyssal",
+        "hex": "#0c4a6e",
+        "desc": "Shadow Base"
+      },
+      {
+        "name": "Pure Snow",
+        "hex": "#ffffff",
+        "desc": "Primary Text"
+      }
+    ],
+    "fontTip": "Use Orbitron or modern geometric sans fonts with layered cyan text glows (0 0 16px #0ea5e9) to capture the frozen luminescence of arctic glaciers.",
+    "faqs": [
+      {
+        "q": "What makes this Liquid Ice banner ideal for community voice servers?",
+        "a": "The calming deep blue and glowing cyan color scheme creates a relaxed, welcoming atmosphere that stands out in Discord server list sidebars."
+      },
+      {
+        "q": "How does this graphic look when downscaled inside Discord profile popouts?",
+        "a": "The large, high-contrast central typography remains razor-sharp even when downscaled inside smaller Discord user profile modal cards."
+      },
+      {
+        "q": "Can I customize the font color to match my Discord server role colors?",
+        "a": "Yes! Our canvas customizer allows you to pick any custom hex color or neon glow preset to align with your server's VIP role palette."
+      },
+      {
+        "q": "Is the exported PNG file compressed?",
+        "a": "No, all downloads from GamingBanner are exported as lossless, high-definition 24-bit PNG files without loss of gradient quality."
+      },
+      {
+        "q": "Can I use this banner for an anime or music Discord server?",
+        "a": "Absolutely! The liquid ice crystal aesthetic pairs perfectly with chill lo-fi study servers, anime discussion hubs, and gaming guilds."
+      }
+    ]
+  },
+  {
+    "id": "discord-synth-clouds",
+    "game": "discord",
+    "bannerSlug": "synth-horizon-banner",
+    "name": "Discord Synth Horizon",
+    "gameName": "Discord",
+    "platform": "discord",
+    "category": "Synthwave",
+    "sub": "RETRO LOUNGE • Lo-Fi & Beats",
+    "legacyIds": [
+      "discord-synth-clouds"
+    ],
+    "image": "/discord_synth_clouds.jpg",
+    "themeColor": "#ec4899",
+    "glow": "shadow-[#ec4899]/10 border-[#ec4899]/30",
+    "gamertag": "SYNTH_HORIZON",
+    "textStyle": {
+      "fontFamily": "var(--font-sans)",
+      "fontWeight": "900",
+      "color": "#fbcfe8",
+      "textShadow": "0 0 12px #ec4899, 0 0 24px #4a044e, 3px 3px 0px #000",
+      "letterSpacing": "0.1em"
+    },
+    "dimensions": {
+      "width": 960,
+      "height": 540,
+      "safeWidth": 960,
+      "safeHeight": 540
+    },
+    "description": "Vibrant Synthwave Horizon Discord banner (960×540 px) featuring retro neon sunset clouds, wireframe perspective grid, and 80s outrun typography.",
+    "story": "Inspired by 1980s synthwave aesthetics and retro outrun culture. Designed for music producers, retro gamers, and night owl community servers looking for an electric neon sunset aesthetic.",
+    "artAnalysis": "A warm magenta and purple sunset gradient across stylized neon cloudscapes, anchored by an ambient wireframe horizon grid for retro visual depth.",
+    "palette": [
+      {
+        "name": "Neon Magenta",
+        "hex": "#ec4899",
+        "desc": "Sunset Horizon"
+      },
+      {
+        "name": "Soft Pink",
+        "hex": "#fbcfe8",
+        "desc": "Title Text Fill"
+      },
+      {
+        "name": "Midnight Violet",
+        "hex": "#4a044e",
+        "desc": "Deep Contrast Shadow"
+      },
+      {
+        "name": "Laser Orange",
+        "hex": "#f97316",
+        "desc": "Sunset Rim Glow"
+      }
+    ],
+    "fontTip": "Use heavy sans-serif fonts (like Inter Black or Space Grotesk) with dual magenta (#ec4899) and deep violet drop shadows for that classic retro outrun look.",
+    "faqs": [
+      {
+        "q": "Why is the Synthwave aesthetic so popular for Discord community headers?",
+        "a": "The vibrant contrast between neon magenta and dark midnight violet provides eye-catching color pop that looks spectacular in dark-mode Discord clients."
+      },
+      {
+        "q": "Can I add our community radio bot name or lo-fi stream link to the text?",
+        "a": "Yes! Use the secondary text line to display your 24/7 music bot command (e.g. '/play lofi chill') or community member count."
+      },
+      {
+        "q": "What dimensions are used when uploading to Discord Server Banner settings?",
+        "a": "Upload at 960 × 540 pixels. Discord will automatically fit the image to the 16:9 server banner container without unwanted cropping."
+      },
+      {
+        "q": "Will this banner look clear on high-DPI 4K monitors?",
+        "a": "Yes. Our canvas renders with high pixel density, ensuring clean vector outlines and crisp text rendering on Retina and 4K screens."
+      },
+      {
+        "q": "Is there any cost or watermark on this Discord graphic?",
+        "a": "Zero cost and zero watermarks. You receive a 100% royalty-free PNG file for personal, server, and commercial usage."
+      }
+    ]
+  },
+  {
+    "id": "discord-dark-anime",
+    "game": "discord",
+    "bannerSlug": "dark-crimson-mist-banner",
+    "name": "Discord Dark Crimson Mist",
+    "gameName": "Discord",
+    "platform": "discord",
+    "category": "Anime",
+    "sub": "SHADOW GUILD • Anime & Gaming",
+    "legacyIds": [
+      "discord-dark-anime",
+      "discord-purple-shorts",
+      "discord-phase-freak",
+      "discord-crimson-slayer"
+    ],
+    "image": "/discord_dark_anime.jpg",
+    "themeColor": "#ef4444",
+    "glow": "shadow-[#ef4444]/10 border-[#ef4444]/30",
+    "gamertag": "SHADOW_REIGN",
+    "textStyle": {
+      "fontFamily": "var(--font-gamertag)",
+      "fontStyle": "italic",
+      "color": "#ef4444",
+      "textShadow": "0 0 15px #ef4444, 3px 3px 0px #000000",
+      "letterSpacing": "0.12em"
+    },
+    "dimensions": {
+      "width": 960,
+      "height": 540,
+      "safeWidth": 960,
+      "safeHeight": 540
+    },
+    "description": "Create a Dark Crimson Mist Discord banner (960×540 px) for anime fandoms, dark fantasy RPG guilds, and shadow gaming syndicates.",
+    "story": "Crafted for dark fantasy clans, Genshin Impact travelers, Elden Ring guilds, and anime discussion servers. Features swirling crimson smoke plumes and ominous obsidian mist for an intense, mysterious aura.",
+    "artAnalysis": "Deep obsidian black backdrop with organic swirling crimson smoke trails framing the central gamertag area. Strong edge contrast ensures text remains readable even at low brightness.",
+    "palette": [
+      {
+        "name": "Blood Crimson",
+        "hex": "#ef4444",
+        "desc": "Mist Aura & Handle"
+      },
+      {
+        "name": "Obsidian Core",
+        "hex": "#09090b",
+        "desc": "Deep Background"
+      },
+      {
+        "name": "Smoky Charcoal",
+        "hex": "#27272a",
+        "desc": "Atmospheric Layers"
+      },
+      {
+        "name": "Silver Ash",
+        "hex": "#e4e4e7",
+        "desc": "Subtitle Details"
+      }
+    ],
+    "fontTip": "Use stylized italicized gaming fonts with wide tracking and deep black drop shadows to give your dark fantasy guild an imposing presence.",
+    "faqs": [
+      {
+        "q": "What types of Discord servers is this Dark Crimson Mist template best for?",
+        "a": "It is ideal for anime guilds, dark fantasy RPG communities (Elden Ring, Dark Souls), competitive scrim clans, and esports syndicates."
+      },
+      {
+        "q": "How does the dark theme enhance server readability in Discord?",
+        "a": "The deep black-and-crimson contrast integrates natively with Discord's dark UI mode, preventing harsh glare while emphasizing your guild name."
+      },
+      {
+        "q": "Can I use this as a Discord Nitro animated profile backdrop?",
+        "a": "Yes, you can customize this graphic and set it as your Nitro profile banner card (600 × 240 px) or upload it to your server."
+      },
+      {
+        "q": "How do I format our guild rank or level on the banner?",
+        "a": "Enter your guild level or member requirements in the secondary text input (e.g. 'LEVEL 100 GUILD • RECRUITING TOP 500')."
+      },
+      {
+        "q": "Are commercial rights included for partnered Discord servers?",
+        "a": "Yes! All banner downloads come with full commercial rights for community monetization and official server events."
+      }
+    ]
+  },
+  {
+    "id": "esports-pro",
+    "game": "twitter",
+    "bannerSlug": "tactical-reticle-pro-header",
+    "name": "Twitter Tactical Reticle Pro",
+    "gameName": "Twitter / X",
+    "platform": "twitter",
+    "category": "Esports",
+    "sub": "PRO ESPORTS • CS2 & Valorant Roster",
+    "legacyIds": [
+      "esports-pro",
+      "twitter-esports-pro"
+    ],
+    "image": "/banner_cs2_v3.jpg",
+    "themeColor": "#00d4ff",
+    "glow": "shadow-[#00d4ff]/10 border-[#00d4ff]/30",
+    "gamertag": "PRO_AIM_ACADEMY",
+    "textStyle": {
+      "fontFamily": "var(--font-gamertag)",
+      "fontStyle": "italic",
+      "color": "#00d4ff",
+      "textShadow": "0 0 10px #00d4ff, 0 0 20px #005f73, 2px 2px 0px #000000",
+      "letterSpacing": "0.15em"
+    },
+    "dimensions": {
+      "width": 1500,
+      "height": 500,
+      "safeWidth": 1200,
+      "safeHeight": 500
+    },
+    "description": "Design a professional Tactical Reticle Pro gaming header for Twitter/X (1500×500 px). Features telemetry crosshairs, cyan energy glow, and avatar safe-zone alignment for competitive esports athletes.",
+    "story": "Designed for competitive FPS creators, pro tournament rosters, and esports organizations across CS2, Valorant, and Warzone. Features crisp telemetry targeting reticles and right-aligned text zones to prevent Twitter avatar overlap.",
+    "artAnalysis": "A 3:1 panoramic composition with tactical telemetry grids on the right wing, leaving the bottom-left area uncluttered so your circular Twitter profile photo does not block your name or sponsors.",
+    "palette": [
+      {
+        "name": "Telemetry Cyan",
+        "hex": "#00d4ff",
+        "desc": "Reticle & Handle Glow"
+      },
+      {
+        "name": "Tactical Cobalt",
+        "hex": "#0284c7",
+        "desc": "Outer Gridlines"
+      },
+      {
+        "name": "Charcoal Mesh",
+        "hex": "#0f172a",
+        "desc": "Carbon Background"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#ffffff",
+        "desc": "Roster Callouts"
+      }
+    ],
+    "fontTip": "Use Orbitron Bold Italic with wide letter-spacing. Keep text shifted toward the center-right to avoid the circular profile photo.",
+    "faqs": [
+      {
+        "q": "What is the recommended Twitter / X header dimension for gamers?",
+        "a": "The standard Twitter/X header size is 1500 × 500 pixels (3:1 aspect ratio). Our generator outputs exact 1500x500 PNG files ready for instant upload."
+      },
+      {
+        "q": "How does this header prevent the circular profile photo from blocking my text?",
+        "a": "Twitter overlays your circular avatar on the bottom-left corner. This template positions all primary gamertag text in the center and right-hand safe zones."
+      },
+      {
+        "q": "Can I add team sponsors or social media tags to this Twitter banner?",
+        "a": "Yes! Use the secondary subtitle field to list your team sponsors, Twitch handle, or YouTube channel link with crisp contrast."
+      },
+      {
+        "q": "Why should I export in PNG instead of JPG for Twitter headers?",
+        "a": "Twitter applies aggressive compression to JPG uploads, causing fuzziness around glowing text. Uncompressed PNG files preserve sharp vector lines."
+      },
+      {
+        "q": "Is this Twitter header free for verified gaming creators and esports teams?",
+        "a": "Yes, 100% free with no watermarks and full commercial rights for individual creators and professional esports organizations."
+      }
+    ]
+  },
+  {
+    "id": "stream-schedule",
+    "game": "twitter",
+    "bannerSlug": "stream-schedule-minimal-header",
+    "name": "Twitter Stream Schedule Minimal",
+    "gameName": "Twitter / X",
+    "platform": "twitter",
+    "category": "Minimalist",
+    "sub": "STREAMING LIVE • Mon / Wed / Fri 7PM EST",
+    "legacyIds": [
+      "stream-schedule",
+      "twitter-stream-schedule"
+    ],
+    "image": "/banner_valorant_v3.jpg",
+    "themeColor": "#8b5cf6",
+    "glow": "shadow-[#8b5cf6]/10 border-[#8b5cf6]/30",
+    "gamertag": "TWITCH_STREAMER",
+    "textStyle": {
+      "fontFamily": "var(--font-sans)",
+      "fontWeight": "900",
+      "color": "#ffffff",
+      "textShadow": "0 0 10px #c084fc, 0 0 20px #8b5cf6, 0 0 30px #6d28d9",
+      "letterSpacing": "0.08em"
+    },
+    "dimensions": {
+      "width": 1500,
+      "height": 500,
+      "safeWidth": 1200,
+      "safeHeight": 500
+    },
+    "description": "Clean, modern Stream Schedule Twitter/X header (1500×500 px). Features a sleek right-side broadcast schedule grid and electric purple neon accents for variety streamers.",
+    "story": "Built for variety streamers on Twitch, Kick, and YouTube. Displays your broadcast schedule and social media handles in clean, high-contrast typography that drives profile visitors directly to your live streams.",
+    "artAnalysis": "A minimalist deep navy gradient with a glowing vertical divider separating your main creator brand on the left from your weekly streaming timetable on the right.",
+    "palette": [
+      {
+        "name": "Neon Violet",
+        "hex": "#8b5cf6",
+        "desc": "Accent Glow & Border"
+      },
+      {
+        "name": "Laser Lavender",
+        "hex": "#c084fc",
+        "desc": "Text Halo"
+      },
+      {
+        "name": "Midnight Indigo",
+        "hex": "#1e1b4b",
+        "desc": "Background Base"
+      },
+      {
+        "name": "Crisp White",
+        "hex": "#ffffff",
+        "desc": "Schedule Hours"
+      }
+    ],
+    "fontTip": "Use Inter Black or Space Grotesk for maximum legibility on mobile Twitter feeds where users scroll quickly.",
+    "faqs": [
+      {
+        "q": "How does displaying my stream schedule on Twitter increase live viewership?",
+        "a": "When followers visit your Twitter profile, having your live broadcast days clearly displayed in the header informs them exactly when to tune in."
+      },
+      {
+        "q": "How do I update my streaming hours if my weekly schedule changes?",
+        "a": "Simply open this template in our free editor, update the timetable text, and download an updated 1500x500 PNG in seconds."
+      },
+      {
+        "q": "Does this template fit both mobile and desktop Twitter layouts?",
+        "a": "Yes. All text elements are centered within the 1200 × 400 px safe area, ensuring nothing gets cut off by mobile UI navigation bars."
+      },
+      {
+        "q": "Can I add my Twitch, Kick, and Discord links to the banner?",
+        "a": "Yes! Use the subtitle input to write your social handles (e.g. 'TWITCH.TV/NAME • DISCORD.GG/COMMUNITY') with clean spacing."
+      },
+      {
+        "q": "Is there any watermark on the exported Twitter header?",
+        "a": "No. All headers exported from GamingBanner are 100% watermark-free and free for personal and commercial branding."
+      }
+    ]
+  },
+  {
+    "id": "clan-tag",
+    "game": "twitter",
+    "bannerSlug": "clan-roster-crimson-header",
+    "name": "Twitter Clan Roster Crimson",
+    "gameName": "Twitter / X",
+    "platform": "twitter",
+    "category": "Esports",
+    "sub": "OFFICIAL ROSTER • Top 10 Scrims",
+    "legacyIds": [
+      "clan-tag",
+      "twitter-clan-tag"
+    ],
+    "image": "/banner_cod_v3.jpg",
+    "themeColor": "#ef4444",
+    "glow": "shadow-[#ef4444]/10 border-[#ef4444]/30",
+    "gamertag": "CRIMSON_SQUAD",
+    "textStyle": {
+      "fontFamily": "Impact, sans-serif",
+      "color": "#fca5a5",
+      "textShadow": "3px 3px 0px #000, -2px -2px 0px #7f1d1d, 0 0 12px #ef4444",
+      "letterSpacing": "0.06em"
+    },
+    "dimensions": {
+      "width": 1500,
+      "height": 500,
+      "safeWidth": 1200,
+      "safeHeight": 500
+    },
+    "description": "Aggressive Clan Roster Crimson Twitter/X banner (1500×500 px) featuring battle-hardened military carbon textures, crimson speed streaks, and bold esports lettering.",
+    "story": "Designed for competitive Warzone, Call of Duty, and Apex Legends clans. The crimson speed flares and heavy military stencil font project dominance and teamwork across social media.",
+    "artAnalysis": "Aggressive diagonal crimson energy streaks cutting across a textured carbon-fiber plate, creating strong forward momentum while framing team roster details on the right.",
+    "palette": [
+      {
+        "name": "Blood Red",
+        "hex": "#ef4444",
+        "desc": "Speed Streaks & Glow"
+      },
+      {
+        "name": "Crimson Silver",
+        "hex": "#fca5a5",
+        "desc": "Main Handle Fill"
+      },
+      {
+        "name": "Dark Carbon",
+        "hex": "#1f1015",
+        "desc": "Armor Texture"
+      },
+      {
+        "name": "Deep Maroon",
+        "hex": "#7f1d1d",
+        "desc": "Outline Shading"
+      }
+    ],
+    "fontTip": "Use Impact or heavy military sans typefaces with deep black drop shadows to give your team roster a rugged, championship-ready appearance.",
+    "faqs": [
+      {
+        "q": "What makes this Crimson Roster template ideal for competitive clan announcements?",
+        "a": "The high-energy crimson streaks and heavy industrial typography create an imposing, professional look for team recruitment announcements and match results."
+      },
+      {
+        "q": "How do I upload and align this cover on the Twitter / X web dashboard?",
+        "a": "Go to your Profile > Edit profile > tap the camera icon on your header, select the downloaded 1500x500 PNG file, and click Save."
+      },
+      {
+        "q": "Will the diagonal red streaks interfere with our clan tag text?",
+        "a": "No. The text layers include multi-layered dark outlines (3px solid drop shadow) that keep letters razor-sharp against textured backgrounds."
+      },
+      {
+        "q": "Can I use this header for Discord server banners as well?",
+        "a": "While designed at 1500 × 500 px for Twitter, the 3:1 ratio also works cleanly for Discord Nitro user profile cards."
+      },
+      {
+        "q": "Is this template free for tournament rosters and gaming organizations?",
+        "a": "Yes, 100% royalty-free with full commercial rights for esports organizations, streamers, and tournament players."
+      }
+    ]
+  },
+  {
+    "id": "neon-glow",
+    "game": "twitter",
+    "bannerSlug": "cyberpunk-neon-kanji-header",
+    "name": "Twitter Cyberpunk Neon Kanji",
+    "gameName": "Twitter / X",
+    "platform": "twitter",
+    "category": "Neon",
+    "sub": "NIGHT CITY • Netrunner 2077",
+    "legacyIds": [
+      "neon-glow",
+      "twitter-neon-glow"
+    ],
+    "image": "/banner_cyberpunk_v3.jpg",
+    "themeColor": "#facc15",
+    "glow": "shadow-[#facc15]/10 border-[#facc15]/30",
+    "gamertag": "CYBER_GHOST",
+    "textStyle": {
+      "fontFamily": "Impact, sans-serif",
+      "color": "#fef08a",
+      "textShadow": "3px 3px 0px #000000, -3px -3px 0px #000000, 0 0 15px #facc15",
+      "letterSpacing": "0.1em"
+    },
+    "dimensions": {
+      "width": 1500,
+      "height": 500,
+      "safeWidth": 1200,
+      "safeHeight": 500
+    },
+    "description": "Futuristic Cyberpunk Neon Twitter/X header (1500×500 px). Features electric yellow cyberware circuits, cyan laser flares, and high-voltage Night City atmosphere.",
+    "story": "Inspired by Cyberpunk 2077, anime netrunners, and futuristic sci-fi cityscapes. Designed for technology streamers, FPS gamers, and cyber aesthetic creators looking to make a bold social media impression.",
+    "artAnalysis": "High-contrast electric cyber yellow (#facc15) and laser cyan highlights illuminating a dark obsidian metropolis background, providing vibrant edge glow around your gamertag.",
+    "palette": [
+      {
+        "name": "Cyber Yellow",
+        "hex": "#facc15",
+        "desc": "Night City Glow"
+      },
+      {
+        "name": "Neon Cyan",
+        "hex": "#00d4ff",
+        "desc": "Circuit Accents"
+      },
+      {
+        "name": "Obsidian Black",
+        "hex": "#09090b",
+        "desc": "Metropolis Backdrop"
+      },
+      {
+        "name": "Laser Lemon",
+        "hex": "#fef08a",
+        "desc": "Text Fill Highlight"
+      }
+    ],
+    "fontTip": "Use Impact or Orbitron Bold with electric yellow outer glows (0 0 15px #facc15) to simulate real neon signage against dark city shadows.",
+    "faqs": [
+      {
+        "q": "Why is high-voltage cyber yellow so effective for Twitter header branding?",
+        "a": "Electric yellow is the most visible color on dark social media feeds, creating instant visual contrast that grabs user attention immediately."
+      },
+      {
+        "q": "How does the canvas editor handle safe zones for Twitter mobile apps?",
+        "a": "Our editor leaves 60px of vertical buffer on top and bottom, ensuring your text remains fully visible even when the Twitter mobile app crops edges."
+      },
+      {
+        "q": "Can I customize the subtitle text with my streaming platform links?",
+        "a": "Yes! Write your Twitch or Kick handle in the subtitle field (e.g. 'LIVE EVERY NIGHT AT 9PM • KICK.COM/NAME') with high-contrast text."
+      },
+      {
+        "q": "Does this template support special characters and gaming clan tags?",
+        "a": "Yes! You can include brackets, numbers, and special characters (e.g. '[CYBER] GHOST_99') in both the gamertag and subtitle boxes."
+      },
+      {
+        "q": "Are there any hidden fees or subscriptions to download this Twitter header?",
+        "a": "Never. GamingBanner is 100% free with unlimited 4K PNG downloads and zero watermarks."
+      }
+    ]
+  },
+  {
+    "id": "glacial-frost",
+    "game": "twitter",
+    "bannerSlug": "glacial-frost-speed-header",
+    "name": "Twitter Glacial Frost Speed",
+    "gameName": "Twitter / X",
+    "platform": "twitter",
+    "category": "Tactical",
+    "sub": "SUB-ZERO • Apex Predator Grind",
+    "legacyIds": [
+      "glacial-frost",
+      "synth-sunset",
+      "acid-biohazard",
+      "dark-singularity"
+    ],
+    "image": "/banner_apex_v3.jpg",
+    "themeColor": "#06b6d4",
+    "glow": "shadow-[#06b6d4]/10 border-[#06b6d4]/30",
+    "gamertag": "ARCTIC_PREDATOR",
+    "textStyle": {
+      "fontFamily": "var(--font-gamertag)",
+      "fontStyle": "italic",
+      "color": "#e0f7fa",
+      "textShadow": "0 0 8px #06b6d4, 0 0 16px #0891b2, 3px 3px 0px #000",
+      "letterSpacing": "0.15em"
+    },
+    "dimensions": {
+      "width": 1500,
+      "height": 500,
+      "safeWidth": 1200,
+      "safeHeight": 500
+    },
+    "description": "Sub-zero Glacial Frost Speed Twitter/X header (1500×500 px) featuring icy crystal shards, arctic cyan telemetry lines, and velocity speed typography for competitive gamers.",
+    "story": "Engineered for high-tempo FPS athletes and Apex Legends predators. The arctic ice textures and speed telemetry lines evoke cold, calculated precision and high-tier competitive gameplay.",
+    "artAnalysis": "Glacial cyan crystal facets along the right flank with aerodynamic velocity lines drawing the viewer's eye toward your central gamer handle.",
+    "palette": [
+      {
+        "name": "Ice Cyan",
+        "hex": "#06b6d4",
+        "desc": "Glacial Glow"
+      },
+      {
+        "name": "Arctic Frost",
+        "hex": "#e0f7fa",
+        "desc": "Text Lettering"
+      },
+      {
+        "name": "Deep Navy",
+        "hex": "#031e2b",
+        "desc": "Frozen Base"
+      },
+      {
+        "name": "Deep Teal",
+        "hex": "#0891b2",
+        "desc": "Outer Aura"
+      }
+    ],
+    "fontTip": "Use Orbitron Italic or velocity-angled typography with frosty cyan glows (0 0 16px #0891b2) to reflect high-speed competitive reflexes.",
+    "faqs": [
+      {
+        "q": "What makes this Glacial Frost header stand out on Twitter / X profiles?",
+        "a": "The crisp sub-zero cyan glow provides a clean, premium look that looks exceptional on both OLED smartphones and desktop monitors."
+      },
+      {
+        "q": "How do I ensure my gamertag is not hidden by the Twitter profile picture?",
+        "a": "All text elements in this template are positioned in the center and right-hand sections, keeping them completely clear of the bottom-left avatar area."
+      },
+      {
+        "q": "Can I use this header for Apex Legends or Overwatch competitive profiles?",
+        "a": "Yes! Add your current competitive rank (e.g. 'TOP 500 PREDATOR • SEASON 22') in the subtitle field to showcase your skill tier."
+      },
+      {
+        "q": "How fast is the 1500x500 PNG download generated?",
+        "a": "Your customized banner renders locally in your browser and downloads instantly within 1 second—no waiting or server queues."
+      },
+      {
+        "q": "Is this graphic licensed for commercial esports and sponsored streams?",
+        "a": "Yes, 100% royalty-free with full commercial licensing rights for streamers, esports players, and content creators."
       }
     ]
   }
@@ -3133,71 +3922,5 @@ export function getTemplateByLegacyId(id) {
   const bySlug = TEMPLATES.find((t) => t.bannerSlug.toLowerCase() === cleanId);
   if (bySlug) return bySlug;
 
-  // 5. Common aliases / shorthand mappings
-  const aliasMap = {
-    "valorant": "valorant-protocol",
-    "minecraft": "minecraft-overworld-nether",
-    "fortnite": "fortnite-mega-city",
-    "cod": "cod-warzone",
-    "call-of-duty": "cod-warzone",
-    "warzone": "cod-warzone",
-    "gta": "gta-street",
-    "gtav": "gta-street",
-    "gta-v": "gta-street",
-    "apex": "apex-canyon",
-    "apex-legends": "apex-canyon",
-    "league": "league-rift",
-    "league-of-legends": "league-rift",
-    "lol": "league-rift",
-    "rocket-league": "rocket-league",
-    "pubg": "pubg-mobile",
-    "pubg-mobile": "pubg-mobile",
-    "coc": "clash-of-clans",
-    "clash-of-clans": "clash-of-clans",
-    "forza": "forza-horizon",
-    "forza-horizon": "forza-horizon",
-    "asphalt": "asphalt-9",
-    "asphalt-9": "asphalt-9",
-    "genshin": "genshin-impact",
-    "genshin-impact": "genshin-impact",
-    "roblox": "roblox-virtual",
-    "cyberpunk": "cyberpunk-2077",
-    "cyberpunk-2077": "cyberpunk-2077",
-    "elden-ring": "elden-ring",
-    "eldenring": "elden-ring",
-    "among-us": "among-us",
-    "amongus": "among-us",
-    "clash-royale": "clash-royale",
-    "clashroyale": "clash-royale",
-    "overwatch": "overwatch-2",
-    "overwatch-2": "overwatch-2",
-    "cs2": "cs2-tactical",
-    "counter-strike": "cs2-tactical",
-    "counter-strike-2": "cs2-tactical",
-    "fifa": "fifa-soccer",
-    "ea-sports-fc": "fifa-soccer",
-    "fc-25": "fifa-soccer"
-  };
-
-  const targetId = aliasMap[cleanId];
-  if (targetId) {
-    return TEMPLATES.find((t) => t.id === targetId);
-  }
-
   return undefined;
-}
-
-export function getAllTemplatePaths() {
-  return TEMPLATES.map((t) => ({
-    game: t.game,
-    banner: t.bannerSlug,
-  }));
-}
-
-export function getTemplatesByGame(game) {
-  return TEMPLATES.filter((t) => t.game === game);
-}
-
-export function getTemplatesByPlatform(platform) {
-  return TEMPLATES.filter((t) => t.platform === platform);
 }

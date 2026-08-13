@@ -441,7 +441,7 @@ export default function YouTubeBanners() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is the best size for a YouTube gaming banner in 2025?",
+        "name": "What is the recommended size and safe zone for a YouTube gaming banner?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "The official recommended size for a YouTube channel banner is 2560 x 1440 pixels (16:9 aspect ratio). To make sure your name and schedule never get cut off on phones, keep all text inside the central 1546 x 423 pixel safe zone."
@@ -506,7 +506,7 @@ export default function YouTubeBanners() {
           {/* Header Overview */}
           <div>
             <span className="text-xs font-bold font-data-mono text-primary-container uppercase tracking-widest bg-primary-container/10 border border-primary-container/20 px-3 py-1 rounded-full">
-              YouTube Channel Branding Guide 2025
+              YouTube Channel Branding Guide
             </span>
             <h2 className="text-2xl md:text-3xl font-extrabold text-on-background mt-4">
               How to Create the Perfect Gaming Banner for YouTube

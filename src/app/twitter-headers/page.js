@@ -11,14 +11,56 @@ export const metadata = {
 export default function TwitterHeaders() {
 
   const templates = [
-    { id: "esports-pro", name: "Tactical Reticle Pro", category: "Esports", desc: "Dark graphite layout with custom team tags and aiming reticles", style: { background: "radial-gradient(circle at 90% 50%, rgba(0, 212, 255, 0.18) 0%, transparent 60%), linear-gradient(135deg, #111827 0%, #030712 100%)", textShadow: "0 0 16px rgba(0, 212, 255, 0.6)" } },
-    { id: "stream-schedule", name: "Stream Schedule Minimal", category: "Minimalist", desc: "Clean right-side grid for stream schedule and social handles", style: { background: "radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.18) 0%, transparent 60%), linear-gradient(135deg, #1e1b4b 0%, #030712 100%)", borderRight: "4px solid rgba(139, 92, 246, 0.5)" } },
-    { id: "clan-tag", name: "Clan Roster Crimson", category: "Esports", desc: "Aggressive red speed streaks with military carbon mesh textures", style: { background: "radial-gradient(circle at 90% 50%, rgba(239, 68, 68, 0.2) 0%, transparent 60%), linear-gradient(135deg, #1f1015 0%, #090204 100%)" } },
-    { id: "neon-glow", name: "Cyberpunk Neon Kanji", category: "Neon", desc: "Vibrant electric cyan and magenta flares on obsidian slate", style: { background: "radial-gradient(circle at 100% 50%, rgba(0, 212, 255, 0.2) 0%, transparent 60%), linear-gradient(135deg, #09090b 0%, #1e1b4b 100%)", color: "#00d4ff" } },
-    { id: "glacial-frost", name: "Glacial Frost Speed", category: "Tactical", desc: "Sub-zero ice cyan crystals and clean geometric telemetry data", style: { background: "radial-gradient(circle at 90% 50%, rgba(6, 182, 212, 0.2) 0%, transparent 60%), linear-gradient(135deg, #031e2b 0%, #020b10 100%)" } },
-    { id: "synth-sunset", name: "Synthwave Sunset 80s", category: "Synthwave", desc: "Retro neon magenta grid horizon with high-contrast gamer tag", style: { background: "radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.25) 0%, transparent 60%), linear-gradient(135deg, #240a2b 0%, #060209 100%)" } },
-    { id: "acid-biohazard", name: "Toxic Emerald Hazard", category: "Neon", desc: "Vibrant radioactive emerald smoke trails and warning hazard bands", style: { background: "radial-gradient(circle at 85% 50%, rgba(16, 185, 129, 0.22) 0%, transparent 60%), linear-gradient(135deg, #052316 0%, #020c07 100%)" } },
-    { id: "dark-singularity", name: "Abyssal Singularity", category: "Dark", desc: "Deep space cosmic gravitational lens with glowing star dust", style: { background: "radial-gradient(circle at 75% 50%, rgba(99, 102, 241, 0.2) 0%, transparent 60%), linear-gradient(135deg, #0f0c29 0%, #030208 100%)" } },
+    {
+      id: "esports-pro",
+      game: "twitter",
+      bannerSlug: "tactical-reticle-pro-header",
+      name: "Tactical Reticle Pro",
+      category: "Esports",
+      desc: "Dark graphite layout with custom team tags and aiming reticles for competitive FPS athletes",
+      textStyle: { fontFamily: "var(--font-gamertag)", fontStyle: "italic", color: "#00d4ff", textShadow: "0 0 10px #00d4ff, 0 0 20px #005f73, 2px 2px 0px #000000", letterSpacing: "0.15em" },
+      style: { background: "radial-gradient(circle at 90% 50%, rgba(0, 212, 255, 0.18) 0%, transparent 60%), linear-gradient(135deg, #111827 0%, #030712 100%)" }
+    },
+    {
+      id: "stream-schedule",
+      game: "twitter",
+      bannerSlug: "stream-schedule-minimal-header",
+      name: "Stream Schedule Minimal",
+      category: "Minimalist",
+      desc: "Clean right-side grid for live stream schedule and creator social handles",
+      textStyle: { fontFamily: "var(--font-sans)", fontWeight: "900", color: "#ffffff", textShadow: "0 0 10px #c084fc, 0 0 20px #8b5cf6, 0 0 30px #6d28d9", letterSpacing: "0.08em" },
+      style: { background: "radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.18) 0%, transparent 60%), linear-gradient(135deg, #1e1b4b 0%, #030712 100%)" }
+    },
+    {
+      id: "clan-tag",
+      game: "twitter",
+      bannerSlug: "clan-roster-crimson-header",
+      name: "Clan Roster Crimson",
+      category: "Esports",
+      desc: "Aggressive red speed streaks with military carbon mesh textures for team scrim announcements",
+      textStyle: { fontFamily: "Impact, sans-serif", color: "#fca5a5", textShadow: "3px 3px 0px #000, -2px -2px 0px #7f1d1d, 0 0 12px #ef4444", letterSpacing: "0.06em" },
+      style: { background: "radial-gradient(circle at 90% 50%, rgba(239, 68, 68, 0.2) 0%, transparent 60%), linear-gradient(135deg, #1f1015 0%, #090204 100%)" }
+    },
+    {
+      id: "neon-glow",
+      game: "twitter",
+      bannerSlug: "cyberpunk-neon-kanji-header",
+      name: "Cyberpunk Neon Kanji",
+      category: "Neon",
+      desc: "Vibrant electric cyber yellow and cyan laser flares on dark obsidian metropolis slate",
+      textStyle: { fontFamily: "Impact, sans-serif", color: "#fef08a", textShadow: "3px 3px 0px #000000, -3px -3px 0px #000000, 0 0 15px #facc15", letterSpacing: "0.1em" },
+      style: { background: "radial-gradient(circle at 100% 50%, rgba(250, 204, 21, 0.2) 0%, transparent 60%), linear-gradient(135deg, #09090b 0%, #1e1b4b 100%)" }
+    },
+    {
+      id: "glacial-frost",
+      game: "twitter",
+      bannerSlug: "glacial-frost-speed-header",
+      name: "Glacial Frost Speed",
+      category: "Tactical",
+      desc: "Sub-zero ice cyan crystals and clean geometric telemetry data for high-speed gamers",
+      textStyle: { fontFamily: "var(--font-gamertag)", fontStyle: "italic", color: "#e0f7fa", textShadow: "0 0 8px #06b6d4, 0 0 16px #0891b2, 3px 3px 0px #000", letterSpacing: "0.15em" },
+      style: { background: "radial-gradient(circle at 90% 50%, rgba(6, 182, 212, 0.2) 0%, transparent 60%), linear-gradient(135deg, #031e2b 0%, #020b10 100%)" }
+    }
   ];
 
   const jsonLd = {

@@ -16,10 +16,7 @@ export default function sitemap() {
     "/about",
     "/contact",
     "/privacy",
-    "/privacy-policy",
     "/terms",
-    "/terms-of-service",
-    "/terms-and-conditions",
     "/disclaimer",
   ];
 

@@ -162,26 +162,40 @@ export async function generateMetadata({ params }) {
     const template = getTemplate(game, banner);
     if (template) {
       const isYouTube = template.platform === "youtube";
-      const title = isYouTube
-        ? `Free ${template.gameName} YouTube Banner 4K Maker (2560x1440) - ${template.name} | Gaming Banner`
-        : `Free ${template.gameName} Twitch Offline Banner 1080p - ${template.name} | Gaming Banner`;
-      const description = isYouTube
-        ? `Design your custom ${template.gameName} YouTube banner 4K (2560×1440 UHD). Free channel art maker with 1546×423 mobile safe zone calibration, 3D gamertag fonts, and instant PNG export without watermark.`
-        : `Create your custom ${template.gameName} Twitch offline screen (1920×1080 Full HD). Free stream schedule banner creator with custom fonts, colors, and OBS compatibility.`;
+      const isTwitch = template.platform === "twitch";
+      const isDiscord = template.platform === "discord";
+      const isTwitter = template.platform === "twitter";
+
+      let title = `Free ${template.name} 4K Maker | Gaming Banner`;
+      let description = template.description;
+
+      if (isYouTube) {
+        title = `Free ${template.gameName} YouTube Banner 4K Maker (2560x1440) - ${template.name} | Gaming Banner`;
+        description = `Design your custom ${template.gameName} YouTube banner 4K (2560×1440 UHD). Free channel art maker with 1546×423 mobile safe zone calibration, 3D gamertag fonts, and instant PNG export without watermark.`;
+      } else if (isTwitch) {
+        title = `Free ${template.gameName} Twitch Offline Banner 1080p - ${template.name} | Gaming Banner`;
+        description = `Create your custom ${template.gameName} Twitch offline screen (1920×1080 Full HD). Free stream schedule banner creator with custom fonts, colors, and OBS compatibility.`;
+      } else if (isDiscord) {
+        title = `Free Discord Server Banner Maker (960x540 & Nitro) - ${template.name} | Gaming Banner`;
+        description = `Design your custom Discord server banner (960×540 px) and Nitro profile header. 100% free with custom neon glowing gamertag fonts and instant PNG export.`;
+      } else if (isTwitter) {
+        title = `Free Twitter/X Gaming Header Maker (1500x500 3:1) - ${template.name} | Gaming Banner`;
+        description = `Create your custom Twitter/X esports header (1500×500 px). Free gaming profile cover maker with avatar safe-zone alignment, 3D fonts, and lossless PNG download.`;
+      }
 
       return {
         title,
         description,
         keywords: [
-          `${template.gameName} YouTube banner`,
-          `${template.gameName} banner 4K`,
           `${template.gameName} banner maker`,
-          `${template.gameName} channel art`,
-          `${template.gameName} banner size 2560x1440`,
-          `${template.gameName} safe zone banner`,
-          `free gaming banner maker no watermark`,
-          `${template.name}`
-        ],
+          `${template.name}`,
+          isYouTube ? `${template.gameName} YouTube banner 4K` : "",
+          isTwitch ? `${template.gameName} Twitch offline screen` : "",
+          isDiscord ? "Discord server banner 960x540" : "",
+          isTwitter ? "Twitter X gaming header 1500x500" : "",
+          "free gaming banner maker no watermark",
+          "esports channel art"
+        ].filter(Boolean),
         openGraph: {
           title,
           description,
@@ -207,8 +221,8 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: "Free Gaming Banner Maker (4K YouTube & Twitch Channel Art) | Gaming Banner",
-    description: "Create custom 4K gaming banners and Twitch offline screens for Valorant, Minecraft, Fortnite, Warzone, GTA V, and more. 100% free with no watermarks.",
+    title: "Free Gaming Banner Maker (4K YouTube, Twitch & Discord Channel Art) | Gaming Banner",
+    description: "Create custom 4K gaming banners, Twitch offline screens, Discord server headers, and Twitter covers. 100% free with no watermarks.",
   };
 }
 
@@ -234,6 +248,25 @@ export default async function CustomizePage({ params }) {
       notFound();
     }
 
+    const isYouTube = template.platform === "youtube";
+    const isTwitch = template.platform === "twitch";
+    const isDiscord = template.platform === "discord";
+    const isTwitter = template.platform === "twitter";
+
+    let hubUrl = "https://gamingbanner.com/youtube-banners";
+    let hubName = "YouTube Banners";
+
+    if (isTwitch) {
+      hubUrl = "https://gamingbanner.com/twitch-banners";
+      hubName = "Twitch Banners";
+    } else if (isDiscord) {
+      hubUrl = "https://gamingbanner.com/discord-banners";
+      hubName = "Discord Banners";
+    } else if (isTwitter) {
+      hubUrl = "https://gamingbanner.com/twitter-headers";
+      hubName = "Twitter Headers";
+    }
+
     const jsonLd = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -247,8 +280,8 @@ export default async function CustomizePage({ params }) {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "YouTube Banners",
-          "item": "https://gamingbanner.com/youtube-banners",
+          "name": hubName,
+          "item": hubUrl,
         },
         {
           "@type": "ListItem",
@@ -345,27 +378,33 @@ export default async function CustomizePage({ params }) {
                       }}
                     >
                       <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: template.themeColor || '#00d4ff' }} />
-                      {template.gameName} YouTube Banner
+                      {isYouTube && `${template.gameName} YouTube Banner`}
+                      {isTwitch && `${template.gameName} Twitch Offline Screen`}
+                      {isDiscord && `Discord Server & Nitro Banner`}
+                      {isTwitter && `Twitter / X Gaming Header`}
                     </span>
                     <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-surface-container border border-outline-variant/40 text-outline">
                       {template.category}
                     </span>
                     <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-surface-container border border-outline-variant/40 text-primary font-data-mono">
-                      4K UHD Banner
+                      {isYouTube && "4K UHD Banner"}
+                      {isTwitch && "1080p Stream Card"}
+                      {isDiscord && "Server & Nitro Art"}
+                      {isTwitter && "Header Cover Art"}
                     </span>
                   </div>
                   <h2 className="text-3xl md:text-5xl font-black text-on-background tracking-tight">
-                    About {template.name} Banner
+                    About {template.name}
                   </h2>
                 </div>
 
                 {/* Quick Specs Chips */}
                 <div className="flex flex-wrap items-center gap-2 text-xs">
                   <span className="px-3 py-1.5 rounded-xl bg-surface-container/80 border border-outline-variant/50 text-on-background font-data-mono flex items-center gap-1.5 shadow-sm">
-                    📐 <strong>2560 × 1440</strong> 4K UHD
+                    📐 <strong>{template.dimensions ? `${template.dimensions.width} × ${template.dimensions.height}` : "2560 × 1440"}</strong> {isYouTube ? "4K UHD" : isTwitch ? "Full HD" : "HD"}
                   </span>
                   <span className="px-3 py-1.5 rounded-xl bg-surface-container/80 border border-outline-variant/50 text-on-background font-data-mono flex items-center gap-1.5 shadow-sm">
-                    📱 <strong>1546 × 423</strong> Safe Area
+                    📱 <strong>{template.dimensions ? `${template.dimensions.safeWidth} × ${template.dimensions.safeHeight}` : "1546 × 423"}</strong> Safe Zone
                   </span>
                   <span className="px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold flex items-center gap-1.5 shadow-sm">
                     ⚡ 100% Free PNG
@@ -374,7 +413,7 @@ export default async function CustomizePage({ params }) {
               </div>
 
               <p className="text-sm md:text-base text-outline leading-relaxed max-w-4xl">
-                {template.description} Design your custom <strong>{template.gameName} banner 4K</strong> (2560×1440 UHD) with our free YouTube channel art maker. Fully calibrated to the official 1546 × 423 px safe zone for zero cropping on mobile phones, tablets, desktop monitors, and TV displays.
+                {template.description}
               </p>
             </div>
 

@@ -309,11 +309,11 @@ export default async function CustomizePage({ params }) {
 
           <div className="max-w-6xl mx-auto space-y-10 relative z-10">
             
-            {/* Page Header */}
+            {/* Page Header with High-Rank SEO Keywords */}
             <div className="flex flex-col gap-4">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-center gap-2 mb-2 flex-wrap">
                     <span
                       className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase border shadow-sm"
                       style={{
@@ -323,14 +323,17 @@ export default async function CustomizePage({ params }) {
                       }}
                     >
                       <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: template.themeColor || '#00d4ff' }} />
-                      {template.gameName} Official Template
+                      {template.gameName} YouTube Banner
                     </span>
                     <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-surface-container border border-outline-variant/40 text-outline">
                       {template.category}
                     </span>
+                    <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-surface-container border border-outline-variant/40 text-primary font-data-mono">
+                      4K UHD Banner
+                    </span>
                   </div>
                   <h2 className="text-3xl md:text-5xl font-black text-on-background tracking-tight">
-                    About {template.name}
+                    About {template.name} Banner
                   </h2>
                 </div>
 
@@ -349,7 +352,7 @@ export default async function CustomizePage({ params }) {
               </div>
 
               <p className="text-sm md:text-base text-outline leading-relaxed max-w-4xl">
-                {template.description}
+                {template.description} Design your custom <strong>{template.gameName} banner 4K</strong> (2560×1440 UHD) with our free YouTube channel art maker. Fully calibrated to the official 1546 × 423 px safe zone for zero cropping on mobile phones, tablets, desktop monitors, and TV displays.
               </p>
             </div>
 

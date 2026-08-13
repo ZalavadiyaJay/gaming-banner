@@ -183,7 +183,7 @@ export const TEMPLATES = [
       "safeWidth": 1546,
       "safeHeight": 423
     },
-    "description": "Wide panoramic Minecraft 4K key art featuring a clean split-screen: a vibrant sunny Overworld castle and cyan gamer on the left, and a fiery Nether fortress with Ghast, gold-armored Steve, and lava oceans on the right.",
+    "description": "Create a custom Minecraft banner 4K (2560×1440 UHD) for your YouTube channel art. Features a vibrant split-screen panoramic scene of a sunny Overworld castle and fiery Nether fortress with lava, Ghasts, and a gold-armored warrior.",
     "story": "This artwork captures the two most iconic dimensions of Minecraft in a panoramic split-screen. On the left, a peaceful green Overworld castle stands under sunny skies; on the right, a dangerous Nether fortress glows with red-hot lava, flying Ghasts, and a gold-armored adventurer.",
     "artAnalysis": "The split-screen composition creates a natural frame on both sides. The central transition zone is softened with ambient mist, leaving clean space for blocky 3D gamertag text, SMP series titles, and subscriber milestones.",
     "palette": [

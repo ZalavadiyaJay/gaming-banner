@@ -615,46 +615,101 @@ export default async function CustomizePage({ params }) {
               </div>
             </div>
 
-            {/* Quick 3-Step Customization Workflow Cards */}
-            <div>
-              <div className="text-center mb-6">
-                <span className="text-xs font-bold font-data-mono text-primary uppercase tracking-widest bg-primary/10 border border-primary/20 px-3 py-1 rounded-full">
-                  Quick Start
+            {/* Quick 3-Step Customization Workflow Cards (100% Game-Specific & E-E-A-T Aligned) */}
+            <div className="space-y-6">
+              <div className="text-center">
+                <span
+                  className="text-xs font-bold font-data-mono uppercase tracking-widest px-3 py-1 rounded-full border shadow-sm"
+                  style={{
+                    backgroundColor: `${template.themeColor}15` || '#00d4ff15',
+                    borderColor: `${template.themeColor}40` || '#00d4ff40',
+                    color: template.themeColor || '#00d4ff'
+                  }}
+                >
+                  {template.gameName} Creator Guide
                 </span>
-                <h3 className="text-2xl font-extrabold text-on-background mt-2">
-                  Create Your Custom 4K Banner in 3 Simple Steps
+                <h3 className="text-2xl md:text-3xl font-extrabold text-on-background mt-2 tracking-tight">
+                  How to Create Your {template.gameName} Channel Banner
                 </h3>
+                <p className="text-xs md:text-sm text-outline mt-1 max-w-2xl mx-auto">
+                  Follow these 3 simple steps to customize this {template.name} artwork for your YouTube channel or live stream.
+                </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-surface-container/60 backdrop-blur-xl rounded-3xl p-6 border border-outline-variant/40 shadow-xl flex flex-col gap-3 group hover:border-primary/50 transition-all">
-                  <div className="w-10 h-10 rounded-2xl bg-primary/10 border border-primary/30 text-primary font-black flex items-center justify-center text-base shadow-sm">
-                    1
+                {/* Step 1: Handle & Role */}
+                <div className="bg-surface-container/70 backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-outline-variant/40 shadow-xl flex flex-col justify-between gap-4 group hover:border-primary/50 transition-all">
+                  <div className="flex flex-col gap-3">
+                    <div
+                      className="w-10 h-10 rounded-2xl font-black flex items-center justify-center text-sm shadow-sm border"
+                      style={{
+                        backgroundColor: `${template.themeColor}20` || '#00d4ff20',
+                        borderColor: `${template.themeColor}50` || '#00d4ff50',
+                        color: template.themeColor || '#00d4ff'
+                      }}
+                    >
+                      01
+                    </div>
+                    <h4 className="font-bold text-on-background text-base">
+                      Enter Your {template.gameName} Handle
+                    </h4>
+                    <p className="text-xs text-outline leading-relaxed">
+                      Type your gamer handle (like <strong className="text-on-background font-data-mono">{template.gamertag || 'YOUR_NAME'}</strong>) and add your channel subtitle (such as <span className="text-on-background/90 italic">{template.sub || 'DAILY STREAMS'}</span>) to tell viewers what you play.
+                    </p>
                   </div>
-                  <h4 className="font-bold text-on-background text-base">Type Your Gamertag</h4>
-                  <p className="text-xs text-outline leading-relaxed">
-                    Replace default text in the sidebar with your channel handle, clan name, or esports alias.
-                  </p>
+                  <div className="text-[11px] font-data-mono text-outline/80 pt-2 border-t border-outline-variant/30">
+                    💡 Tip: Click on any text layer to drag and position it freely.
+                  </div>
                 </div>
 
-                <div className="bg-surface-container/60 backdrop-blur-xl rounded-3xl p-6 border border-outline-variant/40 shadow-xl flex flex-col gap-3 group hover:border-primary/50 transition-all">
-                  <div className="w-10 h-10 rounded-2xl bg-primary/10 border border-primary/30 text-primary font-black flex items-center justify-center text-base shadow-sm">
-                    2
+                {/* Step 2: Styling & Color */}
+                <div className="bg-surface-container/70 backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-outline-variant/40 shadow-xl flex flex-col justify-between gap-4 group hover:border-primary/50 transition-all">
+                  <div className="flex flex-col gap-3">
+                    <div
+                      className="w-10 h-10 rounded-2xl font-black flex items-center justify-center text-sm shadow-sm border"
+                      style={{
+                        backgroundColor: `${template.themeColor}20` || '#00d4ff20',
+                        borderColor: `${template.themeColor}50` || '#00d4ff50',
+                        color: template.themeColor || '#00d4ff'
+                      }}
+                    >
+                      02
+                    </div>
+                    <h4 className="font-bold text-on-background text-base">
+                      Pick Your Colors & Glow
+                    </h4>
+                    <p className="text-xs text-outline leading-relaxed">
+                      Match the {template.gameName} in-game UI by selecting signature colors like <strong className="text-on-background">{template.palette?.[0]?.name || 'Primary Glow'}</strong> or <strong className="text-on-background">{template.palette?.[1]?.name || 'Secondary Accent'}</strong> with high-contrast text shadows.
+                    </p>
                   </div>
-                  <h4 className="font-bold text-on-background text-base">Tune Glowing Accents</h4>
-                  <p className="text-xs text-outline leading-relaxed">
-                    Tweak glowing colors, font families, letter spacing, and shadow intensities to match your channel branding.
-                  </p>
+                  <div className="text-[11px] font-data-mono text-outline/80 pt-2 border-t border-outline-variant/30">
+                    🎨 Color Palette: {template.palette?.[0]?.hex || '#00d4ff'} • {template.palette?.[1]?.hex || '#ffffff'}
+                  </div>
                 </div>
 
-                <div className="bg-surface-container/60 backdrop-blur-xl rounded-3xl p-6 border border-outline-variant/40 shadow-xl flex flex-col gap-3 group hover:border-primary/50 transition-all">
-                  <div className="w-10 h-10 rounded-2xl bg-primary/10 border border-primary/30 text-primary font-black flex items-center justify-center text-base shadow-sm">
-                    3
+                {/* Step 3: 4K Safe-Zone Export */}
+                <div className="bg-surface-container/70 backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-outline-variant/40 shadow-xl flex flex-col justify-between gap-4 group hover:border-primary/50 transition-all">
+                  <div className="flex flex-col gap-3">
+                    <div
+                      className="w-10 h-10 rounded-2xl font-black flex items-center justify-center text-sm shadow-sm border"
+                      style={{
+                        backgroundColor: `${template.themeColor}20` || '#00d4ff20',
+                        borderColor: `${template.themeColor}50` || '#00d4ff50',
+                        color: template.themeColor || '#00d4ff'
+                      }}
+                    >
+                      03
+                    </div>
+                    <h4 className="font-bold text-on-background text-base">
+                      Download Free 4K PNG
+                    </h4>
+                    <p className="text-xs text-outline leading-relaxed">
+                      Click <strong className="text-emerald-400">Download Free 4K PNG</strong> to get your lossless 2560×1440 image. The central 1546×423 safe area ensures your text looks sharp on smartphones, laptops, and TV screens.
+                    </p>
                   </div>
-                  <h4 className="font-bold text-on-background text-base">Export 4K PNG</h4>
-                  <p className="text-xs text-outline leading-relaxed">
-                    Click Download Free to instantly generate an uncompressed, lossless 2560x1440 PNG with zero watermarks.
-                  </p>
+                  <div className="text-[11px] font-data-mono text-emerald-400/90 pt-2 border-t border-outline-variant/30">
+                    ⚡ 100% Free • No Watermark • Commercial Safe
+                  </div>
                 </div>
               </div>
             </div>

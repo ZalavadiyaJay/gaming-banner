@@ -243,35 +243,46 @@ export default async function CustomizePage({ params }) {
       ],
     };
 
+    const faqEntities = (template.faqs && template.faqs.length > 0)
+      ? template.faqs.map((f) => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.a,
+          },
+        }))
+      : [
+          {
+            "@type": "Question",
+            "name": `How do I customize the ${template.name}?`,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": `Simply enter your Gamertag into the text input box above, pick your custom font and glowing color accents, adjust the position, and click 'Download 4K PNG'. No signup or software installation is required.`,
+            },
+          },
+          {
+            "@type": "Question",
+            "name": `Is this ${template.gameName} banner sized properly for YouTube and mobile?`,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": `Yes, all banner elements and central text layers are configured within the strict 1546 x 423 px safe-zone to ensure your name is never cropped on iPhones, Android devices, tablets, or desktop screens.`,
+            },
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use this banner on monetized Twitch and YouTube channels?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! All downloaded banners from GamingBanner.com are completely royalty-free and watermark-free for personal and commercial gaming stream use.",
+            },
+          },
+        ];
+
     const faqJsonLd = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": `How do I customize the ${template.name}?`,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": `Simply enter your Gamertag into the text input box above, pick your custom font and glowing color accents, adjust the position, and click 'Download 4K PNG'. No signup or software installation is required.`,
-          },
-        },
-        {
-          "@type": "Question",
-          "name": `Is this ${template.gameName} banner sized properly for YouTube and mobile?`,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": `Yes, all banner elements and central text layers are configured within the strict 1546 x 423 px safe-zone to ensure your name is never cropped on iPhones, Android devices, tablets, or desktop screens.`,
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this banner on monetized Twitch and YouTube channels?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! All downloaded banners from GamingBanner.com are completely royalty-free and watermark-free for personal and commercial gaming stream use.",
-          },
-        },
-      ],
+      "mainEntity": faqEntities,
     };
 
     return (
@@ -315,6 +326,69 @@ export default async function CustomizePage({ params }) {
                 {template.description}
               </p>
             </div>
+
+            {/* Story & Lore Behind the Artwork */}
+            {template.story && (
+              <div className="bg-surface-container rounded-2xl p-6 md:p-8 border border-outline-variant/50 shadow-md">
+                <h3 className="text-xl font-bold text-on-background flex items-center gap-2 mb-3">
+                  📖 The Story Behind the Artwork
+                </h3>
+                <p className="text-sm text-outline leading-relaxed">
+                  {template.story}
+                </p>
+              </div>
+            )}
+
+            {/* Visual Art Analysis & Safe-Zone Design */}
+            {template.artAnalysis && (
+              <div className="bg-surface-container rounded-2xl p-6 md:p-8 border border-outline-variant/50 shadow-md">
+                <h3 className="text-xl font-bold text-on-background flex items-center gap-2 mb-3">
+                  🎨 Visual Art Breakdown & Safe-Zone Design
+                </h3>
+                <p className="text-sm text-outline leading-relaxed">
+                  {template.artAnalysis}
+                </p>
+              </div>
+            )}
+
+            {/* Curated Color Swatches & Exact HEX Palette */}
+            {template.palette && template.palette.length > 0 && (
+              <div className="bg-surface-container rounded-2xl p-6 md:p-8 border border-outline-variant/50 shadow-md">
+                <h3 className="text-xl font-bold text-on-background flex items-center gap-2 mb-2">
+                  💎 Curated {template.gameName} Color Palette
+                </h3>
+                <p className="text-xs text-outline mb-6">
+                  Use these exact hex color codes in your stream overlays, webcam borders, and thumbnail typography to keep your channel branding cohesive.
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {template.palette.map((c, idx) => (
+                    <div key={idx} className="bg-surface-container-high/60 rounded-xl p-4 border border-outline-variant/40 flex flex-col gap-2">
+                      <div className="flex items-center gap-3">
+                        <span
+                          className="w-7 h-7 rounded-lg border border-white/20 shadow-inner flex-shrink-0"
+                          style={{ backgroundColor: c.hex }}
+                        />
+                        <span className="font-bold text-xs text-on-background">{c.name}</span>
+                      </div>
+                      <span className="font-data-mono text-xs font-semibold text-primary">{c.hex}</span>
+                      <span className="text-[11px] text-outline leading-tight">{c.desc}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Typography & Font Recommendation */}
+            {template.fontTip && (
+              <div className="bg-surface-container-high/40 rounded-2xl p-6 md:p-8 border border-outline-variant/40">
+                <h3 className="text-lg font-bold text-on-background mb-2">
+                  🔤 Recommended Typography for {template.gameName}
+                </h3>
+                <p className="text-sm text-outline leading-relaxed">
+                  {template.fontTip}
+                </p>
+              </div>
+            )}
 
             {/* Technical Safe-Zone Sizing Chart */}
             <div className="bg-surface-container rounded-2xl p-6 md:p-8 border border-outline-variant/50 shadow-md">
@@ -392,14 +466,30 @@ export default async function CustomizePage({ params }) {
               </div>
             </div>
 
-            {/* Creator Pro Tips & Color Guide */}
-            <div className="bg-surface-container-high/40 rounded-2xl p-6 md:p-8 border border-outline-variant/40">
-              <h3 className="text-lg font-bold text-on-background mb-3">
-                💡 Pro Tip for {template.gameName} Creators
+            {/* Frequently Asked Questions (Game-Specific) */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-on-background">
+                Frequently Asked Questions ({template.gameName})
               </h3>
-              <p className="text-sm text-outline leading-relaxed">
-                When designing your channel layout, keep high-contrast fonts (such as <strong>Orbitron</strong>, <strong>Impact</strong>, or <strong>Rajdhani</strong>) paired with bright cyan or neon yellow accent glows. This ensures your gamertag remains readable even when viewed in dark mode on mobile screens.
-              </p>
+              {(template.faqs || [
+                {
+                  q: `How do I customize the ${template.name}?`,
+                  a: `Simply enter your Gamertag into the text input box above, pick your custom font and glowing color accents, adjust the position, and click 'Download 4K PNG'. No signup or software installation is required.`
+                },
+                {
+                  q: `Is this ${template.gameName} banner sized properly for YouTube and mobile?`,
+                  a: `Yes, all banner elements and central text layers are configured within the strict 1546 x 423 px safe-zone to ensure your name is never cropped on iPhones, Android devices, tablets, or desktop screens.`
+                },
+                {
+                  q: "Can I use this banner on monetized Twitch and YouTube channels?",
+                  a: "Yes! All downloaded banners from GamingBanner.com are completely royalty-free and watermark-free for personal and commercial gaming stream use."
+                }
+              ]).map((faq, idx) => (
+                <div key={idx} className="bg-surface-container/50 rounded-xl p-5 border border-outline-variant/40">
+                  <h4 className="font-bold text-sm text-on-background">{faq.q}</h4>
+                  <p className="text-xs text-outline leading-relaxed mt-1">{faq.a}</p>
+                </div>
+              ))}
             </div>
 
           </div>

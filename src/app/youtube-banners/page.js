@@ -409,78 +409,197 @@ export default function YouTubeBanners() {
     ]
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best size for a YouTube gaming banner in 2025?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The official recommended size for a YouTube channel banner is 2560 x 1440 pixels (16:9 aspect ratio). To make sure your name and schedule never get cut off on phones, keep all text inside the central 1546 x 423 pixel safe zone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I upload my new banner to my YouTube channel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Go to YouTube Studio > Customization from the left menu > click the Branding tab > find Banner Image and click Change/Upload. Select your downloaded 4K PNG file and click Done, then hit Publish."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do some YouTube banners look blurry on phones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When you upload low-resolution files or compressed JPGs, YouTube's system compresses them further, causing blur around text. Our studio generates uncompressed, lossless 4K PNG files that stay pin-sharp on every screen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are these YouTube gaming banners 100% free with no watermarks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! All banners created on GamingBanner.com are completely free with zero watermarks, no account registration required, and include full commercial rights for your gaming channel."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Header />
 
       <main className="flex-1 min-h-screen pt-24 pb-6 px-4 md:px-8 w-full max-w-[1440px] mx-auto flex flex-col gap-6 overflow-x-hidden">
         {/* Page Hero */}
         <section className="text-center py-2 flex flex-col items-center gap-2">
-          <h1 className="text-2xl md:text-3xl font-extrabold text-on-background tracking-tight">
-            Free YouTube Gaming Banner Maker (No Watermark & No Signup)
+          <h1 className="text-2xl md:text-4xl font-extrabold text-on-background tracking-tight">
+            Free YouTube Gaming Banner Maker (100% Free 4K PNG)
           </h1>
-          <p className="max-w-[760px] text-xs md:text-sm text-outline leading-relaxed">
-            Create custom 4K YouTube channel art without Photoshop or paid subscriptions. Unlike generic design tools, Gaming Banner is 100% free with zero watermarks, no account registration, and built-in mobile safe zone overlays.
+          <p className="max-w-[800px] text-xs md:text-sm text-outline leading-relaxed">
+            Create custom 4K YouTube channel art with zero watermarks and no signups. Pick your favorite game theme, type your gamertag, choose vibrant glowing colors, and download instantly.
           </p>
         </section>
 
         {/* Category Catalog Grid with Game Filter Pills */}
         <CategoryCatalog templates={templates} />
 
-        {/* Size Guide & Upload specs */}
-        <section className="max-w-[800px] mx-auto w-full py-lg border-t border-outline-variant/65 flex flex-col gap-lg">
-          <div className="border-l-4 border-primary-container pl-lg">
-            <h2 className="text-2xl font-bold text-on-background">YouTube Banner Size Guide</h2>
-            <p className="text-sm text-outline mt-1 leading-relaxed">
-              YouTube channel art displays differently across desktop, mobile, and television devices. Sizing your banner accurately ensures your main text and logo are visible everywhere.
+        {/* Deep Educational Publisher Section (High-E-E-A-T in Simple Language) */}
+        <section className="max-w-[960px] mx-auto w-full py-12 border-t border-outline-variant/60 flex flex-col gap-10">
+          
+          {/* Header Overview */}
+          <div>
+            <span className="text-xs font-bold font-data-mono text-primary-container uppercase tracking-widest bg-primary-container/10 border border-primary-container/20 px-3 py-1 rounded-full">
+              YouTube Channel Branding Guide 2025
+            </span>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-on-background mt-4">
+              How to Create the Perfect Gaming Banner for YouTube
+            </h2>
+            <p className="text-sm text-outline leading-relaxed mt-2">
+              Your YouTube banner is the giant billboard at the top of your channel. When someone watches one of your gaming videos and clicks your channel page, your banner immediately tells them who you are, what games you play, and when you upload new videos. Having a clean, high-contrast banner builds trust and turns casual viewers into permanent subscribers.
             </p>
           </div>
 
-          <div className="p-lg bg-surface-container-high border-l-4 border-emerald-500 rounded-r-lg">
-            <span className="font-bold text-sm text-on-background">Recommended Dimensions:</span>
-            <p className="text-xs font-data-mono text-outline mt-1">
-              Banner Size: 2560 x 1440 px | Safe Area (Center): 1546 x 423 px
+          {/* Technical Resolution Table */}
+          <div className="bg-surface-container rounded-2xl p-6 border border-outline-variant/50 shadow-md">
+            <h3 className="text-lg font-bold text-on-background flex items-center gap-2 mb-2">
+              📐 Official YouTube Banner Dimensions Explained Simply
+            </h3>
+            <p className="text-xs text-outline mb-6">
+              YouTube shows your banner differently depending on whether someone is watching on a phone, a computer, or a 4K TV. Here is how the sizes work:
             </p>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr className="border-b border-outline-variant text-outline font-data-mono uppercase tracking-wider">
+                    <th className="py-3 px-4">Device</th>
+                    <th className="py-3 px-4">Visible Area</th>
+                    <th className="py-3 px-4">What Viewers See</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-outline-variant/30 text-on-surface-variant font-medium">
+                  <tr className="hover:bg-surface-container-high/50 transition-colors">
+                    <td className="py-3 px-4 font-bold text-on-background">📱 Mobile Phones</td>
+                    <td className="py-3 px-4 font-data-mono text-primary-container">1546 × 423 px</td>
+                    <td className="py-3 px-4">The core safe area. Over 75% of your viewers will see this exact center box.</td>
+                  </tr>
+                  <tr className="hover:bg-surface-container-high/50 transition-colors">
+                    <td className="py-3 px-4 font-bold text-on-background">💻 Desktop & Laptops</td>
+                    <td className="py-3 px-4 font-data-mono text-primary-container">2560 × 423 px</td>
+                    <td className="py-3 px-4">A wide banner strip showing the center safe area plus extended side backgrounds.</td>
+                  </tr>
+                  <tr className="hover:bg-surface-container-high/50 transition-colors">
+                    <td className="py-3 px-4 font-bold text-on-background">📟 Tablets & iPads</td>
+                    <td className="py-3 px-4 font-data-mono text-primary-container">1855 × 423 px</td>
+                    <td className="py-3 px-4">Slightly wider than mobile with the same top and bottom height.</td>
+                  </tr>
+                  <tr className="hover:bg-surface-container-high/50 transition-colors">
+                    <td className="py-3 px-4 font-bold text-on-background">📺 4K Smart TVs</td>
+                    <td className="py-3 px-4 font-data-mono text-primary-container">2560 × 1440 px</td>
+                    <td className="py-3 px-4">Shows the full 16:9 4K canvas in living rooms and TV streaming apps.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          {/* Sizing Table */}
-          <div className="overflow-x-auto rounded-lg border border-outline-variant/60 bg-surface-container">
-            <table className="w-full text-left border-collapse text-xs">
-              <thead>
-                <tr className="bg-surface-container-high text-on-background font-bold border-b border-outline-variant/60">
-                  <th className="p-md">Device</th>
-                  <th className="p-md">Visible Sizing</th>
-                  <th className="p-md">Notes</th>
-                </tr>
-              </thead>
-              <tbody className="text-outline">
-                <tr className="border-b border-outline-variant/30">
-                  <td className="p-md font-bold text-on-background">Mobile</td>
-                  <td className="p-md font-data-mono">1546 x 423 px</td>
-                  <td className="p-md">Absolute safe area. Keep text & logo inside this zone.</td>
-                </tr>
-                <tr className="border-b border-outline-variant/30">
-                  <td className="p-md font-bold text-on-background">Tablet</td>
-                  <td className="p-md font-data-mono">1855 x 423 px</td>
-                  <td className="p-md">Scales up centered. Outer edges are clipped.</td>
-                </tr>
-                <tr className="border-b border-outline-variant/30">
-                  <td className="p-md font-bold text-on-background">Desktop</td>
-                  <td className="p-md font-data-mono">2560 x 423 px</td>
-                  <td className="p-md">Full horizontal display width on desktop browsers.</td>
-                </tr>
-                <tr>
-                  <td className="p-md font-bold text-on-background">Television</td>
-                  <td className="p-md font-data-mono">2560 x 1440 px</td>
-                  <td className="p-md">Full banner canvas displays on TV applications.</td>
-                </tr>
-              </tbody>
-            </table>
+          {/* Simple 3-Step YouTube Studio Upload Guide */}
+          <div>
+            <h3 className="text-xl font-bold text-on-background mb-4">
+              🚀 How to Upload Your New Banner in YouTube Studio (3 Quick Steps)
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-surface-container/60 rounded-xl p-5 border border-outline-variant/40">
+                <span className="w-8 h-8 rounded-full bg-primary-container/20 text-primary-container font-bold flex items-center justify-center text-sm mb-3">
+                  1
+                </span>
+                <h4 className="font-bold text-on-background text-sm">Download Your 4K PNG</h4>
+                <p className="text-xs text-outline leading-relaxed mt-2">
+                  Pick your favorite game template above, type your gamertag, choose your colors, and click <strong>Download Free</strong> to save your 4K file.
+                </p>
+              </div>
+
+              <div className="bg-surface-container/60 rounded-xl p-5 border border-outline-variant/40">
+                <span className="w-8 h-8 rounded-full bg-primary-container/20 text-primary-container font-bold flex items-center justify-center text-sm mb-3">
+                  2
+                </span>
+                <h4 className="font-bold text-on-background text-sm">Open YouTube Studio</h4>
+                <p className="text-xs text-outline leading-relaxed mt-2">
+                  Go to <strong>studio.youtube.com</strong> on your computer. Click <strong>Customization</strong> from the left sidebar, then click the <strong>Branding</strong> tab.
+                </p>
+              </div>
+
+              <div className="bg-surface-container/60 rounded-xl p-5 border border-outline-variant/40">
+                <span className="w-8 h-8 rounded-full bg-primary-container/20 text-primary-container font-bold flex items-center justify-center text-sm mb-3">
+                  3
+                </span>
+                <h4 className="font-bold text-on-background text-sm">Upload & Hit Publish</h4>
+                <p className="text-xs text-outline leading-relaxed mt-2">
+                  Under <strong>Banner Image</strong>, click <strong>Upload</strong> (or <strong>Change</strong>), select your downloaded PNG file, click <strong>Done</strong>, and click <strong>Publish</strong>.
+                </p>
+              </div>
+            </div>
           </div>
+
+          {/* YouTube FAQs */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-on-background">
+              Frequently Asked Questions (YouTube Banners)
+            </h3>
+            
+            <div className="bg-surface-container/50 rounded-xl p-5 border border-outline-variant/40">
+              <h4 className="font-bold text-sm text-on-background">Why do our banners stay sharp on mobile phones?</h4>
+              <p className="text-xs text-outline leading-relaxed mt-1">
+                Because we export high-resolution, uncompressed PNG files at 2560 × 1440 pixels with text strictly locked inside the 1546 × 423 mobile safe zone. When YouTube scales the image down for iPhones and Androids, the letters stay crystal clear.
+              </p>
+            </div>
+
+            <div className="bg-surface-container/50 rounded-xl p-5 border border-outline-variant/40">
+              <h4 className="font-bold text-sm text-on-background">Can I add my TikTok, Twitch, or Discord handles to the banner?</h4>
+              <p className="text-xs text-outline leading-relaxed mt-1">
+                Yes! In our customizer studio, you can add unlimited text layers to write your upload days (e.g. <em>"NEW VIDEOS EVERY FRIDAY"</em>) and your social media handles.
+              </p>
+            </div>
+
+            <div className="bg-surface-container/50 rounded-xl p-5 border border-outline-variant/40">
+              <h4 className="font-bold text-sm text-on-background">Are these banners safe from copyright strikes?</h4>
+              <p className="text-xs text-outline leading-relaxed mt-1">
+                Yes, 100%. All banner backgrounds are custom-created digital art without trademarked official logos. You have full commercial rights to use them on monetized YouTube channels.
+              </p>
+            </div>
+          </div>
+
         </section>
       </main>
 

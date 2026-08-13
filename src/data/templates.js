@@ -109,9 +109,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Sleek 1920x1080 Twitch offline screen featuring futuristic cyan HUD geometry and radiant agent silhouettes for professional Valorant stream schedules.",
-    "story": "Designed for competitive Valorant streamers, this 1080p backdrop features sharp geometric HUD borders and glowing energy telemetry lines to announce when your next competitive stream begins.",
-    "artAnalysis": "The design features a dark carbon-fiber mesh background with high-contrast cyan framing lines that highlight your offline schedule and social handles.",
+    "description": "Design a high-tech Valorant Protocol offline screen 1080p (1920×1080 Full HD) for your Twitch stream channel art. Features radiant cyan HUD geometry, tactical agent telemetry lines, rank callouts, and centered schedule typography for competitive Valorant broadcasters and esports teams.",
+    "story": "Designed for competitive Valorant streamers pushing through Immortal and Radiant ranks. This broadcast backdrop captures the high-tech atmosphere of Future Earth with glowing Radianite cyan circuit lines, sharp angular telemetry borders, and tactical targeting reticles that announce your upcoming match schedule.",
+    "artAnalysis": "The 16:9 Full HD composition features an obsidian carbon-fiber background with high-contrast electric cyan framing lines along the outer margins. The central area is illuminated with an ambient cyan radial spotlight, creating maximum contrast for white and glowing gamertags.",
     "palette": [
       {
         "name": "Neon Cyan",
@@ -129,7 +129,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Orbitron Bold with glowing drop shadows for an authentic esports broadcast aesthetic.",
+    "fontTip": "Use Orbitron Bold Italic with wide letter-spacing (0.15em) and multi-layered cyan glow shadows (0 0 20px #00d4ff). This creates the authentic aesthetic of in-game agent HUD interfaces.",
     "faqs": [
       {
         "q": "What is the official resolution for this Twitch offline screen?",
@@ -260,9 +260,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Cozy voxel sunset Twitch offline screen designed for Minecraft SMP stream channels and creative builder communities.",
-    "story": "A warm, peaceful voxel sunset card created for Minecraft SMP streamers, builders, and survival explorers.",
-    "artAnalysis": "Clean voxel geometric terrain with soft amber sunset gradients that make green and gold gamertags pop.",
+    "description": "Create a warm, cozy Minecraft Voxel Sunset Twitch offline screen (1920×1080 Full HD) for your streaming channel art. Features split Overworld and Nether voxel horizons, campfire glows, and blocky 3D typography for SMP survival streamers and creative builders.",
+    "story": "A serene, peaceful voxel twilight backdrop created for Minecraft SMP creators, redstone engineers, and survival explorers. The artwork evokes the warmth of returning to a cozy wooden cabin after a long mining expedition, providing an inviting and relaxing intermission scene for your community.",
+    "artAnalysis": "Stylized 3D voxel block terrain stretches across the lower third of the canvas, anchored by warm amber sunset gradients and emerald particle embers. The open upper sky leaves plenty of clean space for server IP addresses and weekly build stream schedules.",
     "palette": [
       {
         "name": "Voxel Emerald",
@@ -280,7 +280,7 @@ export const TEMPLATES = [
         "desc": "3D Shadow"
       }
     ],
-    "fontTip": "Use JetBrains Mono with 3D drop-shadow extrusion for classic Minecraft voxel charm.",
+    "fontTip": "Use JetBrains Mono or blocky monospace typefaces with dual-layer dark forest (#064e3b) and obsidian drop shadows to give your letters the authentic 16-bit look of Minecraft dirt and stone blocks.",
     "faqs": [
       {
         "q": "Can I use this for my Minecraft SMP server banner?",
@@ -413,9 +413,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Purple rift sky offline screen for Battle Royale Twitch content creators and tournament competitors.",
-    "story": "A high-energy 1080p offline stream screen featuring purple Zero Point lightning storms and neon city silhouettes.",
-    "artAnalysis": "Dark purple gradient center ensures clear readability for stream schedules and tournament results.",
+    "description": "Design an electrifying Fortnite Rift Royale Twitch offline screen (1920×1080 Full HD) for your Battle Royale channel art. Features vibrant purple zero-point rift flares, neon skyscraper skylines, victory crown badges, and centered broadcast typography.",
+    "story": "Captures the high-energy excitement of Fortnite Mega City and Zero-Point rift anomalies. Designed for competitive arena grinders, ranked Unreal pushers, and variety Battle Royale streamers who want their channel branding to stand out in the Twitch directory with vibrant neon energy.",
+    "artAnalysis": "Deep cosmic purple and radiant magenta rift lightning frame the left and right borders of the 1080p canvas, while a soft violet gradient illuminates the center to ensure stream timetable text remains crisp and legible across all devices.",
     "palette": [
       {
         "name": "Neon Purple",
@@ -433,7 +433,7 @@ export const TEMPLATES = [
         "desc": "Text Core"
       }
     ],
-    "fontTip": "Use Inter Extra-Bold or Impact with vibrant purple glow.",
+    "fontTip": "Use heavy sans-serif fonts (like Inter Black or Space Grotesk) with multi-tiered purple (#8b5cf6) and magenta drop shadows to emulate high-octane comic book title cards.",
     "faqs": [
       {
         "q": "What resolution does this Fortnite offline screen export in?",
@@ -564,9 +564,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Gunmetal grid overlay for tactical Warzone and search-and-destroy stream schedule announcements.",
-    "story": "Tactical gunmetal stream screen designed for Call of Duty Warzone and Ranked Play streamers.",
-    "artAnalysis": "Dark military mesh grid with clean stencil typography zones.",
+    "description": "Design a high-contrast Warzone Tactical offline screen 1080p (1920×1080 Full HD) for your Twitch stream channel art. Features authentic brushed gunmetal carbon mesh, tactical smoke particles, military loadout styling, and centered schedule typography for competitive Call of Duty broadcasters, squad scrims, and Ranked Play streams.",
+    "story": "Inspired by the intense battlegrounds of Call of Duty: Warzone and Modern Warfare squad operations. This broadcast backdrop captures the atmosphere of tactical spec-ops missions with textured gunmetal armor plates, desert tan accent lighting, and smoky battlefield ambiance. Built specifically for competitive FPS creators, tournament teams, and weekend squad leaders who want to maintain an elite military brand identity even when their live stream is offline.",
+    "artAnalysis": "The 16:9 Full HD layout is framed by brushed titanium and carbon armor plates along the perimeter, creating a focused, high-contrast central viewport for stream schedules and social links. The warm desert tan (#de9b35) highlight color cuts through dark gunmetal slate textures, ensuring your gamertag and live broadcast times remain razor-sharp across smartphones, tablets, and 4K desktop player monitors.",
     "palette": [
       {
         "name": "Desert Tan",
@@ -584,7 +584,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Impact font with dark outline for military precision.",
+    "fontTip": "Use Impact or heavy condensed industrial sans-serif typefaces with a 3px multi-directional dark gunmetal stroke (#1e293b). This replicates military stencil typography on tactical crates, guaranteeing maximum legibility over smoky explosion textures.",
     "faqs": [
       {
         "q": "How do I format my Call of Duty Warzone scrim schedule on this offline card?",
@@ -795,9 +795,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Los Santos skyline retro purple glow for GTA FiveM roleplay streamer schedules.",
-    "story": "Retro synthwave sunset card over the Vinewood skyline designed for FiveM and GTA RP streamers.",
-    "artAnalysis": "Dusky purple palm tree silhouettes with vibrant neon underglow for streamer timetables.",
+    "description": "Create an atmospheric GTA V Los Santos RP offline banner (1920×1080 Full HD) for your FiveM roleplay streaming channel. Features retro neon city skyline lights, sunset purple gradients, emergency dispatch accents, and clean broadcast timetable typography.",
+    "story": "Inspired by the sprawling neon highways and dramatic criminal heists of Los Santos and FiveM roleplay servers. Whether you play a dedicated police officer, EMS medic, or underground gang leader, this retro outrun backdrop sets the perfect cinematic stage for your roleplay character's next shift.",
+    "artAnalysis": "A silhouetted palm tree and skyscraper skyline rests along the bottom third of the canvas, illuminated by vibrant hot pink (#f472b6) and cyber cyan (#00d4ff) neon lighting. Deep midnight slate gradients ensure your streaming schedule is instantly readable.",
     "palette": [
       {
         "name": "Neon Pink",
@@ -815,7 +815,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Orbitron Italic for retro 80s synthwave roleplay aesthetics.",
+    "fontTip": "Use stylized italicized gaming fonts with wide tracking (0.12em) and dual pink-and-cyan drop shadows to capture the iconic 1980s synthwave vibe of Los Santos nightlife.",
     "faqs": [
       {
         "q": "How do I display my FiveM roleplay character name and department on this screen?",
@@ -946,9 +946,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Volcanic hazard orange background for high-tier Apex Legends competitive stream channels.",
-    "story": "Volcanic predator stream screen designed for competitive Apex Legends tournament broadcasters.",
-    "artAnalysis": "Fiery orange and carbon slate layout designed for high-contrast stream schedule cards.",
+    "description": "Design a high-intensity Apex Legends Predator offline banner (1920×1080 Full HD) for your competitive stream channel art. Features volcanic World's Edge lava fissures, biohazard orange energy halos, predator badges, and aerodynamic velocity typography.",
+    "story": "Engineered for high-tier Apex Legends ranked grinders, ALGS tournament contenders, and movement gods. The blazing volcanic landscape of World's Edge combined with hazardous orange telemetry lines communicates relentless competitive intensity and championship reflexes.",
+    "artAnalysis": "Molten orange lava cracks run diagonally along the lower canvas, balanced by deep obsidian carbon shading across the upper half. The high-contrast palette ensures white gamertags pop forcefully off the screen without visual clutter.",
     "palette": [
       {
         "name": "Predator Red",
@@ -966,7 +966,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Orbitron Italic for high-velocity competitive stream graphics.",
+    "fontTip": "Use Orbitron Italic with glowing volcanic red (#ff3e3e) and ember orange (#ea580c) drop shadows to simulate high-speed movement and tactical legend telemetry.",
     "faqs": [
       {
         "q": "How can I showcase my Apex Legends Predator rank push on this offline screen?",
@@ -1096,9 +1096,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Magical golden rune lines for League of Legends rank push schedules.",
-    "story": "Golden arcane rune stream screen for League of Legends Challenger rank push broadcasts.",
-    "artAnalysis": "Intricate gold rune borders over dark fantasy stone textures.",
+    "description": "Craft an elegant League of Legends Challenger offline banner (1920×1080 Full HD) for your MOBA stream channel. Features ancient golden runic circles, celestial twilight clouds, mythic fantasy borders, and refined serif typography for ranked carries.",
+    "story": "Designed for competitive summoners, Clash captains, and high-ELO League of Legends players. The mythic gold runic patterns and cosmic blue nebulae reflect the deep lore and orchestral grandeur of Mount Targon and Summoner's Rift.",
+    "artAnalysis": "Intricate golden celestial runes frame the perimeter of the canvas, directing visual focus inward toward your summoner handle. Soft atmospheric fog dampens background contrast to keep stream hours perfectly legible.",
     "palette": [
       {
         "name": "Rune Gold",
@@ -1116,7 +1116,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Georgia Serif with wide letter spacing for mythic fantasy elegance.",
+    "fontTip": "Use Georgia or classical serif typefaces with wide letter-spacing (0.2em) and subtle amber drop shadows (#78350f) to embody the ancient wisdom and prestige of Challenger tier.",
     "faqs": [
       {
         "q": "How do I format my League of Legends rank and main role on this Twitch banner?",
@@ -1246,9 +1246,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Cyber dome stadium lights for Rocket League speed runs and tournament streaming.",
-    "story": "High-octane stadium floodlight scene for Rocket League Grand Champion stream channels.",
-    "artAnalysis": "Stadium lighting effects and speed streaks framing a clean center text area.",
+    "description": "Design a high-velocity Rocket League Grand Champion offline banner (1920×1080 Full HD) for your stream art. Features cyber dome stadium spotlights, electric boost trails, aerodynamic speed streaks, and bold esports broadcast typography.",
+    "story": "Built for supersonic freestylers, 2v2 ranked grinders, and RLCS tournament contenders. Captures the electric energy of packed stadium arenas with sweeping floodlight beams, glowing boost pads, and neon cyan cybernetic goal line accents.",
+    "artAnalysis": "Sweeping cyan and cobalt stadium floodlight arcs frame the central text area, simulating a live esports broadcast. Deep navy turf textures ensure white schedule text maintains pristine readability.",
     "palette": [
       {
         "name": "Electric Aqua",
@@ -1266,7 +1266,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Orbitron with wide tracking for high-velocity sports branding.",
+    "fontTip": "Use Orbitron Bold with electric cyan text halos (0 0 25px #0891b2) and solid black drop shadows to give your aerial rank an authoritative, stadium-ready presence.",
     "faqs": [
       {
         "q": "How do I display my Rocket League competitive rank and 2v2 team name?",
@@ -1397,9 +1397,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Tactical military green smoke backdrop for battlegrounds stream schedules.",
-    "story": "Tactical military smoke offline screen for PUBG streamers and tournament competitors.",
-    "artAnalysis": "Olive green and amber smoke textures framing clean stencil typography.",
+    "description": "Create a tactical PUBG Mobile Erangel offline screen (1920×1080 Full HD) for your Battle Royale channel art. Features military camouflage smoke plumes, airdrop crate gold highlights, and bold stencil typography for Conqueror squad streamers.",
+    "story": "Inspired by high-stakes final circle standoffs on Erangel and Miramar. Designed for PMGC competitive players, clan leaders, and survival snipers who want an authentic, no-nonsense military aesthetic for their daily stream broadcasts.",
+    "artAnalysis": "Dark olive drab and tactical slate smoke clouds swirl across the background, framed by subtle targeting reticles. The Winner Winner golden yellow (#eab308) lettering creates instant focal dominance.",
     "palette": [
       {
         "name": "Gold Winner",
@@ -1417,7 +1417,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Impact font with dark outline for military survival aesthetics.",
+    "fontTip": "Use Impact or compressed industrial sans fonts with heavy 2px dark brown (#451a03) borders to replicate military stencil markings on supply crates.",
     "faqs": [
       {
         "q": "How do I format my PUBG Mobile Conqueror tier and squad tag on this header?",
@@ -1548,9 +1548,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Epic fantasy cartoon fort village for strategy builders and clan war stream schedules.",
-    "story": "Warm cartoon fantasy fortress stream card for Clash of Clans stream schedules.",
-    "artAnalysis": "Amber village fortress framing a clean center text area for stream hours.",
+    "description": "Design a fantasy Clash of Clans Fortress offline banner (1920×1080 Full HD) for your strategy stream channel art. Features fortified stone village battlements, glowing gold loot vaults, and chunky 3D cartoon typography for clan leaders.",
+    "story": "Created for Town Hall 16 strategists, Clan War League captains, and base-building creators. The fortified stone castle towers and glowing golden elixir vaults communicate strategic mastery and welcoming community clan leadership.",
+    "artAnalysis": "Chunky cartoon fortress battlements line the bottom of the canvas with warm golden firelight illuminating the central banner area, providing a playful yet authoritative broadcast backdrop.",
     "palette": [
       {
         "name": "Gold Trophy",
@@ -1568,7 +1568,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Impact font with 3D stacked amber drop shadows.",
+    "fontTip": "Use Impact with multi-tiered golden amber (#fbbf24) and deep brown (#78350f) 3D drop shadows to achieve the classic chunky extruded look of mobile strategy games.",
     "faqs": [
       {
         "q": "How do I announce our Clan War Leagues (CWL) timetable on this Twitch banner?",
@@ -1699,9 +1699,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Scenic mountain racing landscape for racing streams and wheel setup broadcasts.",
-    "story": "Scenic alpine drift landscape card for racing wheel streamers and Forza drivers.",
-    "artAnalysis": "Warm sunset mountain range framing high-speed racing typography.",
+    "description": "Create a scenic Forza Horizon Mountain Summit offline banner (1920×1080 Full HD) for your sim racing stream. Features alpine mountain sunset overlooks, asphalt drift streaks, tachometer telemetry, and sports typography for wheel-cam broadcasters.",
+    "story": "Captures the open-world freedom and automotive passion of the Horizon Festival. Designed for sim racers, drift masters, and wheel-and-pedal streamers who want a breathtaking automotive sunset backdrop behind their broadcast schedule.",
+    "artAnalysis": "Panoramic alpine mountain peaks under a golden hour sunset occupy the background, balanced by clean racing telemetry lines along the borders for focused stream timetable display.",
     "palette": [
       {
         "name": "Festival Coral",
@@ -1719,7 +1719,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Orbitron Italic for aerodynamic supercar aesthetics.",
+    "fontTip": "Use Orbitron Italic with glowing rose red (#f43f5e) outlines to convey high-speed velocity and precision steering telemetry.",
     "faqs": [
       {
         "q": "How do I display my steering wheel and pedal cam setup schedule on this screen?",
@@ -1850,9 +1850,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Vibrant neon city drift backdrop for street arcade racing streams.",
-    "story": "Neon street drift stream screen for Asphalt arcade racers and esports drivers.",
-    "artAnalysis": "Vibrant neon pink and purple city skyline framing stream schedule text.",
+    "description": "Design an electrifying Asphalt 9 Times Square Neon offline screen (1920×1080 Full HD) for your arcade racing channel art. Features wet street neon reflections, nitro boost flares, and high-voltage magenta typography for club drivers.",
+    "story": "Inspired by midnight street racing through the glowing canyons of Times Square and Tokyo. Tailored for Asphalt Legends mobile drivers, club tournament captains, and arcade racing enthusiasts looking for an intense neon rush.",
+    "artAnalysis": "Vibrant hot pink and purple neon sign reflections shimmer across wet dark asphalt, creating an authentic cyberpunk arcade racing atmosphere with high contrast for live stream hours.",
     "palette": [
       {
         "name": "Neon Pink",
@@ -1870,7 +1870,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Impact font with bold neon magenta glow.",
+    "fontTip": "Use Impact or heavy condensed sans typefaces with hot magenta (#ec4899) and dark plum drop shadows for an energetic arcade title card look.",
     "faqs": [
       {
         "q": "How do I showcase our Asphalt Legends club recruitment info on this Twitch banner?",
@@ -2001,9 +2001,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Fantasy anime floating skies for Genshin Impact travelers and wish pulling streams.",
-    "story": "Anime fantasy twilight sky stream screen for Genshin Impact streamers and wish pulling events.",
-    "artAnalysis": "Soft floating clouds and celestial islands framing elegant fantasy typography.",
+    "description": "Craft an enchanting Genshin Impact Floating Skies offline banner (1920×1080 Full HD) for your anime streaming channel art. Features floating celestial islands, starry twilight skies, golden constellations, and elegant serif typography for Teyvat explorers.",
+    "story": "Inspired by the celestial gateways of Celestia and the majestic floating peaks of Liyue. Designed for Genshin Impact travelers, lore analysts, and Spiral Abyss speed-runners who want a magical, orchestral atmosphere for their stream breaks.",
+    "artAnalysis": "Soft anime cloudscapes and celestial floating islands float under a starry twilight gradient, creating a serene, visually soothing intermission backdrop for viewers.",
     "palette": [
       {
         "name": "Celestial Cyan",
@@ -2021,7 +2021,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Georgia Serif with wide letter spacing for anime fantasy elegance.",
+    "fontTip": "Use Georgia or classical serif fonts with wide character tracking (0.25em) and soft azure halos (#38bdf8) to reflect the mythic, fantasy atmosphere of Teyvat.",
     "faqs": [
       {
         "q": "How do I announce our character banner wish-pulling streams on this offline screen?",
@@ -2154,9 +2154,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Fun colorful metaverse stream card for Roblox community broadcasts and mini-game streams.",
-    "story": "Playful colorful metaverse stream screen for Roblox content creators and community hosts.",
-    "artAnalysis": "Chunky 3D block geometry with bold comic-book shadow outlines.",
+    "description": "Design a colorful Roblox Metaverse Parkour offline screen (1920×1080 Full HD) for your family-friendly gaming stream art. Features vibrant voxel worlds, floating obby platforms, and playful 3D typography for community game developers and streamers.",
+    "story": "Created for Roblox developers, Blox Fruits adventurers, and variety mini-game creators. The bright, cheerful virtual block landscape creates an inviting, fun-filled stream hub that welcomes viewers of all ages.",
+    "artAnalysis": "Isometric floating voxel platforms and rainbow obstacle courses populate the outer edges, while a clean central gradient provides maximum contrast for private server links and stream timetables.",
     "palette": [
       {
         "name": "Roblox Red",
@@ -2174,7 +2174,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Inter Heavy with 3D drop-shadow for playful cartoon gaming.",
+    "fontTip": "Use ultra-bold sans-serif fonts with thick crimson 3D block shadows (#7f1d1d) for a chunky, readable aesthetic that pops on mobile device screens.",
     "faqs": [
       {
         "q": "How do I share our Roblox VIP server codes and community stream times?",
@@ -2305,9 +2305,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Vibrant yellow and black cybernetic stream screen for Night City streams and RPG walk-throughs.",
-    "story": "Cybernetic high-tech stream screen for Cyberpunk 2077 and futuristic RPG broadcasters.",
-    "artAnalysis": "Gritty dark tech textures with high-voltage yellow neon outlines.",
+    "description": "Create a futuristic Cyberpunk 2077 Netrunner offline banner (1920×1080 Full HD) for your sci-fi streaming channel. Features high-voltage yellow cyberware circuits, neon laser rain, holographic HUD telemetry, and bold stencil typography.",
+    "story": "Inspired by the dystopian megastructures and netrunner subcultures of Night City. Designed for technology streamers, RPG completionists, and sci-fi creators looking to immerse their audience in high-tech street mercenary atmosphere.",
+    "artAnalysis": "High-contrast electric cyber yellow (#facc15) and cyan circuit grids cut through deep obsidian rain, creating an electrifying neon aesthetic that demands viewer attention.",
     "palette": [
       {
         "name": "Cyber Yellow",
@@ -2325,7 +2325,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Impact with heavy contrast for cyberpunk aesthetic.",
+    "fontTip": "Use Impact or Orbitron Bold with electric yellow outer glows (0 0 15px #facc15) and solid black drop shadows to simulate holographic street signage.",
     "faqs": [
       {
         "q": "How do I customize this banner for a Cyberpunk 2077 Netrunner build playthrough?",
@@ -2456,9 +2456,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Dark fantasy Erdtree grace scene for Elden Ring boss runs and Soulslike streams.",
-    "story": "Dark fantasy Erdtree stream screen for Soulslike boss challenge streams.",
-    "artAnalysis": "Golden Erdtree grace atmospheric lighting over gothic stone ruins.",
+    "description": "Design a somber Elden Ring Shadow of the Erdtree offline banner (1920×1080 Full HD) for your soulslike stream channel. Features the luminous golden Erdtree, gothic ruins, grace aura particles, and ornate medieval serif typography for challenge runners.",
+    "story": "Captures the solemn majesty and ancient tragedy of the Lands Between. Built for Tarnished warriors, Rune Level 1 no-hit runners, and lore scholars exploring the Land of Shadow and confronting legendary demigods.",
+    "artAnalysis": "The glowing spectral branches of the Erdtree illuminate a dark, misty gothic horizon, casting warm golden rim lighting across your channel name and stream schedule.",
     "palette": [
       {
         "name": "Grace Gold",
@@ -2476,7 +2476,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Georgia Serif with wide spacing for dark fantasy atmosphere.",
+    "fontTip": "Use Georgia or classical serif typography with wide tracking (0.25em) and deep amber drop shadows (#78350f) to match the orchestral, somber soulslike atmosphere.",
     "faqs": [
       {
         "q": "How do I format our Elden Ring challenge run stream schedule on this card?",
@@ -2608,9 +2608,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Spaceship emergency alarm stream card for Among Us lobbies and party game streams.",
-    "story": "Playful spaceship emergency stream card for Among Us streamers and discord party games.",
-    "artAnalysis": "Flashing red alarm ambiance with thick comic-sticker character outlines.",
+    "description": "Create a playful Among Us Skeld Spaceship offline banner (1920×1080 Full HD) for your community stream art. Features spaceship corridors, emergency alert red lighting, starry cosmic windows, and bold comic typography for proximity chat lobbies.",
+    "story": "Inspired by the hilarious tension and chaotic social deduction of Among Us lobbies. Designed for variety creators and viewer-game streamers hosting weekly proximity chat matches and modded role lobbies.",
+    "artAnalysis": "A futuristic spaceship viewport looks out onto a colorful nebula, framed by subtle warning hazard lights that draw focus to your emergency stream announcement text.",
     "palette": [
       {
         "name": "Impostor Red",
@@ -2628,7 +2628,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Inter Heavy with 4-directional sticker outlines for comic fun.",
+    "fontTip": "Use heavy rounded sans-serif fonts with thick black outlines (3px solid stroke) to emulate the iconic cartoon style of the Crewmate suits.",
     "faqs": [
       {
         "q": "How do I display our Among Us proximity chat lobby rules and stream schedule?",
@@ -2760,9 +2760,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Legendary Arena stream card for Clash Royale trophy push streams and tournament brackets.",
-    "story": "Legendary Arena stream screen for Clash Royale ladder push broadcasts.",
-    "artAnalysis": "Vibrant royal blue and gold arena lighting framing stream timetable text.",
+    "description": "Design a competitive Clash Royale Arena Champions offline banner (1920×1080 Full HD) for your mobile esports stream art. Features royal blue arena floodlights, golden crown arches, and chunky 3D typography for Ultimate Champion ladder climbers.",
+    "story": "Built for competitive Clash Royale deck builders, 20-win challenge champions, and Path of Legends grinders. The vibrant royal blue arena lighting and golden trophy pillars project competitive dominance across mobile esports feeds.",
+    "artAnalysis": "Stately golden crown arches frame the upper corners with royal blue stadium spotlights illuminating the central text container for crystal-clear readability.",
     "palette": [
       {
         "name": "Royale Blue",
@@ -2780,7 +2780,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Inter Heavy with blue 3D drop shadows.",
+    "fontTip": "Use Impact with layered royal blue (#1d4ed8) and navy (#1e3a8a) 3D drop shadows for high-impact mobile tournament branding.",
     "faqs": [
       {
         "q": "How do I showcase our Clash Royale Ultimate Champion trophy push schedule?",
@@ -2911,9 +2911,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Hero shooter futuristic skyline stream card for competitive ranked broadcasts.",
-    "story": "Futuristic hero shooter stream screen for Overwatch 2 competitive broadcasters.",
-    "artAnalysis": "Vibrant orange and slate city skyline framing stream schedule text.",
+    "description": "Create a dynamic Overwatch 2 Rooftop Heroes offline banner (1920×1080 Full HD) for your hero shooter stream art. Features futuristic city skyline rooftops, signature hero orange energy glows, and athletic typography for Grandmaster role-queue streamers.",
+    "story": "Captures the optimistic, high-velocity spirit of the Overwatch universe. Designed for Grandmaster tank, DPS, and support mains who want clean, authoritative esports branding across their live stream breaks.",
+    "artAnalysis": "Futuristic city skylines glow with warm sunset tones, accented by Overwatch hero orange (#f97316) energy arcs that frame your competitive rank and broadcast hours.",
     "palette": [
       {
         "name": "Overwatch Orange",
@@ -2931,7 +2931,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Impact font with 3D stacked amber drop shadows.",
+    "fontTip": "Use Impact or athletic condensed typefaces with deep brown (#78350f) drop shadows to achieve a polished professional broadcast look.",
     "faqs": [
       {
         "q": "How do I format our Overwatch 2 Grandmaster role-queue stream timetable?",
@@ -3062,9 +3062,9 @@ export const TEMPLATES = [
       "safeWidth": 1920,
       "safeHeight": 1080
     },
-    "description": "Stadium pitch floodlight scene for FC 25 FUT Champions and Weekend League stream broadcasts.",
-    "story": "Soccer stadium floodlight screen for EA FC 25 FUT Champions and Weekend League stream schedules.",
-    "artAnalysis": "Green pitch glow and stadium floodlight beams framing stream timetable text.",
+    "description": "Design a premier EA Sports FC 25 Pitch Floodlights offline banner (1920×1080 Full HD) for your soccer stream channel art. Features stadium pitch turf textures, high-power floodlight beams, FUT Champions badges, and athletic broadcast typography.",
+    "story": "Engineered for Weekend League contenders, Ultimate Team pack openers, and competitive FC 25 esports broadcasters. Replicates the excitement of prime-time stadium match nights under powerful arena floodlights.",
+    "artAnalysis": "Pristine green pitch turf textures meet sweeping stadium floodlight rays, framing your channel timetable with the visual polish of a live international sports broadcast.",
     "palette": [
       {
         "name": "Pitch Emerald",
@@ -3082,7 +3082,7 @@ export const TEMPLATES = [
         "desc": "Schedule Hours"
       }
     ],
-    "fontTip": "Use Orbitron or athletic sans for clean soccer broadcast typography.",
+    "fontTip": "Use Orbitron Bold or modern athletic sans-serif fonts with deep forest green shadows (#047857) to deliver a clean, television-ready soccer broadcast aesthetic.",
     "faqs": [
       {
         "q": "How do I display our EA Sports FC 25 FUT Champions 20-game schedule?",

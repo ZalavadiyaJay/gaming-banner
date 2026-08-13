@@ -883,9 +883,9 @@ export default function CustomizeClient({ params }) {
     <>
       <Header />
 
-      <main className="flex-1 pt-16 flex flex-col md:flex-row h-auto overflow-y-auto md:h-[calc(100vh-64px)] md:overflow-hidden">
-        {/* Left Canvas Preview Panel (65%) */}
-        <section className="w-full md:flex-1 bg-surface-container/60 p-md md:p-lg flex flex-col justify-start items-center gap-md border-b md:border-b-0 md:border-r border-outline-variant/65">
+      <main className="flex-1 pt-20 pb-8 px-4 md:px-8 w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row items-start justify-center gap-6">
+        {/* Left Canvas Preview Panel (60%) */}
+        <section className="w-full lg:flex-1 bg-surface-container/60 p-4 md:p-6 rounded-2xl border border-outline-variant/50 flex flex-col justify-start items-center gap-4 shadow-xl">
           {/* Render Mockup Container */}
           <div className="w-full flex justify-center items-start">
             <div className="w-full max-w-4xl border border-outline-variant rounded-xl overflow-hidden bg-surface-container shadow-2xl">
@@ -903,8 +903,6 @@ export default function CustomizeClient({ params }) {
                   className="absolute inset-0 z-0 pointer-events-none transition-all duration-200"
                   style={{ backgroundColor: `rgba(0, 0, 0, ${bgOverlay / 100})` }}
                 />
-
-
 
                 {currentTemplate.decor}
 
@@ -969,15 +967,15 @@ export default function CustomizeClient({ params }) {
               </div>
 
               {/* Simulated Channel info strip */}
-              <div className="p-md bg-surface-container-high border-t border-outline-variant/40 flex items-center gap-md">
-                <div className="h-10 w-10 rounded-full bg-surface-container-low border border-outline-variant/60 flex items-center justify-center font-bold text-outline">
+              <div className="p-4 bg-surface-container-high border-t border-outline-variant/40 flex items-center gap-3">
+                <div className="h-9 w-9 rounded-full bg-surface-container-low border border-outline-variant/60 flex items-center justify-center font-bold text-outline text-sm">
                   {textLayers.length > 0 && textLayers[0].text ? textLayers[0].text[0] : "S"}
                 </div>
                 <div>
-                  <span className="font-bold text-sm text-on-background block">
+                  <span className="font-bold text-sm text-on-background block leading-tight">
                     {textLayers.length > 0 && textLayers[0].text ? textLayers[0].text : "STORM"}
                   </span>
-                  <span className="text-xs text-outline font-data-mono">12.4K subscribers &bull; 42 videos</span>
+                  <span className="text-[11px] text-outline font-data-mono">12.4K subscribers &bull; 42 videos</span>
                 </div>
               </div>
             </div>
@@ -985,13 +983,13 @@ export default function CustomizeClient({ params }) {
 
           <span className="text-xs text-outline/75 text-center font-data-mono">
             {activeTab === "desktop"
-              ? "Tip: Drag any text layer directly on the banner. Add or remove layers anytime!"
+              ? "Tip: Click and drag any text layer directly on the banner to reposition."
               : "Preview shows strict mobile display dimensions."}
           </span>
         </section>
 
-        {/* Right Editor sidebar (Pixel-Perfect Layout & Proper Proportions) */}
-        <section className="w-full md:w-[440px] bg-surface-container-high p-5 md:p-6 flex flex-col gap-4 border-t md:border-t-0 md:border-l border-outline-variant/60 justify-start">
+        {/* Right Editor sidebar (Pixel-Perfect Proportions & Matched Height) */}
+        <section className="w-full lg:w-[440px] bg-surface-container-high p-5 md:p-6 rounded-2xl border border-outline-variant/50 flex flex-col gap-4 shadow-xl">
           
           {/* Header Row: Title & Action Buttons */}
           <div className="flex items-center justify-between gap-3 pb-3 border-b border-outline-variant/40">
@@ -999,9 +997,9 @@ export default function CustomizeClient({ params }) {
               <h2 className="text-base md:text-lg font-extrabold text-on-background tracking-tight">
                 Studio Editor
               </h2>
-              <p className="text-[11px] text-outline font-data-mono truncate max-w-[150px]">
+              <span className="text-[11px] text-primary font-bold font-data-mono uppercase">
                 {currentTemplate.name}
-              </p>
+              </span>
             </div>
             
             <div className="flex items-center gap-2">
@@ -1077,7 +1075,7 @@ export default function CustomizeClient({ params }) {
 
               {/* Row 2: Text Size Slider + Glow Intensity Slider */}
               <div className="grid grid-cols-2 gap-3">
-                <div className="flex flex-col gap-1.5 bg-surface-container/40 p-2.5 rounded-xl border border-outline-variant/30">
+                <div className="flex flex-col gap-1.5 bg-surface-container/40 p-3 rounded-xl border border-outline-variant/30">
                   <div className="flex justify-between items-center text-xs font-bold text-outline">
                     <span>Text Size</span>
                     <span className="font-data-mono text-primary-container font-extrabold">{Math.round((selectedLayer.size || 1) * 100)}%</span>
@@ -1089,11 +1087,11 @@ export default function CustomizeClient({ params }) {
                     step="0.05"
                     value={selectedLayer.size || 1}
                     onChange={(e) => updateLayer(selectedLayer.id, "size", parseFloat(e.target.value))}
-                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none mt-1"
+                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none mt-1.5"
                   />
                 </div>
 
-                <div className="flex flex-col gap-1.5 bg-surface-container/40 p-2.5 rounded-xl border border-outline-variant/30">
+                <div className="flex flex-col gap-1.5 bg-surface-container/40 p-3 rounded-xl border border-outline-variant/30">
                   <div className="flex justify-between items-center text-xs font-bold text-outline">
                     <span>Glow & Shadow</span>
                     <span className="font-data-mono text-primary-container font-extrabold">{selectedLayer.glow}%</span>
@@ -1105,14 +1103,14 @@ export default function CustomizeClient({ params }) {
                     step="5"
                     value={selectedLayer.glow}
                     onChange={(e) => updateLayer(selectedLayer.id, "glow", parseInt(e.target.value))}
-                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none mt-1"
+                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none mt-1.5"
                   />
                 </div>
               </div>
 
               {/* Row 3: Poster Background Dimmer + Color Picker Button */}
-              <div className="grid grid-cols-2 gap-3 items-end">
-                <div className="flex flex-col gap-1.5 bg-surface-container/40 p-2.5 rounded-xl border border-outline-variant/30">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex flex-col gap-1.5 bg-surface-container/40 p-3 rounded-xl border border-outline-variant/30">
                   <div className="flex justify-between items-center text-xs font-bold text-outline">
                     <span>Background Dimmer</span>
                     <span className="font-data-mono text-primary-container font-extrabold">{bgOverlay}%</span>
@@ -1124,54 +1122,62 @@ export default function CustomizeClient({ params }) {
                     step="5"
                     value={bgOverlay}
                     onChange={(e) => setBgOverlay(parseInt(e.target.value))}
-                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none mt-1"
+                    className="w-full accent-primary-container cursor-pointer h-1.5 bg-surface-container rounded-lg appearance-none mt-1.5"
                   />
                 </div>
 
-                <div className="flex items-center gap-2">
-                  <label className="relative flex items-center gap-2 px-3 py-2 bg-surface-container border border-outline-variant/70 hover:border-primary-container rounded-lg cursor-pointer transition-all shadow-sm text-xs font-bold text-on-background group flex-1">
-                    <input
-                      type="color"
-                      value={selectedLayer.color || "#00d4ff"}
-                      onChange={(e) => updateLayer(selectedLayer.id, "color", e.target.value)}
-                      className="opacity-0 absolute inset-0 w-full h-full cursor-pointer z-10"
-                    />
-                    <span
-                      className="h-4 w-4 rounded-full border border-white/50 shadow-inner flex-shrink-0"
-                      style={{ backgroundColor: selectedLayer.color || "#00d4ff" }}
-                    />
-                    <span className="text-xs font-bold truncate">Pick Color</span>
-                  </label>
+                <div className="flex flex-col gap-1.5 bg-surface-container/40 p-3 rounded-xl border border-outline-variant/30">
+                  <div className="flex justify-between items-center text-xs font-bold text-outline">
+                    <span>Layer Color</span>
+                    <span className="font-data-mono text-primary-container font-extrabold uppercase">{selectedLayer.color || "#00D4FF"}</span>
+                  </div>
+                  <div className="flex items-center gap-2 mt-0.5">
+                    <label className="relative flex items-center gap-1.5 px-2.5 py-1.5 bg-surface-container border border-outline-variant/70 hover:border-primary-container rounded-lg cursor-pointer transition-all shadow-sm text-xs font-bold text-on-background group flex-1">
+                      <input
+                        type="color"
+                        value={selectedLayer.color || "#00d4ff"}
+                        onChange={(e) => updateLayer(selectedLayer.id, "color", e.target.value)}
+                        className="opacity-0 absolute inset-0 w-full h-full cursor-pointer z-10"
+                      />
+                      <span
+                        className="h-3.5 w-3.5 rounded-full border border-white/50 shadow-inner flex-shrink-0"
+                        style={{ backgroundColor: selectedLayer.color || "#00d4ff" }}
+                      />
+                      <span className="text-[11px] font-bold truncate">Pick</span>
+                    </label>
 
-                  <div className="flex items-center bg-surface-container border border-outline-variant/70 rounded-lg px-2.5 py-2 w-20">
-                    <input
-                      type="text"
-                      value={selectedLayer.color || "#00d4ff"}
-                      onChange={(e) => {
-                        let val = e.target.value;
-                        if (!val.startsWith("#")) val = "#" + val;
-                        updateLayer(selectedLayer.id, "color", val.slice(0, 7));
-                      }}
-                      className="w-full bg-transparent text-xs font-data-mono font-bold text-on-background outline-none uppercase text-center"
-                    />
+                    <div className="flex items-center bg-surface-container border border-outline-variant/70 rounded-lg px-2 py-1.5 w-20">
+                      <input
+                        type="text"
+                        value={selectedLayer.color || "#00d4ff"}
+                        onChange={(e) => {
+                          let val = e.target.value;
+                          if (!val.startsWith("#")) val = "#" + val;
+                          updateLayer(selectedLayer.id, "color", val.slice(0, 7));
+                        }}
+                        className="w-full bg-transparent text-xs font-data-mono font-bold text-on-background outline-none uppercase text-center"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Row 4: Preset Gaming Color Swatches */}
-              <div className="flex flex-col gap-1.5 pt-1">
-                <span className="text-[11px] font-bold text-outline">Preset Accent Colors:</span>
-                <div className="flex items-center justify-between gap-1.5 flex-wrap">
+              {/* Row 4: Symmetric 7x2 Preset Gaming Color Grid */}
+              <div className="flex flex-col gap-2 pt-1">
+                <span className="text-[11px] font-bold text-outline uppercase font-data-mono">
+                  Preset Color Palette:
+                </span>
+                <div className="grid grid-cols-7 gap-2">
                   {accentColorsList.map((color, idx) => (
                     <button
                       key={idx}
                       onClick={() => updateLayer(selectedLayer.id, "color", color)}
                       style={{ backgroundColor: color }}
                       title={`Select ${color}`}
-                      className={`h-6 w-6 rounded-full border transition-all ${
+                      className={`h-7 w-full rounded-lg border transition-all ${
                         selectedLayer.color === color
-                          ? "border-white ring-2 ring-primary-container scale-110 shadow"
-                          : "border-outline-variant/60 hover:scale-115"
+                          ? "border-white ring-2 ring-primary-container scale-105 shadow-md"
+                          : "border-outline-variant/60 hover:scale-105 opacity-90 hover:opacity-100"
                       }`}
                     />
                   ))}
@@ -1187,11 +1193,11 @@ export default function CustomizeClient({ params }) {
           )}
 
           {/* Bottom Download Action Bar */}
-          <div className="pt-3 border-t border-outline-variant/40 flex flex-col gap-1.5 mt-auto">
+          <div className="pt-3 border-t border-outline-variant/40 flex flex-col gap-1.5">
             <button
               onClick={handleDownload}
               disabled={isDownloading}
-              className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-sm py-3 rounded-xl transition-all shadow-lg shadow-emerald-500/20 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-sm py-3.5 rounded-xl transition-all shadow-lg shadow-emerald-500/25 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isDownloading ? "Generating 4K PNG..." : "Download Free 4K PNG"}
             </button>

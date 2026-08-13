@@ -363,117 +363,58 @@ export default async function CustomizePage({ params }) {
               </p>
             </div>
 
-            {/* 2-Column Bento Grid: Lore & Art (Left) + Typography & Palette (Right) */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* 2x2 Bento Grid: Perfectly Height-Matched & Symmetric */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
               
-              {/* Left Column: Story & Art Direction */}
-              <div className="flex flex-col gap-6">
-                
-                {/* Story & Lore Card */}
-                {template.story && (
+              {/* Row 1 Left: Story & Lore Card */}
+              {template.story && (
+                <div
+                  className="relative bg-surface-container/70 backdrop-blur-xl rounded-3xl p-6 md:p-8 border shadow-xl flex flex-col justify-between gap-5 overflow-hidden h-full"
+                  style={{ borderColor: `${template.themeColor}30` || 'rgba(255,255,255,0.1)' }}
+                >
                   <div
-                    className="relative bg-surface-container/70 backdrop-blur-xl rounded-3xl p-6 md:p-8 border shadow-xl flex flex-col gap-4 overflow-hidden"
-                    style={{ borderColor: `${template.themeColor}30` || 'rgba(255,255,255,0.1)' }}
-                  >
-                    <div
-                      className="absolute top-0 left-0 right-0 h-1"
-                      style={{ background: `linear-gradient(90deg, transparent, ${template.themeColor || '#00d4ff'}, transparent)` }}
-                    />
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-2">
-                        <span className="text-xl">📖</span>
-                        <h3 className="text-lg font-extrabold text-on-background tracking-tight">
-                          The Story Behind the Artwork
-                        </h3>
-                      </div>
-                      <span
-                        className="text-[10px] font-bold font-data-mono px-2.5 py-0.5 rounded-full border"
-                        style={{
-                          backgroundColor: `${template.themeColor}15` || '#00d4ff15',
-                          borderColor: `${template.themeColor}40` || '#00d4ff40',
-                          color: template.themeColor || '#00d4ff'
-                        }}
-                      >
-                        LORE CANON
-                      </span>
+                    className="absolute top-0 left-0 right-0 h-1"
+                    style={{ background: `linear-gradient(90deg, transparent, ${template.themeColor || '#00d4ff'}, transparent)` }}
+                  />
+                  <div className="flex flex-col gap-3.5 flex-1">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">📖</span>
+                      <h3 className="text-lg font-extrabold text-on-background tracking-tight">
+                        The Story Behind the Artwork
+                      </h3>
                     </div>
 
                     <p className="text-sm text-outline leading-relaxed">
                       {template.story}
                     </p>
+                  </div>
 
-                    {/* World & Setting Lore Breakdown Chips */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2 border-t border-outline-variant/30">
-                      <div className="bg-surface-container-high/40 rounded-xl p-2.5 border border-outline-variant/40 flex flex-col gap-0.5">
-                        <span className="text-[10px] font-bold text-outline font-data-mono uppercase">Setting</span>
-                        <span className="text-xs font-bold text-on-background truncate">{template.gameName} Universe</span>
-                      </div>
-                      <div className="bg-surface-container-high/40 rounded-xl p-2.5 border border-outline-variant/40 flex flex-col gap-0.5">
-                        <span className="text-[10px] font-bold text-outline font-data-mono uppercase">Vibe</span>
-                        <span className="text-xs font-bold text-on-background truncate">{template.category}</span>
-                      </div>
-                      <div className="bg-surface-container-high/40 rounded-xl p-2.5 border border-outline-variant/40 flex flex-col gap-0.5">
-                        <span className="text-[10px] font-bold text-outline font-data-mono uppercase">Designed For</span>
-                        <span className="text-xs font-bold text-on-background truncate">Streamers & Creators</span>
-                      </div>
+                  {/* World & Setting Lore Breakdown Chips */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-3 border-t border-outline-variant/30 mt-auto">
+                    <div className="bg-surface-container-high/40 rounded-xl p-2.5 border border-outline-variant/40 flex flex-col gap-0.5">
+                      <span className="text-[10px] font-bold text-outline font-data-mono uppercase">Setting</span>
+                      <span className="text-xs font-bold text-on-background truncate">{template.gameName} Universe</span>
+                    </div>
+                    <div className="bg-surface-container-high/40 rounded-xl p-2.5 border border-outline-variant/40 flex flex-col gap-0.5">
+                      <span className="text-[10px] font-bold text-outline font-data-mono uppercase">Vibe</span>
+                      <span className="text-xs font-bold text-on-background truncate">{template.category}</span>
+                    </div>
+                    <div className="bg-surface-container-high/40 rounded-xl p-2.5 border border-outline-variant/40 flex flex-col gap-0.5">
+                      <span className="text-[10px] font-bold text-outline font-data-mono uppercase">Designed For</span>
+                      <span className="text-xs font-bold text-on-background truncate">Streamers & Creators</span>
                     </div>
                   </div>
-                )}
+                </div>
+              )}
 
-                {/* Visual Art Direction & Safe-Zone Card */}
-                {template.artAnalysis && (
-                  <div className="bg-surface-container/70 backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-outline-variant/40 shadow-xl flex flex-col gap-4">
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-2">
-                        <span className="text-xl">🎨</span>
-                        <h3 className="text-lg font-extrabold text-on-background tracking-tight">
-                          Visual Art Breakdown & Safe-Zone Calibration
-                        </h3>
-                      </div>
-                      <span className="text-[10px] font-bold font-data-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                        4K CALIBRATED
-                      </span>
-                    </div>
-
-                    <p className="text-sm text-outline leading-relaxed">
-                      {template.artAnalysis}
-                    </p>
-
-                    {/* Safe-Zone & Composition Metrics */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2 border-t border-outline-variant/30">
-                      <div className="bg-surface-container-high/40 rounded-xl p-2.5 border border-outline-variant/40 flex flex-col gap-0.5">
-                        <span className="text-[10px] font-bold text-outline font-data-mono uppercase">Safe Area</span>
-                        <span className="text-xs font-bold text-emerald-400 font-data-mono">1546 × 423 px</span>
-                      </div>
-                      <div className="bg-surface-container-high/40 rounded-xl p-2.5 border border-outline-variant/40 flex flex-col gap-0.5">
-                        <span className="text-[10px] font-bold text-outline font-data-mono uppercase">Text Protection</span>
-                        <span className="text-xs font-bold text-on-background">0% Mobile Cut-off</span>
-                      </div>
-                      <div className="bg-surface-container-high/40 rounded-xl p-2.5 border border-outline-variant/40 flex flex-col gap-0.5">
-                        <span className="text-[10px] font-bold text-outline font-data-mono uppercase">Lighting Focus</span>
-                        <span className="text-xs font-bold text-on-background">High-Contrast Center</span>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-              </div>
-
-              {/* Right Column: Live Font Preview & Curated Hex Palette */}
-              <div className="flex flex-col gap-6">
-                
-                {/* Live Font & Typography Card */}
-                <div className="bg-surface-container/70 backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-outline-variant/40 shadow-xl flex flex-col gap-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="text-xl">🔤</span>
-                      <h3 className="text-lg font-extrabold text-on-background tracking-tight">
-                        Recommended Typography
-                      </h3>
-                    </div>
-                    <span className="text-[10px] font-bold font-data-mono px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">
-                      LIVE PREVIEW
-                    </span>
+              {/* Row 1 Right: Live Font & Typography Card */}
+              <div className="bg-surface-container/70 backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-outline-variant/40 shadow-xl flex flex-col justify-between gap-5 h-full">
+                <div className="flex flex-col gap-3.5 flex-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">🔤</span>
+                    <h3 className="text-lg font-extrabold text-on-background tracking-tight">
+                      Recommended Typography
+                    </h3>
                   </div>
 
                   {/* Font Display Box */}
@@ -488,52 +429,89 @@ export default async function CustomizePage({ params }) {
                       {template.sub || 'OFFICIAL STREAM CHANNEL'}
                     </span>
                   </div>
-
-                  <p className="text-xs text-outline leading-relaxed">
-                    {template.fontTip || `Pair bold athletic or geometric fonts with subtle glowing text shadows to match ${template.gameName}'s competitive in-game UI.`}
-                  </p>
                 </div>
 
-                {/* Curated Color Swatches Card */}
-                {template.palette && template.palette.length > 0 && (
-                  <div className="bg-surface-container/70 backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-outline-variant/40 shadow-xl flex flex-col gap-4">
+                <p className="text-xs text-outline leading-relaxed pt-2 border-t border-outline-variant/30 mt-auto">
+                  {template.fontTip || `Pair bold athletic or geometric fonts with subtle glowing text shadows to match ${template.gameName}'s competitive in-game UI.`}
+                </p>
+              </div>
+
+              {/* Row 2 Left: Visual Art Direction & Safe-Zone Card */}
+              {template.artAnalysis && (
+                <div className="bg-surface-container/70 backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-outline-variant/40 shadow-xl flex flex-col justify-between gap-5 h-full">
+                  <div className="flex flex-col gap-3.5 flex-1">
                     <div className="flex items-center gap-2">
-                      <span className="text-xl">💎</span>
+                      <span className="text-xl">🎨</span>
                       <h3 className="text-lg font-extrabold text-on-background tracking-tight">
-                        Curated Color Swatches
+                        Visual Art Breakdown & Safe-Zone Calibration
                       </h3>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-3">
-                      {template.palette.map((c, idx) => (
-                        <div
-                          key={idx}
-                          className="bg-surface-container-high/40 hover:bg-surface-container-high/80 transition-all rounded-2xl p-3.5 border border-outline-variant/40 flex flex-col gap-2 group"
-                        >
-                          <div className="flex items-center gap-2.5">
-                            <span
-                              className="w-5 h-5 rounded-lg shadow-md flex-shrink-0 border border-white/20"
-                              style={{ backgroundColor: c.hex }}
-                            />
-                            <span className="font-bold text-xs text-on-background truncate">
-                              {c.name}
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="font-data-mono text-xs font-bold text-primary">
-                              {c.hex}
-                            </span>
-                          </div>
-                          <span className="text-[10px] text-outline leading-tight">
-                            {c.desc}
-                          </span>
-                        </div>
-                      ))}
+                    <p className="text-sm text-outline leading-relaxed">
+                      {template.artAnalysis}
+                    </p>
+                  </div>
+
+                  {/* Safe-Zone & Composition Metrics */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-3 border-t border-outline-variant/30 mt-auto">
+                    <div className="bg-surface-container-high/40 rounded-xl p-2.5 border border-outline-variant/40 flex flex-col gap-0.5">
+                      <span className="text-[10px] font-bold text-outline font-data-mono uppercase">Safe Area</span>
+                      <span className="text-xs font-bold text-emerald-400 font-data-mono">1546 × 423 px</span>
+                    </div>
+                    <div className="bg-surface-container-high/40 rounded-xl p-2.5 border border-outline-variant/40 flex flex-col gap-0.5">
+                      <span className="text-[10px] font-bold text-outline font-data-mono uppercase">Text Protection</span>
+                      <span className="text-xs font-bold text-on-background">0% Mobile Cut-off</span>
+                    </div>
+                    <div className="bg-surface-container-high/40 rounded-xl p-2.5 border border-outline-variant/40 flex flex-col gap-0.5">
+                      <span className="text-[10px] font-bold text-outline font-data-mono uppercase">Lighting Focus</span>
+                      <span className="text-xs font-bold text-on-background">High-Contrast Center</span>
                     </div>
                   </div>
-                )}
+                </div>
+              )}
 
-              </div>
+              {/* Row 2 Right: Curated Color Swatches Card */}
+              {template.palette && template.palette.length > 0 && (
+                <div className="bg-surface-container/70 backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-outline-variant/40 shadow-xl flex flex-col justify-between gap-5 h-full">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">💎</span>
+                    <h3 className="text-lg font-extrabold text-on-background tracking-tight">
+                      Curated Color Swatches
+                    </h3>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3 flex-1 items-center">
+                    {template.palette.map((c, idx) => (
+                      <div
+                        key={idx}
+                        className="bg-surface-container-high/40 hover:bg-surface-container-high/80 transition-all rounded-2xl p-3.5 border border-outline-variant/40 flex flex-col gap-2 group h-full justify-between"
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <span
+                            className="w-5 h-5 rounded-lg shadow-md flex-shrink-0 border border-white/20"
+                            style={{ backgroundColor: c.hex }}
+                          />
+                          <span className="font-bold text-xs text-on-background truncate">
+                            {c.name}
+                          </span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span className="font-data-mono text-xs font-bold text-primary">
+                            {c.hex}
+                          </span>
+                        </div>
+                        <span className="text-[10px] text-outline leading-tight">
+                          {c.desc}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <span className="text-[11px] text-outline/75 font-data-mono pt-2 border-t border-outline-variant/30">
+                    4-Color Palette calibrated for high readability against the background.
+                  </span>
+                </div>
+              )}
 
             </div>
 

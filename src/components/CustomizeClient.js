@@ -1213,63 +1213,6 @@ export default function CustomizeClient({ params }) {
           </div>
         </section>
       </main>
-
-      {/* AdSense Compliant Rich Publisher Content Section */}
-      <section className="bg-surface-container-low py-xl border-t border-outline-variant/60">
-        <div className="max-w-[1200px] mx-auto px-md md:px-xl flex flex-col gap-lg">
-          
-          {/* Overview & Design Features */}
-          <div className="flex flex-col gap-xs">
-            <h2 className="text-2xl font-bold text-on-background">
-              About {currentTemplate.name} Banner Generator
-            </h2>
-            <p className="text-sm text-outline leading-relaxed">
-              Design custom channel art and social headers with our free 4K banner editor. Built specifically for YouTube creators, Twitch streamers, Discord communities, and Twitter/X gaming profiles.
-            </p>
-          </div>
-
-          {/* Grid of Key Features & Specifications */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-md">
-            <div className="p-md bg-surface-container rounded-lg border border-outline-variant/40">
-              <h3 className="font-bold text-sm text-on-background mb-1">🎬 YouTube Channel Art</h3>
-              <p className="text-xs text-outline leading-relaxed">
-                Exported at 2560 x 1440 px with central mobile safe zone grid alignment (1546 x 423 px) to ensure text renders on phone and TV screens.
-              </p>
-            </div>
-            <div className="p-md bg-surface-container rounded-lg border border-outline-variant/40">
-              <h3 className="font-bold text-sm text-on-background mb-1">🟣 Twitch Offline Banner</h3>
-              <p className="text-xs text-outline leading-relaxed">
-                Optimized for 1200 x 480 px stream offline screens and profile headers featuring neon glow typography.
-              </p>
-            </div>
-            <div className="p-md bg-surface-container rounded-lg border border-outline-variant/40">
-              <h3 className="font-bold text-sm text-on-background mb-1">💬 Discord & Twitter Headers</h3>
-              <p className="text-xs text-outline leading-relaxed">
-                Full 960 x 540 px Discord server banner support and 1500 x 500 px Twitter/X esports profile headers.
-              </p>
-            </div>
-          </div>
-
-          {/* How To Customize Guide */}
-          <div className="p-lg bg-surface-container-high rounded-xl border border-outline-variant/50 flex flex-col gap-sm">
-            <h3 className="font-bold text-base text-on-background">How to Customize Your Banner:</h3>
-            <ol className="list-decimal list-inside text-xs text-outline flex flex-col gap-1.5 leading-relaxed">
-              <li><strong>Enter Gamertag:</strong> Click on any text layer in the side panel or canvas to type your handle.</li>
-              <li><strong>Adjust Font & Glow Color:</strong> Choose custom accent colors, font sizes, and text glow shadows.</li>
-              <li><strong>Fine-Tune Background:</strong> Use the background darkener slider to enhance contrast and legibility.</li>
-              <li><strong>Export Free PNG:</strong> Select your target platform size and click "Download Free" for a high-res 4K file without watermarks.</li>
-            </ol>
-          </div>
-
-          {/* Legal Trademark Disclaimer */}
-          <div className="text-[11px] text-outline/70 border-t border-outline-variant/30 pt-md leading-relaxed">
-            <p>
-              <strong>Trademark Disclaimer:</strong> All game titles, character names, and trade names referenced in design presets are trademarks of their respective owners. GamingBanner is an independent online design utility for gamers and content creators.
-            </p>
-          </div>
-
-        </div>
-      </section>
     </>
   );
 }

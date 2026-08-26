@@ -699,6 +699,105 @@ export default function Home() {
         </div>
       </section>
 
+        {/* Section 5.5: Featured Design Masterclasses & Streaming Guides */}
+        <section className="py-16 max-w-[1440px] mx-auto px-4 md:px-8 border-t border-outline-variant/40">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-primary-container/15 text-primary-container border border-primary-container/30">
+                  📚 Editorial Masterclasses
+                </span>
+                <span className="text-xs text-outline font-data-mono">
+                  31 Comprehensive Guides
+                </span>
+              </div>
+              <h2 className="text-2xl md:text-4xl font-extrabold text-on-background tracking-tight">
+                Featured Creator Guides & Tutorials
+              </h2>
+              <p className="text-xs md:text-sm text-outline mt-1">
+                Learn safe-zone engineering, OBS broadcast setups, and esports color theory from industry experts.
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <Link
+                href="/guides"
+                className="px-4 py-2 rounded-xl bg-surface-container border border-outline-variant/50 text-xs font-bold text-on-background hover:border-primary-container transition-all"
+              >
+                All 16 Dimension Guides →
+              </Link>
+              <Link
+                href="/blog"
+                className="px-4 py-2 rounded-xl bg-primary-container text-on-primary-container text-xs font-bold hover:bg-primary-container/90 transition-all shadow-md shadow-primary-container/20"
+              >
+                All 15 Blog Articles →
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Complete Twitch Stream Branding Guide",
+                category: "Streaming Setup",
+                readTime: "12 min",
+                href: "/blog/complete-twitch-stream-branding-guide-2026",
+                desc: "Design matching 1080p offline screens, 1200x480 profile covers, and 320x160 panels.",
+                icon: "🟣"
+              },
+              {
+                title: "YouTube Banner Safe Zone Masterclass",
+                category: "Platform Specs",
+                readTime: "7 min",
+                href: "/guides/youtube-banner-size",
+                desc: "Exact 1546x423 px safe zones, responsive mobile viewports, and 4K TV scaling.",
+                icon: "🔴"
+              },
+              {
+                title: "Best OBS Settings for Streaming (2026)",
+                category: "Technical Setup",
+                readTime: "11 min",
+                href: "/blog/best-obs-settings-for-streaming",
+                desc: "Bitrate formulas, GPU hardware encoding (NVENC), and lag-free 1080p60 broadcasting.",
+                icon: "🎥"
+              },
+              {
+                title: "Color Theory for Gaming Streamers",
+                category: "Design Theory",
+                readTime: "8 min",
+                href: "/blog/best-gaming-color-palettes-for-streamers",
+                desc: "The 60-30-10 rule and curated 4-swatch hex palettes for esports channels.",
+                icon: "🎨"
+              }
+            ].map((card, idx) => (
+              <Link
+                key={idx}
+                href={card.href}
+                className="bg-surface-container/60 border border-outline-variant/50 hover:border-primary-container/60 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] shadow-lg group"
+              >
+                <div>
+                  <div className="flex items-center justify-between text-[11px] font-data-mono text-outline mb-3">
+                    <span className="text-xl">{card.icon}</span>
+                    <span>⏱️ {card.readTime}</span>
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-primary-container font-data-mono">
+                    {card.category}
+                  </span>
+                  <h3 className="text-base font-extrabold text-on-background group-hover:text-primary-container transition-colors mt-1 line-clamp-2">
+                    {card.title}
+                  </h3>
+                  <p className="text-xs text-outline mt-2 line-clamp-2 leading-relaxed">
+                    {card.desc}
+                  </p>
+                </div>
+                <div className="pt-4 mt-4 border-t border-outline-variant/30 text-xs font-bold text-primary-container flex items-center justify-between">
+                  <span>Read Masterclass</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* Section 6: Frequently Asked Questions */}
         <section className="py-xl max-w-[1440px] mx-auto px-md md:px-xl">
           <div className="text-center mb-xl">
